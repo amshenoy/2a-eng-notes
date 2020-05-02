@@ -1,10 +1,12 @@
 # Markov Chains
 
-## Finite State-Space
+## Discrete (Finite) State-Space
 
 
 
 ## Continuous State-Space
+
+$$ $$
 
 
 ## Stochastic Processes
