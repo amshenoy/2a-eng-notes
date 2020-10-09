@@ -34,3 +34,30 @@ $$
 $$
 P\Big(\color{orange}{\big| X - E[X] \big|} \ge \color{orange}{a} \Big) = P\Big( \color{red}{\big| X - E[X] \big|^{2} } \ge \color{red}{ a^{2} } \Big) = P(\color{blue} {Y} \ge \color{red} {a^{2}}) \quad \le \quad \dfrac{E[\color{blue} {Y}]}{\color{red} {a^{2}}}  \quad = \dfrac{Var[\color{red} {X}]}{\color{red} {a^{2}}} 
 $$
+
+## Weak Law of Large Numbers (WLLN)
+
+$ \color{blue}{\text{'Empirical average converges to the mean'}} $
+</br>
+**Let $ X_{1}, X{2}, ..., X_{n} $ be a sequence of i.i.d rvs with finite mean $ \mu $:**
+$$
+\text{Informal Statement of WLLN:} \color{blue}{ \qquad S_{n} \rightarrow \mu \qquad \text{ as } \quad n \rightarrow \infty }
+\\
+\text{Formal Statement of WLLN:} \qquad
+\text{For any } \color{blue}{ \epsilon > 0
+\qquad \lim_{n \rightarrow \infty} P\Big( | S_{n} - \mu | \ge \epsilon \Big) = 0 }
+$$
+
+</br>
+Proof using Chebyshev's Inequality:
+$$
+
+\qquad \lim_{n \rightarrow \infty} P\Big( | S_{n} - \mu | \ge \epsilon \Big) \le \dfrac{\color{red}{Var(S_{n})}}{\epsilon^{2}} = \dfrac{\color{red}{\sigma^{2}}}{\color{red}{n} \epsilon^{2}}
+\\
+\text{For } \epsilon > 0, \text{ as } n \rightarrow \infty, \dfrac{\color{red}{\sigma^{2}}}{\color{red}{n} \epsilon^{2}} \rightarrow 0
+\\
+\text{Therefore WLLN is true!}
+$$
+
+
+
