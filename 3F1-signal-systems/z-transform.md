@@ -69,12 +69,37 @@ $$ \{x_{k}\}*\{y_{k}\} = \sum^{k}_{i=0} x_{i} y_{k-i} = \sum^{k}_{i=0} x_{k-i} y
 
 ## Inversion
 
+### Standard Transforms
+
 ### $$ \color{blue} { \mathcal{Z}\{ p^{k} \} = \dfrac{1}{1-pz^{-1}} } $$
 Example:
 #### $$ \color{blue} { \mathcal{Z}\{ k p^{k} \} } = \color{red}{?} $$
 
+$$ \color{blue} { \mathcal{Z}\{ k p^{k} \} } 
+\\ = \color{blue} { \mathcal{Z}\{ p \cdot k p^{k-1} \} } 
+\\ = \color{blue} { p \cdot \mathcal{Z}\{ k p^{k-1} \} } 
+\\ = \color{blue} { p \cdot \mathcal{Z}\{ \dfrac{d}{dp} \Big( p^{k} \Big) \} } 
+\\ = \color{blue} { p \cdot \dfrac{d}{dp} \Big( \mathcal{Z}\{ p^{k} \} \Big) } 
+\\ = \color{blue} { p \cdot \dfrac{d}{dp} \Big( \dfrac{1}{1-pz^{-1}} \Big) } 
+\\ = \color{blue} { p \cdot \Big( \dfrac{z^{-1}}{(1-pz^{-1})^{2}} \Big) } 
+$$
+</br>
+### $$
+\therefore \color{blue} { \mathcal{Z}\{ k p^{k} \}  = \dfrac{p z^{-1}}{(1-pz^{-1})^{2}} }
+$$
+Letting **p = 1**,
+### $$
+\therefore \color{blue} { \mathcal{Z}\{ k \}  = \dfrac{z^{-1}}{(1-z^{-1})^{2}} }
+$$
 
+### Inverting a Z-domain Signal
+Always **convert top-heavy z-fraction into a proper fraction + constant**. Constant in z-domain adds to the initial term in k-domain (ie. if $ X(z) = C + f(z) $ then $ \mathcal{Z^{-1}}\{ X(z) \} = \{x_{k}\} = \{f_{0}+C, f_{1}, ..., f_{n} \} $ ).
 
+$ \small \text{Note*: Derivable using the fact that } \mathcal{Z^{-1}}\{ 1 \} = \delta(k) $
 
+#### Analytical Inversion
+Using **partial fractions** to break-down a system function into **standard transforms**.
 
+#### Numeric Inversion
+Using **long division** to generate first-few terms to hopefully **extrapolate pattern**.
 
