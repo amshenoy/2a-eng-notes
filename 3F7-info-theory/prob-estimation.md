@@ -8,7 +8,7 @@ probabilities with limited information about the random variable.
 
 ### Markov Inequality
 
-$$ 
+### $$ 
 \text{For a non-negative rv X and any a > 0:} \\
 \color{blue} { P(X \ge a) \le \dfrac{E[X]}{a} }
 \\
@@ -17,7 +17,7 @@ $$
 
 ### Chebyshev Inequality
 
-$$ 
+### $$ 
 \color{blue} { P\Big(\big| X - E[X] \big| \ge a \Big) \le \dfrac{Var[X]}{a^{2}} }
 $$
 **Chebyshev** can be directly **derived from Markov** as follows:
