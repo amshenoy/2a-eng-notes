@@ -1,9 +1,3 @@
-$$ 
-\usepackage{mathtools}
-\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
-\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-$$
-
 # Information Coding
 
 ## Shannon-Fano Coding
@@ -61,4 +55,3 @@ Also note that multiplying by $ 2^{L} $ is to shift the desired bits of the deci
 
 
 ## Arithmetic Coding
-
