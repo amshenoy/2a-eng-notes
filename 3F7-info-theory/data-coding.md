@@ -1,5 +1,8 @@
 # Information Coding
 
+Prefix-free codes
+
+
 ## Shannon-Fano Coding
 
 
@@ -46,12 +49,31 @@ Also note that multiplying by $ 2^{L} $ is to shift the desired bits of the deci
 </br>
 
 ### Average Codeword Length
-### $ E(L) = H(X) + 2 $
+### $ E(\color{blue} {L}) = \sum_{i} \color{red} {p_{i}} \color{blue} {L_{i}} \quad \le \quad \sum_{i} \color{red} {p_{i}} \Big(\big\lceil \log_{2} \dfrac{1}{\color{red} {p_{i}}} \big\rceil + 1 \Big) \quad \lt \quad H(X) + 2 \text{ bits per symbol} $
+### $$ \therefore E(L) \lt H(X) + 2 \text{ bits per symbol} $$
+
+
+</br><hr>
+
+## Arithmetic Coding
+
+### For a given alphabet $ \underline{a} $ with probability $ \underline{p} $, determine the codeword for the sequence $ \underline{s} $ :
+
+### Overview
+#### 1) Determine interval for sequence
+#### 2) Apply interval coding
+
+
 
 </br>
 
+### Average Codeword Length
+For a sequence of length $ N $, where each $i$-th sample is picked from a distribution $ X_{i} $.
+
+### $$ E(L) \lt \dfrac{H(X_{1}, ..., X_{N}) + 2}{N} \text{ bits per symbol} $$
+### $$ E(L) \lt H(X) + \dfrac{2}{N} \text{ bits per symbol} \quad \text{if X is i.i.d} $$
 
 
 
 
-## Arithmetic Coding
+
