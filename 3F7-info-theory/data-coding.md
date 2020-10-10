@@ -60,9 +60,17 @@ Also note that multiplying by $ 2^{L} $ is to shift the desired bits of the deci
 ### For a given alphabet $ \underline{a} $ with probability $ \underline{p} $, determine the codeword for the sequence $ \underline{s} $ :
 
 ### Overview
-#### 1) Determine interval for sequence
+#### 1) Determine sequence interval
 #### 2) Apply interval coding
 
+</br> 
+
+#### Sequence Interval
+For each symbol $ s_{i} $ in sequence $ \underline{s} $:
+$ s_{i} \quad [ f(s_{i}), f(s_{i}) + p(s_{i}) ] $
+
+
+Apply recursive interval finding
 
 
 </br>
