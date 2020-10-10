@@ -31,7 +31,7 @@ Every symbol can be represented as an interval inside $ [0,1] $ with the length 
 </br>
 $ \rule{14cm}{0.4pt} $
 
-**A more practical way of solving this is as follows (used in arithmetic coding):**
+**PRACTICALLY as follows (used in arithmetic coding):**
 
 ### Given $ [a, a+\color{red} {p}] $ :
 
@@ -57,7 +57,7 @@ Also note that multiplying by $ 2^{L} $ is to shift the desired bits of the deci
 
 ## Arithmetic Coding
 
-### For a given alphabet $ \underline{a} $ with probability $ \underline{p} $, determine the codeword for the sequence $ \underline{s} $ :
+### For a given alphabet set $ \underline{a} $ with probability set $ \underline{p} $, determine the codeword for the sequence $ \underline{s} $ :
 
 ### Overview
 #### 1) Determine sequence interval
@@ -65,13 +65,28 @@ Also note that multiplying by $ 2^{L} $ is to shift the desired bits of the deci
 
 </br> 
 
-#### Sequence Interval
-For each symbol $ s_{i} $ in sequence $ \underline{s} $:
-$ s_{i} \quad [ f(s_{i}), f(s_{i}) + p(s_{i}) ] $
+### Sequence Interval
 
+**INTUITIVELY as follows:**
 
-Apply recursive interval finding
+Nested Subset Diagram
 
+</br>
+
+**PRACTICALLY as follows:**
+#### 1)
+Calculate cumulative probabilities $ \underline{f} $ for each symbol where $ f(s_{1}) = 0 $.
+
+For each symbol $ s_{i} $ in sequence $ \underline{s} $, calculate the alphabet interval $ A_{i} $ :
+
+$ A_{1} = [0, p_{1}] $
+
+$ A_{i} \quad = \quad \Big[ f(s_{i}), \quad f(s_{i}) + p(s_{i}) \Big] $
+
+Apply recursive interval finding from $ i = 2 $ to $ i = N $ to find the sequence interval $ S_{N} $ :
+$ S_{i} = \Big[ f(s_{i-1}), \quad f(s_{i-1}) \Big] + p(s_{i-1})  \Big[ f(s_{i}), \quad f(s_{i}) + p(s_{i}) \Big] $ 
+
+#### 2) $ \text{Codeword} = bin(S_{N}[0] \cdot 2^{L}) $
 
 </br>
 
