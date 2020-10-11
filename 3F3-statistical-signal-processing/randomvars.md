@@ -12,6 +12,15 @@ $$ F(x) = \int^{x}_{-\infty} p(x) dx $$
 
 $$ E(X) = \int^{\infty}_{-\infty} x p(x) dx $$
 
+Define the indicator function for a set or
+event E:
+
+$$ \mathcal{I}_{E} (t) = \begin{cases}
+1 \quad \text{ if } t \in E \\
+0 \quad \text{ if } t \notin E
+\end{cases}
+$$
+
 </br><hr>
 
 ## Function of a RV
@@ -52,3 +61,15 @@ $$ \color{blue}{ p_{Y}(y) = p_{X}(G^{-1}(y)) \enspace | \det(J_{G^{-1}}) | } $$
 If $ Y = X_{1} + X_{2} $, then pdf of $ Y $ is the **convolution** of $ X_{1} $ and $ X_{2} $:
 $$ p_{Y} = p_{X_{1}} * p_{X_{2}} = \int^{\infty}_{-\infty} p_{X_{2}}(y-x_{1}) \enspace p_{X_{1}}(x_{1}) dy $$
  
+
+
+### Rule of Iterated Expectation
+
+$$ E\Big( \ G(X, Y) \ \Big) = E \Big( \ E\{G(X|Y) \big| Y = y\} \ \Big) $$
+
+### Characteristic Function
+For a random variable $ X $: 
+$$ \phi_{X}(t) = E( e^{i t X})$$
+
+For a vector random variables $ \underline{X} = \{ X_{1}, ..., X_{N} \} $:
+$$ \phi_{X}(\underline{t}) = E( e^{i \underline{t}^{T} \underline{X}})$$
