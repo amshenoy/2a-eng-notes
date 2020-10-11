@@ -21,6 +21,7 @@ $$ \mathcal{I}_{E} (t) = \begin{cases}
 \end{cases}
 $$
 
+
 </br><hr>
 
 ## Function of a RV
@@ -39,12 +40,33 @@ $ \Bigg|\dfrac{d G(x)}{dx}\Bigg| = \Bigg|\dfrac{dy}{dx}\Bigg| \quad \text{ and }
 
 ##### Note*: The formula can be derived from $ \int p_{Y}(y) dy = \int p_{X}(x) dx $
 
+
+</br>
+
+### Piecewise Functions
+
+For a piecewise function $ Y = G_{i}(X) $ where $ X $ is distributed as $ f_{X}(x) $ :
+
+1) Rewrite the distribution $ f_{X}(x) $ as:
+$$  f_{X}(x) = \sum_{i} ( F(L_{i+1}) - F(L_{i}) ) f_{i}(x) $$ 
+where $ f_{i}(x) = \dfrac{f_{X}(x)}{\int^{L_{i+1}}_{L_{i}} f_{X}(x) dx } $
+
+2) Change the variable in the distribution by replacing $ x $ with $ G^{-1}_{i}(y) $ and write it as the new distribution:
+
+$$  f_{Y}(y) = \sum_{i} ( F(L_{i+1}) - F(L_{i}) ) \enspace f_{i}(G^{-1}_{i}(y)) $$ 
+
+
+
+</br>
+
 ### Multiple Inverse Functions
 If the function G(X) has more than one inverse function then the formula is the the sum over all of the inverse functions.
 
 eg. $ G(X) = |X| $ has inverse $ G^{-1}(Y) = \begin{cases}  1 \quad y \gt 0 \\ -1 \quad y \lt 0 \end{cases} $
 
 $$ p_{Y}(y) = \sum^{K}_{k=1} \dfrac{ p_{X}\Big(x\Big) } { \Bigg|\dfrac{dy}{dx}\Bigg| } \Bigg|_{x = G^{-1}_{k}(y) } = \sum^{K}_{k=1} p_{X}\Big(x\Big) \enspace \Bigg|\dfrac{d x}{dy}\Bigg| \enspace \Bigg|_{x = G^{-1}_{k}(y) } $$
+
+</br>
 
 ### Multivariate Case
 
@@ -62,6 +84,8 @@ If $ Y = X_{1} + X_{2} $, then pdf of $ Y $ is the **convolution** of $ X_{1} $ 
 $$ p_{Y} = p_{X_{1}} * p_{X_{2}} = \int^{\infty}_{-\infty} p_{X_{2}}(y-x_{1}) \enspace p_{X_{1}}(x_{1}) dy $$
  
 
+
+</br>
 
 ### Rule of Iterated Expectation
 
