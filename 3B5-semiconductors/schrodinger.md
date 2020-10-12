@@ -86,7 +86,7 @@ We can rearrange the Schrodinger's equation to simplify the linear PDE.
 $$ \dfrac{\partial^{2} \psi}{\partial x^{2}} = - \dfrac{2m}{\hbar^{2}}  (E-V) \psi \qquad \Big(= - \alpha^{2} \psi \Big) $$
 
 #### (Revision: General Solution to $ \dfrac{\partial^{2} \psi}{\partial x^{2}} = - \alpha^{2} \psi \Longrightarrow \psi = Ae^{i \alpha x} + Be^{-i \alpha x} $ )
-$$ \psi = Ae^{i \alpha x} + Be^{-i \alpha x} \text{ where } \alpha = \sqrt{ \dfrac{2m}{\hbar^{2}}  (E-V) } $$
+### $$ \color{red}{ \psi = Ae^{i \alpha x} + Be^{-i \alpha x} \text{ where } \alpha = \sqrt{ \dfrac{2m}{\hbar^{2}}  (E-V) } } $$
 
 To find the coefficients of the general solution, we need to consider the following while considering boundary conditions:
 * $ \psi $ is continuous
@@ -115,29 +115,30 @@ $$ V = \begin{array}{cc}
 
 $ \text{For} \quad 0 \leq x \leq L : $
 </br>
-$ E > V_{0} \qquad \therefore \alpha = +ve \qquad \therefore \psi_{2} = A \text{sin}(\alpha x) + B \text{cos}(\alpha x) $ 
+If $ E > 0 \qquad \therefore \alpha = +ve \qquad \therefore \psi_{2} = A \text{sin}(\alpha x) + B \text{cos}(\alpha x) $ 
 
 </br>
 
 $ \text{For} \quad x \leq 0 \text{ and } x \geq L: $
 </br></br>
 $
-\text{ Case 1: } E > V_{0} \qquad \therefore \beta = +ve \\
+\text{ Case 1: } \text{ If } E > V_{0} \qquad \therefore \beta = +ve \\
 
 \therefore \psi_{1} = C \text{sin}(\beta x) + D \text{cos}(\beta x) \qquad \psi_{3} = E \text{sin}(\beta x) + F \text{cos}(\beta x) 
 $
 </br></br>
 $
-\text{ Case 2: } E < V_{0} \qquad \therefore \beta = -ve \\
+\text{ Case 2: } \text{ If } E < V_{0} \qquad \therefore \beta = -ve \\
 
 \therefore \psi_{1} = C e^{\beta x } + D e^{- \beta x } \qquad \psi_{3} = E e^{\beta x } + F e^{- \beta x }
 $ 
 
 Any exploding (tending to $ \infty $) terms can be neglected as the wave function must adhere to our "sensible" wave-function requirements as show in the solutions section.
 
-For $ E > V_{0} $, there are no exploding terms and we have already found our solutions.
+For $ E > V_{0} $, there are no exploding terms and we have already **found our solutions**.
 
-However for $ E < V_{0} $, there are exploding terms that need to be corrected. 
+However for $ E < V_{0} $, there are **exploding terms** that need to be **removed**. 
+
 ##### Note*: The result for $ E < V_{0} $ is significant as this only works for wave-duality and not for classical mechanics. This process is known as tunneling.
 
 For $ x \leq 0 $, as $ \beta < 0 $: 
