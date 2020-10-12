@@ -156,3 +156,6 @@ Solve for the potential by integration and applying boundary conditions.
 
 </br>
 
+## Hall Effect
+
+
