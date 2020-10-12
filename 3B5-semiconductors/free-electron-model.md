@@ -28,9 +28,9 @@ To derive the function, we will be considering the following:
 
 * $ \psi = A \text{sin}(k_{x} x) + B \text{cos}(k_{x} x) $ 
 
-* The wavefunction must be zero at the infinite barriers of the well. $ \psi(0) = \psi(L) = 0 \qquad \therefore B = 0 $ and $ k_{x} = \dfrac{n \pi}{L} \qquad \text{ for } n \in \mathcal{N} $
+* The wavefunction must be zero at the infinite barriers of the well. $ \psi(0) = \psi(L) = 0 \qquad \therefore B = 0 $ and $ k_{x} = \dfrac{2 \pi}{L} n \qquad \text{ for } n \in \mathcal{N} $
 
-* Repeat the analysis in the y and z direction giving $ k_{y} = k_{z} = k_{x} = \dfrac{n \pi}{L} $
+* Repeat the analysis in the y and z direction giving $ k_{y} = k_{z} = k_{x} = \dfrac{2 \pi}{L} n $
 
 * The **total number of solutions** $ N $ with a different value for $ k_{x} $, $ k_{y} $ and $ k_{z} $ and with a magnitude of the wavevector less than $ k $ is obtained by calculating the **volume of a sphere with radius $ k $ divided by the volume of the cube corresponding to a single solution $ (\dfrac{2\pi}{L})^{3} $.** A **factor of two** is added to account for the two possible spins of each solution.
 $$ N = 2 \cdot \dfrac{ \Big( \dfrac{4}{3} \pi k^{3} \Big) }{ \Big( \dfrac{2\pi}{L} \Big)^{3} } $$
