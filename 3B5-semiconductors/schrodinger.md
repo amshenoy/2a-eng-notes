@@ -162,5 +162,5 @@ $$ \Delta E \Delta t \geqslant \dfrac{\hbar}{2} $$
 $ \therefore p_{min} = \dfrac{\hbar}{2 \Delta x} $
 
 Energy of electron at energy state $ n $:
-### $$ E_{n} = (2n \pi)^{2} E_{min} = (2n \pi)^{2} \dfrac{p_{min}^2}{2m} $$
+### $$ E_{n} = (2n \pi)^{2} E_{min} = (2n \pi)^{2} \dfrac{p_{min}^2}{2m} = \dfrac{(n\pi)^2 \ \hbar^2 }{2m \ \Delta x ^{2}} $$
 
