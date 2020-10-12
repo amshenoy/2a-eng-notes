@@ -19,6 +19,6 @@ Wave Vector &emsp; $ k = \dfrac{2 \pi}{\lambda} $
 
 Momentum &emsp; $ p = mv = \dfrac{h}{\lambda} = \hbar \ k $
 
-Energy &emsp; &emsp; $ E = hf = h \dfrac{c}{\lambda} = \hbar \ \omega $
+Energy &emsp; &emsp; $ E = hf = h \dfrac{c}{\lambda} = \hbar \ \omega = \dfrac{p^2}{2m} = \dfrac{\hbar^2 k^2}{2m}$
 
 </br><hr></br>
