@@ -1,5 +1,18 @@
 # Free-Electron Model
 
+## Fermi Function
+
+The Fermi function $ f(E) $ is a probability function (not probability density) which outputs the probability of an electron occupying an energy state $ E $ under thermal equilibrium. $ k $ is the Boltzmann constant and $ T $ is the temperature. This will be useful for finding the probability of an electron being in the valence or the conduction band.
+
+$$ \large f(E) = \dfrac{1}{1+e^{\frac{E-E_{f}}{kT}}} $$
+
+The function is dependent on the Fermi energy level $ E_{f} $ which is in turn dependent on the effective density of energy states $ N_{c} $ (in the conduction band) and $ N_{v} $ (in the valence band).
+
+#### Properties
+$$ 0 \leq f(E) \leq 1 $$
+$$ f(E_{f}) = \frac{1}{2} $$
+$$ \small \text{Probability of empty energy state} \qquad \large 1 - f(E)$$
+
 ## Density of States
 
 This section is the derivation of the density of states function for semiconductors.
