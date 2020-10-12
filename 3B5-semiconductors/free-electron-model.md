@@ -1,5 +1,45 @@
+# Free-Electron Model
+
+## Density of States
+
+This section is the derivation of the density of states function for semiconductors.
 
 
+#### Density of states in a semiconductor = Density per unit volume per unit energy of the number of solutions to Schrödinger's equation
+
+To derive the function, we will be considering the following:
+
+* The semiconductor can be modeled as an infinite quantum well in which electrons with effective mass $ m* $ are free to move with the base of the well being $ E = 0 $.
+
+* Semiconductor is a cube with side $ L $. (This does not actually matter we are calculating the density of states per unit volume) 
+
+* $ \psi = A \text{sin}(k_{x} x) + B \text{cos}(k_{x} x) $ 
+
+* The wavefunction must be zero at the infinite barriers of the well. $ \psi(0) = \psi(L) = 0 \qquad \therefore B = 0 $ and $ k_{x} = \dfrac{n \pi}{L} \qquad \text{ for } n \in \mathcal{N} $
+
+* Repeat the analysis in the y and z direction giving $ k_{y} = k_{z} = k_{x} = \dfrac{n \pi}{L} $
+
+* The **total number of solutions** $ N $ with a different value for $ k_{x} $, $ k_{y} $ and $ k_{z} $ and with a magnitude of the wavevector less than $ k $ is obtained by calculating the **volume of $ \dfrac{1}{8} $ of a sphere with radius $ k $ divided by the volume of the cube corresponding to a single solution $ (\dfrac{\pi}{L})^{3} $.** A **factor of two** is added to account for the two possible spins of each solution.
+$$ N = 2 \cdot \dfrac{ \Big( \dfrac{1}{8} \cdot \dfrac{4}{3} \pi k^{3} \Big) }{ \Big( \dfrac{\pi}{L} \Big)^{3} } $$
+
+##### Note*: We are essentially trying to calculate the number of cubes that can fit in an eighth of a sphere where each cube can hold two electrons with opposite spins.
+
+Now we can calculate the density of states per unit volume per unit energy $ g(E) $ by differentiating density of states per unit volume $ N $ with respect to energy $ E $:
+ 
+$ g(E) = \dfrac{dN}{dE} = \dfrac{dN}{dk} \dfrac{dk}{dE}$
+
+From before we know that $ E = \dfrac{\hbar k^{2}}{2m^{*}} $ 
+
+$ \therefore \dfrac{dk}{dE} = \dfrac{m^{*}}{\hbar k} \qquad \text{where} \qquad  k = \dfrac{\sqrt{2m^{*}E}}{\hbar} $ 
+
+Expanding and simplifying $ g(E) $ gives the following:
+$$ g(E) = \dfrac{\pi k^{2}}{ \Big( \dfrac{\pi}{L} \Big)^{3} } \dfrac{m^{*}}{\hbar k} = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m^{*})^{\frac{3}{2}} \sqrt{E} \qquad (E \geq 0) $$
+
+The above is an important result and will help us in understanding semiconductors. Stated below are the functions for the conduction and valence density of states per unit energy:
+
+$$ \therefore g_{c}(E) = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m_{n}^{*})^{\frac{3}{2}} \sqrt{E-E_{c}} \qquad (E \geq E_{c}) $$
+
+$$ \therefore g_{v}(E) = \dfrac{8 \pi \sqrt{2}}{h^{3}} (m_{p}^{*})^{\frac{3}{2}} \sqrt{E_{v}-E} \qquad (E \leq E_{v}) $$
 
 ### Density of States
 
