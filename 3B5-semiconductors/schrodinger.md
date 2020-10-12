@@ -159,3 +159,8 @@ $$ \Delta p \Delta x \geqslant \dfrac{\hbar}{2} $$
 This can also be written using $ \Delta E $ as the error in energy and $ \Delta t $ as the error in time:
 $$ \Delta E \Delta t \geqslant \dfrac{\hbar}{2} $$
 
+$ \therefore p_{min} = \dfrac{\hbar}{2 \Delta x} $
+
+Energy of electron at energy state $ n $:
+### $$ E_{n} = (2n \pi)^{2} E_{min} = (2n \pi)^{2} \dfrac{p_{min}^2}{2m} $$
+
