@@ -33,6 +33,7 @@ $$ N_{v} = 2 \Big( \dfrac{ 2 \pi \ m_{p}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2}
 </br>
 
 ### Fermi Energy Level
+The energy of the highest filled state is called the Fermi energy (E_{F}).
 
 #### Intrinsic Fermi Level
 Consider the Fermi energy level of an intrinsic semconductor at thermal equilibrium to be $ E_{i} $ . This is roughly the midpoint of $ E_{v} $ and $ E_{c} $:
