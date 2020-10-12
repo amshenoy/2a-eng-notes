@@ -37,8 +37,17 @@ $$ N = 2 \cdot \dfrac{ \Big( \dfrac{4}{3} \pi k^{3} \Big) }{ \Big( \dfrac{2\pi}{
 
 ##### Note*: We are essentially trying to calculate the number of cubes that can fit in a sphere where each cube can hold two electrons with opposite spins.
 
+We could also consider an infinitesimal k-space $\delta k$.
+$$ \delta E = \dfrac{\hbar^2}{m} k \delta k $$
+$$ \delta V = 4 \pi k^2 \delta k $$
+$$ 2 \text{ states in volume } (\dfrac{2\pi}{L}) ^3 $$
+$$ \delta N = 2 \dfrac{4 \pi k^2 \delta k}{(\dfrac{2 \pi}{L})^3} $$
+$$ \delta n = \dfrac{\delta N}{L^3} = \dfrac{k}{\pi}^2 \delta k $$
+
+</br>
+
 Now we can calculate the density of states per unit volume per unit energy $ g(E) $ by differentiating density of states per unit volume $ N $ with respect to energy $ E $:
- 
+
 $ g(E) = \dfrac{dN}{dE} = \dfrac{dN}{dk} \dfrac{dk}{dE}$
 
 From before we know that $ E = \dfrac{(\hbar k)^{2}}{2m^{*}} $ 
