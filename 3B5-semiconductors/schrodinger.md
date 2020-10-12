@@ -78,6 +78,8 @@ $$ - \dfrac{\hbar^{2}}{2m} \dfrac{\partial^{2} \psi}{\partial x^{2}} + V \psi = 
 However we will be looking at the **time-independent** Schrodinger equation (ie. $\hat{E} (\psi) = \text{Constant} = E \psi $):
 $$ - \dfrac{\hbar^{2}}{2m} \dfrac{\partial^{2} \psi}{\partial x^{2}} + V \psi = E \psi $$
 
+### $$ \color{blue}{ - \dfrac{\hbar^{2}}{2m} \dfrac{\partial^{2} \psi}{\partial x^{2}} = (E - V ) \psi } $$
+
 ### Solutions
 
 We can rearrange the Schrodinger's equation to simplify the linear PDE.  
