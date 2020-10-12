@@ -32,10 +32,10 @@ To derive the function, we will be considering the following:
 
 * Repeat the analysis in the y and z direction giving $ k_{y} = k_{z} = k_{x} = \dfrac{n \pi}{L} $
 
-* The **total number of solutions** $ N $ with a different value for $ k_{x} $, $ k_{y} $ and $ k_{z} $ and with a magnitude of the wavevector less than $ k $ is obtained by calculating the **volume of $ \dfrac{1}{8} $ of a sphere with radius $ k $ divided by the volume of the cube corresponding to a single solution $ (\dfrac{\pi}{L})^{3} $.** A **factor of two** is added to account for the two possible spins of each solution.
-$$ N = 2 \cdot \dfrac{ \Big( \dfrac{1}{8} \cdot \dfrac{4}{3} \pi k^{3} \Big) }{ \Big( \dfrac{\pi}{L} \Big)^{3} } $$
+* The **total number of solutions** $ N $ with a different value for $ k_{x} $, $ k_{y} $ and $ k_{z} $ and with a magnitude of the wavevector less than $ k $ is obtained by calculating the **volume of a sphere with radius $ k $ divided by the volume of the cube corresponding to a single solution $ (\dfrac{2\pi}{L})^{3} $.** A **factor of two** is added to account for the two possible spins of each solution.
+$$ N = 2 \cdot \dfrac{ \Big( \dfrac{4}{3} \pi k^{3} \Big) }{ \Big( \dfrac{2\pi}{L} \Big)^{3} } $$
 
-##### Note*: We are essentially trying to calculate the number of cubes that can fit in an eighth of a sphere where each cube can hold two electrons with opposite spins.
+##### Note*: We are essentially trying to calculate the number of cubes that can fit in a sphere where each cube can hold two electrons with opposite spins.
 
 Now we can calculate the density of states per unit volume per unit energy $ g(E) $ by differentiating density of states per unit volume $ N $ with respect to energy $ E $:
  
