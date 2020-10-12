@@ -41,7 +41,7 @@ Now we can calculate the density of states per unit volume per unit energy $ g(E
  
 $ g(E) = \dfrac{dN}{dE} = \dfrac{dN}{dk} \dfrac{dk}{dE}$
 
-From before we know that $ E = \dfrac{\hbar k^{2}}{2m^{*}} $ 
+From before we know that $ E = \dfrac{(\hbar k)^{2}}{2m^{*}} $ 
 
 $ \therefore \dfrac{dk}{dE} = \dfrac{m^{*}}{\hbar k} \qquad \text{where} \qquad  k = \dfrac{\sqrt{2m^{*}E}}{\hbar} $ 
 
