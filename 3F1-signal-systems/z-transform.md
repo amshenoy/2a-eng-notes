@@ -77,13 +77,15 @@ $$ \color{green} { \{x_{k}\}*\{y_{k}\} = \sum^{k}_{i=0} x_{i} y_{k-i} = \sum^{k}
 Example:
 #### $$ \color{blue} { \mathcal{Z}\{ k p^{k} \} } = \color{red}{?} $$
 
-$$ \color{blue} { \mathcal{Z}\{ k p^{k} \} } 
-\\ = \color{blue} { \mathcal{Z}\{ p \cdot k p^{k-1} \} } 
-\\ = \color{blue} { p \cdot \mathcal{Z}\{ k p^{k-1} \} } 
-\\ = \color{blue} { p \cdot \mathcal{Z}\{ \dfrac{d}{dp} \Big( p^{k} \Big) \} } 
-\\ = \color{blue} { p \cdot \dfrac{d}{dp} \Big( \mathcal{Z}\{ p^{k} \} \Big) } 
-\\ = \color{blue} { p \cdot \dfrac{d}{dp} \Big( \dfrac{1}{1-pz^{-1}} \Big) } 
-\\ = \color{blue} { p \cdot \Big( \dfrac{z^{-1}}{(1-pz^{-1})^{2}} \Big) } 
+$$ 
+\begin{align*}
+\color{blue} { \mathcal{Z}\{ k p^{k} \} } & = \color{purple} { \mathcal{Z}\{ p \cdot k p^{k-1} \} } 
+ = \color{purple} { p \cdot \mathcal{Z}\{ k p^{k-1} \} } 
+\\& = \color{blue} { p \cdot \mathcal{Z}\{ \dfrac{d}{dp} \Big( p^{k} \Big) \} } 
+= \color{blue} { p \cdot \dfrac{d}{dp} \Big( \mathcal{Z}\{ p^{k} \} \Big) } 
+\\& = \color{blue} { p \cdot \dfrac{d}{dp} \Big( \dfrac{1}{1-pz^{-1}} \Big) } 
+= \color{blue} { p \cdot \Big( \dfrac{z^{-1}}{(1-pz^{-1})^{2}} \Big) } 
+\end{align*}
 $$
 </br>
 ### $$
@@ -132,3 +134,11 @@ Using **long division** to generate first-few terms to hopefully **extrapolate p
 ## Laplace to Z Transform
 
 ### $ \color{green} { F(s) \overbrace{\longrightarrow}^{\text{Tables}} f(t) \rightarrow f(kT) \text{ exponentials } \overbrace{\longrightarrow}^{\text{Z-Transform}} F(z) } $ 
+
+</br><hr>
+
+## BIBO Stability
+
+Bounded Input gives Bounded Output
+
+
