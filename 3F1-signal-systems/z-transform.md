@@ -60,16 +60,18 @@ $  \mathcal{Z}\{ x_{k-1} \} = x_{-1} + z^{-1} \mathcal{Z}\{ x_{k} \} \quad \text
 ### Initial-Value Theorem
 ### $$ \color{green} {  \lim_{z \rightarrow \infty} \overline{x}(z) = \lim_{z \rightarrow \infty} \mathcal{Z}\{ x_{k} \} = x_{0}  } $$
 
+### Final-Value Theorem
+### $$ \color{green} {  \lim_{z \rightarrow 1} (z-1) Y(z) = \lim_{z \rightarrow \infty} \mathcal{Z}\{ x_{k} \} = x_{0}  } $$
+
 ### Convolution
 
-$$ \{x_{k}\}*\{y_{k}\} = \sum^{k}_{i=0} x_{i} y_{k-i} = \sum^{k}_{i=0} x_{k-i} y_{i} $$
+$$ \color{green} { \{x_{k}\}*\{y_{k}\} = \sum^{k}_{i=0} x_{i} y_{k-i} = \sum^{k}_{i=0} x_{k-i} y_{i} } $$
 
 ### $$ \color{green} {  \mathcal{Z}\{ x_{k} * y_{k} \} = \mathcal{Z}\{ x_{k} \} \mathcal{Z}\{ y_{k} \} = \overline{x}(z) \overline{y}(z)  } $$
 
+</br>
 
-## Inversion
-
-### Standard Transforms
+## Standard Transforms
 
 ### $$ \color{blue} { \mathcal{Z}\{ p^{k} \} = \dfrac{1}{1-pz^{-1}} } $$
 Example:
@@ -92,7 +94,25 @@ Letting **p = 1**,
 \therefore \color{blue} { \mathcal{Z}\{ k \}  = \dfrac{z^{-1}}{(1-z^{-1})^{2}} }
 $$
 
-### Inverting a Z-domain Signal
+### Step Response
+### $$
+\color{blue} { \mathcal{Z}\{ h_{k} \}  = H(z) = \dfrac{1}{1-z^{-1}} }
+$$
+$$ Y(z) = G(z) H(z) $$
+
+#### Steady-State Value
+Using the final-value theorem:
+$$ \color{purple}{ \lim_{k \rightarrow \infty} y(k) = G(1) } $$
+
+### Harmonic Response
+### $$
+\text{If } \quad u_{k} = \cos(\omega kT) \\
+\color{blue} { y_{k} = |G(e^{j \omega T})| \cos(\omega k T + \angle G(e^{j \omega T})) }
+$$
+#### Note*: The function in the output is the same as the function in the input. (ie. $\sin \rightarrow \sin$)
+</br>
+
+## Inverting a Z-domain Signal
 Always **convert top-heavy z-fraction into a proper fraction + constant**. Constant in z-domain adds to the initial term in k-domain (ie. if $ X(z) = C + f(z) $ then $ \mathcal{Z^{-1}}\{ X(z) \} = \{x_{k}\} = \{f_{0}+C, f_{1}, ..., f_{n} \} $ ).
 
 $ \small \text{Note*: Derivable using the fact that } \mathcal{Z^{-1}}\{ 1 \} = \delta(k) $
@@ -103,3 +123,12 @@ Using **partial fractions** to break-down a system function into **standard tran
 #### Numeric Inversion
 Using **long division** to generate first-few terms to hopefully **extrapolate pattern**.
 
+</br><hr>
+
+## Solving LDEs
+
+### $ \color{red} { \text{LDE} \enspace y_{k} \overbrace{\longrightarrow}^{\text{Z-Transform}} Y(z) \overbrace{\longrightarrow}^{\text{Inverse Z-Transform}} y(k) \text{ or } \{y_{k}\} } $ 
+
+## Laplace to Z Transform
+
+### $ \color{green} { F(s) \overbrace{\longrightarrow}^{\text{Tables}} f(t) \rightarrow f(kT) \text{ exponentials } \overbrace{\longrightarrow}^{\text{Z-Transform}} F(z) } $ 
