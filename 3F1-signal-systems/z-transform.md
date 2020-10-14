@@ -141,5 +141,5 @@ Using **long division** to generate first-few terms to hopefully **extrapolate p
 
 Bounded Input gives Bounded Output
 
-Stable if all roots of $ G(z) $ are in unit circle.
+Stable if all poles of $ G(z) $ are in unit circle.
 
