@@ -42,7 +42,7 @@ $$ \delta E = \dfrac{\hbar^2}{m} k \delta k $$
 $$ \delta V = 4 \pi k^2 \delta k $$
 $$ 2 \text{ states in volume } (\dfrac{2\pi}{L}) ^3 $$
 $$ \delta N = 2 \dfrac{4 \pi k^2 \delta k}{(\dfrac{2 \pi}{L})^3} $$
-$$ \delta n = \dfrac{\delta N}{L^3} = \dfrac{k}{\pi}^2 \delta k $$
+$$ \delta n = \dfrac{\delta N}{L^3} = \dfrac{k^2}{\pi^2} \delta k $$
 
 </br>
 
