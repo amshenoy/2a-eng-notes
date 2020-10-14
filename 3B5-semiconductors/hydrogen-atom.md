@@ -31,11 +31,9 @@ $ a = 2n \Big( \dfrac{\hbar^{2}}{2m} \div \dfrac{e^{2}}{4\pi \epsilon_{0}} \Big)
 ## Electron Shells
 ### 1s 2s 2p 3s 3p 3d &emsp; - &emsp; Corresponding n, l ( n={1,2,3,4,...} l = {0,1,2,3,4} = {s,p,d,f,g} )
 
+</br>
+
 ## Pauli Exclusion Principle
-
-The wavefunction of each electron must be unique (ie. the set of quantum of numbers must be unique).
-
-$$\textbf{ "In a multi-electron system there can never be more than one electron in the same state." } $$
 
 ### $ \color{red}{ m_{s} = \pm \dfrac{1}{2} } \qquad \color{purple}{ m_{s} \enspace - \enspace \textbf{Spin QN} } $
 
@@ -44,3 +42,7 @@ Note*: Derived from the Dirac equation (out of scope)
 $ S = \sqrt{\dfrac{1}{2}(1+\dfrac{1}{2})}\hbar = \dfrac{\sqrt{3}}{2} \hbar \qquad \color{purple}{ L \enspace - \enspace \text{ Spin Angular Momentum} }$
 
 $ S_{z} = m_{s} \hbar = \pm \dfrac{1}{2} \hbar \qquad \color{purple}{ S_{z} \enspace - \enspace \text{ Spin Angular Momentum along arbitrary z-axis } }$
+
+The wavefunction of each electron must be unique (ie. the set of quantum numbers must be unique).
+
+$$ \textbf{ "In a multi-electron system there can never be more than one electron in the same state." } $$
