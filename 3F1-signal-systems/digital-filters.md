@@ -34,9 +34,11 @@ A system is causal if the system $ G(z) $ is **not top-heavy**.
 
 If a system is causal, $ G(z) $ is finite (equals $ g_{0} $) as $ z \rightarrow \infty $ and is **zero for negative time**.
 
-</br>
+</br><hr>
 
-## Linear Filter
+## FIR Filter Design
+
+### Linear Filter
 
 $$ \textbf{A stable filter "forgets" the initial conditions} $$
 
@@ -47,7 +49,7 @@ $ C(z, y_{i}) $ takes into account the initial conditions of the filter. $ U(z) 
 
 </br>
 
-## Ideal Filter
+### Ideal Filter
 
 $$
 \text{ Analog } \cos(\omega t) \qquad  \text{ Digital } \cos(k \theta)
@@ -90,8 +92,6 @@ To convert the filter from the z-domain to the k-domain, we can use the inverse 
 $$
 
 </br>
-
-## Filter Design
 
 ### Filter Specs
 
@@ -165,7 +165,7 @@ $$ g^{*}_{k} = h_{k} w_{k}
 \\ g_{k} = g^{*}_{k-N} $$
 
 
-</br>
+</br><hr>
 
 ## FIR vs IIR Filters
 
@@ -183,5 +183,11 @@ $$ g^{*}_{k} = h_{k} w_{k}
 
 - Design Methods: i) Direct optimisation of transfer function, ii) digital implementation of analog filters.
 - Can be unstable, use feedback
+
+</br><hr>
+
+## IIR Filter Design
+
+
 
 
