@@ -8,7 +8,7 @@ Infinite collection of random variables
 ### Discrete Random Variables
 **Joint PMF** &emsp; $ p(x_{0}, ..., x_{n}) $
 
-</br>
+</br><hr>
 
 ## Markov Chains
 $ \pi $ or $ \lambda $ is the initial distribution
@@ -35,9 +35,26 @@ More briefly written as:
 A discrete time random process (**Markov** or not) is **strictly stationary** if:
 ### $ f_{X_{0}, ... X_{k}}(x_{0}, ..., x_{k}) = f_{X_{m}, ... X_{m+k}}(x_{m}, ..., x_{m+k}) $ &emsp; for all k and m > 0
 
+#### Note*: Markov Chains are strictly stationary
+
 </br>
 
 ### Invariant (/Stationary) Distribution
 
 
 
+
+</br><hr>
+
+## Autoregressive (AR) Process
+
+</br>
+
+### Wide Sense Stationary (WSS)
+
+
+### Correlation Function
+
+</br><hr>
+
+## Moving Average (MA) Process
