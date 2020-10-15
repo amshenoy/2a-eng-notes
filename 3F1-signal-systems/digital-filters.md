@@ -49,17 +49,45 @@ $ C(z, y_{i}) $ takes into account the initial conditions of the filter. $ U(z) 
 
 ## Ideal Filter
 
-(TBD)
+$$
+\text{ Analog } \cos(\omega t) \qquad  \text{ Digital } \cos(k \theta)
+\\
+H_{a}(j \omega) = \begin{cases}
+               1 \qquad |\omega| \le \omega_{c} \\
+               0 \qquad |\omega| \gt \omega_{c}
+            \end{cases}
+\qquad 
+\color{blue}{
+H_{d}(e ^ {j \theta}) = \begin{cases}
+               1 \qquad |\theta| \le \theta_{c} \\
+               0 \qquad |\theta| \gt \theta_{c}
+            \end{cases}
+}
+$$
+
+These cannot be implemented in real life as they have a non-causal impulse response.
+
+### $ \color{red} { \text{Frequency Response of Digital Filter: } G(e^{j \theta}) } $
+
+Write $ G(e^{j \theta}) $ as a delay term and a frequency-dependent gain term (for easier handling):
+###  $ \color{blue}{ G(e^{j \theta}) = e^{-j N\theta} f(\theta) }$
+
+### Sketch $ \color{blue}{ | G(e^{j \theta}) |  \quad 0 \le \theta \le \pi } $  for labelling as lowpass, bandpass, highpass or allpass. 
+
 
 </br>
 
-These cannot be implemented as they have a non-causal impulse response.
+
 
 ### Inverse Fourier Transform
 
-(TBD)
+To convert the filter from the z-domain to the k-domain, we can use the inverse fourier transform:
 
-
+### $$ 
+\text{ Analog } \qquad h_{a}(t) = \dfrac{1}{2\pi} \int^{\infty}_{-\infty} H_{a}(j \omega) e^{j \omega t} d\omega
+\\
+\color{blue}{ \text{ Digital } \qquad h_{d}(k) = \dfrac{1}{2\pi} \int^{\pi}_{-\pi} H_{d}(e^{j \theta}) e^{j \theta k} d\theta }
+$$
 
 </br>
 
@@ -73,9 +101,68 @@ Peak-to-peak Passband Ripple - $ 1 + 2 \delta p $ - Start to Peak
 
 Minimum Stopband Attenuation - $ \dfrac{1}{\delta s} $ - Attenuation of stopband level ($ \delta s $)
 
-### Design Methods
+### Window Design Method
 
-(TBD)
+### $$ \color{blue}{ \underbrace{g_{k}}_{\text{Filter}} = \underbrace{h_{k}}_{\text{Ideal/Desired} \\ \text{ Impulse Response}} \underbrace{w_{k}}_{\text{Window function}} } $$
+
+$ G = H * W $ 
+
+Using **duality** of multiplication / **convolution**:
+
+### $$ \color{blue}{ G(e^{j \omega}) = \dfrac{1}{2 \pi} \int^{\pi}_{-\pi} H(e^{j \theta}) W(e^{j (\omega - \theta)}) d\theta } $$
+
+#### Full Steps:
+1) Select window function $ w_{k} $
+2) Select ideal frequency response $ H(e^{j \theta}) $
+3) Compute coefficients of $ h_{k} $
+4) $ g_{k} = h_{k} w_{k} $ 
+5) Evaluate and iterate if necessary
+
+Note*: Truncation = Multiplication by Window
+
+</br>
+
+#### Linear Phase
+Linear Phase $ G(e^{j \theta}) = |G(e^{j \theta})| e^{-j \theta \dfrac{N}{2}} $ is achieved if $ g_{k} = g_{N-k} $
+
+All window functions satisfy linear phase $ w_{k} = w_{N-k} $.
+If the impulse response $ h_{k} $ is also symmetric ie. $ h_{k} = h_{N-k} $, then $ g_{k} = g_{N-k} $.
+
+</br>
+
+### Composite Filters
+
+#### Example:
+**Ideal Bandpass Filter**
+$$
+\begin{align*}
+H(e^{j \theta}) &= \begin{cases}
+               1 \qquad \theta_{1} \le \theta \le \theta_{2}\\
+               0 \qquad \text{Otherwise}
+            \end{cases}
+\\
+&= \text{Lowpass}_{[0, \theta_{2}]} - \text{Lowpass}_{[0, \theta_{1}]}
+\end{align*}
+\\ 
+\text{ where } \text{ Lowpass}_{[0, \theta_{c}]}(e^{j \theta}) = \begin{cases}
+ 1 \qquad 0 \le \theta \le \theta_{c}\\
+ 0 \qquad \text{Otherwise}
+\end{cases} 
+$$
+
+$$
+\begin{align*}
+h_{k} &= \mathcal{F}^{-1}(H)
+\\ &= \mathcal{F}^{-1}(\text{Lowpass}_{[0, \theta_{2}]}) - \mathcal{F}^{-1}(\text{Lowpass}_{[0, \theta_{1}]}) 
+\\ &= \dfrac{sin(k\theta_{2})}{\pi k} - \dfrac{sin(k\theta_{1})}{\pi k} 
+\end{align*}
+$$
+
+**Final Filter $ g_{k} $**
+
+With window function and shift as required.
+$$ g^{*}_{k} = h_{k} w_{k}
+\\ g_{k} = g^{*}_{k-N} $$
 
 
 </br>
@@ -85,6 +172,7 @@ Minimum Stopband Attenuation - $ \dfrac{1}{\delta s} $ - Attenuation of stopband
 **FIR**
 + Simple, fast, stable, feedforward implementation (FFT)
 + Linear Design Methods (Easy, efficient)
++ Can have exactly linear phase ie. $ G(e^{j \theta}) = |G(e^{j \theta})| e^{-j \theta} $
 
 - Higher filter order than IIR required (for same performance)
 - Often greater delay than an equal performance IIR
