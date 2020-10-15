@@ -58,3 +58,10 @@ A discrete time random process (**Markov** or not) is **strictly stationary** if
 </br><hr>
 
 ## Moving Average (MA) Process
+
+
+</br><hr>
+
+## Power Spectrum
+
+
