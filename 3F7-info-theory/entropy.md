@@ -1,6 +1,6 @@
 # Entropy
 
-$$ H(X) = \sum_{x} P(x) log \Big( \dfrac{1}{P(x)} \Big) $$
+$$ H(X) = \sum_{x} P(x) log \Big( \dfrac{1}{P(x)} \Big) = \mathcal{E}(-log(P(x))) $$
 
 ### Binary Entropy Function
 $$ 
