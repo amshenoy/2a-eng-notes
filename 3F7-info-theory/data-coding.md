@@ -1,5 +1,24 @@
 # Information Coding
 
+## Compression
+Typical set is a small subset of the state space but contains majority of the probability. Hence we can focus on trying to optimise the coding for the typical set.
+
+### Fundamental Limit
+### $ E(L) \quad \text{Average Codeword 
+Length per Sequence} $
+
+### $ \dfrac{E(L)}{N} \quad \text{Average Codeword 
+Length per Symbol} $
+ 
+**Expected codeword length per symbol must be greater than or equal to the entropy of the source.**
+### $$ \dfrac{E(L)}{N} \ge H(X) $$
+
+
+Note*: A uniform distribution source cannot be compressed at all!
+
+
+</br><hr>
+
 Prefix-free codes
 
 
@@ -35,11 +54,11 @@ $ \rule{14cm}{0.4pt} $
 
 ### Given $ [a, a+\color{red} {p}] $ :
 
-$ \color{blue} { L } = \Bigg\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Bigg\rceil \text{ or } \Bigg\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Bigg\rceil + 1 $
+### $ \color{blue} { L } = \Bigg\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Bigg\rceil \text{ or } \Bigg\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Bigg\rceil + 1 $
 
-#### Check if some $ \color{red} { j } $ and $ \color{red} { j + 1 } $ lies in $ \Big[a \cdot 2^{\color{blue} {L}}, \quad (a+\color{red} {p}) \cdot 2^{\color{blue} {L}} \Big] $
+### Check if some $ \color{red} { j } $ and $ \color{red} { j + 1 } $ lies in $ \Big[a \cdot 2^{\color{blue} {L}}, \quad (a+\color{red} {p}) \cdot 2^{\color{blue} {L}} \Big] $
 
-#### Codeword for the symbol is $ \color{blue} { bin(\color{red} {j}) } $
+### Codeword for the symbol is $ \color{blue} { bin(\color{red} {j}) } $
 
 Note*: Possible to have more than one $ j $ and $ j+1 $ pairs and hence more than one codeword per symbol.
 $ \rule{14cm}{0.4pt} $
@@ -74,27 +93,26 @@ Nested Subset Diagram
 </br>
 
 **PRACTICALLY as follows:**
-#### 1)
-Calculate cumulative probabilities $ \underline{f} $ for each symbol where $ f(s_{1}) = 0 $.
+#### 1) Calculate cumulative probabilities $ \underline{f} $ for each symbol where $ f(s_{1}) = 0 $.
 
-For each symbol $ s_{i} $ in sequence $ \underline{s} $, calculate the alphabet interval $ A_{i} $ :
+#### 2) For each symbol $ s_{i} $ in sequence $ \underline{s} $, calculate the alphabet interval $ A_{i} $ :
 
 $ A_{1} = [0, p_{1}] $
 
 $ A_{i} \quad = \quad \Big[ f(s_{i}), \quad f(s_{i}) + p(s_{i}) \Big] $
 
-Apply recursive interval finding from $ i = 2 $ to $ i = N $ to find the sequence interval $ S_{N} $ :
+#### 3) Apply recursive interval finding from $ i = 2 $ to $ i = N $ to find the sequence interval $ S_{N} $ :
 $ S_{i} = \Big[ f(s_{i-1}), \quad f(s_{i-1}) \Big] + p(s_{i-1})  \Big[ f(s_{i}), \quad f(s_{i}) + p(s_{i}) \Big] $ 
 
-#### 2) $ \text{Codeword} = bin(S_{N}[0] \cdot 2^{L}) $
+#### 4) $ \text{Codeword} = bin(S_{N}[0] \cdot 2^{L}) $
 
 </br>
 
 ### Average Codeword Length
 For a sequence of length $ N $, where each $i$-th sample is picked from a distribution $ X_{i} $.
 
-### $$ E(L) \lt \dfrac{H(X_{1}, ..., X_{N}) + 2}{N} \text{ bits per symbol} $$
-### $$ E(L) \lt H(X) + \dfrac{2}{N} \text{ bits per symbol} \quad \text{if X is i.i.d} $$
+### $$ \dfrac{E(L)}{N} \lt \dfrac{H(X_{1}, ..., X_{N}) + 2}{N} \text{ bits per symbol} $$
+### $$ \dfrac{E(L)}{N} \lt H(X) + \dfrac{2}{N} \text{ bits per symbol} \quad \text{if X is i.i.d} $$
 
 
 
