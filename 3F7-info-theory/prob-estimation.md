@@ -62,7 +62,8 @@ $$
 </br>
 
 ## Typicality
-#### A typical sequence for a random variable $ X $ has probability $ \color{blue}{ p_{T} = 2^{-n H(X)} } $ 
+
+### A typical sequence for a random variable $ X $ has probability $ \color{blue}{ p_{T} = 2^{-n H(X)} } $ 
 
 A typical set $ \mathcal{A}_{\epsilon, n} $ is therefore defined as the set of sequences $ (x_{1}, ..., x_{n}) $ for which:
 
@@ -72,7 +73,11 @@ This essentially means:
 
 $ \color{blue} { P((x_{1}, ..., x_{n}) \in \mathcal{A}_{\epsilon, n}) \quad \Leftrightarrow \quad 2^{-n (H(X)+\epsilon)} < P(x_{1}, ..., x_{n}) < 2^{-n (H(X)-\epsilon)} } $
 
-## Asymptotic Equipartition Property (AEP)
+### The number of typical sequences is close to $ \color{blue}{ N = 2^{n H(X)} } $.
+
+</br>
+
+### Asymptotic Equipartition Property (AEP)
 The observation of typicality gives an operational meaning to entropy.
 The **AEP** makes this precise for **any i.i.d. discrete source**, not just Bernoulli sources.
 
@@ -90,7 +95,7 @@ To get the actual AEP definition, apply $ - \dfrac{1}{n} \log_{2}$ of the inner 
 $$ \lim_{n \rightarrow \infty} P \Big( H(X)-\epsilon < -\dfrac{1}{n} \log_{2} P(X_{1}, ..., X_{n}) < H(X)+\epsilon \Big) = 1 $$
 $$ \color{red}{ \lim_{n \rightarrow \infty} P \Big( \Big| -\dfrac{1}{n} \log_{2} P(X_{1}, ..., X_{n}) - H(X) \Big| < \epsilon \Big) = 1 } $$
 
-### Proof using WLLN
+#### Proof using WLLN
 
 Let $ Y_{i} = - \log(P(X_{i})) $
 $$ \color{red}{ \lim_{n \rightarrow \infty} P \Big( \Big| \dfrac{1}{n} \sum_{i}^{n} Y_{i} - E\{Y_{1}\} \Big| < \epsilon \Big) = 1 } $$
