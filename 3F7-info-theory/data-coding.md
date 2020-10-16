@@ -23,10 +23,20 @@ Note*: A uniform distribution source cannot be compressed at all!
  
 **A codeset is prefix-free if no codeword in the codeset is a prefix of another codeword in the same codeset.**
 
+**Prefix-free** codewords must be the **leaves** of the binary tree.
+
 ### Unique Decodability
 A codeset is uniquely decodable if each codeword in the codeset can only be produced by the corresponding symbol and not by a combination of symbols.
 
 All **prefix-free codesets are uniquely decodable** however all uniquely decodable codesets are not prefix-free.
+
+### Kraft's Inequality
+
+Given a set of required lengths for each codeword, we can check if a prefix-free codeset is possible by pruning the binary tree.
+
+#### A binary prefix-free (including uniquely decodable) codeset with lengths $ l_{1}, ..., l_{n} $ exists only if:
+## $$ \sum^{n}_{i} 2^{-l_{i}} \le 1 $$
+
 
 
 </br><hr>
