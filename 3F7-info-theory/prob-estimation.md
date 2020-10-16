@@ -39,7 +39,7 @@ $$
 
 $ \color{blue}{\text{'Empirical average converges to the mean'}} $
 </br>
-**Let $ X_{1}, X{2}, ..., X_{n} $ be a sequence of i.i.d rvs with finite mean $ \mu $:**
+**Let $ X_{1}, X{2}, ..., X_{n} $ be a sequence of i.i.d rvs with finite mean $ \mu $ and let $ S_{n} = \dfrac{1}{n} \sum_{i}^{n} X_{i} $:**
 $$
 \text{Informal Statement of WLLN:} \color{blue}{ \qquad S_{n} \rightarrow \mu \qquad \text{ as } \quad n \rightarrow \infty }
 \\
