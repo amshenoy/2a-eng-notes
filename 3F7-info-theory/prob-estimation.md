@@ -64,6 +64,14 @@ $$
 ## Typicality
 #### A typical sequence for a random variable $ X $ has probability $ \color{blue}{ p_{T} = 2^{-n H(X)} } $ 
 
+A typical set $ \mathcal{A}_{\epsilon, n} $ is therefore defined as the set of sequences $ (x_{1}, ..., x_{n}) $ for which:
+
+$ 2^{-n (H(X)+\epsilon)} < P(x_{1}, ..., x_{n}) < 2^{-n (H(X)-\epsilon) } $ 
+
+This essentially means:
+
+$ \color{blue} { P((x_{1}, ..., x_{n}) \in \mathcal{A}_{\epsilon, n}) \quad \Leftrightarrow \quad 2^{-n (H(X)+\epsilon)} < P(x_{1}, ..., x_{n}) < 2^{-n (H(X)-\epsilon)} } $
+
 ## Asymptotic Equipartition Property (AEP)
 The observation of typicality gives an operational meaning to entropy.
 The **AEP** makes this precise for **any i.i.d. discrete source**, not just Bernoulli sources.
@@ -74,6 +82,8 @@ If $X_{1}, ..., X_{n}$ are i.i.d, then for any $ \epsilon > 0 $:
 $$ \color{blue}{ \lim_{n \rightarrow \infty} P \Big( 2^{-n (H(X)+\epsilon)} < P(X_{1}, ..., X_{n}) < 2^{-n (H(X)-\epsilon)} \Big) = 1 } $$
 
 **In words, as $ n \rightarrow \infty $ the probability of a typical sequence being generated is certain.**
+
+$$ \color{green}{ P((x_{1}, ..., x_{n}) \in \mathcal{A}_{\epsilon, n})|_{n \rightarrow \infty} \rightarrow 1 } $$
 </br>
 
 To get the actual AEP definition, apply $ - \dfrac{1}{n} \log_{2}$ of the inner probability and convert to absolute sign:
@@ -85,7 +95,7 @@ $$ \color{red}{ \lim_{n \rightarrow \infty} P \Big( \Big| -\dfrac{1}{n} \log_{2}
 Let $ Y_{i} = - \log(P(X_{i})) $
 $$ \color{red}{ \lim_{n \rightarrow \infty} P \Big( \Big| \dfrac{1}{n} \sum_{i}^{n} Y_{i} - E\{Y_{1}\} \Big| < \epsilon \Big) = 1 } $$
 
-Note*: $ E\{Y_{1}\} = H(X) $ and $ \sum_{i}^{n} Y_{i} = - \log(\prod^{n}_{i=1} P(X_{i})) = - \log(P(X_{1}, X_{2}, ..., X_{n})) $
+Note*: $ \color{purple}{ E\{Y_{1}\} = H(X) } $ and $ \color{purple}{ \sum_{i}^{n} Y_{i} = - \log(\prod^{n}_{i=1} P(X_{i})) = - \log(P(X_{1}, ..., X_{n})) } $
 
 
 
