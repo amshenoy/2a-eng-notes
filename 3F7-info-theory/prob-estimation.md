@@ -63,6 +63,8 @@ $$
 
 ## Typicality
 
+**A typical set is essentially a set for which the fraction of every symbol in the set is close to the probability of that symbol.**
+
 ### A typical sequence for a random variable $ X $ has probability $ \color{blue}{ p_{T} = 2^{-n H(X)} } $ 
 
 A typical set $ \mathcal{A}_{\epsilon, n} $ is therefore defined as the set of sequences $ (x_{1}, ..., x_{n}) $ for which:
