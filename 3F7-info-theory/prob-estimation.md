@@ -59,5 +59,33 @@ $$
 \text{Therefore WLLN is true!}
 $$
 
+</br>
+
+## Typicality
+#### A typical sequence for a random variable $ X $ has probability $ \color{blue}{ p_{T} = 2^{-n H(X)} } $ 
+
+## Asymptotic Equipartition Property (AEP)
+The observation of typicality gives an operational meaning to entropy.
+The **AEP** makes this precise for **any i.i.d. discrete source**, not just Bernoulli sources.
+
+</br>
+
+If $X_{1}, ..., X_{n}$ are i.i.d, then for any $ \epsilon > 0 $:
+$$ \color{blue}{ \lim_{n \rightarrow \infty} P \Big( 2^{-n (H(X)+\epsilon)} < P(X_{1}, ..., X_{n}) < 2^{-n (H(X)-\epsilon)} \Big) = 1 } $$
+
+**In words, as $ n \rightarrow \infty $ the probability of a typical sequence being generated is certain.**
+</br>
+
+To get the actual AEP definition, apply $ - \dfrac{1}{n} \log_{2}$ of the inner probability and convert to absolute sign:
+$$ \lim_{n \rightarrow \infty} P \Big( H(X)-\epsilon < -\dfrac{1}{n} \log_{2} P(X_{1}, ..., X_{n}) < H(X)+\epsilon \Big) = 1 $$
+$$ \color{red}{ \lim_{n \rightarrow \infty} P \Big( \Big| -\dfrac{1}{n} \log_{2} P(X_{1}, ..., X_{n}) - H(X) \Big| < \epsilon \Big) = 1 } $$
+
+### Proof using WLLN
+
+Let $ Y_{i} = - \log(P(X_{i})) $
+$$ \color{red}{ \lim_{n \rightarrow \infty} P \Big( \Big| \dfrac{1}{n} \sum_{i}^{n} Y_{i} - E\{Y_{1}\} \Big| < \epsilon \Big) = 1 } $$
+
+Note*: $ E\{Y_{1}\} = H(X) $ and $ \sum_{i}^{n} Y_{i} = - \log(\prod^{n}_{i=1} P(X_{i})) = - \log(P(X_{1}, X_{2}, ..., X_{n})) $
+
 
 
