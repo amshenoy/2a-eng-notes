@@ -19,8 +19,17 @@ Note*: A uniform distribution source cannot be compressed at all!
 
 </br><hr>
 
-Prefix-free codes
+## Prefix-Free Codes
+ 
+**A codeset is prefix-free if no codeword in the codeset is a prefix of another codeword in the same codeset.**
 
+### Unique Decodability
+A codeset is uniquely decodable if each codeword in the codeset can only be produced by the corresponding symbol and not by a combination of symbols.
+
+All **prefix-free codesets are uniquely decodable** however all uniquely decodable codesets are not prefix-free.
+
+
+</br><hr>
 
 ## Shannon-Fano Coding
 
