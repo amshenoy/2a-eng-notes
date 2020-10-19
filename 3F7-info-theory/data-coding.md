@@ -55,7 +55,7 @@ Given a set of required lengths for each codeword, we can check if a prefix-free
 
 1) Arrange symbols in order of probability $p_{i}$ from **highest to lowest** (or lowest to highest).
 
-2) Combine lowest two probabilities and re-insert into list at correct position. (**Draw cumulation branch diagram**)
+2) Combine lowest two probabilities and re-insert into list at correct position. $(\color{blue}{\textbf{Draw cumulation branch diagram}}) $
 
 3) **Repeat until only one node in list.**
 
@@ -85,11 +85,11 @@ $ \rule{14cm}{0.4pt} $
 
 ### Given $ [a, a+\color{red} {p}] $ :
 
-### $ \color{blue} { L } = \Bigg\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Bigg\rceil \text{ or } \Bigg\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Bigg\rceil + 1 $
+#### $ \color{blue} { L } = \Big\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Big\rceil \text{ or } \Big\lceil \log_{2} \dfrac{1}{\color{red} {p}} \Big\rceil + 1 $
 
-### Check if some $ \color{red} { j } $ and $ \color{red} { j + 1 } $ lies in $ \Big[a \cdot 2^{\color{blue} {L}}, \quad (a+\color{red} {p}) \cdot 2^{\color{blue} {L}} \Big] $
+#### Check if some $ \color{red} { j } $ and $ \color{red} { j + 1 } $ lies in $ \Big[a \cdot 2^{\color{blue} {L}}, \quad (a+\color{red} {p}) \cdot 2^{\color{blue} {L}} \Big] $
 
-### Codeword for the symbol is $ \color{blue} { bin(\color{red} {j}) } $
+#### Codeword for the symbol is $ \color{blue} { bin(\color{red} {j}) } $
 
 Note*: Possible to have more than one $ j $ and $ j+1 $ pairs and hence more than one codeword per symbol.
 $ \rule{14cm}{0.4pt} $
