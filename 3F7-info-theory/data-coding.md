@@ -4,10 +4,10 @@
 Typical set is a small subset of the state space but contains majority of the probability. Hence we can focus on trying to optimise the coding for the typical set.
 
 ### Fundamental Limit
-### $ E(L) \quad \text{Average Codeword 
+### $ E(\color{blue} {L}) = \sum_{i} \color{red} {p_{i}} \color{blue} {L_{i}} \quad \text{Average Codeword 
 Length per Sequence} $
 
-### $ \dfrac{E(L)}{N} \quad \text{Average Codeword 
+### $ \dfrac{E(\color{blue} {L})}{N} \quad \text{Average Codeword 
 Length per Symbol} $
  
 **Expected codeword length per symbol must be greater than or equal to the entropy of the source.**
@@ -38,19 +38,31 @@ Given a set of required lengths for each codeword, we can check if a prefix-free
 ## $$ \sum^{n}_{i} 2^{-l_{i}} \le 1 $$
 
 
-
 </br><hr>
 
 ## Shannon-Fano Coding
 
+1) Arrange symbols in order of probability $p_{i}$ from highest to lowest.
+2) Calculate the cumulative probability $f_{i-1}$ for each symbol.
+3) Calculate the length of the codeword $ L_{i} = \Big\lceil \log_{2}\dfrac{1}{p_{i}} \Big\rceil = \Big\lceil -\log_{2}p_{i} \Big\rceil $ for each symbol.
+4) The codeword is $c_{i} = bin(int(f_{i-1} \cdot 2^{L_{i}})) $
 
+### $ \color{blue}{c_{i} = bin(int(f_{i-1} \cdot 2^{L_{i}})) } $
 
 
 </br><hr>
 ## Huffman Coding
 
+1) Arrange symbols in order of probability $p_{i}$ from **highest to lowest** (or lowest to highest).
 
+2) Combine lowest two probabilities and re-insert into list at correct position. (**Draw cumulation branch diagram**)
 
+3) **Repeat until only one node in list.**
+
+4) **Note codeword for each symbol** by allocating 0 and 1 to up and down (or vice versa) branches respectively and **following from root node to symbol**.
+ 
+Example:
+(Insert Diagram Here)
 
 </br><hr>
 ## Interval Coding
@@ -60,7 +72,7 @@ Every symbol can be represented as an interval inside $ [0,1] $ with the length 
 </br>
 
 **For a set of symbols:**
-1) Map symbols to $ [0, 1] $
+1) Map symbols to intervals $ [a, a+p] $ between $ [0, 1] $ in any order.
 
 **To find the codewords for each symbol:**
 
@@ -112,7 +124,7 @@ Nested Subset Diagram
 </br>
 
 **PRACTICALLY as follows:**
-#### 1) Calculate cumulative probabilities $ \underline{f} $ for each symbol where $ f(s_{1}) = 0 $.
+#### 1) Calculate cumulative probabilities $ \underline{f} $ for each symbol starting with $ 0 $.
 
 #### 2) For each symbol $ s_{i} $ in sequence $ \underline{s} $, calculate the alphabet interval $ A_{i} $ :
 
