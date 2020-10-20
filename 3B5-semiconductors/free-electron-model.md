@@ -117,13 +117,4 @@ $$ \large n_{i} = \sqrt{N_{c} N_{v}} \ e^{-\frac{E_{g}}{2kT}} $$
 
 $$ E_{F} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{1}{2} kT \ln \dfrac{N_{v}}{N_{c}} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{3}{4} kT \ln \dfrac{m_{p}^{*}}{m_{n}^{*}} $$
 
-##### Solutions
-The following can be easily derived but nonetheless the solutions for $ n $ and $ p $ from the doping equations have been shown below:
-
-$$ n = \dfrac{1}{2} \Big( - (N_{D}^{+} - N_{A}^{-}) + \sqrt{(N_{D}^{+} - N_{A}^{-})^{2} + 4n_{i}^{2}} \Big) $$
-
-$$ p = \dfrac{1}{2} \Big( + (N_{D}^{+} - N_{A}^{-}) + \sqrt{(N_{D}^{+} - N_{A}^{-})^{2} + 4n_{i}^{2}} \Big) $$
-
 </br>
-
-##### Note*: $ n=p=n_{i} $ for **intrinsic** semiconductors so each of the above equations is also equal to $ n_{i} $
