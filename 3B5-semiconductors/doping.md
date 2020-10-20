@@ -4,7 +4,7 @@
 
 **Metals** - Overlap of valence and conduction bands
 
-**Semiconductors** - Valence and conduction band gap $ 0.5 < E_{g} < 2eV  \small \text{(non-strict values)} $
+**Semiconductors** - Valence and conduction band gap $ 0.5 < E_{g} < 2eV  \small \text{(non-strict values)} $ - Silicon $ sp^{3} $ hybridisation creating bonding and antibonding electron states.
 
 **Insulators** - Valence and conduction band gap $ E_{g} > 2eV  \small \text{(non-strict values)} $
 
