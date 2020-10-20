@@ -126,6 +126,9 @@ $$ \large n_{i} = \sqrt{N_{c} N_{v}} \ e^{-\frac{E_{g}}{2kT}} $$
 
 ### $$ E_{F} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{1}{2} kT \ln \dfrac{N_{v}}{N_{c}} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{3}{4} kT \ln \dfrac{m_{p}^{*}}{m_{n}^{*}} $$
 
+For an **intrinsic** semiconductor:
+### $$ E_{F} \approx \dfrac{E_{c} + E_{v}}{2} = E_{c} - \dfrac{E_{g}}{2} = E_{v} + \dfrac{E_{g}}{2} $$
+
 </br><hr>
 
 
