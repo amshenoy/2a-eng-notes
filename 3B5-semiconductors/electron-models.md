@@ -1,6 +1,8 @@
-# Free-Electron Model
+# Electron Models
 
-## Fermi Function
+## Background
+
+### Fermi Function
 
 The Fermi function $ f(E) $ is a probability function (not probability density) which outputs the probability of an electron occupying an energy state $ E $ under thermal equilibrium.
 
@@ -17,8 +19,9 @@ $$
 
 $$ \small \text{Probability of empty energy state} \qquad \large 1 - f(E)$$
 
+</br>
 
-## Density of States
+### Density of States
 
 This section is the derivation of the density of states function for semiconductors.
 
@@ -62,13 +65,19 @@ $ \therefore \dfrac{dk}{dE} = \dfrac{m^{*}}{\hbar k} \qquad \text{where} \qquad 
 Expanding and simplifying $ g(E) $ gives the following:
 $$ g(E) = \dfrac{\pi k^{2}}{ \Big( \dfrac{\pi}{L} \Big)^{3} } \dfrac{m^{*}}{\hbar k} = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m^{*})^{\frac{3}{2}} \sqrt{E} \qquad (E \geq 0) $$
 
-The above is an important result and will help us in understanding semiconductors. Stated below are the functions for the conduction and valence density of states per unit energy:
+The above is an important result and will help us in understanding semiconductors. 
+
+</br><hr>
+
+## Semiconductor Electron Model
+
+Stated below are the functions for the conduction and valence density of states per unit energy:
 
 $$ \therefore g_{c}(E) = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m_{n}^{*})^{\frac{3}{2}} \sqrt{E-E_{c}} \qquad (E \geq E_{c}) $$
 
 $$ \therefore g_{v}(E) = \dfrac{8 \pi \sqrt{2}}{h^{3}} (m_{p}^{*})^{\frac{3}{2}} \sqrt{E_{v}-E} \qquad (E \leq E_{v}) $$
 
-## States Occupation
+### States Occupation
 
 For the scope of this topic, we will assume that we have some function $ g_{c}(E) $ which outputs the density of states in the conduction band and $ g_{v}(E) $ respectively in the valence band although this can be derived from the Schrodinger's equation. 
 
@@ -115,6 +124,22 @@ $$ \large n_{i} = \sqrt{N_{c} N_{v}} \ e^{-\frac{E_{g}}{2kT}} $$
 
 ### Fermi Energy Level
 
-$$ E_{F} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{1}{2} kT \ln \dfrac{N_{v}}{N_{c}} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{3}{4} kT \ln \dfrac{m_{p}^{*}}{m_{n}^{*}} $$
+### $$ E_{F} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{1}{2} kT \ln \dfrac{N_{v}}{N_{c}} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{3}{4} kT \ln \dfrac{m_{p}^{*}}{m_{n}^{*}} $$
 
-</br>
+</br><hr>
+
+
+## Metals Electron Model
+
+### Carrier Equation
+### $$ n = \int_{0}^{E_{F}} g(E) dE = \dfrac{(2mE_{F})^\dfrac{2}{3}}{3 \pi^2 \hbar^{3}}$$
+
+$ n $ is the electron carrier concentration, $ c $ is the group number of the element, $ \rho $ is the density, $ m_{a} $ is the atomic mass and $ N_{A} $ is Avo's constant.
+
+### $$ n = c \dfrac{\rho N_{A}}{m_{a}}  $$
+
+### Fermi Energy Level
+Rearranging the **carrier equation**: 
+### $$ E_{F} = \dfrac{\hbar^{2}}{2m} (3 \pi^{2} n)^\dfrac{2}{3} $$
+
+
