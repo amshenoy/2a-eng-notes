@@ -83,7 +83,17 @@ $ N_{A}^{-} = \small\text{Number of Ionised Acceptors} \ (cm^{-3})$
 
 </br>
 
-##### Note*: We can combine the suitable $ \textbf{doping equation} $ with the $ \textbf{mass action law} $ to solve the quadratic for $ n $ or $ p $ given $ N $ and $ n_{i} $
+##### Solutions
+We can combine the suitable $ \textbf{doping equation} $ with the $ \textbf{mass action law} $ to solve the quadratic for $ n $ or $ p $ given $ N $ and $ n_{i} $.
+The following can be easily derived but nonetheless the solutions for $ n $ and $ p $ from the doping equations have been shown below:
+
+$$ n = \dfrac{1}{2} \Big( - (N_{D}^{+} - N_{A}^{-}) + \sqrt{(N_{D}^{+} - N_{A}^{-})^{2} + 4n_{i}^{2}} \Big) $$
+
+$$ p = \dfrac{1}{2} \Big( + (N_{D}^{+} - N_{A}^{-}) + \sqrt{(N_{D}^{+} - N_{A}^{-})^{2} + 4n_{i}^{2}} \Big) $$
+
+</br>
+
+##### Note*: $ n=p=n_{i} $ only for **intrinsic** semiconductors
 
 </br>
 
