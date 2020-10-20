@@ -65,6 +65,7 @@ $ \therefore \dfrac{dk}{dE} = \dfrac{m^{*}}{\hbar k} \qquad \text{where} \qquad 
 Expanding and simplifying $ g(E) $ gives the following:
 $$ g(E) = \dfrac{\pi k^{2}}{ \Big( \dfrac{\pi}{L} \Big)^{3} } \dfrac{m^{*}}{\hbar k} = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m^{*})^{\frac{3}{2}} \sqrt{E} \qquad (E \geq 0) $$
 
+### $$ \color{blue}{ g(E) = \dfrac{(2m^{*})^\dfrac{3}{2}}{2 \pi \hbar^{3}} \sqrt{E} } $$
 The above is an important result and will help us in understanding semiconductors. 
 
 </br><hr>
@@ -94,11 +95,11 @@ We can now attain the carrier concentrations by integrating with respect to ener
 $$ \therefore n = \int_{E_{c}}^{\infty} g_{c}(E) f(E) dE $$
 $$ \therefore p = \int_{-\infty}^{E_{f}} g_{v}(E) (1-f(E)) dE $$
 
-The above functions have no analytical solutions however by restricting ourselves to non-degenerate semiconductors, we can replace the Fermi function with the Boltzmann distribution function (a simple exponential) which can be analytically solved to find the carrier concentrations:
+The above functions have no analytical solutions however by restricting ourselves to non-degenerate semiconductors, we can **approximate the Fermi function with the Boltzmann distribution function** (a simple exponential) which can be analytically solved to find the carrier concentrations:
 
-$$ \large n = \int_{E_{c}}^{\infty} g_{c}(E) e^{-\frac{E-E_{f}}{kT}} dE = N_{c} \ e^{-\frac{E_{c}-E_{f}}{kT}} $$
+$$ \large n = \int_{E_{c}}^{\infty} g_{c}(E) e^{-\frac{E-E_{f}}{kT}} dE = N_{c} \ e^{-\frac{E_{c}-E_{F}}{kT}} $$
 
-$$ \large p = \int_{-\infty}^{E_{v}} g_{v}(E) e^{-\frac{E_{f}-E}{kT}} dE = N_{v} \ e^{-\frac{E_{f}-E_{v}}{kT}} $$
+$$ \large p = \int_{-\infty}^{E_{v}} g_{v}(E) e^{-\frac{E_{F}-E}{kT}} dE = N_{v} \ e^{-\frac{E_{F}-E_{v}}{kT}} $$
 
 where $ N_{c} $ is the effective density of states in the conduction band and $ N_{v} $ is the effective density of states in the valence band:
 
