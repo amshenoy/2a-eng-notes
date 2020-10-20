@@ -2,16 +2,21 @@
 
 ## Fermi Function
 
-The Fermi function $ f(E) $ is a probability function (not probability density) which outputs the probability of an electron occupying an energy state $ E $ under thermal equilibrium. $ k $ is the Boltzmann constant and $ T $ is the temperature. This will be useful for finding the probability of an electron being in the valence or the conduction band.
+The Fermi function $ f(E) $ is a probability function (not probability density) which outputs the probability of an electron occupying an energy state $ E $ under thermal equilibrium.
 
-$$ \large f(E) = \dfrac{1}{1+e^{\frac{E-E_{f}}{kT}}} $$
+$$ \large f(E) = \dfrac{1}{1+e^{\frac{E-E_{F}}{k_{B}T}}} $$
 
-The function is dependent on the Fermi energy level $ E_{f} $ which is in turn dependent on the effective density of energy states $ N_{c} $ (in the conduction band) and $ N_{v} $ (in the valence band).
+The function is dependent on the Fermi energy level $ E_{F} $ which is in turn dependent on the effective density of energy states $ N_{c} $ (in the conduction band) and $ N_{v} $ (in the valence band).
 
 #### Properties
-$$ 0 \leq f(E) \leq 1 $$
-$$ f(E_{f}) = \frac{1}{2} $$
+$$ f(E) = \begin{cases}
+1 \quad E < E_{f} \\
+0 \quad E \ge E_{f} \\
+\end{cases}
+$$
+
 $$ \small \text{Probability of empty energy state} \qquad \large 1 - f(E)$$
+
 
 ## Density of States
 
@@ -63,7 +68,7 @@ $$ \therefore g_{c}(E) = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m_{n}^{*})^{\frac{3}
 
 $$ \therefore g_{v}(E) = \dfrac{8 \pi \sqrt{2}}{h^{3}} (m_{p}^{*})^{\frac{3}{2}} \sqrt{E_{v}-E} \qquad (E \leq E_{v}) $$
 
-### Density of States
+## States Occupation
 
 For the scope of this topic, we will assume that we have some function $ g_{c}(E) $ which outputs the density of states in the conduction band and $ g_{v}(E) $ respectively in the valence band although this can be derived from the Schrodinger's equation. 
 
@@ -92,30 +97,25 @@ $$ N_{c} = 2 \Big( \dfrac{ 2 \pi \ m_{n}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2}
 $$ N_{v} = 2 \Big( \dfrac{ 2 \pi \ m_{p}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2} $$
 
 
+
+### Carrier Equations
+
+As derived above, we now have equations for the carrier concentrations that are dependent on the fermi level:
+
+### $$ \color{blue}{ \large n = N_{c} \ e^{-\frac{E_{c}-E_{F}}{kT}} } $$
+### $$ \color{blue}{ \large p = N_{v} \ e^{-\frac{E_{F}-E_{v}}{kT}} } $$
+
+Using mass action law:
+$$ n_{i}^{2} = N_{c} N_{v} \ e^{-\frac{E_{g}}{kT}} \qquad \small (E_{g} = E_{c} - E_{v}) $$
+
+$$ \large n_{i} = \sqrt{N_{c} N_{v}} \ e^{-\frac{E_{g}}{2kT}} $$
+
+
 </br>
 
 ### Fermi Energy Level
-The energy of the highest filled state is called the Fermi energy ($E_{F}$).
 
-#### Intrinsic Fermi Level
-Consider the Fermi energy level of an intrinsic semconductor at thermal equilibrium to be $ E_{i} $ . This is roughly the midpoint of $ E_{v} $ and $ E_{c} $:
-
-$$ E_{i} \approx \dfrac{E_{c} + E_{v}}{2} $$
-
-But more explicitly:
-
-$$ E_{i} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{1}{2} kT \ln \dfrac{N_{v}}{N_{c}} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{3}{4} kT \ln \dfrac{m_{p}^{*}}{m_{n}^{*}} $$
-
-#### Extrinsic Fermi Level (Non-Degenerate)
-Consider the Fermi energy level $ E_{f} $ of an extrinsic semconductor at thermal equilibrium to be $ E_{e} $ . By rearranging the equations for the carrier concentrations, we get the following equations:
-
-##### N-Type
-$$ E_{e} = E_{i} + kT \ln \dfrac{n}{n_{i}} $$
-
-##### P-Type
-$$ E_{e} = E_{i} - kT \ln \dfrac{p}{n_{i}} $$
-
-$ n $ and $ p $ can be found by solving the quadratic doping equations which can in turn be used to calculate the Fermi energy level for an extrinsic semiconductor.
+$$ E_{F} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{1}{2} kT \ln \dfrac{N_{v}}{N_{c}} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{3}{4} kT \ln \dfrac{m_{p}^{*}}{m_{n}^{*}} $$
 
 ##### Solutions
 The following can be easily derived but nonetheless the solutions for $ n $ and $ p $ from the doping equations have been shown below:
@@ -126,16 +126,4 @@ $$ p = \dfrac{1}{2} \Big( + (N_{D}^{+} - N_{A}^{-}) + \sqrt{(N_{D}^{+} - N_{A}^{
 
 </br>
 
-### Intrinsic Carriers
-
-As derived above, we now have equations for the carrier concentrations that are dependent on the fermi level:
-
-$$ \large n_{| \small E_{f} = E_{i}} = N_{c} \ e^{-\frac{E_{c}-E_{i}}{kT}} $$
-$$ \large p_{| \small E_{f} = E_{i}} = N_{v} \ e^{-\frac{E_{i}-E_{v}}{kT}} $$
-
-Using mass action law:
-$$ n_{i}^{2} = N_{c} N_{v} \ e^{-\frac{E_{g}}{kT}} \qquad \small (E_{g} = E_{c} - E_{v}) $$
-
-$$ \large n_{i} = \sqrt{N_{c} N_{v}} \ e^{-\frac{E_{g}}{2kT}} $$
-
-##### Note*: $ n=p=n_{i} $ for intrinsic semiconductors so each of the above equations is also equal to $ n_{i} $
+##### Note*: $ n=p=n_{i} $ for **intrinsic** semiconductors so each of the above equations is also equal to $ n_{i} $
