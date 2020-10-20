@@ -54,7 +54,7 @@ $$ \delta n = \dfrac{\delta N}{L^3} = \dfrac{k^2}{\pi^2} \delta k $$
 
 </br>
 
-Now we can calculate the density of states per unit volume per unit energy $ g(E) $ by differentiating density of states per unit volume $ N $ with respect to energy $ E $:
+Now we can calculate the **density of states per unit energy** $ g(E) $ by differentiating the density of states $ N $ with respect to energy $ E $:
 
 $ g(E) = \dfrac{dN}{dE} = \dfrac{dN}{dk} \dfrac{dk}{dE}$
 
@@ -67,6 +67,9 @@ $$ g(E) = \dfrac{\pi k^{2}}{ \Big( \dfrac{\pi}{L} \Big)^{3} } \dfrac{m^{*}}{\hba
 
 ### $$ \color{blue}{ g(E) = \dfrac{(2m^{*})^\dfrac{3}{2}}{2 \pi \hbar^{3}} \sqrt{E} } $$
 The above is an important result and will help us in understanding semiconductors. 
+
+Note that the density of states $ N $ can be calculated for an energy interval using the following equation:
+#### $$ N = \int g(E) dE $$
 
 </br><hr>
 
@@ -86,25 +89,21 @@ $$ g_{c}(E) = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m_{n}^{*})^{\frac{3}{2}} \sqrt{
 
 $$ g_{v}(E) = \dfrac{8 \pi \sqrt{2}}{h^{3}} (m_{p}^{*})^{\frac{3}{2}} \sqrt{E_{v}-E} \qquad (E \leq E_{v}) $$
 
-Therefore we can now write an equation for the density of occupied energy states per unit volume and per unit energy $ n(E) $ and $ p(E) $ as the following:
-
-$$ n(E) = g_{c}(E) \cdot f(E) \qquad \text{and} \qquad p(E) = g_{v}(E) \cdot (1 - f(E)) $$
-
 We can now attain the carrier concentrations by integrating with respect to energy.
 
 $$ \therefore n = \int_{E_{c}}^{\infty} g_{c}(E) f(E) dE $$
-$$ \therefore p = \int_{-\infty}^{E_{f}} g_{v}(E) (1-f(E)) dE $$
+$$ \therefore p = \int_{-\infty}^{E_{v}} g_{v}(E) (1-f(E)) dE $$
 
 The above functions have no analytical solutions however by restricting ourselves to non-degenerate semiconductors, we can **approximate the Fermi function with the Boltzmann distribution function** (a simple exponential) which can be analytically solved to find the carrier concentrations:
 
-$$ \large n = \int_{E_{c}}^{\infty} g_{c}(E) e^{-\frac{E-E_{f}}{kT}} dE = N_{c} \ e^{-\frac{E_{c}-E_{F}}{kT}} $$
+$$ \large n = \int_{E_{c}}^{\infty} g_{c}(E) e^{-\frac{E-E_{F}}{kT}} dE = N_{c} \ e^{-\frac{E_{c}-E_{F}}{kT}} $$
 
 $$ \large p = \int_{-\infty}^{E_{v}} g_{v}(E) e^{-\frac{E_{F}-E}{kT}} dE = N_{v} \ e^{-\frac{E_{F}-E_{v}}{kT}} $$
 
 where $ N_{c} $ is the effective density of states in the conduction band and $ N_{v} $ is the effective density of states in the valence band:
 
-$$ N_{c} = 2 \Big( \dfrac{ 2 \pi \ m_{n}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2} $$
-$$ N_{v} = 2 \Big( \dfrac{ 2 \pi \ m_{p}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2} $$
+$$ N_{c} = 2 \Big( \dfrac{ 2 \pi \ m_{n}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2} = \dfrac{1}{\sqrt{2}} \Big( \dfrac{ \ m_{n}^{*} \ k T }{\pi \hbar^{2}} \Big) ^ \dfrac{3}{2} $$
+$$ N_{v} = 2 \Big( \dfrac{ 2 \pi \ m_{p}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2} = \dfrac{1}{\sqrt{2}} \Big( \dfrac{ \ m_{p}^{*} \ k T }{\pi \hbar^{2}} \Big) ^ \dfrac{3}{2} $$
 
 
 
@@ -133,7 +132,7 @@ $$ \large n_{i} = \sqrt{N_{c} N_{v}} \ e^{-\frac{E_{g}}{2kT}} $$
 ## Metals Electron Model
 
 ### Carrier Equation
-### $$ n = \int_{0}^{E_{F}} g(E) dE = \dfrac{(2mE_{F})^\dfrac{2}{3}}{3 \pi^2 \hbar^{3}}$$
+### $$ n = \int_{0}^{E_{F}} g(E) f(E) dE = \dfrac{(2mE_{F})^\dfrac{2}{3}}{3 \pi^2 \hbar^{3}}$$
 
 $ n $ is the electron carrier concentration, $ c $ is the group number of the element, $ \rho $ is the density, $ m_{a} $ is the atomic mass and $ N_{A} $ is Avo's constant.
 
