@@ -130,7 +130,7 @@ $ n $ is the electron carrier concentration, $ c $ is the group number of the el
 
 ### $$ n = c \dfrac{\rho N_{A}}{m_{a}}  $$
 
-### Fermi Energy
+#### Fermi Energy
 Rearranging the **carrier equation**, we get the **Fermi Energy (Fermi Level at absolute zero)** : 
 ### $$ E_{F} = \dfrac{\hbar^{2}}{2m} (3 \pi^{2} n)^\dfrac{2}{3} $$
 
