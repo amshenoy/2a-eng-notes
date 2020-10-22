@@ -233,7 +233,17 @@ For the bilinear transform, $ j \omega = \dfrac{2}{T} tan \dfrac{\theta}{2} $ or
 
 ## Band Transformations
 
+Assuming a lowpass prototype with a cutoff of 1:
 
+Lowpass to Lowpass:
+
+Lowpass to Highpass:
+
+Lowpass to Bandpass:
+
+Lowpass to Bandstop:
+
+ 
 
 </br>
 
