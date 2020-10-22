@@ -36,9 +36,9 @@ If a system is causal, $ G(z) $ is finite (equals $ g_{0} $) as $ z \rightarrow 
 
 </br><hr>
 
-## FIR Filter Design
+# FIR Filter Design
 
-### Linear Filter
+## Linear Filter
 
 $$ \textbf{A stable filter "forgets" the initial conditions} $$
 
@@ -49,7 +49,7 @@ $ C(z, y_{i}) $ takes into account the initial conditions of the filter. $ U(z) 
 
 </br>
 
-### Ideal Filter
+## Ideal Filter
 
 $$
 \text{ Analog } \cos(\omega t) \qquad  \text{ Digital } \cos(k \theta)
@@ -81,7 +81,7 @@ Write $ G(e^{j \theta}) $ as a delay term and a frequency-dependent gain term (f
 
 
 
-### Inverse Fourier Transform
+## Inverse Fourier Transform
 
 To convert the filter from the z-domain to the k-domain, we can use the inverse fourier transform:
 
@@ -93,7 +93,7 @@ $$
 
 </br>
 
-### Filter Specs
+## Filter Specs
 
 Passband Ripple - $ 1+\delta p $ - Peak
 
@@ -101,7 +101,7 @@ Peak-to-peak Passband Ripple - $ 1 + 2 \delta p $ - Start to Peak
 
 Minimum Stopband Attenuation - $ \dfrac{1}{\delta s} $ - Attenuation of stopband level ($ \delta s $)
 
-### Window Design Method
+## Window Design Method
 
 ### $$ \color{blue}{ \underbrace{g_{k}}_{\text{Filter}} = \underbrace{h_{k}}_{\text{Ideal/Desired} \\ \text{ Impulse Response}} \underbrace{w_{k}}_{\text{Window function}} } $$
 
@@ -111,18 +111,18 @@ Using **duality** of multiplication / **convolution**:
 
 ### $$ \color{blue}{ G(e^{j \omega}) = \dfrac{1}{2 \pi} \int^{\pi}_{-\pi} H(e^{j \theta}) W(e^{j (\omega - \theta)}) d\theta } $$
 
-#### Full Steps:
+### Full Steps:
 1) Select window function $ w_{k} $
 2) Select ideal frequency response $ H(e^{j \theta}) $
 3) Compute coefficients of $ h_{k} $
 4) $ g_{k} = h_{k} w_{k} $ 
 5) Evaluate and iterate if necessary
 
-Note*: Truncation = Multiplication by Window
+Note*: Truncation = Multiplication by Window, Abrupt discontinuities in window filter leads to side-lobe interference
 
 </br>
 
-#### Linear Phase
+### Linear Phase
 Linear Phase $ G(e^{j \theta}) = |G(e^{j \theta})| e^{-j \theta \dfrac{N}{2}} $ is achieved if $ g_{k} = g_{N-k} $
 
 All window functions satisfy linear phase $ w_{k} = w_{N-k} $.
@@ -130,9 +130,9 @@ If the impulse response $ h_{k} $ is also symmetric ie. $ h_{k} = h_{N-k} $, the
 
 </br>
 
-### Composite Filters
+## Composite Filters
 
-#### Example:
+### Example:
 **Ideal Bandpass Filter**
 $$
 \begin{align*}
@@ -150,7 +150,7 @@ H(e^{j \theta}) &= \begin{cases}
 \end{cases} 
 $$
 
-$$
+### $$
 \begin{align*}
 h_{k} &= \mathcal{F}^{-1}(H)
 \\ &= \mathcal{F}^{-1}(\text{Lowpass}_{[0, \theta_{2}]}) - \mathcal{F}^{-1}(\text{Lowpass}_{[0, \theta_{1}]}) 
@@ -161,7 +161,7 @@ $$
 **Final Filter $ g_{k} $**
 
 With window function and shift as required.
-$$ g^{*}_{k} = h_{k} w_{k}
+### $$ g^{*}_{k} = h_{k} w_{k}
 \\ g_{k} = g^{*}_{k-N} $$
 
 
@@ -186,8 +186,37 @@ $$ g^{*}_{k} = h_{k} w_{k}
 
 </br><hr>
 
-## IIR Filter Design
+# IIR Filter Design
+
+## Discretisation
+Given an analogue filter $ H(s) $ (s-domain), we can convert to the z-domain by discretisation.
+
+There are two methods of discretisation:
+**1) Transformation**
+**2) Response Matching**
+
+</br>
+
+### Transformation
+
+### $$ s = \Psi(z) $$
+
+**Notable Transforms**
+
+Forward Difference: &emsp; LHS ($ s < 0 $) of s-plane maps to $ z < 1 $ &emsp; (Possibly Unstable)
+
+Backward Difference: &emsp; LHS ($ s < 0 $) of s-plane maps to circle $ r=1/2 $ at $ (1/2, 0) $ &emsp; (Stable)
+
+Tustin / Bilinear Transform: &emsp; LHS ($ s < 0 $) of s-plane maps to **unit circle** &emsp; (Stable)
+
+</br>
+
+### Response Matching
 
 
+</br>
+
+
+## Design Method
 
 
