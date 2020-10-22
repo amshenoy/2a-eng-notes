@@ -255,7 +255,7 @@ Lowpass to Bandstop:
 ### $$ \color{blue}{ \theta_{i} }= \dfrac{f_{i}}{f_{s}} \cdot 2 \pi $$
 
 2) Find **analogue frequencies** $ \omega_{i} $ by normalising digital frequencies $ \theta_{i} $ depending on the discretisation transformation $ \Psi(z) $:
-### $$ j \color{blue}{ \omega_{i} } = \Psi(e^{j \theta}) $$
+### $$ j \color{blue}{ \omega_{i} } = \Psi(e^{j \theta_{i}}) $$
 
 3) Apply required **band transformation** $ F(s) $ to analogue prototype using calculated analogue frequencies $ \omega_{i} $:
 ### $$ \color{blue}{ G_{A}(s) = H(F(s)|_{w_{i}}) } $$
