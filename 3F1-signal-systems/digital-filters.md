@@ -189,34 +189,69 @@ With window function and shift as required.
 # IIR Filter Design
 
 ## Discretisation
-Given an analogue filter $ H(s) $ (s-domain), we can convert to the z-domain by discretisation.
+Given an analogue filter $ G_{A}(s) $ (s-domain), we can convert it to a digital filter $ G_{D}(z) $ (z-domain) by discretisation.
 
 There are two methods of discretisation:
-**1) Transformation**
+**1) Algebraic Transformation**
 **2) Response Matching**
 
 </br>
 
-### Transformation
+### 1) Algebraic Transformation
 
 ### $$ s = \Psi(z) $$
 
+### $$ \color{blue}{ G_{D}(z) = G_{A}(\Psi(z)) } $$
+
+#### Frequency Warping
+Therefore the **frequency response** of the **digital filter** $ G_{D}(e^{j \theta}) $ is:
+### $$ G_{D}(e^{j \theta}) = G_{A}(\Psi(e^{j \theta})) = G_{A}(j \omega) $$
+### $$ \color{blue}{ \therefore j\omega = \Psi(e^{j \theta}) } $$
+
+Note that **$\omega$ is the analogue frequency** and **$\theta$ is the digital frequency**. Therefore we can now convert between analogue and digital frequencies depending on the transformation.
+
+
+</br>
+
 **Notable Transforms**
 
-Forward Difference: &emsp; LHS ($ s < 0 $) of s-plane maps to $ z < 1 $ &emsp; (Possibly Unstable)
+**Forward Difference**: $\Psi(z) = \dfrac{z-1}{T}$ &emsp; LHS ($ s < 0 $) of s-plane maps to $ z < 1 $ &emsp; (**Possibly Unstable**)
 
-Backward Difference: &emsp; LHS ($ s < 0 $) of s-plane maps to circle $ r=1/2 $ at $ (1/2, 0) $ &emsp; (Stable)
+**Backward Difference**: $\Psi(z) = \dfrac{z-1}{zT}$ &emsp; LHS ($ s < 0 $) of s-plane maps to circle $ r=1/2 $ at $ (1/2, 0) $ &emsp; (**Stable**)
 
-Tustin / Bilinear Transform: &emsp; LHS ($ s < 0 $) of s-plane maps to **unit circle** &emsp; (Stable)
+**Tustin / Bilinear Transform**: $\Psi(z) = \dfrac{2}{T} \dfrac{z-1}{z+1}$ (or simply $\dfrac{z-1}{z+1}$ ) &emsp; LHS ($ s < 0 $) of s-plane maps to **unit circle** &emsp; (**Stable**)
 
-</br>
-
-### Response Matching
-
+For the bilinear transform, $ j \omega = \dfrac{2}{T} tan \dfrac{\theta}{2} $ or simply $ \color{blue}{ j \omega = tan \dfrac{\theta}{2} } $
 
 </br>
 
+### 2) Response Matching
+
+
+</br>
+
+
+## Band Transformations
+
+
+
+</br>
 
 ## Design Method
+
+#### Given the sampling frequency $\color{orange}{f_{s}} $, the type of filter $\color{orange}{F}$ to be designed with the corresponding 3dB (ie. cutoff) frequency/frequencies $\color{orange}{ f_{i} }$, the prototype analogue low pass filter $\color{orange}{ H(s) }$ with 3dB (ie. cutoff) frequency $ \color{orange}{ \omega_{H} = 1 rad s^{-1}} $ and the discretisation transformation $ \color{orange}{ \Psi(z) } $:
+
+1) Find **digital frequencies** $ \theta_{i} $ by converting required frequencies $ f_{i} $:
+### $$ \color{blue}{ \theta_{i} }= \dfrac{f_{i}}{f_{s}} \cdot 2 \pi $$
+
+2) Find **analogue frequencies** $ \omega_{i} $ by normalising digital frequencies $ \theta_{i} $ depending on the discretisation transformation $ \Psi(z) $:
+### $$ j \color{blue}{ \omega_{i} } = \Psi(e^{j \theta}) $$
+
+3) Apply required **band transformation** $ F(s) $ to analogue prototype using calculated analogue frequencies $ \omega_{i} $:
+### $$ \color{blue}{ G_{A}(s) = H(F(s)|_{w_{i}}) } $$
+
+4) Apply the **discretisation filter** from before:
+ ### $$ \color{blue}{ G_{D}(z) = G_{A}(\Psi(z)) } \quad \Big( = H(F(\Psi(z))|_{w_{i}}) \Big) $$
+
 
 
