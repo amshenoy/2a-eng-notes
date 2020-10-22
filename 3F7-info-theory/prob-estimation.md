@@ -23,9 +23,11 @@ $$
 **Chebyshev** can be directly **derived from Markov** as follows:
 $$
 P\Big(\color{orange}{\big| X - E[X] \big|} \ge \color{orange}{a} \Big) = P\Big( \color{red}{\big| X - E[X] \big|^{2} } \ge \color{red}{ a^{2} } \Big)
-\\
+$$
+### $$
 \text{ Let } \color{blue}{Y} = \color{red}{\big| X - E[X] \big|^{2} }
-\\
+$$
+$$
 \text{By Markov's Inequality: } \qquad
 \color{blue} { P(Y \ge a^{2}) \le \dfrac{E[Y]}{a^{2}} } \qquad
 E[\color{blue}{Y}] = E\Big[ \color{red}{ \big| X - E[X] \big|^{2} } \Big] = Var[X]
@@ -59,6 +61,8 @@ $$
 \text{Therefore WLLN is true!}
 $$
 
+**Notable Example:**
+### $$ \color{blue}{ \dfrac{1}{n} \sum^{n}_{i} log(X_{i}) \overbrace{\rightarrow}^{LLN \\ n \rightarrow \infty} = E( \log(X_{i})) } $$
 </br>
 
 ## Typicality
