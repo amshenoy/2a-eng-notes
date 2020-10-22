@@ -1,8 +1,6 @@
-# Electron Models
+# Carrier Density
 
-## Background
-
-### Fermi Function
+## Fermi Function
 
 The Fermi function $ f(E) $ is a probability function (not probability density) which outputs the probability of an electron occupying an energy state $ E $ under thermal equilibrium.
 
@@ -10,18 +8,21 @@ $$ \large f(E) = \dfrac{1}{1+e^{\frac{E-E_{F}}{k_{B}T}}} $$
 
 The function is dependent on the Fermi energy level $ E_{F} $ which is in turn dependent on the effective density of energy states $ N_{c} $ (in the conduction band) and $ N_{v} $ (in the valence band).
 
-#### Properties
+$$ \small \text{Probability of empty energy state} \qquad \large 1 - f(E)$$
+
+
+#### Note*: At **absolute zero**, the fermi function is ideal for integration!
 $$ f(E) = \begin{cases}
 1 \quad E < E_{f} \\
 0 \quad E \ge E_{f} \\
 \end{cases}
 $$
 
-$$ \small \text{Probability of empty energy state} \qquad \large 1 - f(E)$$
+
 
 </br>
 
-### Density of States
+## Density of States
 
 This section is the derivation of the density of states function for semiconductors.
 
@@ -71,19 +72,9 @@ The above is an important result and will help us in understanding semiconductor
 Note that the density of states $ N $ can be calculated for an energy interval using the following equation:
 #### $$ N = \int g(E) dE $$
 
-</br><hr>
+## States Occupation
 
-## Semiconductor Electron Model
-
-Stated below are the functions for the conduction and valence density of states per unit energy:
-
-$$ \therefore g_{c}(E) = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m_{n}^{*})^{\frac{3}{2}} \sqrt{E-E_{c}} \qquad (E \geq E_{c}) $$
-
-$$ \therefore g_{v}(E) = \dfrac{8 \pi \sqrt{2}}{h^{3}} (m_{p}^{*})^{\frac{3}{2}} \sqrt{E_{v}-E} \qquad (E \leq E_{v}) $$
-
-### States Occupation
-
-For the scope of this topic, we will assume that we have some function $ g_{c}(E) $ which outputs the density of states in the conduction band and $ g_{v}(E) $ respectively in the valence band although this can be derived from the Schrodinger's equation. 
+Using $ g(E)$, we can derive a function $ g_{c}(E) $ which outputs the density of states in the conduction band and $ g_{v}(E) $ respectively in the valence band.
 
 $$ g_{c}(E) = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m_{n}^{*})^{\frac{3}{2}} \sqrt{E-E_{c}} \qquad (E \geq E_{c}) $$
 
@@ -107,7 +98,7 @@ $$ N_{v} = 2 \Big( \dfrac{ 2 \pi \ m_{p}^{*} \ k T }{h^{2}} \Big) ^ \dfrac{3}{2}
 
 
 
-### Carrier Equations
+## Carrier Equations
 
 As derived above, we now have equations for the carrier concentrations that are dependent on the fermi level:
 
@@ -122,7 +113,7 @@ $$ \large n_{i} = \sqrt{N_{c} N_{v}} \ e^{-\frac{E_{g}}{2kT}} $$
 
 </br>
 
-### Fermi Energy Level
+### Fermi Level
 
 ### $$ E_{F} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{1}{2} kT \ln \dfrac{N_{v}}{N_{c}} = \dfrac{E_{c} + E_{v}}{2} + \dfrac{3}{4} kT \ln \dfrac{m_{p}^{*}}{m_{n}^{*}} $$
 
@@ -131,18 +122,16 @@ For an **intrinsic** semiconductor:
 
 </br><hr>
 
-
-## Metals Electron Model
-
-### Carrier Equation
-### $$ n = \int_{0}^{E_{F}} g(E) f(E) dE = \dfrac{(2mE_{F})^\dfrac{2}{3}}{3 \pi^2 \hbar^{3}}$$
+### Absolute Zero Simplication
+At **absolute zero T = 0 K**, using the **ideal Fermi function** (0 or 1):
+### $$ n =  \int_{0}^{\infty} g(E) f(E) dE = \int_{0}^{E_{F}} g(E) dE = \dfrac{(2mE_{F})^\dfrac{2}{3}}{3 \pi^2 \hbar^{3}}$$
 
 $ n $ is the electron carrier concentration, $ c $ is the group number of the element, $ \rho $ is the density, $ m_{a} $ is the atomic mass and $ N_{A} $ is Avo's constant.
 
 ### $$ n = c \dfrac{\rho N_{A}}{m_{a}}  $$
 
-### Fermi Energy Level
-Rearranging the **carrier equation**: 
+### Fermi Energy
+Rearranging the **carrier equation**, we get the **Fermi Energy (Fermi Level at absolute zero)** : 
 ### $$ E_{F} = \dfrac{\hbar^{2}}{2m} (3 \pi^{2} n)^\dfrac{2}{3} $$
 
 
