@@ -68,13 +68,10 @@ I(\color{blue}{A}; Y) &= H(\color{blue}{A}) - H(\color{blue}{A}|Y) \\
 \end{align*}
 $$
 
-
-
-$$ 
-
-
-$$
-
 ### Data Processing Inequality
 
+Let three random variables $X, Y, Z$ for a Markov Chain $ X \rightarrow Y \rightarrow Z $ ie that the conditional distribution $ Z $ is dependent only on $Y$ and conditionally independent of $X$ (ie. $ P_{Z|Y} = P_{Z|XY} $) then the following is true:
 
+### $$ I(X; Y) \ge I(X; Z) $$
+
+Essentially means that any processing on $Y$ ($Z$) does not increase the information $Y$ contains about $X$.
