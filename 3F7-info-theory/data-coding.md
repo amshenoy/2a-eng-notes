@@ -49,6 +49,7 @@ Given a set of required lengths for each codeword, we can check if a prefix-free
 
 ### $ \color{blue}{c_{i} = bin(int(f_{i-1} \cdot 2^{L_{i}})) } $
 
+Alternatively create a binary tree from just the lengths and then label each branch to find the code starting with the root.
 
 </br><hr>
 ## Huffman Coding
