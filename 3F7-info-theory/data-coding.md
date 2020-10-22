@@ -10,7 +10,7 @@ Length per Sequence} $
 ### $ \dfrac{E(\color{blue} {L})}{N} \quad \text{Average Codeword 
 Length per Symbol} $
  
-**Expected codeword length per symbol must be greater than or equal to the entropy of the source.**
+**Shannon's Lossless Source Coding Theorem &emsp; - &emsp; Expected codeword length per symbol must be greater than or equal to the entropy of the source.**
 ### $$ \dfrac{E(L)}{N} \ge H(X) $$
 
 
