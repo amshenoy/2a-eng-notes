@@ -65,7 +65,7 @@ $ \therefore \dfrac{dk}{dE} = \dfrac{m^{*}}{\hbar k} \qquad \text{where} \qquad 
 Expanding and simplifying $ g(E) $ gives the following:
 $$ g(E) = \dfrac{\pi k^{2}}{ \Big( \dfrac{\pi}{L} \Big)^{3} } \dfrac{m^{*}}{\hbar k} = \dfrac{ 8 \pi \sqrt{2} }{ h^{3} } (m^{*})^{\frac{3}{2}} \sqrt{E} \qquad (E \geq 0) $$
 
-### $$ \color{blue}{ g(E) = \dfrac{(2m^{*})^\dfrac{3}{2}}{2 \pi \hbar^{3}} \sqrt{E} } $$
+### $$ \color{blue}{ g(E) = \dfrac{(2m^{*})^\dfrac{3}{2}}{2 \pi^{2} \hbar^{3}} \sqrt{E} } $$
 The above is an important result and will help us in understanding semiconductors. 
 
 Note that the density of states $ N $ can be calculated for an energy interval using the following equation:
