@@ -29,7 +29,8 @@ $$
 ### Entropy Properties
 ### $$
 \begin{align*}
-I(X; Y) &= H(X) - H(X|Y) \\
+I(X; Y) &= I(Y; X) \\
+&= H(X) - H(X|Y) \\
 &= H(Y) - H(Y|X) \\
 &= H(X) + H(Y) - H(X,Y) \\ \\
 &= D(P_{XY}||P_{X}P_{Y}) \\
