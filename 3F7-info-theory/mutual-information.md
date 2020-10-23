@@ -1,78 +1,85 @@
-# Mutual Information
+# Discrete Memoryless Channels (DMC)
 
-## Relative Entropy
-Also known as KL-Divergence:
-$$
-D(P||Q) = \sum_{i}^{n} P(X_{i}) \log \Big(\dfrac{P(X_{i})}{Q(X_{i})} \Big)
-$$
+"The current output only depends on the current input."
+
+**Diagram shows the $ P_{Y|X} $.**
 
 
-## Log-Likelihood Ratio (LLR)
-Consider $P$, $Q$ are two pmfs defined on the same alphabet $ X_{i} $ where $ X_{i} $ is i.i.d generated according to either $P$ or $Q$:
-$$ 
-\begin{align*}
-LLR(X_{1}, ..., X_{n}) &= \dfrac{1}{n} \log \Big(\dfrac{P(X_{1}, ..., X_{n})}{Q(X_{1}, ..., X_{n})} \Big) = \dfrac{1}{n} \sum_{i}^{n} \log \Big(\dfrac{P(X_{i})}{Q(X_{i})} \Big) \\ \\
-&\overbrace{\approx}^{WLLN} E\Bigg(\log\Big(\dfrac{P(X_{i})}{Q(X_{i})} \Big) \Bigg) \\
+## Channel Capacity
+### $$ \color{blue}{ \mathcal{C} = \max_{P_{X}} I(X; Y) = \max_{P_{X}} H(Y) - H(Y|X) } $$
 
-\\ \\
-&= \sum_{i}^{n} P(X_{i}) \log \Big(\dfrac{P(X_{i})}{Q(X_{i})} \Big) = D(P||Q) \qquad \text{If }X_{i}\text{ i.i.d according to P}
-\\
-= \sum_{i}^{n} Q(X_{i}) \log \Big(\dfrac{P(X_{i})}{Q(X_{i})} \Big) &= - \sum_{i}^{n} Q(X_{i}) \log \Big(\dfrac{Q(X_{i})}{P(X_{i})} \Big) = - D(Q||P) \qquad \text{If }X_{i}\text{ i.i.d according to Q}
-\end{align*}
+### $$ \text{The channel capacity } \mathcal{C} \text{ is the maximum transmission rate over the DMC } $$
+
+### To find $\mathcal{C}$:
 
 $$
+\mathcal{C} = \max_{P_{X}} I(X; Y) = \max_{P_{X}} H(Y) - H(Y|X) \\
+$$
+
+#### 1) Assign probabilities $ \color{blue}{ P_{X} = ( \alpha, 1-\alpha ) } $ and find the probabilities of $ \color{blue}{ Y } $.
+
+#### 2) $ \color{blue}{ H(Y|X) = \sum_{x \in \Chi} P_{X}(x) H(Y | X=x) } \qquad ( = \sum_{x \in \Chi} P_{X}(x) H_{2}(P(Y | X=x)) \text{ for a binary output Y }) $
+
+#### 3) Find $ \color{blue}{H(Y)} (\text{Use the calculated probabilities of $ Y $}) \qquad ( = H_{2}(P_{Y}(0)) = H_{2}(P_{Y}(1)) \text{ for a binary output Y }) $
+
+#### 4) $ \color{blue}{ \text{ Maximise } I(X; Y) \text{ over } \alpha \quad \mathcal{C} = I(X; Y)(\alpha) \quad P_{X} = (\alpha, 1-\alpha) \text{ is the maximising input distribution.} } $ 
+
+
+</br><hr>
+
+
+## Binary Symmetric Channel (BSC)
+
+### $$ P(Y=\overline{x} | X=x) = p $$
+
+(Insert Diagram Here)
+
+$ p $ is the crossover (switching) probability.
+
+
+### $$ \color{blue}{ \mathcal{C} = 1- H_{2}(p) } $$
+
+### Repetition Code
+
+
 
 </br>
 
-## Mutual Information
 
-### Entropy Properties
-### $$
-\begin{align*}
-I(X; Y) &= I(Y; X) \\
-&= H(X) - H(X|Y) \\
-&= H(Y) - H(Y|X) \\
-&= H(X) + H(Y) - H(X,Y) \\ \\
-&= D(P_{XY}||P_{X}P_{Y}) \\
+## Cascade Channel
 
-\end{align*}
-$$
+A **cascade channel** is just a series of **connected BSCs**.
+A **cascade channgel** can be represented as a **single BSC with a crossover probability** given by:
+$$ p_{c} = P(Y=1 | X=0) = P(Y=0 | X=1) = P(Y=\overline{x} | X=x) $$
 
-### Conditionality Switching
-### $$
-I(X; Y|Z) = I(X|Z; Y) \\
-I(X; Y,Z) = I(X,Z; Y) 
-$$
+The probability can be calculated by considering the different pathways to go from the corresponding $ X $ value to the corresponding $ Y $ value.
 
-### Chain Rule
+A set of $m$ BSC channels $$ CC_{m} = BSC(p_{c}) $$
 
-$$ I(\color{blue}{X_{1}, X_{2}, ..., X_{n}} | Y ) = \sum_{i}^{n} I(\color{red}{X_{i}|X_{i-1}, X_{i-2}, ..., X_{1}}; Y) $$
 
-#### Proof
+<small> **Note: The actual $p_{c}$ for $ m $ BSCs is given by $ p_{c}(m) = \dfrac{1}{2}(1 - (1-2p)^{m}) $ however the derivation and analysis is outside the scope of this course. Can be proved by induction by considering m-1 attached to a single BSC.** </small>
 
-Let $ \color{blue}{A} = (\color{blue}{X_{1}, X_{2}, ..., X_{n}}) $, $ \color{red}{B} = (\color{red}{X_{i}| X_{i-1}, X_{i-2} ..., X_{1}}) $
 
-Chain Rule for Entropy:
-$
-H(\color{blue}{A}) = \sum_{i}^{n} H(\color{red}{B}) \qquad H(\color{blue}{A}|Y) = \sum_{i}^{n} H(\color{red}{B}|Y)
-$
+
 
 </br>
 
-$$ 
-\begin{align*}
-I(\color{blue}{A}; Y) &= H(\color{blue}{A}) - H(\color{blue}{A}|Y) \\
-&= \sum_{i}^{n} H(\color{red}{B}) - \sum_{i}^{n} H(\color{red}{B}|Y) \\
-&= \sum_{i}^{n} H(\color{red}{B}) - H(\color{red}{B}|Y) \\
-\therefore I(\color{blue}{A}; Y) &= \sum_{i}^{n} I(\color{red}{B}; Y) \\
+## Binary Erasure Channel
 
-\end{align*}
-$$
+### $$ P_{Y|X} (y: P_{y|X}) = \{ 0: 1-\epsilon, \quad ?: \epsilon, \quad 1: 1-\epsilon \} $$
 
-### Data Processing Inequality
+(Insert Diagram Here)
 
-Let three random variables $X, Y, Z$ for a Markov Chain $ X \rightarrow Y \rightarrow Z $ ie that the conditional distribution $ Z $ is dependent only on $Y$ and conditionally independent of $X$ (ie. $ P_{Z|Y} = P_{Z|XY} $) then the following is true:
+### $ P(Y=? | X=x) = \epsilon $
 
-### $$ I(X; Y) \ge I(X; Z) $$
 
-Essentially means that any processing on $Y$ ($Z$) does not increase the information $Y$ contains about $X$.
+### $$ \mathcal{C} = 1 - \epsilon $$
+
+</br>
+
+
+## Z-Channel
+
+
+
+
