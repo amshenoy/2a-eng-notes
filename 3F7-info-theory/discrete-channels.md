@@ -2,31 +2,72 @@
 
 "The current output only depends on the current input."
 
+**Diagram shows the $ P_{Y|X} $.**
+
+
 ## Channel Capacity
-### $$ \color{blue}{ \mathcal{C} = \max_{P_{X}} I(X; Y) } $$
+### $$ \color{blue}{ \mathcal{C} = \max_{P_{X}} I(X; Y) = \max_{P_{X}} H(Y) - H(Y|X) } $$
 
 ### $$ \text{The channel capacity } \mathcal{C} \text{ is the maximum transmission rate over the DMC } $$
 
+### To find $\mathcal{C}$:
 
-## Noiseless Binary Channel
+$$
+\mathcal{C} = \max_{P_{X}} I(X; Y) = \max_{P_{X}} H(Y) - H(Y|X) \\
+$$
 
-$$ X \longrightarrow Y $$
+#### 1) Assign probabilities $ \color{blue}{ P_{X} = ( \alpha, 1-\alpha ) } $ and find the probabilities of $ \color{blue}{ Y } $.
 
-$$ I(X; Y) = H(X) - H(X|Y) = H(X) \quad ( H(X|Y) = 0 \text{ as } Y \text{  is fully dependent on } X) $$
+#### 2) $ \color{blue}{ H(Y|X) = \sum_{x \in \Chi} P_{X}(x) H(Y | X=x) } \qquad ( = \sum_{x \in \Chi} P_{X}(x) H_{2}(P(Y | X=x)) \text{ for a binary channel}) $
 
-The $P_{X}$ that maximises $ H(X) $ is $P_{X} = (\dfrac{1}{2}, \dfrac{1}{2})$:
-$$  \mathcal{C} = \max_{P_{X}} I(X; Y) = \max_{P_{X}} H(X) = 1 \text{ bit/transmission } $$
+#### 3) Find $ \color{blue}{H(Y)} (\text{Use the calculated probabilities of $ Y $}) \qquad ( = H_{2}(P_{Y}(0)) = H_{2}(P_{Y}(1)) \text{ for a binary channel}) $
 
-
-
-## Binary Symmetric Channel
+#### 4) $ \color{blue}{ \text{ Maximise } I(X; Y) \text{ over } \alpha \quad \mathcal{C} = I(X; Y)(\alpha) \quad P_{X} = (\alpha, 1-\alpha) \text{ is the maximising input distribution.} } $ 
 
 
+</br><hr>
+
+
+## Binary Symmetric Channel (BSC)
+
+$ p $ is the crossover (switching) probability.
+
+### $$ \color{blue}{ \mathcal{C} = 1- H_{2}(p) } $$
 
 ### Repetition Code
 
 
 
+</br>
+
+
+## Cascade Channel
+
+A **cascade channel** is just a series of **connected BSCs**.
+A **cascade channgel** can be represented as a **single BSC with a crossover probability** given by:
+$$ p_{c} = P(Y=1 | X=0) = P(Y=0 | X=1) $$
+
+The probability can be calculated by considering the different pathways to go from the corresponding $ X $ value to the corresponding $ Y $ value.
+
+A set of $m$ BSC channels $$ CC_{m} = BSC(p_{c}) $$
+
+
+<small> **Note: The actual $p_{c}$ for $ m $ BSCs is given by $ p_{c}(m) = \dfrac{1}{2}(1 - (1-2p)^{m}) $ however the derivation and analysis is outside the scope of this course. Can be proved by induction by considering m-1 attached to a single BSC.** </small>
+
+
+
+
+</br>
+
 ## Binary Erasure Channel
 
-##
+
+
+$$ \mathcal{C} = 1 - \epsilon $$
+
+
+## Z-Channel
+
+
+
+
