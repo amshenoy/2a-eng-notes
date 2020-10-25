@@ -239,18 +239,22 @@ Given an analogue filter $ G_{a}(s) $, we need to find the digital filter $ G(z)
 
 ## Band Transformations
 
-Assuming a lowpass prototype with a cutoff of 1:
+Assuming a **lowpass prototype with a cutoff of $\omega=1$**:
 
-Lowpass to Lowpass:
+### Lowpass to Lowpass:
+### $ F(s) = \dfrac{s}{\omega_{c}} $
 
-Lowpass to Highpass:
+### Lowpass to Highpass:
+### $ F(s) = \dfrac{\omega_{c}}{s} $
 
-Lowpass to Bandpass:
+### Lowpass to Bandpass:
+### $ F(s) = \dfrac{s^{2}+\omega_{1}\omega_{2}}{s(\omega_{2} - \omega_{1})} $
 
-Lowpass to Bandstop:
-
+### Lowpass to Bandstop:
+### $ F(s) = \dfrac{s(\omega_{2} - \omega_{1})}{s^{2}+\omega_{1}\omega_{2}}$
  
-
+**Note: $ \color{blue}{ \text{Highpass is the reciprocal of lowpass. Bandstop is the reciprocal of bandpass.} } $**
+ 
 </br>
 
 ## Design Method
@@ -268,7 +272,6 @@ Lowpass to Bandstop:
 
 4) Apply the **discretisation filter** from before:
  ### $$ \color{blue}{ G_{D}(z) = G_{A}(\Psi(z)) } \quad \Big( = H(F(\Psi(z))|_{w_{i}}) \Big) $$
-
 
 
 
