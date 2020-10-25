@@ -20,13 +20,14 @@ $$
 
 #### 2) $ \color{blue}{ H(Y|X) = \sum_{x \in \Chi} P_{X}(x) H(Y | X=x) } \qquad ( = \sum_{x \in \Chi} P_{X}(x) H_{2}(P(Y | X=x)) \text{ for a binary output Y }) $
 
-#### 3) Find $ \color{blue}{H(Y)} (\text{Use the calculated probabilities of $ Y $}) \qquad ( = H_{2}(P_{Y}(0)) = H_{2}(P_{Y}(1)) \text{ for a binary output Y }) $
+#### 3) Find $ \color{blue}{H(Y)} \qquad ( = H_{2}(P_{Y}(0)) = H_{2}(P_{Y}(1)) \text{ for a binary output Y }) $ </br> $ \text{Use } \color{blue}{P(Y) = \sum_{x \in \Chi} P_{X}(x) P(Y | X=x)} $
 
 #### 4) $ \color{blue}{ \text{ Maximise } I(X; Y) \text{ over } \alpha \quad \mathcal{C} = I(X; Y)(\alpha) \quad P_{X} = (\alpha, 1-\alpha) \text{ is the maximising input distribution.} } $ 
 
 
 </br><hr>
 
+### $ \color{green}{ \text{All channels can be expressed as a probability matrix } P_{Y|X} }$.
 
 ## Binary Symmetric Channel (BSC)
 
