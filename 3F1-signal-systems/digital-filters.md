@@ -221,11 +221,17 @@ Note that **$\omega$ is the analogue frequency** and **$\theta$ is the digital f
 
 **Tustin / Bilinear Transform**: $\Psi(z) = \dfrac{2}{T} \dfrac{z-1}{z+1}$ (or simply $\dfrac{z-1}{z+1}$ ) &emsp; LHS ($ s < 0 $) of s-plane maps to **unit circle** &emsp; (**Stable**)
 
-For the bilinear transform, $ j \omega = \dfrac{2}{T} tan \dfrac{\theta}{2} $ or simply $ \color{blue}{ j \omega = tan \dfrac{\theta}{2} } $
+For the **bilinear transform**, $ j \omega = \dfrac{2}{T} tan \dfrac{\theta}{2} $ or simply $ \color{blue}{ j \omega = tan \dfrac{\theta}{2} } $
 
 </br>
 
 ### 2) Response Matching
+
+Given an analogue filter $ G_{a}(s) $, we need to find the digital filter $ G(z) $ for which the response is invariant for some function $ U(s) $ and for some function $ U(z) $ (ie. the discrete time response is the same):
+
+### $$ \color{blue}{\mathcal{Z}^{-1} \{ G(z) U(z) \} = \mathcal{L}^{-1} \{ G(s) U(s) \}|_{t=kT}} $$
+
+### $ \color{blue}{ \text{Rearrange to solve for } G(z)  \text{ given a } G(s) }$
 
 
 </br>
