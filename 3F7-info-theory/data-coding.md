@@ -43,11 +43,11 @@ Given a set of required lengths for each codeword, we can check if a prefix-free
 ## Shannon-Fano Coding
 
 1) Arrange symbols in order of probability $p_{i}$ from highest to lowest.
-2) Calculate the cumulative probability $f_{i-1}$ for each symbol.
+2) Calculate the cumulative probability $f_{i}$ for each symbol.
 3) Calculate the length of the codeword $ L_{i} = \Big\lceil \log_{2}\dfrac{1}{p_{i}} \Big\rceil = \Big\lceil -\log_{2}p_{i} \Big\rceil $ for each symbol.
-4) The codeword is $c_{i} = bin(int(f_{i-1} \cdot 2^{L_{i}})) $
+4) The codeword is $c_{i} = bin(int(f_{i} \cdot 2^{L_{i}})) $
 
-### $ \color{blue}{c_{i} = bin(int(f_{i-1} \cdot 2^{L_{i}})) } $
+### $ \color{blue}{c_{i} = bin(int(f_{i} \cdot 2^{L_{i}})) } $
 
 Alternatively create a binary tree from just the lengths and then label each branch to find the code starting with the root.
 
