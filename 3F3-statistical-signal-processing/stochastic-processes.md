@@ -17,11 +17,19 @@ $ Q $ is the transition probability matrix
 
 $ (\pi, Q) $ completely defines a Markov Chain
 
+### $$ \color{blue}{ P_{X_{n}}(x_{n}) = (\pi Q^{n})_{x_{n}} } $$
+
+### $$ \color{blue}{ P(x_{n}, ..., x_{n+k}) \overbrace{=}^{\text{Chain Rule}} \prod_{i=m}^{m+k} P(x_{i}|x_{i-1}, ..., x_{1}) \overbrace{=}^{\text{Markov Property}} \pi_{i_{m}} \prod_{i=m}^{m+k-1} Q_{i, i+1} \overbrace{=}^{\text{Invariant}} \prod_{i=m}^{m+k} \pi_{i} } $$
+
+**Irreducible** - All states communicate with each other (No sink cycles/nodes)
+
+**Ergodic** - All **irreducible** and **aperiodic** Markov chains have a unique **invariant (/stationary) distribution** $ \pi $.
+
 </br>
 
 ## Markov Property
 **"Limited Memory"** / Markov property:
-#### Only the most recent state $ i_{n-1} $ is needed to determine the probability of the next state $ i_{n} $.
+#### The next state $ x_{n} $ depends only on the previous state $ x_{n-1} $.
 
 #### $ P(X_{n} = x_{n}| X_{n-1} = x_{n-1}, ..., X_{0} = x_{0}) = P(X_{n} = x_{n} | X_{n-1} = x_{n-1}) = Q_{x_{n-1} x_{n}} $
 
@@ -32,7 +40,7 @@ More briefly written as:
 
 ## Strict Stationarity
 A discrete time random process (**Markov** or not) is **strictly stationary** if:
-### $ f_{X_{0}, ... X_{k}}(x_{0}, ..., x_{k}) = f_{X_{m}, ... X_{m+k}}(x_{m}, ..., x_{m+k}) $ &emsp; for all k and m > 0
+### $ \color{blue}{ f_{X_{0}, ... X_{k}}(x_{0}, ..., x_{k}) = f_{X_{m}, ... X_{m+k}}(x_{m}, ..., x_{m+k}) } $ &emsp; for all k and m > 0
 
 #### Note*: Markov Chains are strictly stationary
 
