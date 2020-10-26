@@ -273,5 +273,18 @@ Assuming a **lowpass prototype with a cutoff of $\omega=1$**:
 4) Apply the **discretisation filter** from before:
  ### $$ \color{blue}{ G_{D}(z) = G_{A}(\Psi(z)) } \quad \Big( = H(F(\Psi(z))|_{w_{i}}) \Big) $$
 
+</br>
 
+## Butterworth Filter (Lowpass, $N$-th Order)
+
+### $$ G_{A}(s) = \prod_{i}^{P} \dfrac{1}{s+p_{i}} $$
+
+### $$ G_{A}(s)G_{A}(-s) = \dfrac{1}{1+\Big(\dfrac{s}{j \omega_{c}}\Big)^{2N}} $$
+
+
+### Unit Gain $ G(0) = 1 $ 
+
+### 3dB cutoff frequency $ \omega_{c} $
+
+### Poles when $ (\dfrac{s}{j \omega_{c}})^{2N} = -1 $
 
