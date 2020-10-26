@@ -168,4 +168,26 @@ Solve for the potential by integration and applying boundary conditions.
 
 ## Hall Effect
 
+(Insert Diagram)
 
+### Left-Hand Rule
+**Y** &emsp; **Z** </br>
+|&emsp;/</br>
+| /____ **X**</br>
+
+### $ \text{Apply magnetic field } B_{z} \text{ , conventional current density } J_{x} $:
+### $ F = q \underline{v} \times \underline{B} $
+
+### $ |F_{y}| = q v_{x} B_{z} = q E_{y} $
+
+### $ J_{x} = p q v_{x} $ ($p$ = hole concentration ) 
+$ J_{x} = \dfrac{I}{A} $ where $ A $ is the cross-sectional area of the sample.
+
+### $ V_{H} = E_{y} \Delta y $ (-ve for n-type material)
+
+### Hall's Coefficient &emsp; $ R_{H} = \dfrac{E_{y}}{J_{x} B_{z}} 
+ = \dfrac{1}{\underbrace{pq}_{\text{For p-type material}}} = \dfrac{-1}{\underbrace{nq}_{\text{For n-type material}}} $
+
+__Note*: Problems that involve the Hall Effect would be to determine some property to continue solving the problem (ie. $ p $, $ \mu $, $ \sigma $, $B_{z}$). Use in conjunction with other equations (ie. Fermi $ E_{F} $, conductivity $ \sigma $, mobility $\mu$)__
+
+ 
