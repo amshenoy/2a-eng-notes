@@ -72,7 +72,7 @@ $ \text{Potential of lattice (Periodic boundary condition) } \quad V(x) = V(x - 
 
 #### $ \text{Group Velocity} \quad v = \dfrac{\partial \omega}{ \partial k} $
 
-#### $ \text{Energy} \quad E = h f = \hbar k $
+#### $ \text{Energy} \quad E = h f = \hbar \omega $
 
 ### $ v = \dfrac{1}{\hbar} \dfrac{\partial E}{\partial k} $ &emsp; (1)
 
