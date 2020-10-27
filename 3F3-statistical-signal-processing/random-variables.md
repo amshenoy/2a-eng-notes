@@ -76,7 +76,7 @@ Notice how the above formulas are all involving the differentials.
 For the multivariate case, we simply need to use the **Jacobian**.
 
 From calculus, we can quickly get the following:
-$$ \color{blue}{ p_{Y}(y) = p_{X}(G^{-1}(y)) \enspace | \det(J_{G^{-1}}) | } $$
+$$ \color{blue}{ p_{Y}(y) = p_{X}(G^{-1}(y)) \enspace | \det(J_{G}^{-1}) | } $$
 
 
 </br>
