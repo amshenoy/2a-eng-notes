@@ -19,11 +19,11 @@ $ (\pi, Q) $ completely defines a Markov Chain
 
 ### $$ \color{blue}{ P_{X_{n}}(x_{n}) = (\pi Q^{n})_{x_{n}} } $$
 
-### $$ \color{blue}{ P(x_{n}, ..., x_{n+k}) \overbrace{=}^{\text{Chain Rule}} \prod_{i=m}^{m+k} P(x_{i}|x_{i-1}, ..., x_{1}) \overbrace{=}^{\text{Markov Property}} \pi_{i_{m}} \prod_{i=m}^{m+k-1} Q_{i, i+1} \overbrace{=}^{\text{Invariant}} \prod_{i=m}^{m+k} \pi_{i} } $$
+### $$ \color{blue}{ P(x_{n}, ..., x_{n+k}) \overbrace{=}^{\text{Chain Rule}} \prod_{i=m}^{m+k} P(x_{i}|x_{i-1}, ..., x_{1}) \overbrace{=}^{\text{Markov Property}} \pi_{i_{m}} \prod_{i=m}^{m+k-1} Q_{i, i+1} \overbrace{=}^{\text{Invariant Dist.}} \prod_{i=m}^{m+k} \pi_{i} } $$
 
 **Irreducible** - All states communicate with each other (No sink cycles/nodes)
 
-**Ergodic** - All **irreducible** and **aperiodic** Markov chains have a unique **invariant (/stationary) distribution** $ \pi $.
+**Ergodic** - All **irreducible** and **aperiodic** Markov chains have a unique **stationary (/invariant) distribution** $ \pi $.
 
 </br>
 
@@ -46,7 +46,7 @@ A discrete time random process (**Markov** or not) is **strictly stationary** if
 
 </br>
 
-## Invariant (/Stationary) Distribution
+## Stationary (/Invariant) Distribution
 The p.m.f $ \pi = (\pi_{i}: i \in S) $ is invariant for $Q$ if for all $ j \in S $:
 
 $$ \sum_{i \in S } \pi_{i} Q_{ij} = \pi_{j} $$  
@@ -56,22 +56,42 @@ $$ \sum_{i \in S } \pi_{i} Q_{ij} = \pi_{j} $$
 
 # Autoregressive (AR) Process
 
+### $$ AR(p): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} X_{n-i} \Big) + W_{n} } $$
+ 
+## $$ 
+\begin{align*}
+AR(1): \qquad
+\color{blue}{ X_{n} } &= \color{blue}{ a X_{n-1} + W_{n} } \\
+&= a (a X_{n-2} + W_{n-1}) + W_{n} \quad (\small\text{By resubstitution})  \\
+&= \quad ... \\
+\color{blue}{ X_{n} } &= \color{blue}{ \sum_{k=0}^{\infty} W_{n-k} a^{k} } \\
+&= W_{k} * \underbrace{a^{k}}_{h_{k}} \quad (\small\text{ where the impulse response is } h_{k} = a^{k}  ) \\
+\end{align*}
+$$
+
 </br>
 
 ## Wide Sense Stationary (WSS)
 
-#### 1) Constant Mean: $ E\{ X_{n} \} = \mu \quad \text{ for all n } $
-#### 2) Finite Variance: $ E\{ X_{n}^{2} \} < \infty \quad \text{ for all n } $
-#### 3) Stationarity Property: $ \color{green}{ E \{ X_{m} X_{n}  \} = E \{ X_{m+k} X_{n+k}  \} } $ 
+### 1) Constant Mean: $ E\{ X_{n} \} = \mu \quad \text{ for all n } $
+### 2) Finite Variance: $ E\{ X_{n}^{2} \} < \infty \quad \text{ for all n } $
+### 3) Stationarity Property: $ \color{green}{ E \{ X_{m} X_{n}  \} = E \{ X_{m+k} X_{n+k}  \} = R_{X}(n-m) } $
 </br>
 
 **Note: WSS is a weaker restriction of strict stationarity as strict stationarity is an inappropriate model for real-world processes.**
 
 ## Correlation Function
-### $$ \color{blue}{ R_{X}(k) = E \{ X_{0} X_{k} \} } $$
+## $$ \color{blue}{ 
+\begin{align*}
+R_{X}(k) &= E \{ X_{0} X_{k} \} \\ (&= E \{ X_{n} X_{n+k} \}) \quad (\small\text{By stationarity})
+\end{align*}
+}
+$$
 
-$ E \{ X_{m} X_{n}  \} = E \{ X_{0} X_{n-m}  \} = R_{X}(n-m) $ 
- 
+### For a WSS process, $ R_{X}(k) $ is only dependent on $ k $ (ie. the difference of the indices).
+
+### $ R_{X}(k) $ is an even function (ie. $ R_{X}(k) = R_{X}(-k) $ )
+
 </br><hr>
 
 # Moving Average (MA) Process
@@ -79,6 +99,26 @@ $ E \{ X_{m} X_{n}  \} = E \{ X_{0} X_{n-m}  \} = R_{X}(n-m) $
 
 </br><hr>
 
-## Power Spectrum
+# Power Spectrum Density (PSD)
 
+Power Spectrum Density = Fourier transform of the correlation function
+
+### Note: Split $ \sum_{k=-\infty}^{\infty} $ into $ \sum_{k=0}^{\infty} $ and $ \sum_{k=-\infty}^{0} $.
+
+### Note: $ R_{X}(k) = R_{X}(-k) $ (even function)
+</br>
+
+
+### $$ 
+\begin{align*}
+S_{X}(f) &= \mathcal{F}\{ R_{X}(k) \} \\ \\
+&= \sum_{k=-\infty}^{\infty} R_{X}(k) e^{-j 2\pi f k} = \sum_{k=0}^{\infty} R_{X}(k) e^{-j 2\pi f k} + \sum_{k=0}^{\infty} R_{X}(-k) e^{j 2\pi f k}  \enspace - R_{X}(0) \\
+&= \sum_{k=-\infty}^{\infty} R_{X}(k) \cos(2 \pi f k) 
+= 2 \sum_{k=0}^{\infty} R_{X}(k) \cos(2 \pi f k) \enspace - R_{X}(0) \\
+\end{align*}
+$$
+
+</br>
+
+### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
 
