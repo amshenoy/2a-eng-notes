@@ -77,16 +77,22 @@ $$
 
 ### $ R_{X}(k) $ is an even function (ie. $ R_{X}(k) = R_{X}(-k) $ )
 
-</br><hr></br>
+## LTI System
 
-# Autoregressive (AR) Process
+### If $ W_{n} $ is WSS then $ X_{n} $ is WSS where:
+### $$ X_{n} = \sum_{k=0}^{\infty} W_{n-k} h_{k} $$
+
+</br></br>
+
+## Autoregressive (AR) Process
 
 ### $$ \color{purple}{AR}(p): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} \color{purple}{X_{n-i}} \Big) + W_{n} } $$
 
-### where $ E\{ W_{i} W_{j} \} =  \begin{cases}
-\sigma^{2} \quad i = j \\
+### where $ \quad \color{green}{ E\{W_{i}\} = 0 \quad E\{ W_{i} W_{j} \} = \begin{cases}
+\sigma^{2} \qquad i = j \\
 0 \quad i \ne j
 \end{cases}
+\quad \text{(Required for WSS)} }
 $
 
 ## $$ 
@@ -102,15 +108,30 @@ $$
 
 </br>
 
-# Moving Average (MA) Process
+## Moving Average (MA) Process
 
  
-### $$ \color{purple}{MA}(p): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} \color{purple}{W_{n-i}} \Big) + W_{n} } $$
+### $$ \color{purple}{MA}(q): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{q} b_{i} \color{purple}{W_{n-i}} \Big) + W_{n} } $$
 
-### where $ E\{ W_{i} W_{j} \} =  \begin{cases}
-\sigma^{2} \quad i = j \\
+### where $ \quad \color{green}{ E\{W_{i}\} = 0 \quad E\{ W_{i} W_{j} \} = \begin{cases}
+\sigma^{2} \qquad i = j \\
 0 \quad i \ne j
 \end{cases}
+\quad \text{(Required for WSS)} }
+$
+
+</br>
+
+## Autoregressive Moving Average (ARMA) Process
+
+ 
+### $$ \color{purple}{ARMA}(p, q): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} \color{purple}{X_{n-i}} \Big) + \Big( \sum_{i=1}^{q} b_{i} \color{purple}{W_{n-i}} \Big) + W_{n} } $$
+
+### where $ \quad \color{green}{ E\{W_{i}\} = 0 \quad E\{ W_{i} W_{j} \} = \begin{cases}
+\sigma^{2} \qquad i = j \\
+0 \quad i \ne j
+\end{cases}
+\quad \text{(Required for WSS)} }
 $
 
 </br><hr>
@@ -155,7 +176,6 @@ $$
 ### $$ X_{n} = W_{k} * h_{k} $$
 
 ### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
-
 
 
 
