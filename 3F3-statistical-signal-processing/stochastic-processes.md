@@ -152,7 +152,7 @@ $$
 </br>
 
 ## LTI System
-### $$ X_{n} = W_{n} * h_{k} $$
+### $$ X_{n} = W_{k} * h_{k} $$
 
 ### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
 
