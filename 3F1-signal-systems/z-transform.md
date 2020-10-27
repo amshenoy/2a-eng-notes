@@ -107,11 +107,22 @@ Using the final-value theorem:
 $$ \color{purple}{ \lim_{k \rightarrow \infty} y(k) = G(1) } $$
 
 ### Harmonic Response
+
+#### Note that these are all steady state responses ($ k \rightarrow \infty $)
+
+### $$
+\text{If } \quad u_{k} = e^{j \theta k} \\
+\color{blue} { y_{k} = |G(e^{j \theta k})| e^{j(\theta k + \angle G(e^{j \theta k}))} }
+$$
+
+</br>
+
 ### $$
 \text{If } \quad u_{k} = \cos(\omega kT) \\
 \color{blue} { y_{k} = |G(e^{j \omega T})| \cos(\omega k T + \angle G(e^{j \omega T})) }
 $$
 #### Note*: The function in the output is the same as the function in the input. (ie. $\sin \rightarrow \sin$)
+
 </br>
 
 ## Inverting a Z-domain Signal
