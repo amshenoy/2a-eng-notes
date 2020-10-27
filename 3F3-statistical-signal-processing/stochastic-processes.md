@@ -103,11 +103,20 @@ $$
 
 Power Spectrum Density = Fourier transform of the correlation function
 
-### Note: Split $ \sum_{k=-\infty}^{\infty} $ into $ \sum_{k=0}^{\infty} $ and $ \sum_{k=-\infty}^{0} $.
+### $ S_{X}(f) $ is even, real and non-negative &emsp; $ S_{X}(f) = S_{X}(-f) = S^{*}_{X}(f) \enspace \ge 0 $
 
-### Note: $ R_{X}(k) = R_{X}(-k) $ (even function)
+### $ S_{X}(f) $ is continuous if $ \sum_{-\infty}^{\infty} |R_{X}(k)| < \infty $
+ 
+### $ S_{X}(f) = S_{X}(f+k) \quad S_{X}$ has period 1.
+
 </br>
 
+#### Note: Split $ \sum_{k=-\infty}^{\infty} $ into $ \sum_{k=0}^{\infty} $ and $ \sum_{k=-\infty}^{0} $
+
+#### Note: $ R_{X}(k) = R_{X}(-k) $ (even function)
+</br>
+
+## Fourier Transform
 
 ### $$ 
 \begin{align*}
@@ -120,5 +129,16 @@ $$
 
 </br>
 
+## Inverse Fourier Transform
+
+### $$ R_{X}(k) = \int_{-\frac{1}{2}}^{\frac{1}{2}} \enspace S_{X}(f) \enspace e^{j 2\pi f k } \enspace df $$
+
+</br>
+
+## LTI System
+### $$ X_{n} = W_{n} * h_{k} $$
+
 ### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
+
+
 
