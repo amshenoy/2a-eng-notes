@@ -52,24 +52,9 @@ The p.m.f $ \pi = (\pi_{i}: i \in S) $ is invariant for $Q$ if for all $ j \in S
 $$ \sum_{i \in S } \pi_{i} Q_{ij} = \pi_{j} $$  
 ## $$ \color{blue}{ \pi Q = \pi } \quad (\pi \text{ is regarded as a row vector}) $$
 
-</br><hr>
+</br><hr></br>
 
-# Autoregressive (AR) Process
-
-### $$ AR(p): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} X_{n-i} \Big) + W_{n} } $$
- 
-## $$ 
-\begin{align*}
-AR(1): \qquad
-\color{blue}{ X_{n} } &= \color{blue}{ a X_{n-1} + W_{n} } \\
-&= a (a X_{n-2} + W_{n-1}) + W_{n} \quad (\small\text{By resubstitution})  \\
-&= \quad ... \\
-\color{blue}{ X_{n} } &= \color{blue}{ \sum_{k=0}^{\infty} W_{n-k} a^{k} } \\
-&= W_{k} * \underbrace{a^{k}}_{h_{k}} \quad (\small\text{ where the impulse response is } h_{k} = a^{k}  ) \\
-\end{align*}
-$$
-
-</br>
+# WSS Processes
 
 ## Wide Sense Stationary (WSS)
 
@@ -92,10 +77,41 @@ $$
 
 ### $ R_{X}(k) $ is an even function (ie. $ R_{X}(k) = R_{X}(-k) $ )
 
-</br><hr>
+</br><hr></br>
+
+# Autoregressive (AR) Process
+
+### $$ \color{purple}{AR}(p): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} \color{purple}{X_{n-i}} \Big) + W_{n} } $$
+
+### where $ E\{ W_{i} W_{j} \} =  \begin{cases}
+\sigma^{2} \quad i = j \\
+0 \quad i \ne j
+\end{cases}
+$
+
+## $$ 
+\begin{align*}
+AR(1): \qquad
+\color{blue}{ X_{n} } &= \color{blue}{ a X_{n-1} + W_{n} } \\
+&= a (a X_{n-2} + W_{n-1}) + W_{n} \quad (\small\text{By resubstitution})  \\
+&= \quad ... \\
+\color{blue}{ X_{n} } &= \color{blue}{ \sum_{k=0}^{\infty} W_{n-k} a^{k} } \\
+&= W_{k} * \underbrace{a^{k}}_{h_{k}} \quad (\small\text{ where the impulse response is } h_{k} = a^{k}  ) \\
+\end{align*}
+$$
+
+</br>
 
 # Moving Average (MA) Process
 
+ 
+### $$ \color{purple}{MA}(p): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} \color{purple}{W_{n-i}} \Big) + W_{n} } $$
+
+### where $ E\{ W_{i} W_{j} \} =  \begin{cases}
+\sigma^{2} \quad i = j \\
+0 \quad i \ne j
+\end{cases}
+$
 
 </br><hr>
 
