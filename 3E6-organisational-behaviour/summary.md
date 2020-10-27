@@ -22,7 +22,26 @@ Personality based on:
 
 # Culture
 
+$$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
+#### Leader Perspective
+Leader's Personality = Culture
+Negative effect due to bounded rationality and availability bias
+
+#### Characteristics
+Shared Beliefs
+Implicit Control
+Artifacts: Empirical Evidence
+
+#### Socialisation
+* Prearrival
+* Encounter
+* Metamorphosis
+
+### Reverse Causality
+Idea that people select cultures
+* Person-Organisation Fit
+* Attraction-Selection-Attrition Theory
 
 # Perception
 
