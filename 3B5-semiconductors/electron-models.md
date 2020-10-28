@@ -74,7 +74,7 @@ $ \text{Potential of lattice (Periodic boundary condition) } \quad V(x) = V(x - 
 
 #### $ \text{Energy} \quad E = h f = \hbar \omega $
 
-### $ v = \dfrac{1}{\hbar} \dfrac{\partial E}{\partial k} $ &emsp; (1)
+## $ \color{blue}{ v = \dfrac{1}{\hbar} \dfrac{\partial E}{\partial k} } $ &emsp; (1)
 
 
 ### Consider as a **particle**:
@@ -85,4 +85,4 @@ $ \text{Potential of lattice (Periodic boundary condition) } \quad V(x) = V(x - 
 
 
 **Sub (1) into (3) and then (2) into the same simplified equation.**
-## $$ \therefore \dfrac{\hbar^{2}}{m^{*}} =  \dfrac{d^{2}E}{dk^{2}} $$
+## $$ \therefore \color{blue}{ \dfrac{\hbar^{2}}{m^{*}} =  \dfrac{d^{2}E}{dk^{2}} } $$
