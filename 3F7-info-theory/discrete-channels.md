@@ -67,7 +67,7 @@ A set of $m$ BSC channels $$ CC_{m} = BSC(p_{c}) $$
 
 </br>
 
-## Binary Erasure Channel
+## Binary Erasure Channel (BEC)
 
 ### $$ P_{Y|X} (y: P_{y|X}) = \{ 0: 1-\epsilon, \quad ?: \epsilon, \quad 1: 1-\epsilon \} $$
 
