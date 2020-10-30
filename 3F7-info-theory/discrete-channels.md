@@ -41,7 +41,9 @@ $ p $ is the crossover (switching) probability.
 ### $$ \color{blue}{ \mathcal{C} = 1- H_{2}(p) } $$
 
 ### Repetition Code
+(1, 3) - 1 bit is repeated 3 times
 
+#### $ P(\text{decoding error}) = P( \text{errors} \ge 2 ) = 3C2 p^{2}(1-p) + 3C3 (1-p)^{3} $
 
 
 </br>
@@ -81,6 +83,7 @@ A set of $m$ BSC channels $$ CC_{m} = BSC(p_{c}) $$
 
 ## Z-Channel
 
+## $ P_{Y|X} $ - Asymmetric Matrix (Diagram looks like a Z)
 
 
 
