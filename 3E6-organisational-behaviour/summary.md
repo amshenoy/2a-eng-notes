@@ -20,6 +20,8 @@ Personality based on:
 * Environmental factors do have some influence
 * Aging influences levels of ability
 
+</br><hr>
+
 # Culture
 
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
@@ -43,9 +45,15 @@ Idea that people select cultures
 * Person-Organisation Fit
 * Attraction-Selection-Attrition Theory
 
+</br><hr>
+
 # Perception
+Perception is a process by which individuals interpret and organize their sensory impressions to give meaning to their environment.
 
 
+
+
+</br><hr>
 
 # Motivation
 
