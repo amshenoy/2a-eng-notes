@@ -154,6 +154,9 @@ Power Spectrum Density = Fourier transform of the correlation function
 #### Note: Split $ \sum_{k=-\infty}^{\infty} $ into $ \sum_{k=0}^{\infty} $ and $ \sum_{k=-\infty}^{0} $
 
 #### Note: $ R_{X}(k) = R_{X}(-k) $ (even function)
+
+#### Note: For proving conjugates, use change of variable $ k = - k^{'} $ in sum before doing anything else!
+
 </br>
 
 ## Fourier Transform
