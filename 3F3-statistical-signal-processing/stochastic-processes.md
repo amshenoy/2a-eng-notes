@@ -79,8 +79,8 @@ $$
 
 ## LTI System
 
-### If $ W_{n} $ is WSS then $ X_{n} $ is WSS where:
-### $$ X_{n} = \sum_{k=0}^{\infty} W_{n-k} h_{k} $$
+### For any LTI system with WSS input $ W_{n} $ and impulse response $ h_{n} $, then the output $ X_{n} $ is WSS where:
+### $$ X_{n} = \sum_{k=-\infty}^{\infty} W_{n-k} h_{k} = W_{n} * h_{n} $$
 
 </br></br>
 
