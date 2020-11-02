@@ -58,14 +58,24 @@ Perception is a process by which individuals interpret and organize their sensor
 # Motivation
 
 
+</br><hr>
+
+
 # Creativity, Innovation, and Innovation Diffusion
 
+
+
+
+</br><hr>
 
 
 # Group Dynamics
 
 
+</br><hr>
+
 
 # Leadership
 
 
+</br><hr>
