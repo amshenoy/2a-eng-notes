@@ -169,7 +169,7 @@ S_{X}(f) &= \mathcal{F}\{ R_{X}(k) \} = \sum_{k=-\infty}^{\infty} R_{X}(k) e^{-j
 $$
 
 Alternatively can be written in the z-domain as:
-### $$ S_{X}(e^{j \omega}) = \mathcal{Z}\{ R_{X}(k) \}|_{z=e^{j \omega}}  $$
+### $$ S_{X}(e^{j \theta}) = \mathcal{Z}\{ R_{X}(k) \}|_{z=e^{j \theta}}  $$
 
 
 </br>
