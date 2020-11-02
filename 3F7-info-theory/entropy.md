@@ -2,6 +2,9 @@
 
 $$ H(X) = \sum_{x} P(x) \log \Big( \dfrac{1}{P(x)} \Big) = \mathcal{E}( - \log(P(x)) ) $$
 
+#### Differential Entropy
+$$ h(X) = \int_{x=-\infty}^{\infty} p(x) \log \Big( \dfrac{1}{p(x)} \Big) = \mathcal{E}( - \log(p(x)) ) $$
+
 ### Binary Entropy Function
 $$ 
 H_{2}(p) = p log(\dfrac{1}{p}) + (1-p)log(\dfrac{1}{1-p})
