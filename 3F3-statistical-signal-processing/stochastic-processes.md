@@ -106,6 +106,9 @@ AR(1): \qquad
 \end{align*}
 $$
 
+
+### $ R_{X}(k) = a^{2} \sigma_{x}^{2} = a^{2} \dfrac{\sigma^{2}}{1-a^{2}} $
+
 </br>
 
 ## Moving Average (MA) Process
