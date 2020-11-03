@@ -77,6 +77,8 @@ $$
 
 ### $ R_{X}(k) $ is an even function (ie. $ R_{X}(k) = R_{X}(-k) $ )
 
+</br>
+
 ## LTI System
 
 ### For any LTI system with WSS input $ W_{n} $ and impulse response $ h_{n} $, then the output $ X_{n} $ is WSS where:
