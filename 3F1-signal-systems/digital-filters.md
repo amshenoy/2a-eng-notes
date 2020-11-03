@@ -123,8 +123,10 @@ Note*: Truncation = Multiplication by Window, Abrupt discontinuities in window f
 </br>
 
 ### Linear Phase
+
 Linear Phase $ G(e^{j \theta}) = |G(e^{j \theta})| e^{-j \theta \dfrac{N}{2}} $ is achieved if $ g_{k} = g_{N-k} $
 
+The window method gives linear phase filters:
 All window functions satisfy linear phase $ w_{k} = w_{N-k} $.
 If the impulse response $ h_{k} $ is also symmetric ie. $ h_{k} = h_{N-k} $, then $ g_{k} = g_{N-k} $.
 
