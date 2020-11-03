@@ -108,8 +108,9 @@ AR(1): \qquad
 \end{align*}
 $$
 
+For AR(1):
 
-### $ R_{X}(k) = a^{2} \sigma_{x}^{2} = a^{2} \dfrac{\sigma^{2}}{1-a^{2}} $
+### $$ \begin{align*} R_{X}(k) &= E(X_{n} X_{n+k}) = E(X_{n} (a X_{n+k-1} + W_{n+k}) ) = E(a^p X_{n} X_{n+k-p}) ) \\ &= a^{2} \sigma_{x}^{2} = a^{|k|} \dfrac{\sigma^{2}}{1-a^{2}} \end{align*} $$
 
 </br>
 
@@ -165,8 +166,10 @@ Power Spectrum Density = Fourier transform of the correlation function
 
 ### $$ 
 \begin{align*}
-S_{X}(f) &= \mathcal{F}\{ R_{X}(k) \} = \sum_{k=-\infty}^{\infty} R_{X}(k) e^{-j 2\pi f k} = \sum_{k=-\infty}^{\infty} R_{X}(k) \cos(2 \pi f k) \\ & (\text{As } R_{x}(k) \text{ is even, sines are removed}) \\ \\ &= \Bigg( \sum_{k=0}^{\infty} R_{X}(k) e^{-j 2\pi f k} + R_{X}(-k) e^{j 2\pi f k} \Bigg) \enspace - R_{X}(0) \\
-&= 2 \sum_{k=0}^{\infty} R_{X}(k) \cos(2 \pi f k) \enspace - R_{X}(0) \\
+S_{X}(f) &= \mathcal{F}\{ R_{X}(k) \} = \sum_{k=-\infty}^{\infty} R_{X}(k) e^{-j 2\pi f k} = \sum_{k=-\infty}^{\infty} R_{X}(k) \cos(2 \pi f k) \\ & (\text{As } R_{x}(k) \text{ is even, sines are removed}) \\ \\
+ S_{X}(f) &= \Bigg( \sum_{k=0}^{\infty} R_{X}(k) e^{-j 2\pi f k} + R_{X}(-k) e^{j 2\pi f k} \Bigg) \enspace - R_{X}(0) \\
+&= \Bigg( \sum_{k=0}^{\infty} R_{X}(k) ( e^{-j 2\pi f k} + e^{j 2\pi f k} ) \Bigg) \enspace - R_{X}(0) \\
+&= \sum_{k=0}^{\infty} R_{X}(k) \cdot 2 \cos(2 \pi f k) \enspace - R_{X}(0) \\
 \end{align*}
 $$
 
