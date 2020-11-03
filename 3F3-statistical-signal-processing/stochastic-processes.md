@@ -144,7 +144,11 @@ $
 
 # Power Spectrum Density (PSD)
 
-Power Spectrum Density = Fourier transform of the correlation function
+**Power Density Function** = **Fourier Transform** of the **Correlation Function**
+
+### $ S_{X}(f) = \mathcal{F}\{ R_{X}(k) \} $
+
+</br>
 
 ### $ S_{X}(f) $ is even, real and non-negative &emsp; $ S_{X}(f) = S_{X}(-f) = S^{*}_{X}(f) \enspace \ge 0 $
 
@@ -162,9 +166,9 @@ Power Spectrum Density = Fourier transform of the correlation function
 
 </br>
 
-## Fourier Transform
+### Fourier Transform
 
-### $$ 
+#### $$ 
 \begin{align*}
 S_{X}(f) &= \mathcal{F}\{ R_{X}(k) \} = \sum_{k=-\infty}^{\infty} R_{X}(k) e^{-j 2\pi f k} = \sum_{k=-\infty}^{\infty} R_{X}(k) \cos(2 \pi f k) \\ & (\text{As } R_{x}(k) \text{ is even, sines are removed}) \\ \\
  S_{X}(f) &= \Bigg( \sum_{k=0}^{\infty} R_{X}(k) e^{-j 2\pi f k} + R_{X}(-k) e^{j 2\pi f k} \Bigg) \enspace - R_{X}(0) \\
@@ -173,22 +177,37 @@ S_{X}(f) &= \mathcal{F}\{ R_{X}(k) \} = \sum_{k=-\infty}^{\infty} R_{X}(k) e^{-j
 \end{align*}
 $$
 
+### $$ \color{blue}{ S_{X}(f) = \sum_{k=-\infty}^{\infty} R_{X}(k) e^{-j 2\pi f k} = \Bigg( \sum_{k=0}^{\infty} R_{X}(k) e^{-j 2\pi f k} + R_{X}(-k) e^{j 2\pi f k} \Bigg) \enspace - R_{X}(0) } $$
+
 Alternatively can be written in the z-domain as:
 ### $$ S_{X}(e^{j \theta}) = \mathcal{Z}\{ R_{X}(k) \}|_{z=e^{j \theta}}  $$
 
 
 </br>
 
-## Inverse Fourier Transform
+### Inverse Fourier Transform
 
-### $$ R_{X}(k) = \int_{-\frac{1}{2}}^{\frac{1}{2}} \enspace S_{X}(f) \enspace e^{j 2\pi f k } \enspace df $$
+## $$ \color{blue}{ R_{X}(k) = \int_{-\frac{1}{2}}^{\frac{1}{2}} \enspace S_{X}(f) \enspace e^{j 2\pi f k } \enspace df } $$
 
 </br>
 
 ## LTI System
-### $$ X_{n} = W_{k} * h_{k} $$
+For a WSS output $ X_{n} $ and a WSS input $ W_{n} $ :
+## $$ X_{n} = W_{n} * h_{n} $$
 
+### Power Density Conversions
 ### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
+
+
+### Expected Average Power
+## $$ P = E(X_{n}^{2}) $$
+
+**Note: For any random process $ P = E(X_{n}^{2}) $ is the expected instantaneous power and not the expected average power. Only true if the process is WSS.**
+
+### Power of Frequency Band
+## $$ P_{f_{1}\text{ to }f_{2}} = 2 \int_{f_{1}}^{f_{2}} S_{X}(f) df $$ 
+
+
 
 
 
