@@ -86,7 +86,7 @@ $$
 
 </br></br>
 
-## Autoregressive (AR) Process
+## Autoregressive (AR) Process (IIR)
 
 ### $$ \color{purple}{AR}(p): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{p} a_{i} \color{purple}{X_{n-i}} \Big) + W_{n} } $$
 
@@ -114,7 +114,7 @@ For AR(1):
 
 </br>
 
-## Moving Average (MA) Process
+## Moving Average (MA) Process (FIR)
 
  
 ### $$ \color{purple}{MA}(q): \qquad \color{blue}{  X_{n} = \Big( \sum_{i=1}^{q} b_{i} \color{purple}{W_{n-i}} \Big) + W_{n} } $$
