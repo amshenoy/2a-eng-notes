@@ -110,7 +110,7 @@ $$
 
 For AR(1):
 
-### $$ \begin{align*} R_{X}(k) &= E(X_{n} X_{n+k}) = E(X_{n} (a X_{n+k-1} + W_{n+k}) ) = E(a^p X_{n} X_{n+k-p}) ) \\ &= a^{2} \sigma_{x}^{2} = a^{|k|} \dfrac{\sigma^{2}}{1-a^{2}} \end{align*} $$
+### $$ \begin{align*} R_{X}(k) &= E(X_{n} X_{n+k}) = E(X_{n} (a X_{n+k-1} + W_{n+k}) ) = E(a^p X_{n} X_{n+k-p}) ) \quad \text{ (for any p) } \\ &= a^{|k|} E(X_{n}^{2}) = a^{|k|} \sigma_{x}^{2} = a^{|k|} \dfrac{\sigma^{2}}{1-a^{2}} \end{align*} $$
 
 </br>
 
