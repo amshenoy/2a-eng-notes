@@ -161,7 +161,7 @@ Stable if all poles of $ G(z) $ are in unit circle.
 
 Let $ z_{k} $ be the $k$-th zero and $ p_{k} $ be the $k$-th pole of the system transfer function $ G(z) $.
 
-Consider e^{j theta} moving around the **unit circle** as $ \theta $ increases, use the formulas below to determine the diagram. 
+Consider $e^{j theta}$ moving around the **unit circle** as $ \theta $ increases and use the equations below to determine the diagram. 
 
 ### $$ \color{purple}{ |G(e^{j \theta})| = \dfrac{\prod_{k} |e^{j \theta} - z_{k}|}{\prod_{k} |e^{j \theta} - p_{k}|} } $$
 
