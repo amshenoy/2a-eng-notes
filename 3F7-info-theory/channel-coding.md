@@ -46,6 +46,8 @@ For a channel with input $X_{k}$, output $Y_{k}$ and gaussian noise $ Z_{k} = \m
 #### Example Channel
 $$ \Large Y_{k} = X_{k} + Z_{k} $$
 
+Gaussian has the maximum possible differential entropy:
+
 $$ \large \color{blue}{ h(Z) = \dfrac{1}{2} \log_{2} (2\pi e \sigma^{2}) } $$
 
 $$ \large \color{blue}{ \large h(Y) \le \dfrac{1}{2} \log_{2} (2\pi e \ E(Y_{k}^{2})) } $$ 
