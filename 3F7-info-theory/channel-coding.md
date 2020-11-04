@@ -11,20 +11,21 @@ presence of noise and interference.
 ### $ k $ bits $ \leftrightarrow 2^{k} = 2^{nR} $ messages 
 
 
-## Joint Typicality
+# Joint Typicality
 
 
-### Joint AEP
+## Joint AEP
 
 
+</br>
 
-## Error Estimation
+# Error Estimation
 
 ### Minimum Error Probability Estimator 
 $$ \large \hat{X}(Y) = \arg\max_{x \in \mathcal{X}} P_{X|Y}(x|Y) = \arg\max_{x \in \mathcal{X}} \dfrac{P_{XY}(x, Y)}{P_{Y}(Y)} $$ 
 
 ### Error Probability
-$$ 
+$$ \large 
 \begin{align*}
 P_{e} &= P( \hat{X}(Y) \ne X ) \\ &= \sum_{x} P( \hat{X}(Y) \ne X | X = x) P_{X}(x) \\ P_{e} &= \sum_{x} P( \hat{X}(Y) \ne X, X = x) \\
 \end{align*}
@@ -32,7 +33,7 @@ $$
 
 
 ### Fano's Inequality
-$$ P_{e} \ge \dfrac{H(X|Y)-1}{\log|\mathcal{X}|}$$ 
+$$ \large P_{e} \ge \dfrac{H(X|Y)-1}{\log|\mathcal{X}|}$$ 
 
 
 </br>
