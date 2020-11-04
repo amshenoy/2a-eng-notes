@@ -68,7 +68,7 @@ $$
 \end{align*}
 $$
 
-$ \large \color{blue}{ \text{SNR} = \dfrac{E(f(X)^{2})}{E(g(Z)^{2})} } $
+$ \large \color{blue}{ \text{SNR} = \dfrac{\text{Input Power}}{\text{Noise Power}} = \dfrac{E(f(X)^{2})}{E(g(Z)^{2})} } $
  
 $$ \Large \color{blue}{
 \mathcal{C} = h(Y) - h(Z) = \dfrac{1}{2} \log_{2} (1 + \text{SNR})
