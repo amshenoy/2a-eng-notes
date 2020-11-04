@@ -161,8 +161,12 @@ Stable if all poles of $ G(z) $ are in unit circle.
 
 Let $ z_{k} $ be the $k$-th zero and $ p_{k} $ be the $k$-th pole of the system transfer function $ G(z) $.
 
-Consider $e^{j theta}$ moving around the **unit circle** as $ \theta $ increases and use the equations below to determine the diagram. 
+Consider $e^{j \theta}$ moving around the **unit circle** as $ \theta $ increases and use the equations below to determine the diagram. 
 
 ### $$ \color{purple}{ |G(e^{j \theta})| = \dfrac{\prod_{k} |e^{j \theta} - z_{k}|}{\prod_{k} |e^{j \theta} - p_{k}|} } $$
 
 ### $$ \color{purple}{ \angle G(e^{j \theta}) = \sum_{k} \angle (e^{j \theta} - z_{k}) - \sum_{k} \angle(e^{j \theta} - p_{k}) } $$
+
+#### For dB scale (sketching), use the following:
+#### $$ \color{purple}{ \log|G(e^{j \theta})| = \sum_{k} \log|e^{j \theta} - z_{k}| - \sum_{k} \log|e^{j \theta} - p_{k}|  } $$
+
