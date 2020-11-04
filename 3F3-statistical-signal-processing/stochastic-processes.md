@@ -189,6 +189,8 @@ Alternatively can be written in the z-domain as:
 
 ## $$ \color{blue}{ R_{X}(k) = \int_{-\frac{1}{2}}^{\frac{1}{2}} \enspace S_{X}(f) \enspace e^{j 2\pi f k } \enspace df } $$
 
+## $$ \color{blue}{ r_{xx}(k) = \dfrac{1}{2\pi} \int_{-\pi}^{\pi} \enspace S_{X}(e^{j\theta}) \enspace e^{j \theta k } \enspace d\theta } $$
+
 </br>
 
 ## LTI System
@@ -207,6 +209,7 @@ For a WSS output $ X_{n} $ and a WSS input $ W_{n} $ :
 ### Power of Frequency Band
 ## $$ P_{f_{1}\text{ to }f_{2}} = 2 \int_{f_{1}}^{f_{2}} S_{X}(f) df $$ 
 
+## $$ P_{\theta_{1}\text{ to }\theta_{2}} = \dfrac{1}{\pi} \int_{\theta_{1}}^{\theta_{2}} S_{X}(e^{j \theta}) d\theta  $$
 
 
 
