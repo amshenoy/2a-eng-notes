@@ -84,6 +84,14 @@ $$
 ### For any LTI system with WSS input $ W_{n} $ and impulse response $ h_{n} $, then the output $ X_{n} $ is WSS where:
 ### $$ X_{n} = \sum_{k=-\infty}^{\infty} W_{n-k} h_{k} = W_{n} * h_{n} $$
 
+### Power Density Conversions
+### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
+
+### Expected Average Power
+## $$ P = E(X_{n}^{2}) $$
+
+**Note: For any random process $ P = E(X_{n}^{2}) $ is the expected instantaneous power and not the expected average power. Only true if the process is WSS.**
+
 </br></br>
 
 ## Autoregressive (AR) Process (IIR)
@@ -193,18 +201,6 @@ Alternatively can be written in the z-domain as:
 
 </br>
 
-## LTI System
-For a WSS output $ X_{n} $ and a WSS input $ W_{n} $ :
-## $$ X_{n} = W_{n} * h_{n} $$
-
-### Power Density Conversions
-### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
-
-
-### Expected Average Power
-## $$ P = E(X_{n}^{2}) $$
-
-**Note: For any random process $ P = E(X_{n}^{2}) $ is the expected instantaneous power and not the expected average power. Only true if the process is WSS.**
 
 ### Power of Frequency Band
 ## $$ P_{f_{1}\text{ to }f_{2}} = 2 \int_{f_{1}}^{f_{2}} S_{X}(f) df $$ 
