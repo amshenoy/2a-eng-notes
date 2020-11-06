@@ -15,11 +15,11 @@
 
 ### Cross-Covariance
 
-### White Noise
+## White Noise
 A process $ X_{n} $ is a **white noise process** if:
 ### $$ \color{red}{ c_{XX}[k] = \sigma_{X}^{2} \enspace \delta(k) } $$
 
-### Mean Ergodic
+## Mean Ergodic
 A process $ X_{n} $ is mean ergodic if:
 ### $$ \color{red}{ \lim_{k \rightarrow \infty} c_{XX}[k] = 0 } $$
 
