@@ -1,14 +1,19 @@
 # Noise Processes
 
-## Auto-Correlation Function
+## Correlation Function
 
+### Auto-Correlation
+### Similary auto-correlation function as from stochastic processes: $ r_{XX}[k] = r_{XX}[-k] $
+
+### Cross-Correlation
 ### $$ \color{blue}{ r_{XY}[k] = E(X_{n} Y_{n+k}) = E(Y_{n+k} X_{n}) = r_{YX}[-k] } $$
 
-#### Similary auto-correlation function as from stochastic processes: $ r_{XX}[k] = r_{XX}[-k] $
+## Covariance Function
 
-## Cross-Correlation Function
-
+### Auto-Covariance
 ### $$ \color{blue}{ c_{XX}[k] = E((X_{n}-\mu)(X_{n+k}-\mu)) } \qquad \text{where } \mu = E(X_{n})  $$
+
+### Cross-Covariance
 
 ### White Noise
 A process $ X_{n} $ is a **white noise process** if:
