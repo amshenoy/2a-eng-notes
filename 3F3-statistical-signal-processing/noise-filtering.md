@@ -1,4 +1,4 @@
-# Noise Processes
+# Noise Filtering
 
 ## Correlation Function
 
