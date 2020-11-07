@@ -36,13 +36,13 @@ $ E(x_{n}) = 0 $
 
 $ V(0) = 0 $
 
-**Note: For a one-sided junction, the width of one of the depletion regions with the highest concentration is very small in comparison to the other.**
+**Note: For a one-sided junction, the width of one of the depletion regions with the highest concentration is very small in comparison to the other. (ie.$ N_{A} >> N_{D} $ or $ N_{D} >> N_{A}$ )**
 
 
 </br>
 
 ## Contact Potential
-For a one-sided junction, the above method gives the following result in terms $ N_{A} $ and $ N_{D} $ :
+For a one-sided junction (denoted for example by **p_{+}n**), the above method gives the following result in terms $ N_{A} $ and $ N_{D} $ :
 
 $$ eV_{0} = E_{Fn} - E_{Fp} = kT \ln(\dfrac{N_{A}N_{D}}{n_{i}^{2}}) $$
 
