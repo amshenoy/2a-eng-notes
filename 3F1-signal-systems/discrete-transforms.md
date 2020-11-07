@@ -15,4 +15,4 @@ $$ \Large x_{k} = \dfrac{1}{N} \sum_{n=0}^{N-1} X_{n} e^{j \frac{2\pi}{N} k n} $
 ## Inverse FFT
 
 
-## Multi-Die
+## Multi-Dimensional Variants
