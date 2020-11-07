@@ -44,8 +44,17 @@ $$
 &= \text{NPIC } \dfrac{KG}{1+KG} - \text{NPIC } (KG) \\
 &= \text{NPIC Closed-Loop}  - \text{NPIC Open-Loop} \\ \\
 & \text{As total number of poles for } KG \text{ and } \dfrac{KG}{1+KG} \text{ are the same: }\\ 
-&= \text{NPOC } \dfrac{KG}{1+KG} - \text{NPOC } (KG) \\
-&= \text{NPOC Closed-Loop}  - \text{NPOC Open-Loop} \\
+&= (N - \text{NPOC } \dfrac{KG}{1+KG} ) - (N - \text{NPOC } (KG) ) \\
+&= - \text{NPOC } \dfrac{KG}{1+KG} + \text{NPOC } (KG) \\
+&= - \text{NPOC Closed-Loop} + \text{NPOC Open-Loop} \\
 \end{align*}
 $$
+
+</br>
+
+Therefore for **stability of the closed-loop** system $ \text{NPOC Closed-Loop} = 0 $ and therefore:
+
+### $$ \text{No. of AC encirclements of } \dfrac{-1}{K} \text{ for } G(z) \text{ must equal } \text{NPOC Open-Loop} $$
+
+ie. must equal the number of unstable open-loop poles.
 
