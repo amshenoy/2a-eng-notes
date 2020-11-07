@@ -13,6 +13,7 @@ $ \text{NPIC} = \text{Number of Poles in Unit Circle} \\
 
 $$ \text{No. of AC encirclements of the origin for } F(e^{j \theta}) \quad \theta = [0, 2\pi] = \text{NZIC } F(z) - \text{NPIC } F(z) $$
 
+</br>
 
 ## Closed Loop Stability
 
