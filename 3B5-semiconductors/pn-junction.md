@@ -83,7 +83,13 @@ Applying a bias voltage changes the Fermi levels in the semiconductor.
 
 
 
-For the diagram below, applying a **positive bias voltage** to the **positive side**:
+Applying a **positive bias voltage** $ V_{\text{bias}} $ to the **positive side**, For all the equations above $ V_{0} $ changes to $ V_{0} - V_{\text{bias}} $.
+
+The Fermi level changes in the following way:
+
+
+</br>
+
 
 
 
