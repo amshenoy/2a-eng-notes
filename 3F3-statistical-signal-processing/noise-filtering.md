@@ -39,9 +39,11 @@ A process $ X_{n} $ is mean ergodic if:
 
 **Wiener filter** is only the **optimal linear estimator** for **stationary signals**. The Kalman filter offers an extension for non-stationary signals via state space models. In cases where a linear filter is still not good enough, non-linear filtering techniques can be adopted.
 
-## $$ \color{blue}{ \underbrace{\underline{h}}_{\scriptsize \text{Coefficients of Wiener Filter}} = R_{XX}^{-1} \enspace \underline{r_{xy}} } $$
+If we are trying to estimate $ \hat{x_{n}} $ by $ h_{n} * y_{n} $ (ie. $ y_{n} = f(x_{n}) $ ):
 
-### $ R_{XX} $ is a symmetric matrix from the vector $ \underline{r_{xx}} $
+## $$ \color{blue}{ \underbrace{\underline{h}}_{\scriptsize \text{Coefficients of Wiener Filter}} = R_{YY}^{-1} \enspace \underline{r_{yx}} } $$
+
+### $ R_{YY} $ is a symmetric matrix from the vector $ \underline{r_{yy}} $
 
 </br>
 
