@@ -78,3 +78,14 @@ $$ \Large \color{blue}{
 ### A channel with bandwidth $ W $ has capacity $ C = 2W \mathcal{C} \quad \small \text{bits / sec} $.
 
  
+</br>
+
+# Binary Linear Codes
+
+</br>
+
+#### Minimum Distance of Code &emsp; $ \large d_{\min} = \min_{i \ne j} d(c_{i}, c_{j}) $ &emsp; (Hamming distance to count number of bit flips)
+
+#### Linear Code &emsp; $ \underline{0} $ must be a codeword and for any codeword $ \underline{c} $, $ \underline{c} + \underline{c} $ must be a codeword.
+
+
