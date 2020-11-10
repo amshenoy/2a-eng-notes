@@ -84,9 +84,7 @@ $$ \Large \color{blue}{
 
 </br>
 
-#### Minimum Distance of Code &emsp; $ \large d_{\min} = \min_{i \ne j} d(c_{i}, c_{j}) $ &emsp; (Hamming distance to count number of bit flips)
-
-#### Linear Code &emsp; $ \underline{0} $ must be a codeword and for any codeword $ \underline{c} $, $ \underline{c} + \underline{c} $ must be a codeword.
+#### Linear Code &emsp; $ \underline{0} $ must be a codeword and for any codeword $ \underline{c} $, $ \underline{c} \text{ XOR }  \underline{c} $ must be a codeword.
 
 </br>
 
@@ -137,7 +135,20 @@ $ H $ works for $ G $ not just $ G_{sys} $ as codewords remain the same, only th
 
 </br>
 
-$$ d_{min} = \text{Min no. of columns of H that sum to } \underline{0} $$
+### Minimum Distance
+
+**Hamming distance to count number of bit flips**
+
+### $$ d_{\min} = \min_{i \ne j} d(c_{i}, c_{j}) $$
+
+### $$ d_{min} = \text{Min no. of columns of H that sum to } \underline{0} $$
+
+Atleast $ \large t $ errors can be corrected where $ t = \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor $:
+
+$$ \Large \color{blue}{ t \ge \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor } $$
+
+
+
 
 
 
