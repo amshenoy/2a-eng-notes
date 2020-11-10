@@ -129,3 +129,18 @@ $ H(e^{j \theta}) = \dfrac{S_{xx}}{S_{xx} + S_{vv}} = \dfrac{1}{1+ \dfrac{1}{\te
 \text{SNR}_{\text{opt}} = \dfrac{ \underline{\tilde{x}} \cdot \underline{\tilde{x}} } {\sigma_{v}^{2}} = \dfrac{ |\underline{\tilde{x}}|^{2} } {\sigma_{v}^{2}} 
 } $$
 
+
+## Orthognal Signals
+
+Consider $ \large y_{n} = s_{1,n} + s_{2, n} + v_{n} $ where $ s_{1, n} $ and $ s_{2, n} $ are orthognal to each other:
+
+Since the two signals are orthognal, both signals can be extracted by applying their respective filters $ h_{1} $ and $ h_{2} $.
+
+$ \large \hat{s_{1,n}} = h_{1} * y_{n} $
+
+$ \large \hat{s_{2,n}} = h_{2} * y_{n} $
+
+
+
+
+ 
