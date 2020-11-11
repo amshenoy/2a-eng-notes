@@ -26,8 +26,11 @@ Personality based on:
 
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
-#### Leader Perspective
-Leader's Personality = Culture
+### Origins of Culture
+Functionality Perspective - Cultures are created because those cultures are beneficial to groups
+
+#### Leader / Cultural-Transfer Perspective
+Leader's Personality + Past Experience = Culture
 Negative effect due to bounded rationality and availability bias
 
 #### Characteristics
