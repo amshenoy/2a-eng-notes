@@ -101,3 +101,16 @@ $ \dfrac{\partial \Delta n}{\partial t} = 0 ? \qquad \mathcal{E} = 0 ? $
 **Solve the differential**
 
 
+</br><hr>
+
+
+## Haynes-Shockley 
+
+Used to obtain **minority carrier mobility**.
+
+**Hall Effect** used to obtain **majority carrier mobility**.
+
+  
+
+
+
