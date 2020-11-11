@@ -27,11 +27,16 @@ Personality based on:
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
 ### Origins of Culture
-Functionality Perspective - Cultures are created because those cultures are beneficial to groups
 
-#### Leader / Cultural-Transfer Perspective
-Leader's Personality + Past Experience = Culture
+#### 1) Cultural-Transfer Perspective
+Leader's Past Experience
+
+#### 2) Leader Perspective
+Leader's Personality
 Negative effect due to bounded rationality and availability bias
+
+#### 3) Functionality Perspective
+Cultures are created because those cultures are beneficial to groups
 
 #### Characteristics
 Shared Beliefs
@@ -43,7 +48,10 @@ Artifacts: Empirical Evidence
 ## Socialisation
 
 ### Prearrival
+Information of organisation
+
 ### Encounter
+Integration with organisation
 
 Language: To communicate assumptions, values
 • Symbols: To reinforce values and ideology
@@ -54,6 +62,7 @@ Language: To communicate assumptions, values
 reinforce values and shape communication patterns
 
 ### Metamorphosis
+Adaptation of thought and behaviour of new leader to new organisation
 
 </br>
 
