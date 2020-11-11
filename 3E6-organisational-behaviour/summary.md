@@ -24,6 +24,8 @@ Personality based on:
 
 # Culture
 
+Reference this http://web.b.ebscohost.com/bsi/pdfviewer/pdfviewer?vid=1&sid=d4510544-93ea-484a-8ef0-7465960f64c1%40pdc-v-sessmgr03 as (Kim & Toh 2019)
+
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
 ### Origins of Culture
