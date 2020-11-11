@@ -11,13 +11,15 @@ presence of noise and interference.
 ### $ k $ bits $ \leftrightarrow 2^{k} = 2^{nR} $ messages 
 
 
+</br> <hr>
+
 # Joint Typicality
 
 
 ## Joint AEP
 
 
-</br>
+</br> <hr>
 
 # Error Estimation
 
@@ -146,6 +148,40 @@ $ H $ works for $ G $ not just $ G_{sys} $ as codewords remain the same, only th
 Atleast $ \large t $ errors can be corrected where $ t = \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor $:
 
 $$ \Large \color{blue}{ t \ge \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor } $$
+
+
+
+</br> <hr>
+
+# Low Density Parity Check (LDPC) Codes
+
+In a regular $ (n, k) $ **LDPC code**, the **parity check** matrix has the same weight (no. of 1s) for every row $ \large d_{c} $ and the same weight (no. of 1s) for every column $ \large d_{v} $.
+
+For **irregular codes**, we need to specify the **weight distributions** on the columns and rows.
+
+If $ \overline{d_{v}} $ is the average weight of columns and $ \overline{d_{c}} $ is the average weight of rows:
+
+### In any LDPC matrix, $ \text{ No. of 1s } = \overline{d_{v}} n = \overline{d_{c}} (n − k) $.
+
+### Rate &emsp; $ R = \dfrac{k}{n} = 1 - \dfrac{\overline{d_{v}}}{\overline{d_{c}}} $ bits per transmission
+
+</br>
+
+<font style="font-size: 18px;">Consider the **LDPC matrix** $ H_{ij} $ to be an **adjacency matrix** of a **bipartite graph** with  **row variables $ \large c_{i} $** and **column variables $ \large v_{h} $**.</font>
+
+</br>
+
+## Degree Distributions
+
+### Node Perspective
+
+
+### Edge Perspective
+
+
+
+</br>
+
 
 
 
