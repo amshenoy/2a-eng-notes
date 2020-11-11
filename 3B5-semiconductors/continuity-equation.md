@@ -1,4 +1,4 @@
-# Continuity Master Equation
+# Continuity Equation
 
 If we introduce local excess carriers, we are now considering inhomogeneous semiconductors.
 Therefore we cannot use the mass-action law $ np = n_{i}^{2} $:
