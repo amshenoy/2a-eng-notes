@@ -24,7 +24,7 @@ Personality based on:
 
 # Culture
 
-Reference this http://web.b.ebscohost.com/bsi/pdfviewer/pdfviewer?vid=1&sid=d4510544-93ea-484a-8ef0-7465960f64c1%40pdc-v-sessmgr03 as (Kim & Toh 2019)
+#### Reference this http://web.b.ebscohost.com/bsi/pdfviewer/pdfviewer?vid=1&sid=d4510544-93ea-484a-8ef0-7465960f64c1%40pdc-v-sessmgr03 as (Kim & Toh 2019)
 
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
@@ -87,6 +87,36 @@ Cognitive biases
 
 # Motivation
 
+$$ \text{Performance} = f(\text{Ability}, \text{Motivation}) $$
+
+$$ \text{Motivation} = f(\underbrace{\text{Effort}}_{\text{Velocity}}, \underbrace{\text{Persistence}}_{\text{Duration}}, \underbrace{\text{Goal}}_{Distance Required}) $$
+
+</br>
+
+## Content-Based Theories
+Offer ways to profile or analyze individuals’ needs that motivate their behavior 
+
+### Maslow’s Hierarchy of Needs
+### ERG Theory
+### McClelland’s Theory of Needs
+
+</br>
+
+## Process-Based Theories
+Cognitive processes influencing motivation
+
+### Expectancy theory
+
+### Equity theory
+
+</br>
+
+## Contemporary Theories
+
+### Self-Determination theory
+
+
+### Goal-Setting theory
 
 
 
