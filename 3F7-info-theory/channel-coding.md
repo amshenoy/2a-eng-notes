@@ -1,191 +1,103 @@
-# Channel Coding
+# Continuity Equation
 
-To add redundancy in the information sequence so that
-the sequence can be recovered at the receiver even in the
-presence of noise and interference.
+If we introduce local excess carriers, we are now considering inhomogeneous semiconductors.
+Therefore we cannot use the mass-action law $ np = n_{i}^{2} $:
+We also need to consider transport by **diffusion** as well as **generation and recombination**.
 
-### Block Code $(n, k)$ : &emsp; $k$ bits each transmitted $n$ times
+</br><hr>
 
-### Rate $ R = \dfrac{k}{n} $ bits per transmission
+## Diffusion
 
-### $ k $ bits $ \leftrightarrow 2^{k} = 2^{nR} $ messages 
+### Current Density
+$ D $ is **diffusion coefficient** and $ e D_{e} \dfrac{\partial n(x)}{\partial x} $ is the expression for carrier diffusion.
 
+$ e n \mu_{e} E $ is the expression due to **drift** caused by inhomogenous charge density from an **applied electric field** $ \mathcal{E} $. Note that $ \large v_{\text{drift}} = \mu_{e} \mathcal{E} $ 
+ 
+$$ \Large J_{e} = e n \mu_{e} \mathcal{E} \color{blue}{\mathbf{\boldsymbol{+}}} e D_{e} \dfrac{\partial n}{\partial x} $$
 
-</br> <hr>
+$$ \Large J_{h} = e p \mu_{e} \mathcal{E} \color{red}{\mathbf{\boldsymbol{-}}}  e D_{e} \dfrac{\partial p}{\partial x} $$
 
-# Joint Typicality
-
-
-## Joint AEP
-
-
-</br> <hr>
-
-# Error Estimation
-
-### Minimum Error Probability Estimator 
-$$ \large \hat{X}(Y) = \arg\max_{x \in \mathcal{X}} P_{X|Y}(x|Y) = \arg\max_{x \in \mathcal{X}} \dfrac{P_{XY}(x, Y)}{P_{Y}(Y)} $$ 
-
-### Error Probability
-$$ \large 
-\begin{align*}
-P_{e} &= P( \hat{X}(Y) \ne X ) \\ &= \sum_{x} P( \hat{X}(Y) \ne X | X = x) P_{X}(x) \\ P_{e} &= \sum_{x} P( \hat{X}(Y) \ne X, X = x) \\
-\end{align*}
-$$ 
+At **equilibrium**, no net current flows:
+$ \large J_{e} = J_{h} = 0 $
 
 
-### Fano's Inequality
-$$ \large P_{e} \ge \dfrac{H(X|Y)-1}{\log|\mathcal{X}|}$$ 
+
+
+</br>
+
+### Einstein's Relation
+
+$$ \large \dfrac{D_{e}}{\mu_{e}} = \dfrac{D_{h}}{\mu_{h}} = \dfrac{kT}{e} \quad (\text{Volts}) $$
+
+#### Derivation:
+
+1) Consider equilibrium ie. **diffusion current density** $ J_{n} = 0 $.
+
+2) Find $ \dfrac{\partial n}{\partial x} $ from $ n(x) = N_{c} e^{\dfrac{E_{f}-E_{c}(x)}{kT} }$  and $ \dfrac{dE_{c}}{dx} = \mathcal{E} e $ (from $ E = F x = \mathcal{E} q \ x $ )
+
+
 
 
 </br><hr>
 
-# AWGN Channel
-Additive White Gaussian Noise Channel
+## Generation & Recombination
 
-For a channel with input $X_{k}$, output $Y_{k}$ and gaussian noise $ Z_{k} = \mathcal{N}(0, \sigma^{2}) $:
-
-#### Example Channel
-$$ \Large Y_{k} = X_{k} + Z_{k} $$
-
-Gaussian has the maximum possible differential entropy:
-
-$$ \large \color{blue}{ h(Z) = \dfrac{1}{2} \log_{2} (2\pi e \sigma^{2}) } $$
-
-$$ \large \color{blue}{ \large h(Y) \le \dfrac{1}{2} \log_{2} (2\pi e \ E(Y_{k}^{2})) } $$ 
-
-### Power Constraint $ \color{blue}{ P = E(X_{k}^{2}) } $
-
-#### Method of Calculation &emsp; $ E(Y_{k}^{2}) = E((X_{k}+Z_{k})^{2}) = E(X_{k}^{2})+E(Z_{k}^{2}) = P + \sigma^{2} $
-
-## Channel Capacity
-
-### For a general AWGN channel where $ \color{green}{ Y = f(X) + g(Z) } $:
-
-$$
-\begin{align*}
-\mathcal{C} = \max I(X; Y) &= H(Y) - H(Y|X) = H(Y) - H(f(X)+g(Z)|X) \\
-&= H(Y) - H(Z|X) \\
-&= H(Y) - H(Z)
-\end{align*}
-$$
-
-$ \large \color{blue}{ \text{SNR} = \dfrac{\text{Input Power}}{\text{Noise Power}} = \dfrac{E(f(X)^{2})}{E(g(Z)^{2})} } $
+$ np \ne n_{i}^{2} $
  
-$$ \Large \color{blue}{
-\mathcal{C} = h(Y) - h(Z) = \dfrac{1}{2} \log_{2} (1 + \text{SNR})
- \quad \small \text{bits / transmission} 
-} $$
+Consider the generation rate of carriers $ g_{i} $ due to excitation and recombination rate of carriers $ r_{i} $:
 
-### A channel with bandwidth $ W $ has capacity $ C = 2W \mathcal{C} \quad \small \text{bits / sec} $.
+$$ \large \dfrac{dn}{dt} = g_{i} - r_{i} $$
 
- 
+### 1) Generation 
+Photonic ($ E > E_{g} $) Electron-Hole Pair Creation 
+
+### 2) Recombination
+Transition (VB to CB) Recombination
+
+__a)__ **Direct Recombination** - **Photon** absorption/emission
+
+__b)__ **Indirect Recombination** - **Photon** (move in $ E $ energy dimension) and **Phonon** (move in $ k $ momentum dimension) absorption/emission
+
+### 3) Recombination by Traps
+
+Defects in the crystal lattice causing recombination
+
+– Before entering the **recombination centre**, the electron may pass through several traps.
+
+– The **average time that a carrier can exist in the free state** is called the **lifetime** $ \tau $.
+
+– Whilst trapped, the carriers cannot contribute to conduction.
+
 </br><hr>
 
-# Binary Linear Codes
+## Master Equation
+
+$ \Delta n $ denotes excess electrons and $ \Delta p $ denotes excess holes.
+
+$ \dfrac{\Delta n}{\tau_{e}} $ is the generation/recombination term.
+
+$$ \large \dfrac{\partial \Delta n}{\partial t} = - \dfrac{\Delta n}{\tau_{e}} \color{blue}{\mathbf{\boldsymbol{+}}} \dfrac{1}{e} \dfrac{\partial}{\partial x} J_{e} $$
 
 </br>
 
-#### Linear Code &emsp; $ \underline{0} $ must be a codeword and for any codeword $ \underline{c} $, $ \underline{c} \text{ XOR }  \underline{c} $ must be a codeword.
-
-</br>
-
-## Linear Coding (n, k)
-
-We can generate $n$-bit codewords (**block length**) using a generator matrix that takes a $k$-bit input (**dimension**). For the purpose of this topic, we will consider vectors to be by default row vectors.
-
-$$ \Large \underbrace{\underline{u}}_{\qquad 1 \times k \\ \text{Information Vector}} \underbrace{G}_{\qquad k \times n \\ \text{Generator Matrix}} = \underbrace{\underline{c}}_{\qquad 1 \times n \\ \text{Code Vector}} $$
-
-### Rate $ R = \dfrac{k}{n} $ bits per transmission
-
-</br>
-
-### Systematic Encoder
-
-$$ \Large G_{sys} = [ \underbrace{I_{k}}_{ \qquad k \times k \\ \text{Identity Matrix}} | \quad \underbrace{P}_{k \times (n-k)} \quad ] $$
-
-#### Note: | is concatenation
-
-This means we can actually derive the codeword $ \underline{c} $ by just concatenating the parity bits $ \underline{u} P $ to $ \underline{u} $:
-
-$$ \Large \underline{c} = \underline{u} [ I_{k} | P ] = [ \underline{u} | \underline{u} P ]$$
-
-Given a $ G $ matrix, we can find $ G_{sys} $ by **swapping columns** and performing **row operations** to create an identity matrix as required.
-
-</br>
-
-### Parity Check Matrix
-
-Given $ G_{sys} $ we can find a parity check matrix $ H $:
-
-$$ \Large G_{sys} = [I_{k} | P] \qquad \underbrace{H}_{(n-k) \times n} = [\underbrace{P_{T}}_{(n-k) \times k} \quad | \quad \underbrace{I_{n-k} }_{(n-k) \times (n-k)} ]$$ 
-
-</br>
-
-If $ \underline{c} $ is a codeword, then:
-
-$$ \Large \underline{c} H^{T} = \underline{0} \\
-\sum_{i=1}^{n} c_{i} \enspace \underline{\text{h}_{i}} = \underline{0} 
- $$
+$$ \large \dfrac{\partial \Delta p}{\partial t} = - \dfrac{\Delta p}{\tau_{h}} \color{red}{\mathbf{\boldsymbol{-}}} \dfrac{1}{e} \dfrac{\partial}{\partial x} J_{h} $$
 
 
-**Note: Intuitively this means the sum of all the $i$-th columns $ \text{h}_{i} $ of $ H $ ( only $ c_{i} = 1 $ actually matters) must equal $ \underline{0} $**
+### Full Equation
 
+$$ \large \dfrac{\partial \Delta n}{\partial t} = D_{e} \dfrac{\partial^{2} \Delta n}{\partial x^{2}} \color{blue}{\mathbf{\boldsymbol{+}}} \mu_{e} \mathcal{E}  \dfrac{\partial \Delta n}{\partial x} - \dfrac{\Delta n}{\tau_{e}} $$
 
-
-$ H $ works for $ G $ not just $ G_{sys} $ as codewords remain the same, only the mapping is different.
-
-</br>
-
-### Minimum Distance
-
-**Hamming distance to count number of bit flips**
-
-### $$ d_{\min} = \min_{i \ne j} d(c_{i}, c_{j}) $$
-
-### $$ d_{min} = \text{Min no. of columns of H that sum to } \underline{0} $$
-
-Atleast $ \large t $ errors can be corrected where $ t = \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor $:
-
-$$ \Large \color{blue}{ t \ge \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor } $$
-
-
-
-</br> <hr>
-
-# Low Density Parity Check (LDPC) Codes
-
-In a regular $ (n, k) $ **LDPC code**, the **parity check** matrix has the same weight (no. of 1s) for every row $ \large d_{c} $ and the same weight (no. of 1s) for every column $ \large d_{v} $.
-
-For **irregular codes**, we need to specify the **weight distributions** on the columns and rows.
-
-If $ \overline{d_{v}} $ is the average weight of columns and $ \overline{d_{c}} $ is the average weight of rows:
-
-### In any LDPC matrix, $ \text{ No. of 1s } = \overline{d_{v}} n = \overline{d_{c}} (n − k) $.
-
-### Rate &emsp; $ R = \dfrac{k}{n} = 1 - \dfrac{\overline{d_{v}}}{\overline{d_{c}}} $ bits per transmission
-
-</br>
-
-<font style="font-size: 18px;">Consider the **LDPC matrix** $ H_{ij} $ to be an **adjacency matrix** of a **bipartite graph** with  **row variables $ \large c_{i} $** and **column variables $ \large v_{h} $**.</font>
-
-</br>
-
-## Degree Distributions
-
-### Node Perspective
-
-
-### Edge Perspective
-
+$$ \large \dfrac{\partial \Delta p}{\partial t} = D_{h} \dfrac{\partial^{2} \Delta p}{\partial x^{2}} \color{red}{\mathbf{\boldsymbol{-}}} \mu_{h} \mathcal{E}  \dfrac{\partial \Delta p}{\partial x} - \dfrac{\Delta p}{\tau_{e}} $$
 
 
 </br>
 
+### Solving Method
 
+**Simplify the equation**
 
+$ \dfrac{\partial \Delta n}{\partial t} = 0 ? \qquad \mathcal{E} = 0 ? $ 
 
-
-
+**Solve the differential**
 
 
