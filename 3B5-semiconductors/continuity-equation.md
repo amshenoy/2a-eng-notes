@@ -74,6 +74,8 @@ Defects in the crystal lattice causing recombination
 
 $ \Delta n $ denotes excess electrons and $ \Delta p $ denotes excess holes.
 
+$ \dfrac{\Delta n}{\tau_{e}} $ is the generation/recombination term.
+
 $$ \large \dfrac{\partial \Delta n}{\partial t} = - \dfrac{\Delta n}{\tau_{e}} \color{blue}{\mathbf{\boldsymbol{+}}} \dfrac{1}{e} \dfrac{\partial}{\partial x} J_{e} $$
 
 </br>
@@ -88,6 +90,8 @@ $$ \large \dfrac{\partial \Delta n}{\partial t} = D_{e} \dfrac{\partial^{2} \Del
 $$ \large \dfrac{\partial \Delta p}{\partial t} = D_{h} \dfrac{\partial^{2} \Delta p}{\partial x^{2}} \color{red}{\mathbf{\boldsymbol{-}}} \mu_{h} \mathcal{E}  \dfrac{\partial \Delta p}{\partial x} - \dfrac{\Delta p}{\tau_{e}} $$
 
 
+</br>
+
 ### Solving Method
 
 **Simplify the equation**
@@ -95,5 +99,18 @@ $$ \large \dfrac{\partial \Delta p}{\partial t} = D_{h} \dfrac{\partial^{2} \Del
 $ \dfrac{\partial \Delta n}{\partial t} = 0 ? \qquad \mathcal{E} = 0 ? $ 
 
 **Solve the differential**
+
+
+</br><hr>
+
+
+## Haynes-Shockley 
+
+Used to obtain **minority carrier mobility**.
+
+**Hall Effect** used to obtain **majority carrier mobility**.
+
+  
+
 
 
