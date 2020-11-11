@@ -38,12 +38,26 @@ Shared Beliefs
 Implicit Control
 Artifacts: Empirical Evidence
 
-#### Socialisation
-* Prearrival
-* Encounter
-* Metamorphosis
+</br>
 
-### Reverse Causality
+## Socialisation
+
+### Prearrival
+### Encounter
+
+Language: To communicate assumptions, values
+• Symbols: To reinforce values and ideology
+• Stories/Myths: Exemplifying norms and heroes
+• Ceremonies/rituals: To build cohesion and morale
+• Dress/uniform: To reinforce identity
+• Technology/Structure/Physical Environment: To
+reinforce values and shape communication patterns
+
+### Metamorphosis
+
+</br>
+
+## Reverse Causality
 Idea that people select cultures
 * Person-Organisation Fit
 * Attraction-Selection-Attrition Theory
