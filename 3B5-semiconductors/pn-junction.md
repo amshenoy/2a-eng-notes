@@ -137,6 +137,17 @@ $ \large L_{h} = (D_{h} \tau_{h})^{\frac{1}{2}} $ and $ \large L_{e} = (D_{e} \t
 
 $$ \Large J_{s} = e n_{i}^{2} (\dfrac{D_{h}}{L_{h} N_{D}} + \dfrac{D_{e}}{L_{e} N_{A}}) $$
 
+</br>
+
+$$
+\large
+\begin{align*}
+J_{s} &= e (\dfrac{D_{h}}{L_{h}} \dfrac{n_{i}^{2}}{ N_{D}} + \dfrac{D_{e}}{L_{e}} \dfrac{n_{i}^{2}}{N_{A}}) \\
+J_{s} &= e (\dfrac{L_{h}}{\tau_{h}} p_{n0} + \dfrac{L_{e}}{\tau_{e}} n_{p0})
+\end{align*}
+$$
+
+
 
 
 
