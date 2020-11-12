@@ -35,6 +35,8 @@ $$
 
 
 ### Fano's Inequality
+
+For any estimator $ \hat{X} $ such that $ X - Y - \hat{X} $, the $ P_{e} = P(\hat{X} \ne X) $ satisfies:
 $$ \large P_{e} \ge \dfrac{H(X|Y)-1}{\log|\mathcal{X}|}$$ 
 
 
@@ -94,7 +96,9 @@ $$ \Large \color{blue}{
 
 We can generate $n$-bit codewords (**block length**) using a generator matrix that takes a $k$-bit input (**dimension**). For the purpose of this topic, we will consider vectors to be by default row vectors.
 
-$$ \Large \underbrace{\underline{u}}_{\qquad 1 \times k \\ \text{Information Vector}} \underbrace{G}_{\qquad k \times n \\ \text{Generator Matrix}} = \underbrace{\underline{c}}_{\qquad 1 \times n \\ \text{Code Vector}} $$
+$$ \Large \color{purple}{ \underbrace{\underline{u}}_{\qquad 1 \times k \\ \text{Information Vector}} \underbrace{G}_{\qquad k \times n \\ \text{Generator Matrix}} = \underbrace{\underline{c}}_{\qquad 1 \times n \\ \text{Code Vector}} 
+}
+$$
 
 ### Rate $ R = \dfrac{k}{n} $ bits per transmission
 
@@ -102,7 +106,9 @@ $$ \Large \underbrace{\underline{u}}_{\qquad 1 \times k \\ \text{Information Vec
 
 ### Systematic Encoder
 
-$$ \Large G_{sys} = [ \underbrace{I_{k}}_{ \qquad k \times k \\ \text{Identity Matrix}} | \quad \underbrace{P}_{k \times (n-k)} \quad ] $$
+$$ \Large \color{blue}{ 
+G_{sys} = [ \underbrace{I_{k}}_{ \qquad k \times k \\ \text{Identity Matrix}} | \quad \underbrace{P}_{k \times (n-k)} \quad ] 
+} $$
 
 #### Note: | is concatenation
 
@@ -118,7 +124,8 @@ Given a $ G $ matrix, we can find $ G_{sys} $ by **swapping columns** and perfor
 
 Given $ G_{sys} $ we can find a parity check matrix $ H $:
 
-$$ \Large G_{sys} = [I_{k} | P] \qquad \underbrace{H}_{(n-k) \times n} = [\underbrace{P_{T}}_{(n-k) \times k} \quad | \quad \underbrace{I_{n-k} }_{(n-k) \times (n-k)} ]$$ 
+$$ \Large \color{blue}{ G_{sys} = [I_{k} | P] \qquad \underbrace{H}_{(n-k) \times n} = [\underbrace{P_{T}}_{(n-k) \times k} \quad | \quad \underbrace{I_{n-k} }_{(n-k) \times (n-k)} ] 
+} $$ 
 
 </br>
 
