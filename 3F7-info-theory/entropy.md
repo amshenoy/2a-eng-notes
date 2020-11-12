@@ -1,9 +1,9 @@
 # Entropy
 
-$$ H(X) = \sum_{x} P(x) \log \Big( \dfrac{1}{P(x)} \Big) = \mathcal{E}( - \log(P(x)) ) $$
+$$ H(X) = \sum_{x} P(x) \log \Big( \dfrac{1}{P(x)} \Big) = E( - \log(P(x)) ) $$
 
 #### Differential Entropy
-$$ h(X) = \int_{x=-\infty}^{\infty} p(x) \log \Big( \dfrac{1}{p(x)} \Big) = \mathcal{E}( - \log(p(x)) ) $$
+$$ h(X) = \int_{x=-\infty}^{\infty} p(x) \log \Big( \dfrac{1}{p(x)} \Big) = E( - \log(p(x)) ) $$
 
 #### Note: Differential entropy can be negative.
 
@@ -16,24 +16,25 @@ $$
 
 ### 1) $ H(X) \ge 0 $
 ### 2) $ H(X) \le log(M) $ where $ M $ is the alphabet size
-### 3) Discrete Uniform Distribution with $ p = \dfrac{1}{M} $ has maximum entropy with a value of $ log(M) $
+### 3) Discrete Uniform Distribution with $ p = \dfrac{1}{M} $ has maximum entropy with a value of $ \log(M) $
 
 ## Joint & Conditional Entropy
 
-$$ H(X,Y) = \sum_{x,y} P_{XY}(x,y) log \Big(\dfrac{1}{P_{XY}(x,y)} \Big) 
-$$
-$$ H(Y|X) = \sum_{x,y} P_{XY}(x,y) log \Big(\dfrac{1}{P_{Y|X}(y|x))} \Big)
+$$ \color{purple}{ 
+H(Y|X) = \sum_{x,y} P_{XY}(x,y) \log \Big(\dfrac{1}{P_{Y|X}(y|x))} \Big)
+}
 \\
-= \sum_{x} P_{X}(x) \underbrace{ \sum_{y} P_{Y|X}(y|x) log \Big(\dfrac{1}{P_{Y|X}(y|x))} \Big) }_{\color{blue}{H(Y|X=x)}}
+= \sum_{x} P_{X}(x) \underbrace{ \sum_{y} P_{Y|X}(y|x) \log \Big(\dfrac{1}{P_{Y|X}(y|x))} \Big) }_{\color{blue}{H(Y|X=x)}}
 $$
 
 
 </br>
-$$ \color{red} { H(X,Y) = \sum_{x,y} P_{XY}(x,y) log \Big(\dfrac{1}{P_{XY}(x,y)} \Big) }
+
+$$ \color{red} { H(X,Y) = \sum_{x,y} P_{XY}(x,y) \log \Big(\dfrac{1}{P_{XY}(x,y)} \Big) }
 \\
-= \sum_{x,y} P_{XY}(x,y) log \Big(\dfrac{1}{P_{Y|X}(y|x) P_{X}(x)} \Big)
+= \sum_{x,y} P_{XY}(x,y) \log \Big(\dfrac{1}{P_{Y|X}(y|x) P_{X}(x)} \Big)
 \\
-= \sum_{x,y} P_{XY}(x,y) \Bigg( log \Big(\dfrac{1}{P_{Y|X}(y|x)} \Big) + log \Big(\dfrac{1}{ P_{X}(x)} \Big) \Bigg)
+= \sum_{x,y} P_{XY}(x,y) \Bigg( \log \Big(\dfrac{1}{P_{Y|X}(y|x)} \Big) + \log \Big(\dfrac{1}{ P_{X}(x)} \Big) \Bigg)
 $$
 $$ \color{blue} { H(X,Y) = H(Y|X) + H(X) } $$
 $$ \color{green} { P(X,Y) = P(Y|X) P(X) } $$
@@ -50,7 +51,15 @@ $$ \color{green} { P(X_{1}, X_{2}, ..., X_{n}) = P(X_{1}) P(X_{1}|X_{2}) ... P(X
 \\ =  \color{purple} { \prod^{n}_{i=1} P(X_{i}|X_{i-1}, ..., X_{1}) }
 $$
 
-#### Independent Random Variables
+#### Chain Rule with Conditionals
+
+$$ H(\color{blue}{X_{1}, ..., X_{n}}|\color{green}{Y}) = H(X_{1}, \color{green}{Y}) + H(X_{1}|X_{2}, \color{green}{Y}) + ... + H(X_{n}|X_{n-1}, ..., X_{1}, \color{green}{Y}) \\
+= \sum^{n}_{i=1} H(\color{red}{X_{i}|X_{i-1}, ..., X_{1}}, \color{green}{Y}) $$
+
+
+</br>
+
+### Independent Random Variables
 
 $$ \color{blue} { H(X_{1}, X_{2}, ..., X_{n}) } = \color{red} { \sum^{n}_{i=1} H(X_{i}) }
 $$
