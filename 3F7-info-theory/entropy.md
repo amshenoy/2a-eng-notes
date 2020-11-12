@@ -6,6 +6,8 @@ $$ H(X) = \sum_{x} P(x) \log \Big( \dfrac{1}{P(x)} \Big) = E( - \log(P(x)) ) $$
 $$ h(X) = \int_{x=-\infty}^{\infty} p(x) \log \Big( \dfrac{1}{p(x)} \Big) = E( - \log(p(x)) ) $$
 
 #### Note: Differential entropy can be negative.
+We therefore have to interpret differential entropy as the entropy relative to a r.v with a uniform distribution $ U(0,1) $ which has a baseline of 0 differential entropy.
+
 
 ### Binary Entropy Function
 $$ 
