@@ -95,11 +95,12 @@ $$ E\Big( \ G(X, Y) \ \Big) = E \Big( \ E\{G(X|Y) \big| Y = y\} \ \Big) $$
 
 ### Characteristic Function
 For a random variable $ X $: 
-$$ \phi_{X}(t) = E( e^{i t X})$$
+$$ \large \phi_{X}(t) = E( e^{i t x})$$
 
 For a vector random variables $ \underline{X} = \{ X_{1}, ..., X_{N} \} $:
 $$ \phi_{X}(\underline{t}) = E( e^{i \underline{t}^{T} \underline{X}})$$
 
+$$ \Large \color{blue}{ j^{n} E(X^{n}) = \dfrac{\partial^{n}\phi}{\partial t^{n}} |_{t=0} } $$ 
 
 </br>
 
