@@ -71,7 +71,7 @@ These cannot be implemented in real life as they have a non-causal impulse respo
 
 ### $ \color{red} { \text{Frequency Response of Digital Filter: } G(e^{j \theta}) } $
 
-Write $ G(e^{j \theta}) $ as a delay term and a frequency-dependent gain term (for easier handling):
+Write $ G(e^{j \theta}) $ as a delay term and a frequency-dependent gain term (ie. as **linear phase** for easier handling):
 ###  $ \color{blue}{ G(e^{j \theta}) = e^{-j N\theta} f(\theta) }$
 
 ### Sketch $ \color{blue}{ | G(e^{j \theta}) |  \quad 0 \le \theta \le \pi } $  for labelling as lowpass, bandpass, highpass or allpass. 
