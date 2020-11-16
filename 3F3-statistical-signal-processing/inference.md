@@ -123,6 +123,28 @@ $$ \Large \color{blue}{ \dfrac{d}{d \underline{\theta}} P(\underline{\theta} | \
 # Comparison
 
 
+### Least Squares (LS)
+* (+) Requires no knowledge of probability distributions 
+* (+) Simplest to implement  
+* (+) Guarantee of performance as BLUE (**Best Linear Unbiased Estimator**) estimator 
+* (-) Cannot incorporate prior knowledge about parameter probability distributions 
+* No guarantees of performance compared to nonlinear estimators
+
+### Maximum Likelihood (ML)
+* (+) Performance guaranteed to be optimal when the amount of data is large
+* (-) Requires knowledge of noise (model) probability distribution 
+* (-) Cannot incorporate prior knowledge about parameter probability distributions 
+* (-) Can be more complicated to implement than LS in the non-Gaussian case
+
+
+
+### Bayesian (MAP and MMSE)
+* (+) Incorporates prior knowledge
+* (+/-) Performance guaranteed to be optimal for any amount of data (provided prior distribution is correct) 
+* (-) Requires knowledge of noise (model) probability distribution 
+* (-) Requires knowledge of parameter prior probability distribution
+* (-) Can be more complicated to implement than LS or ML, depending on form of likelihood and prior
+
 
 
 
