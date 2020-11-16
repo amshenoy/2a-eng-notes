@@ -106,6 +106,7 @@ $
 
 ## $$ \color{blue}{ J_{min} = r_{xx}(0) - \underline{h} \cdot \underline{r_{yx}} } $$
 
+Power of the error signal can be found by performing the inverse fourier transform on $ J_{min} $.
 
 ## Wiener Gain
 
