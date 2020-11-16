@@ -25,7 +25,7 @@ This means that **all poles of an FIR filter must be at 0**.
 
 IIR filters have an infinite pulse response and can have **arbitrary pole locations**.
 
-IIR filters have feedback ( ie. the output is used in the filter).
+IIR filters have **feedback** ( ie. the output is used in the filter).
 
 
 ### Causal System
