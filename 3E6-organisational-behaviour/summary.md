@@ -89,7 +89,7 @@ Cognitive biases
 
 $$ \text{Performance} = f(\text{Ability}, \text{Motivation}) $$
 
-$$ \text{Motivation} = f(\underbrace{\text{Effort}}_{\text{Velocity}/\text{Expectancy}}, \underbrace{\text{Persistence}/\text{Instrumentality}}_{\text{Duration}/\text{Valence}}, \underbrace{\text{Goal}}_{Distance Required}) $$
+$$ \text{Motivation} = f(\underbrace{\text{Effort}}_{\text{Velocity}}, \ \underbrace{\text{Persistence}}_{\text{Duration}}, \underbrace{\text{Goal}}_{\text{Distance Required}}) $$
 
 </br>
 
@@ -105,16 +105,17 @@ Method of profiling or analysing individuals’ needs that motivate their behavi
 * Safety needs: security and protection from physical, emotional harms
 * Physiological needs: hunger, thirst, shelter, other bodily needs
 
-(+) Intuitive
-(-) Not always true
+(+) Intuitive </br>
+(-) Not always true </br>
 
 ### McClelland’s Theory of Needs
 
 Maslow's Theory (with first three labelle as **Achievement**, **Power**, **Affiliation**) but no heirarchy
 
+</br>
 
-### ERG Theory
-Existence - Relatedness - Growth &emsp; (Dual Cycle)
+##### Alternative: ERG Theory - Existence - Relatedness - Growth &emsp; (Dual Cycle)
+
 
 </br>
 
@@ -123,18 +124,39 @@ Cognitive processes influencing motivation
 
 ### Expectancy theory
 
-### Equity theory
+$$ \text{Motivation} = f(\text{Expectancy}, \text{Instrumentality}, \text{Valence}) $$
 
+**Expectancy** - Effort to Performance Conversion - (Ability, Definition, Trust)
+
+**Instrumentality** - Performance to Reward Conversion - (Trust, Understanding, Fair Allocation)
+
+**Valence** - Reward to Goals Conversion
+
+
+(-) Performance not always measurable </br>
+(-) Model success dependent on valence </br>
+
+
+</br>
+
+##### Alternative: Equity theory
 </br>
 
 ## Contemporary Theories
 
 ### Self-Determination theory
 
+**Intrinsic** > **Extrinsic** Motivation
 
-### Goal-Setting theory
+* People prefer to have self-determination therefore being more likely to enjoy their jobs (intrinsic motivation)
+* Intrinsic motivation has stronger effects on performance
 
+* Monetary incentives undermine the sense of self-determination as you feel that the cause of your actions come from external sources 
+* Monetary incentives lower your sense of self-determination, therefore your intrinsic motivation, and thereby your performance.
 
+</br>
+
+##### Alternative: Goal-Setting theory
 
 </br><hr>
 
@@ -143,9 +165,7 @@ Cognitive processes influencing motivation
 
 
 
-
 </br><hr>
-
 
 # Group Dynamics
 
@@ -153,6 +173,9 @@ Cognitive processes influencing motivation
 
 
 </br><hr>
+
+
+
 
 
 # Leadership
