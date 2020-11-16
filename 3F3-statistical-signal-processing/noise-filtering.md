@@ -26,6 +26,8 @@ A process $ X_{n} $ is mean ergodic if:
 ### $$ \color{red}{ \lim_{k \rightarrow \infty} c_{XX}[k] = 0 } $$
 
 
+</br>
+
 # Example System
 ### For input $ x_{n} $, noise $ v_{n} $ and output $ y_{n} $:
 ## $$ y_{n} = x_{n} + v_{n} $$
