@@ -36,6 +36,10 @@ A process $ X_{n} $ is mean ergodic if:
 
 </br>
 
+#### Note: In the general case, $ r_{xx}[k] = E(X_{n} X_{n+k}) $ giving $ E(X_{n}^{2}) $ for $ k=0 $ and $ E(X_{n})E(X_{n+k}) $ for $ k \ne 0 $ which can be written as $ \color{green}{ r_{xx}[k] = \mu^{2} + \sigma^{2} \delta(k) } $.
+
+</br>
+
 # Wiener Filter
 **Wiener filter** shows how to extract a **random signal from random noise**.
 
