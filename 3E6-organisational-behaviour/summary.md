@@ -89,16 +89,32 @@ Cognitive biases
 
 $$ \text{Performance} = f(\text{Ability}, \text{Motivation}) $$
 
-$$ \text{Motivation} = f(\underbrace{\text{Effort}}_{\text{Velocity}}, \underbrace{\text{Persistence}}_{\text{Duration}}, \underbrace{\text{Goal}}_{Distance Required}) $$
+$$ \text{Motivation} = f(\underbrace{\text{Effort}}_{\text{Velocity}/\text{Expectancy}}, \underbrace{\text{Persistence}/\text{Instrumentality}}_{\text{Duration}/\text{Valence}}, \underbrace{\text{Goal}}_{Distance Required}) $$
 
 </br>
 
 ## Content-Based Theories
-Offer ways to profile or analyze individuals’ needs that motivate their behavior 
+Method of profiling or analysing individuals’ needs that motivate their behavior 
 
 ### Maslow’s Hierarchy of Needs
-### ERG Theory
+
+**Pyramid**
+* Self-actualization: acheiving full-potential
+* Esteem needs: self-respect, recognition
+* Social needs: needs for having social relationships with others
+* Safety needs: security and protection from physical, emotional harms
+* Physiological needs: hunger, thirst, shelter, other bodily needs
+
+(+) Intuitive
+(-) Not always true
+
 ### McClelland’s Theory of Needs
+
+Maslow's Theory (with first three labelle as **Achievement**, **Power**, **Affiliation**) but no heirarchy
+
+
+### ERG Theory
+Existence - Relatedness - Growth &emsp; (Dual Cycle)
 
 </br>
 
