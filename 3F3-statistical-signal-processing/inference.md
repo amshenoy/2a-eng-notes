@@ -60,6 +60,8 @@ $$ \Large x_{n} = \mathbf{g_{n}}^{T} \boldsymbol{\theta} + e_{n} $$
 
 ### Unbiased if $ E(\hat{\underline{\theta}}) = \underline{\theta} $
 
+### Consistent if $ \text{Var}(\hat{\underline{\theta}}) \rightarrow 0 \text{ as } N \rightarrow \infty $ and unbiased
+
 
 </br>
 
@@ -67,6 +69,8 @@ $$ \Large x_{n} = \mathbf{g_{n}}^{T} \boldsymbol{\theta} + e_{n} $$
 
 
 ## Ordinary Least-Squares (OLS)
+
+$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = 0 $$
 
 $$ \Large \color{blue}{ \hat{\underline{\theta}}_{\text{OLS}} = (G^{T} G)^{-1} \ G^{T} \underline{x} }$$ 
 
@@ -114,6 +118,9 @@ $$ \Large \color{blue}{ \dfrac{d}{d \underline{\theta}} P(\underline{\theta} | \
 #### Consider $ \color{purple}{ \text{ log-posterior } } $ where suitable.
 
 </br></br>
+
+
+# Comparison
 
 
 
