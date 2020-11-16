@@ -24,7 +24,8 @@ Personality based on:
 
 # Culture
 
-#### Reference this http://web.b.ebscohost.com/bsi/pdfviewer/pdfviewer?vid=1&sid=d4510544-93ea-484a-8ef0-7465960f64c1%40pdc-v-sessmgr03 as (Kim & Toh 2019)
+#### Reference this [Culture Paper](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=136916071&site=bsi-live&scope=site) as (Kim & Toh 2019)
+#### Reference this [Tightness and Looseness Culture](https://www.pnas.org/content/111/22/7990) as (Jesse & Michelle 2014)
 
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
@@ -164,12 +165,59 @@ $$ \text{Motivation} = f(\text{Expectancy}, \text{Instrumentality}, \text{Valenc
 # Creativity, Innovation, and Innovation Diffusion
 
 
+## Creativity
+Generation of novel and useful ideas
+
+Overlap of **Intrinsic Motivation**, **Creative Skills**, **Expertise**.
+
+
+### Dual-Pathway to Creativity Model
+
+* **Cognitive Flexibility**
+Use of broad and inclusive cognitive categories through flexible switching among categories and use of remote associations between different cognitive categories
+
+* **Cognitive Persistence**:
+The systematic, effortful, and in-depth exploration of only a few cognitive categories
+
+
+</br>
+
+## Innovation
+
+Process:
+1) Generation
+2) Evaluation
+3) Selection
+4) Implementation
+
+
+</br>
+
+## Innovation Diffusion
+
+Process:
+1) Recognition / Evaluation of Innovation
+2) Adoption of Innovation
+3) Implementation
+
+
+### Adopter’s Dilemma
+
+__Not Adopt__
+- Losing Competitive Advantage
+
+__Adopt__
+- Ambiguity
+- Cost
+- Inerita of Success
+
+
 
 </br><hr>
 
 # Group Dynamics
 
-
+### Reference this [Big Five Personality Dimensions](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=9609192320&site=bsi-live&scope=site) as (Barrick & Mount 20)
 
 
 </br><hr>
