@@ -21,20 +21,24 @@ $$ \Large \phi_{sc} = E_{\text{vac}} - E_{F \ s} $$
 $$ \Large \chi = E_{\text{vac}} - E_{c} $$
 
 
-## Junction
+
+# Junction
 
 As before for a PN-junction when we create a junction the difference in work functions causes an exchange of electrons creating a contact potential present across the depletion region present entirely within the semiconductor. 
 
 </br>
 
-
 ### Ohmic Contact
 For an Ohmic contact, the M and SC are essentially separate. Diagram is dependent on properties defined above.
 
 
+
+
+
+
 </br>
 
-### Schottky Contact
+# Schottky Contact
 
 #### Key Points for Diagram
 
@@ -45,6 +49,44 @@ For an Ohmic contact, the M and SC are essentially separate. Diagram is dependen
 **Changes**
 * At interface, $ E_{c} = E_{F \ s} + ( \phi_{m} - \chi ) $
 * $ E_{\text{vac}} $ and $ E_{c} $ drops by $ \phi_{m} - \phi_{sc} = e (V_{0} - V_{app}) $ as a plateau
+
+</br>
+
+
+
+
+
+
+
+</br>
+
+## Current Flow
+
+### Net Current Flow
+$$ I_{net} = I_{F} - I_{R} $$
+
+In equilibrium, $ I_{F} = I_{R} $.
+
+In forward bias, $ I_{F} >> I_{R} $.
+
+In reverse bias, $ I_{R} >> I_{F} $.
+
+
+</br>
+
+Schottky barrier diode is a uni-polar device (ie. we only need to consider one type of carrier flow).
+
+</br>
+
+## Thermionic Emission Theory
+
+
+$$ \color{blue}{ \large J_{m-sc} =  A^{*} \enspace T^{2} e^{-\dfrac{e \ (\phi_{m} - \phi_{sc})}{kT}} (e^{\dfrac{e V_{a}}{kT}} - 1) } $$ 
+
+
+
+
+
 
 
 
