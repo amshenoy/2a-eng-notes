@@ -89,6 +89,7 @@ Applying a **positive bias voltage** $ V_{\text{bias}} $ to the **positive side*
 
 The Fermi level changes in the following way:
 
+<img src="images/fermi-bias.png"></img>
 
 </br><hr>
 
