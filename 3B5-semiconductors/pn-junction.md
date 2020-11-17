@@ -85,7 +85,7 @@ Applying a bias voltage changes the Fermi levels in the semiconductor.
 
 
 
-Applying a **positive bias voltage** $ V_{\text{bias}} $ to the **positive side**, For all the equations above $ V_{0} $ changes to $ V_{0} - V_{\text{bias}} $.
+Applying a **positive bias voltage** $ V_{\text{app}} $ to the **positive side**, For all the equations above $ V_{0} $ changes to $ V_{0} - V_{\text{app}} $.
 
 The Fermi level changes in the following way:
 
@@ -111,10 +111,10 @@ We can use the **continuity equation** to find $ p(x) $ and $ n(x) $ by consider
 
 Using the contact potential equation $ e V_{0} = kT \ln(\dfrac{N_{A}N_{D}}{n_{i}^{2}}) $ alongside the mass-action law $ n p = n_{i}^{2} $, we can find the **boundary condition** for $ p(0) $ and $ n(0) $.  
 
-This gives the following solutions for an applied bias $ V $:
-$$ \color{blue}{ \Large p = p_{n0} \ e^{\frac{eV}{kT}} e^{-\frac{x}{L_{h}}} = \Big( N_{A} e^{-\frac{eV_{0}}{kT}} \Big) e^{\frac{eV}{kT}} e^{-\frac{x}{L_{h}}} } $$
+This gives the following solutions for an applied bias $ V_{a} $:
+$$ \color{blue}{ \Large p = p_{n0} \ e^{\frac{eV_{a}}{kT}} e^{-\frac{x}{L_{h}}} = \Big( N_{A} e^{-\frac{eV_{0}}{kT}} \Big) e^{\frac{eV_{a}}{kT}} e^{-\frac{x}{L_{h}}} } $$
 
-$$ \color{blue}{ \Large n = n_{p0} \ e^{\frac{eV}{kT}} e^{-\frac{x}{L_{e}}} = \Big( N_{D} e^{-\frac{eV_{0}}{kT}} \Big) e^{\frac{eV}{kT}} e^{-\frac{x}{L_{e}}} } $$
+$$ \color{blue}{ \Large n = n_{p0} \ e^{\frac{eV_{a}}{kT}} e^{-\frac{x}{L_{e}}} = \Big( N_{D} e^{-\frac{eV_{0}}{kT}} \Big) e^{\frac{eV_{a}}{kT}} e^{-\frac{x}{L_{e}}} } $$
 
 </br>
 
