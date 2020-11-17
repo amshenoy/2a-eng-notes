@@ -217,13 +217,13 @@ Note that **$\omega$ is the analogue frequency** and **$\theta$ is the digital f
 
 **Notable Transforms**
 
-**Forward Difference**: $\Psi(z) = \dfrac{z-1}{T}$ &emsp; LHS ($ s < 0 $) of s-plane maps to $ z < 1 $ &emsp; (**Possibly Unstable**)
+**Forward Difference**: $\Psi(z) = \dfrac{z-1}{T}$ &emsp; LHS ($ Re(s) < 0 $) of s-plane maps to $ z < 1 $ &emsp; (**Possibly Unstable**)
 
-**Backward Difference**: $\Psi(z) = \dfrac{z-1}{zT}$ &emsp; LHS ($ s < 0 $) of s-plane maps to circle $ r=1/2 $ at $ (1/2, 0) $ &emsp; (**Stable**)
+**Backward Difference**: $\Psi(z) = \dfrac{z-1}{zT}$ &emsp; LHS ($ Re(s) < 0 $) of s-plane maps to circle $ r=1/2 $ at $ (1/2, 0) $ &emsp; (**Stable**)
 
-**Tustin / Bilinear Transform**: $\Psi(z) = \dfrac{2}{T} \dfrac{z-1}{z+1}$ (or simply $\dfrac{z-1}{z+1}$ ) &emsp; LHS ($ s < 0 $) of s-plane maps to **unit circle** &emsp; (**Stable**)
+**Tustin / Bilinear Transform**: $\Psi(z) = \dfrac{2}{T} \dfrac{z-1}{z+1}$ (or simply $\dfrac{z-1}{z+1}$ ) &emsp; LHS ($ Re(s) < 0 $) of s-plane maps to **unit circle** &emsp; (**Stable**)
 
-For the **bilinear transform**, $ j \omega = \dfrac{2}{T} tan \dfrac{\theta}{2} $ or simply $ \color{blue}{ j \omega = tan \dfrac{\theta}{2} } $
+For the **bilinear transform**, $ \color{red}{ j \omega = \dfrac{2}{T} tan \dfrac{\theta}{2} } $ or simply $ \color{red}{ j \omega = tan \dfrac{\theta}{2} } $
 
 </br>
 
