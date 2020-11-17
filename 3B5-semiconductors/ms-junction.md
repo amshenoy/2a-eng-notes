@@ -96,7 +96,7 @@ where $ A^{*} = A \dfrac{m^{*}}{m} $ and $ A = \dfrac{4\pi e m k^{2}}{h^{3}} $ i
 
 
 # Ohmic Contact
-For an Ohmic contact, the M and SC are essentially separate. Diagram is dependent on properties defined above.
+For an Ohmic contact, the M and SC are essentially separate. Diagram is dependent on properties defined in introduction.
 
 
 
