@@ -33,13 +33,6 @@ $$ \large \dfrac{d^{2}V}{dx^{2}} = \dfrac{-\rho}{\epsilon} \qquad (\text{from Po
 
 $$ E(x) = \dfrac{dV}{dx} = \int \dfrac{d^{2}V}{dx^{2}} dx $$
 
-Find $ V_{n} $ using conditions for n-type side.
-Find $ V_{p} $ using conditions for p-type side.
-
-$ \Large V_{0} = V_{n} - V_{p} $
-
-$$ \Large V_{0} = \dfrac{e}{2 \epsilon} (N_{A} x_{p}^{2} + N_{D} x_{n}^{2}) $$
-
 #### Boundary Conditions
 
 For p-type side: $ E(-x_{p}) = 0 $
@@ -47,6 +40,16 @@ For p-type side: $ E(-x_{p}) = 0 $
 For n-type side: $ E(x_{n}) = 0 $
 
 Common: $ V(0) = 0 $
+
+</br>
+Find $ V_{n} $ using conditions for n-type side.
+Find $ V_{p} $ using conditions for p-type side.
+
+$ \Large V_{0} = V_{n} - V_{p} $
+
+$$ \Large V_{0} = \dfrac{e}{2 \epsilon} (N_{A} x_{p}^{2} + N_{D} x_{n}^{2}) $$
+
+
 
 
 </br>
