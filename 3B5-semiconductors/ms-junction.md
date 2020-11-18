@@ -26,12 +26,37 @@ $$ \Large \chi = E_{\text{vac}} - E_{c} $$
 As before for a PN-junction when we create a junction the difference in work functions causes an exchange of electrons creating a contact potential present across the depletion region present entirely within the semiconductor. 
 
 
+## Contact Potential
+
+$$ \Large eV_{0} = \phi_{m} - \phi_{sc} $$
+
+
 ## Depletion Region
 
+### Contact Potential
+Equation of contact potential in terms of depletion region widths.
 
-## Capacitance
+$$ \large \dfrac{d^{2}V}{dx^{2}} = \dfrac{-\rho}{\epsilon} \qquad (\text{from Poisson's Equation})$$
+
+(eg. $ \rho = - e N_{A} = e N_{D} $)
+
+$$ E(x) = \dfrac{dV}{dx} = \int \dfrac{d^{2}V}{dx^{2}} dx $$
+
+#### Boundary Conditions
+$ E(w) = 0 $
+
+$ V(w) = V_{0} $
 
 
+Rearrange to find depletion region width $ w $.
+ 
+</br>
+
+## Junction Capacitance
+
+Capacitance (per unit area) $ \Large C_{A} = \dfrac{C}{A} = \dfrac{\epsilon}{w} $ (Parallel-Plate Analogy)
+
+More specifically from $ C = \dfrac{dQ}{dV} = \dfrac{d(\rho w)}{dV} $
 
 
 
