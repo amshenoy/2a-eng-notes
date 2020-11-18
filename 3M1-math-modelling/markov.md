@@ -4,7 +4,7 @@
 
 
 
-## Continuous State-Space
+## Continuous Time, Discrete Process
 
 $$ Q = R - E $$
 R is the transition rate matrix.
@@ -28,8 +28,3 @@ $$ \dfrac{dR}{dt} = + I * \gamma * 1 $$
 From the differential equations and/or the compartment diagram, we can find the transition generator matrix Q.
 
 
-## Stochastic Processes
-
-
-
-## Sampling
