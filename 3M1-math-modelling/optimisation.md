@@ -23,5 +23,16 @@ Many ways of defining tolerance for convergence:
 
 # Line Search (1D Optimisation)
 
+## Golden Section Search
+
+
+## Newton's Method
+
+**Equivalent to fitting a quadratic at one point**
+
+$$ x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{f^{''}(x_{k+1})} $$
+
+
+
 
 
