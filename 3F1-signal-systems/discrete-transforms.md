@@ -69,6 +69,16 @@ $$
 
 ## Circular Convolution
 
+$$ \Large y_{m} = \text{IDFT}( \text{DFT}(g_{k}) \text{DFT}(x_{k}) ) = \text{IDFT}(G_{n} X_{n}) = \sum_{k=0}^{N-1} g_{k} \ x_{mod(m-k, N)} $$
+
+</br>
+
+If $ M \le m \le N $ for a given $ m $ where $ M = len(g_{k}) $ and $ N = len(x_{k})$, then **circular convolution equals standard convolution**:
+
+$$ \Large y_{m} = \underbrace{\sum_{k=0}^{N-1} g_{k} \ x_{mod(m-k, N)}}_{\text{Circular Convolution}} = \underbrace{\sum_{k=0}^{M} g_{k} x_{m-k}}_{\text{Standard Convolution}}  $$
+
+
+
 
 ## Fast Fourier Transform (FFT)
 
