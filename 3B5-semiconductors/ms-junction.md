@@ -54,11 +54,9 @@ Rearrange to find depletion region width $ w $.
 
 ## Junction Capacitance
 
-Capacitance (per unit area) $ \Large C_{A} = \dfrac{C}{A} = \dfrac{\epsilon}{w} $ (Parallel-Plate Analogy)
+Capacitance (per unit area) $ \large C_{A} = \dfrac{C}{A} = \dfrac{\epsilon}{w} $ (Parallel-Plate Analogy)
 
 More specifically from $ C = \dfrac{dQ}{dV} = \dfrac{d(\rho w)}{dV} $
-
-
 
 
 </br><hr>
