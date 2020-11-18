@@ -1,10 +1,71 @@
 # Discrete Transforms 
 
 ## Discrete Fourier Transform (DFT) 
+**Single DFT sample** generated from **two vectors**:
+
 $$ \Large X_{n} = \sum_{k=0}^{N-1} x_{k} e^{-j \frac{2\pi}{N} n k} $$
+
+$$ \Large X_{n}  = \underline{b_{N}(n)} \cdot \underline{x} $$
+
+where $ \large  \underline{b_{N}(n)} = \begin{pmatrix}
+           e^{-j\frac{2\pi}{N} \ (0) \ n} \\
+           e^{-j\frac{2\pi}{N} \ (1) \ n} \\
+           \vdots \\
+           e^{-j\frac{2\pi}{N} \ (N-1) \ n}
+         \end{pmatrix} = \begin{pmatrix}
+           e^{-j\frac{2\pi}{N} \ (0)} \\
+           e^{-j\frac{2\pi}{N} \ (1)} \\
+           \vdots \\
+           e^{-j\frac{2\pi}{N} \ (N-1)}
+         \end{pmatrix}^{ \Large \circ n } = \underline{b_{N}}^{ \Large \circ n } $ using the Hadamdard power notation.
+
+</br>
+
+**DFT vector** of **N samples** generated from **matrix multiplication**:
+$$ \Large \underline{X}  = B_{N} \ \underline{x} $$
+
+$$ \large
+\begin{align*}
+\underline{X} = \begin{bmatrix}
+           \underline{b_{N}^{T}(0)} \\
+           \underline{b_{N}^{T}(1)}\\
+           \vdots \\
+           \underline{b_{N}^{T}(N-1)}
+         \end{bmatrix} \underline{x}
+\end{align*}
+$$
+
 
 ## Inverse DFT
 $$ \Large x_{k} = \dfrac{1}{N} \sum_{n=0}^{N-1} X_{n} e^{j \frac{2\pi}{N} k n} $$
+
+
+$$ \Large \underline{x}  = \underbrace{B_{N}^{-1}}_{\frac{1}{N} B_{N}^{*}} \ \underline{X} $$
+
+$$
+\begin{align*}
+\large x_{k} &= \frac{1}{N} \ \underline{b_{N}(n)}^{*} \cdot \underline{X}\\
+&= \frac{1}{N} \ \underline{b_{N}(-n)} \cdot \underline{X}
+\end{align*}
+$$
+
+</br>
+
+## Properties
+
+#### Linearity &emsp; If $ z_{k} = x_{k} + y_{k} $, then $ Z_{n} = X_{n} + Y_{n} $
+
+#### Periodicity &emsp; $ X_{n} = X_{n+N} $
+
+#### Symmetry &emsp; $ X_{n} = X_{n}^{*} = X_{N-n} $
+
+
+#### Finite Sampling $ \omega = \dfrac{2 \pi}{NT}$  (Not a problem, any $ T $ can be selected)
+
+#### Finite Horizon (Frequency distortion) Improvement as $ N \rightarrow \infty $
+
+
+</br><hr>
 
 ## Circular Convolution
 
