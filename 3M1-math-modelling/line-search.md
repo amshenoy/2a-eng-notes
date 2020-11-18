@@ -1,4 +1,4 @@
-# Optimisation
+# Line Search (1D Optimisation)
 
 ## Convergence Criteria
 
@@ -21,7 +21,7 @@ Many ways of defining tolerance for convergence:
 
 </br><hr>
 
-# Line Search (1D Optimisation)
+# Methods
 
 ## Golden Section Search
 
