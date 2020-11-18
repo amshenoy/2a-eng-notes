@@ -137,7 +137,7 @@ $ L_{h} $ and $ L_{e} $ are known as **carrier diffusion lengths**.
 
 $ \large L_{h} = (D_{h} \tau_{h})^{\frac{1}{2}} $ and $ \large L_{e} = (D_{e} \tau_{e})^{\frac{1}{2}} $
 
-$$ \Large J_{s} = e n_{i}^{2} (\dfrac{D_{h}}{L_{h} N_{D}} + \dfrac{D_{e}}{L_{e} N_{A}}) $$
+$$ \color{blue}{ \Large J_{s} = e n_{i}^{2} (\dfrac{D_{h}}{L_{h} N_{D}} + \dfrac{D_{e}}{L_{e} N_{A}}) } $$
 
 </br>
 
