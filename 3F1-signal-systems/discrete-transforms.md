@@ -79,6 +79,8 @@ $$ \Large y_{m} = \underbrace{\sum_{k=0}^{N-1} g_{k} \ x_{mod(m-k, N)}}_{\text{C
 
 
 
+</br><hr>
+
 
 ## Fast Fourier Transform (FFT)
 
@@ -86,4 +88,14 @@ $$ \Large y_{m} = \underbrace{\sum_{k=0}^{N-1} g_{k} \ x_{mod(m-k, N)}}_{\text{C
 ## Inverse FFT
 
 
+</br><hr>
+
 ## Multi-Dimensional Variants
+
+
+
+
+
+
+
+
