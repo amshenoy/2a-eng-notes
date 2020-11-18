@@ -81,16 +81,68 @@ $$ \Large y_{m} = \underbrace{\sum_{k=0}^{N-1} g_{k} \ x_{mod(m-k, N)}}_{\text{C
 
 </br><hr>
 
-
 ## Fast Fourier Transform (FFT)
+
+$$ \underline{X} = \text{FFT}(\underline{x}) $$
+
+### Radix-2 Method
+
+$$ X_{n} = \underline{b_{N}^{T}(n)} \underline{x} = \underline{b_{N/2}^{T}(n)} \Big( \underline{x_{A}} \color{red}{+} 
+ (e^{-j \frac{2 \pi}{N}})^{n} \ \underline{x_{B}} \Big) $$
+
+$$ X_{n+N/2} = \underline{b_{N}^{T}(n + N/2)} \underline{x} = \underline{b_{N/2}^{T}(n)} \Big( \underline{x_{A}} \color{red}{-} (e^{-j \frac{2 \pi}{N}})^{n} \ \underline{x_{B}} \Big) $$
+
+where $ \underline{x_{A}} = [x_{i\%2 \ == \ 0}]^{T} $ and $ \underline{x_{B}} = [x_{i\%2 \ != \ 0}]^{T} $
+
+In simple notation from above:
+$$ X_{n} = \underline{b_{N}^{T}(n)} \underline{x} = A_{n} + W^{n} B_{n} $$
+
+$$ X_{n+N/2} = \underline{b_{N}^{T}(n + N/2)} \underline{x} = A_{n} - W^{n} B_{n} $$
+
 
 
 ## Inverse FFT
+
+$$ \underline{x} = \dfrac{1}{N} \text{FFT}(\underline{X}^{*})^{*} $$
+
+
+
+
+</br>
+
+### Time Complexity
+
+DFT (N points): $ 2N^{2} $ (each DFT point requires 2N operations)
+
+FFT (N points): $ \dfrac{3}{2} N \log_{2}(N) $
+* $ N/2 $ products and $ N $ sum at each stage
+* $ log_{2}(N) $ stages
 
 
 </br><hr>
 
 ## Multi-Dimensional Variants
+
+## 2D Z-Transform
+
+
+
+## 2D Convolution
+
+
+## 2D DTFT
+
+
+
+## 2D DFT
+
+
+
+
+
+
+
+
 
 
 
