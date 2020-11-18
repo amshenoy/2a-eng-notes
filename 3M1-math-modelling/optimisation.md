@@ -26,12 +26,23 @@ Many ways of defining tolerance for convergence:
 ## Golden Section Search
 
 
+## Quadratic Fitting (at 3 points)
+
+
+
 ## Newton's Method
 
-**Equivalent to fitting a quadratic at one point**
+**Equivalent to quadratic fitting at one point**
 
 $$ x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{f^{''}(x_{k+1})} $$
 
+
+## Quasi-Newton Methods
+
+
+
+
+</br><hr>
 
 
 
