@@ -75,9 +75,7 @@ $ w = \Big( \dfrac{2 \epsilon V_{0}}{e N_{D}} \Big)^{\dfrac{1}{2}} $ for ($ N_{A
 
 ## Junction Capacitance
 
-Parallel-Plate Analogy
-
-Capacitance (per unit area) $ C_{A} = \dfrac{C}{A} = \dfrac{\epsilon}{w} $
+Capacitance (per unit area) $ \large C_{A} = \dfrac{C}{A} = \dfrac{\epsilon}{w} $ (Parallel-Plate Analogy)
 
 
 </br>
