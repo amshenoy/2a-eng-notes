@@ -26,7 +26,8 @@ A process $ X_{n} $ is mean ergodic if:
 ### $$ \color{red}{ \lim_{k \rightarrow \infty} c_{XX}[k] = 0 } $$
 
 
-</br>
+</br><hr>
+
 
 # Example System
 ### For input $ x_{n} $, noise $ v_{n} $ and output $ y_{n} $:
@@ -40,7 +41,8 @@ A process $ X_{n} $ is mean ergodic if:
 
 #### Note: In the general case, $ r_{xx}[k] = E(X_{n} X_{n+k}) $ giving $ E(X_{n}^{2}) $ for $ k=0 $ and $ E(X_{n})E(X_{n+k}) $ for $ k \ne 0 $ which can be written as $ \color{green}{ r_{xx}[k] = \mu^{2} + \sigma^{2} \delta(k) } $.
 
-</br>
+</br><hr>
+
 
 # Wiener Filter
 **Wiener filter** shows how to extract a **random signal from random noise**.
@@ -124,11 +126,14 @@ If noise and input are uncorrelated then $ S_{yx} = S_{xx} $ and $ S_{yy} = S_{x
 
 $ H(e^{j \theta}) = \dfrac{S_{xx}}{S_{xx} + S_{vv}} = \dfrac{1}{1+ \dfrac{1}{\text{SNR}} }$
 
+</br><hr>
 
 # Matched Filter
 **Matched filter** shows how to extract a **known deterministic signal from random noise**.
 
 ## $$ \color{blue}{ \underbrace{\underline{h_{\text{opt}}}}_{\scriptsize \text{Coefficients of Matched Filter}} = \dfrac{\underline{\tilde{x}}}{|\underline{\tilde{x}}|} } \qquad \small ( \text{where }\underline{\tilde{x}}\text{ is } \underline{x} \text{ time-reversed })$$
+
+$$ \text{SNR} = \dfrac{E(|\mathbf{h} \mathbf{\tilde{s}}|^{2})}{E(|\mathbf{h} \mathbf{\tilde{v}}|^{2})} = \dfrac{|\mathbf{h} \mathbf{\tilde{s}}|^{2}}{\sigma_{v}^{2} \mathbf{h}_{T} \mathbf{h} } $$
 
 #### Instead of minimising the MSE like for Wiener, here we try to maximise the SNR:
 
@@ -136,8 +141,10 @@ $ H(e^{j \theta}) = \dfrac{S_{xx}}{S_{xx} + S_{vv}} = \dfrac{1}{1+ \dfrac{1}{\te
 \text{SNR}_{\text{opt}} = \dfrac{ \underline{\tilde{x}} \cdot \underline{\tilde{x}} } {\sigma_{v}^{2}} = \dfrac{ |\underline{\tilde{x}}|^{2} } {\sigma_{v}^{2}} 
 } $$
 
+</br><hr>
 
-## Orthognal Signals
+
+# Orthognal Signals
 
 Consider $ \large y_{n} = s_{1,n} + s_{2, n} + v_{n} $ where $ s_{1, n} $ and $ s_{2, n} $ are orthognal to each other:
 
