@@ -92,6 +92,10 @@ $$
 
 **Note: For any random process $ P = E(X_{n}^{2}) $ is the expected instantaneous power and not the expected average power. Only true if the process is WSS.**
 
+## Covariance Matrix
+For any linear system $ \underline{Y} = A \underline{X} + B $ (ie. all the below processes):
+## $$ Cov(Y) = A Cov(X) A^{T} $$ 
+
 </br></br>
 
 ## Autoregressive (AR) Process (IIR)
