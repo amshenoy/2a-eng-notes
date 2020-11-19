@@ -120,32 +120,18 @@ FFT (N points): $ \dfrac{3}{2} N \log_{2}(N) $
 
 
 </br><hr>
-
+**Non/Basic-Examinable**
 ## Multi-Dimensional Variants
 
 ## 2D Z-Transform
 
-
+$$ X_{z_{1}, z_{2}} = \sum_{k_{1}=0}^{\infty} \sum_{k_{2}=0}^{\infty} x(k_{1}, k_{2}) z_{1}^{-k_{1}} z_{2}^{-k_{2}} $$
 
 ## 2D Convolution
+$$ x(k_{1}, k_{2})*y(k_{1}, k_{2}) = \sum_{k_{1}=0}^{\infty} \sum_{k_{2}=0}^{\infty} x(k_{1}, k_{2}) \ y(n_{1}-k_{1}, n_{2}-k_{2}) $$
 
-
-## 2D DTFT
-
-
-
-## 2D DFT
-
-
-
-
-
-
-
-
-
-
-
+### Z-Transform of Convolution
+$$ X_{z_{1}, z_{2}} Y(z_{1}, z_{2}) = \mathcal{Z}\{ x(k_{1}, k_{2})*y(k_{1}, k_{2}) \}$$
 
 
 
