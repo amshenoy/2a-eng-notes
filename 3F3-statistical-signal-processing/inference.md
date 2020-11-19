@@ -117,6 +117,10 @@ $$ \Large \color{blue}{ \dfrac{d}{d \underline{\theta}} P(\underline{\theta} | \
 
 #### Consider $ \color{purple}{ \text{ log-posterior } } $ where suitable.
 
+</br>
+
+$$ P(\underline{\theta} | \underline{x}) \propto  P(\theta) P(\underline{x} | \underline{\theta}) $$
+
 </br></br>
 
 
