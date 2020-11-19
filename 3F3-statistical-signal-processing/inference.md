@@ -32,7 +32,7 @@ $ (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - \
 
 </br>
 
-$ \Large \underline{x}^{T} B \underline{x} + 2 b^{T} x \quad \rightarrow \quad (\underline{x} + B^{-1} \underline{b})^{T} B (\underline{x} + B^{-1} \underline{b} ) - \underline{b}^{T} (B^{-1} \underline{b}) $
+$ \Large \color{blue}{ \underline{x}^{T} B \underline{x} + 2 \underline{b}^{T} x \quad \rightarrow \quad (\underline{x} + B^{-1} \underline{b})^{T} \ B \ (\underline{x} + B^{-1} \underline{b} ) - \underline{b}^{T} (B^{-1} \underline{b}) } $
 
 
 </br><hr>
