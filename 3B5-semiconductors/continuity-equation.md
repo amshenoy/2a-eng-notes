@@ -49,7 +49,7 @@ Consider the generation rate of carriers $ g_{i} $ due to excitation and recombi
 $$ \large \dfrac{dn}{dt} = g_{i} - r_{i} $$
 
 ### 1) Generation 
-Photonic ($ E > E_{g} $) Electron-Hole Pair Creation 
+Photonic ($ E > E_{g} $) Electron-Hole Pair Creation (Optical Injection & Excitation)
 
 ### 2) Recombination
 Transition (VB to CB) Recombination
