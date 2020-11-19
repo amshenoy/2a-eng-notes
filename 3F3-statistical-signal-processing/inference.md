@@ -34,7 +34,11 @@ $ (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - \
 
 **Extremely important for multivariate gaussian products!**
 
-$ \Large \color{blue}{ \underline{x}^{T} B \underline{x} + 2 \underline{b}^{T} x \quad \rightarrow \quad (\underline{x} + B^{-1} \underline{b})^{T} \ B \ (\underline{x} + B^{-1} \underline{b} ) - \underline{b}^{T} (B^{-1} \underline{b}) } $
+$ \Large \color{blue}{ \underline{x}^{T} B \underline{x} \color{red}{-} 2 \underline{b}^{T} x \quad \rightarrow \quad (\underline{x} \color{red}{-} B^{-1} \underline{b})^{T} \ B \ (\underline{x} \color{red}{-} B^{-1} \underline{b} ) - \underline{b}^{T} (B^{-1} \underline{b}) } $
+
+**Complete the square for multivariate gaussian**:
+* $ B $ is Covariance Matrix
+* $ B^{-1} \underline{b} $ is Mean Vector
 
 
 </br><hr>
