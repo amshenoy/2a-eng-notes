@@ -19,18 +19,20 @@ $ \large \underline{x}^{T} B \underline{x} + 2 b^{T} \color{green}{B^{-1} B} \ x
  = \underline{b}^{T} B^{-1} 
  } $ 
 
-$ \large \underline{x}^{T} B \underline{x} + 2 \color{green}{ \underline{u}^{T} } B \ x = \underline{x}^{T} B \underline{x} + \color{green}{ \underline{u}^{T} } B \ x +  \color{green}{ \underline{u}^{T} } B \ x $
-
-</br>
+$ \underline{x}^{T} B \underline{x} + 2 \color{green}{ \underline{u}^{T} } B \ x = \underline{x}^{T} B \underline{x} + \color{green}{ \underline{u}^{T} } B \ x +  \color{green}{ \underline{u}^{T} } B \ x $
 
 $ \large (\underline{x}^{T} + \underline{u}^{T}) B \underline{x} + \color{green}{ \underline{u}^{T} } B \underline{x} $
 
 $ \large (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \color{green}{ \underline{u} }) - \color{green}{ (\underline{x}^{T} + \underline{u}^{T}) B \underline{u} } + \underline{u}^{T} B \underline{x} $
 
 
-$ \large (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - (\underline{x}^{T} + \underline{u}^{T}) \color{green}{ \underline{b} } + \color{green}{ \underline{b}^{T} } \underline{x} $
+$ (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - (\underline{x}^{T} + \underline{u}^{T}) \color{green}{ \underline{b} } + \color{green}{ \underline{b}^{T} } \underline{x} $
 
-$ \large (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - \underbrace{\underline{u}^{T} \underline{b}}_{\underline{b}^{T} \underline{u}} $
+$ (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - \underbrace{\underline{u}^{T} \underline{b}}_{\underline{b}^{T} \underline{u}} $
+
+</br>
+
+$ \Large \underline{x}^{T} B \underline{x} + 2 b^{T} x \quad \rightarrow \quad (\underline{x} + B^{-1} \underline{b})^{T} B (\underline{x} + B^{-1} \underline{b} ) - \underline{b}^{T} (B^{-1} \underline{b}) $
 
 
 </br><hr>
@@ -43,16 +45,6 @@ $$ \Large \mathbf{x} = \mathbf{G} \boldsymbol{\theta} + \mathbf{e} $$
 Therefore at a point in time $ n $:
  
 $$ \Large x_{n} = \mathbf{g_{n}}^{T} \boldsymbol{\theta} + e_{n} $$
-
-</br>
-
-## Bayesian Theory
-
-
-
-
-
-
 
 </br>
 
@@ -88,11 +80,17 @@ $$ \Large \color{blue}{ \dfrac{d}{d \underline{\theta}} P(\underline{x} | \under
 
 </br>
 
-$$ x_{n} = \mathbf{g_{n}}^{T} \boldsymbol{\theta} + e_{n} $$
+Given $ x_{n} = \mathbf{g_{n}}^{T} \boldsymbol{\theta} + e_{n} $ (For iid RVs):
 
 $$ P(x_{n} | \theta_{n}) = P_{e}(e_{n}) $$
 
 $$ P(\underline{x} | \underline{\theta}) = \prod_{n} P_{e}(e_{n}) = \prod_{n} P_{e}(x_{n} - \mathbf{g_{n}}^{T} \boldsymbol{\theta}) $$
+
+</br>
+
+Given $ \underline{x} = \mathbf{G} \underline{\theta} + \underline{e} $ (Usually for multivariate gaussian):
+
+$$ P(\underline{x} | \underline{\theta}) = P_{e}(\underline{x} - \mathbf{G} \underline{\theta}) $$
 
 
 </br></br>
