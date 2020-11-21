@@ -91,7 +91,7 @@ $$ \large \sum_{i=1}^{N} u_{i} \underline{g}_{i} = \underline{c} $$
 
 </br>
 
-### Systematic Encoder
+## Systematic Encoder
 
 $$ \Large \color{blue}{ 
 G_{sys} = [ \underbrace{I_{k}}_{ \qquad k \times k \\ \text{Identity Matrix}} | \quad \underbrace{P}_{k \times (n-k)} \quad ] 
@@ -107,7 +107,7 @@ Given a $ G $ matrix, we can find $ G_{sys} $ by **swapping columns** and perfor
 
 </br>
 
-### Parity Check Matrix
+## Parity Check Matrix
 
 Given $ G_{sys} $ we can find a parity check matrix $ H $:
 
@@ -120,13 +120,17 @@ If $ \underline{c} $ is a codeword, then:
 
 $$ \Large \underline{c} H^{T} = \underline{0} $$
 
-Therefore \underline{u} G H^{T} = \mathcal{O} $ and therefore $ G H^{T} = \mathcal{O} $
-
-$$ \large \sum_{i=1}^{n} c_{i} \enspace \underline{\text{h}_{i}} = \underline{0} 
- $$
-
+$$ \large \sum_{i=1}^{n} c_{i} \enspace \underline{\text{h}_{i}} = \underline{0} $$
 
 **Note: Intuitively this means the sum of all the $i$-th columns $ \text{h}_{i} $ of $ H $ ( only $ c_{i} = 1 $ actually matters) must equal $ \underline{0} $**
+
+
+Therefore $ (\underline{u} G) H^{T} = \mathcal{O} $ and therefore $ \large G H^{T} = [I_{k} | P] \begin{bmatrix}
+           P \\
+           I_{n-k}
+         \end{bmatrix} = P + P = \mathcal{O} $
+
+
 
 
 
@@ -134,7 +138,7 @@ $ H $ works for $ G $ not just $ G_{sys} $ as codewords remain the same, only th
 
 </br>
 
-### Minimum Distance
+## Minimum Distance
 
 **Hamming distance to count number of bit flips**
 
