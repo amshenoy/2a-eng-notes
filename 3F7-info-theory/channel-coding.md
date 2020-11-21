@@ -31,9 +31,12 @@ __Note: The step from $ \underline{y} \longrightarrow \hat{\underline{u}} $ can 
 # Error Estimation
 
 ### Minimum Error Probability Estimator 
+For any estimator $ \hat{X} $ such that $ X - Y - \hat{X} $:
+
 $$ \large \hat{X}(Y) = \arg\max_{x \in \mathcal{X}} P_{X|Y}(x|Y) = \arg\max_{x \in \mathcal{X}} \dfrac{P_{XY}(x, Y)}{P_{Y}(Y)} $$ 
 
 ### Error Probability
+For any estimator $ \hat{X} $ such that $ X - Y - \hat{X} $
 $$ \large 
 \begin{align*}
 P_{e} &= P( \hat{X}(Y) \ne X ) \\ &= \sum_{x} P( \hat{X}(Y) \ne X | X = x) P_{X}(x) \\ P_{e} &= \sum_{x} P( \hat{X}(Y) \ne X, X = x) \\
@@ -48,6 +51,8 @@ $$ \large P_{e} \ge \dfrac{H(X|Y)-1}{\log|\mathcal{X}|}$$
 
 
 </br><hr>
+
+
 
 # Optimal Codeword Estimation
 
@@ -74,11 +79,13 @@ __Note: $ d(\underline{y}, \underline{c}) $ is the Hamming distance between the 
 
 ## Linear Coding (n, k)
 
-We can generate $n$-bit codewords (**block length**) using a generator matrix that takes a $k$-bit input (**dimension**). For the purpose of this topic, we will consider vectors to be by default row vectors.
+We can generate $n$-bit codewords (**block length**) using a generator matrix that takes a $k$-bit input (**dimension**). For the purpose of this topic, we will consider vectors to be by **default row vectors**.
 
 $$ \Large \color{purple}{ \underbrace{\underline{u}}_{\qquad 1 \times k \\ \text{Information Vector}} \underbrace{G}_{\qquad k \times n \\ \text{Generator Matrix}} = \underbrace{\underline{c}}_{\qquad 1 \times n \\ \text{Code Vector}} 
 }
 $$
+
+$$ \large \sum_{i=1}^{N} u_{i} \underline{g}_{i} = \underline{c} $$
 
 ### Rate $ R = \dfrac{k}{n} $ bits per transmission
 
@@ -111,8 +118,9 @@ $$ \Large \color{blue}{ G_{sys} = [I_{k} | P] \qquad \underbrace{H}_{(n-k) \time
 
 If $ \underline{c} $ is a codeword, then:
 
-$$ \Large \underline{c} H^{T} = \underline{0} \\
-\sum_{i=1}^{n} c_{i} \enspace \underline{\text{h}_{i}} = \underline{0} 
+$$ \Large \underline{c} H^{T} = \underline{0} $$
+
+$$ \large \sum_{i=1}^{n} c_{i} \enspace \underline{\text{h}_{i}} = \underline{0} 
  $$
 
 
