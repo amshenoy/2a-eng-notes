@@ -120,6 +120,8 @@ If $ \underline{c} $ is a codeword, then:
 
 $$ \Large \underline{c} H^{T} = \underline{0} $$
 
+Therefore \underline{u} G H^{T} = \mathcal{O} $ and therefore $ G H^{T} = \mathcal{O} $
+
 $$ \large \sum_{i=1}^{n} c_{i} \enspace \underline{\text{h}_{i}} = \underline{0} 
  $$
 
