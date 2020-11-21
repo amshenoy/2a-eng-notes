@@ -87,3 +87,52 @@ A set of $m$ BSC channels $$ CC_{m} = BSC(p_{c}) $$
 
 
 
+</br><hr>
+
+
+# AWGN Channel (Continuous)
+
+Additive White Gaussian Noise Channel
+
+For a channel with input $X_{k}$, output $Y_{k}$ and gaussian noise $ Z_{k} = \mathcal{N}(0, \sigma^{2}) $:
+
+#### Example Channel
+$$ \Large Y_{k} = X_{k} + Z_{k} $$
+
+Gaussian has the maximum possible differential entropy:
+
+$$ \large \color{blue}{ h(Z) = \dfrac{1}{2} \log_{2} (2\pi e \sigma^{2}) } $$
+
+$$ \large \color{blue}{ \large h(Y) \le \dfrac{1}{2} \log_{2} (2\pi e \ E(Y_{k}^{2})) } $$ 
+
+### Power Constraint $ \color{blue}{ P = E(X_{k}^{2}) } $
+
+#### Method of Calculation &emsp; $ E(Y_{k}^{2}) = E((X_{k}+Z_{k})^{2}) = E(X_{k}^{2})+E(Z_{k}^{2}) = P + \sigma^{2} $
+
+## Channel Capacity
+
+### For a general AWGN channel where $ \color{green}{ Y = f(X) + g(Z) } $:
+
+$$
+\begin{align*}
+\mathcal{C} = \max I(X; Y) &= H(Y) - H(Y|X) = H(Y) - H(f(X)+g(Z)|X) \\
+&= H(Y) - H(Z|X) \\
+&= H(Y) - H(Z)
+\end{align*}
+$$
+
+$ \large \color{blue}{ \text{SNR} = \dfrac{\text{Input Power}}{\text{Noise Power}} = \dfrac{E(f(X)^{2})}{E(g(Z)^{2})} } $
+ 
+$$ \Large \color{blue}{
+\mathcal{C} = h(Y) - h(Z) = \dfrac{1}{2} \log_{2} (1 + \text{SNR})
+ \quad \small \text{bits / transmission} 
+} $$
+
+### A channel with bandwidth $ W $ has capacity $ C = 2W \mathcal{C} \quad \small \text{bits / sec} $.
+
+</br>
+ 
+</br><hr>
+
+
+
