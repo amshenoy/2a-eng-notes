@@ -10,6 +10,13 @@ presence of noise and interference.
 
 ### $ k $ bits $ \leftrightarrow 2^{k} = 2^{nR} $ messages 
 
+## Overview
+
+We have take some information $ \underline{u} $, we turn it into some codeword $ \underline{c} $, transmit it over some channel (we consider discrete channels for binary problems but AWGN is given as a continuous channel example) to receive a possibly modified codeword $ \underline{y} $ due to noise and we need to decode this optimally to get an estimate of the original codeword $ \hat{\underline{c}}$. From this we can recover the estimated information $ \hat{\underline{u}} $.
+
+$$ \Large \underline{u} \underbrace{\longrightarrow}_{\text{Codeword Encoding}} \underline{c} \underbrace{\longrightarrow}_{\text{Channel Transmission}} \underline{y} \underbrace{\longrightarrow}_{\text{Estimation}} \hat{\underline{c}} \underbrace{\longrightarrow}_{\text{Codeword Decoding}}  \hat{\underline{u}}  $$
+
+__Note: The step from $ \underline{y} \longrightarrow \hat{\underline{u}} $ can be considered as a single decoding step.__
 
 </br> <hr>
 
@@ -81,8 +88,24 @@ $$ \Large \color{blue}{
 
 ### A channel with bandwidth $ W $ has capacity $ C = 2W \mathcal{C} \quad \small \text{bits / sec} $.
 
+</br>
  
 </br><hr>
+
+# Optimal Codeword Estimation
+
+For a received codeword $ \underline{y} $ and a block code $ \mathcal{B} $ consisting of codewords $ \underline{c}_{i} $, the optimally estimateed codeword $ \hat{\underline{c}} $ is given by:
+
+$$ \Large \hat{\underline{c}} = \arg\max_{\underline{c} \in \{c_{0}, ..., \underline{c}_{m}\} } P(\underline{y}|\underline{c}) $$   
+
+For a binary symmetric channel (BSC), this simplifies to the following:
+$$ \Large \hat{\underline{c}} = \arg\min_{\underline{c} \in \{c_{0}, ..., \underline{c}_{m}\} } d(\underline{y}, \underline{c}) $$   
+
+This is because for a BSC $ P(\underline{y}|\underline{c}) = (p)^{d(\underline{y}, \underline{c})} (1-p)^{n - d(\underline{y}, \underline{c})} = (1-p)^{n} (\dfrac{p}{1-p})^{d(\underline{y}, \underline{c})} $. Therefore to maximise the probability, we need $ d(\underline{y}, \underline{c}) $ to be as small as possible.
+
+__Note: $ d(\underline{y}, \underline{c}) $ is the Hamming distance between the received codeword $ \underline{y} $ and the actual codeword $ \underline{c} $  (ie. The number of bits that are different or the number of bits that flipped during channel transmission).__
+ 
+</br>
 
 # Binary Linear Codes
 
