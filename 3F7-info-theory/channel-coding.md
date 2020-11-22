@@ -156,29 +156,71 @@ $$ \Large \color{blue}{ t \ge \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor }
 
 # Low Density Parity Check (LDPC) Codes
 
+LDPC matrix $ H $ is a $ (n-k) \times n $ parity check matrix as for BLC:
+$$ \underline{c} H^{T} = \underline{0} $$
+
+</br>
+
 In a regular $ (n, k) $ **LDPC code**, the **parity check** matrix has the same weight (no. of 1s) for every row $ \large d_{c} $ and the same weight (no. of 1s) for every column $ \large d_{v} $.
 
 For **irregular codes**, we need to specify the **weight distributions** on the columns and rows.
 
-If $ \overline{d_{v}} $ is the average weight of columns and $ \overline{d_{c}} $ is the average weight of rows:
+</br>
 
-### In any LDPC matrix, $ \text{ No. of 1s } = \overline{d_{v}} n = \overline{d_{c}} (n − k) $.
+### If $ \color{green}{ \overline{d_{v}} } $ is the average weight of columns and $ \color{red}{ \overline{d_{c}} } $ is the average weight of rows:
 
-### Rate &emsp; $ R = \dfrac{k}{n} = 1 - \dfrac{\overline{d_{v}}}{\overline{d_{c}}} $ bits per transmission
+### In any LDPC matrix, $ \text{ Total Number of Edges (No. of 1s) } \color{blue}{ N = \overline{d_{v}} n = \overline{d_{c}} (n − k) } $.
+
+### Rate &emsp; $ \color{blue}{ R = \dfrac{k}{n} = 1 - \dfrac{\overline{d_{v}}}{\overline{d_{c}}} } $ bits per transmission
 
 </br>
 
-<font style="font-size: 18px;">Consider the **LDPC matrix** $ H_{ij} $ to be an **adjacency matrix** of a **bipartite graph** with  **row variables $ \large c_{i} $** and **column variables $ \large v_{h} $**.</font>
+<font style="font-size: 18px;">Consider the **LDPC matrix** $ H_{ij} $ to be an **adjacency matrix** of a **bipartite graph** with $ \color{green}{ n \text{ variable}} $ nodes **column variables $ \large \color{green}{v_{j}} $** and $ \color{red}{ (n-k) \text{ check}} $ nodes (**row variables $ \large \color{red}{c_{i}} $**).</font>
 
 </br>
 
 ## Degree Distributions
 
 ### Node Perspective
+This is simple and intuitive, just take the **mean of the weights**. Using **weight fractions** $ Fv_{i} $ and $ Fc_{i} $ for each value of weight $ \large i $, we get the following:
+
+$$ \large \color{blue}{
+\overline{d_{v}} = \sum_{i \in \{d\}} i \ Fv_{i} 
+}
+= \dfrac{d}{dx} \Big( \sum_{i \in \{d\}} \ Fv_{i} \ x^{i} \Big)|_{x=1} = Fv^{'}(1) $$
+
+$$ \large \color{blue}{ 
+\overline{d_{c}} = \sum_{i \in \{d\}} i \ Fc_{i} 
+}
+= \dfrac{d}{dx} \Big( \sum_{i \in \{d\}} \ Fc_{i} \ x^{i} \Big)|_{x=1} = Fc^{'}(1) $$
 
 
 ### Edge Perspective
 
+From the equation for **total number of edges** $ N = \overline{d_{v}} n = \overline{d_{c}} (n − k) $, we can derive the edge perspective equations.
+
+$ \lambda_{i} $ &emsp; **Fraction of 1s in H** that are in **columns** of weight $ i $ </br> &emsp; &emsp; (**Fraction of total edges** connected to **variable nodes** with degree $ i $)
+
+$ \rho_{i} $  &emsp; **Fraction of 1s in H** that are in **rows** of weight $ i $ </br> &emsp; &emsp; (**Fraction of total edges** connected to **check nodes** with degree $ i $)
+
+
+
+$$ \large \color{blue}{ 
+\overline{d_{v}} = \Big(\dfrac{n}{N}\Big)^{-1}
+= \Big(\sum_{i \in \{d\}} \dfrac{\lambda_{i}}{i} \Big)^{-1} 
+}
+= \Big(\sum_{i \in \{d\}} \lambda_{i} \big(\int_{0}^{1} x^{i-1}\big) dx \Big)^{-1}
+= \Bigg( \int_{0}^{1} \color{green}{\Big(\sum_{i \in \{d\}} \lambda_{i} x^{i-1} \Big)} dx \Bigg)^{-1}
+= \Big(\int_{0}^{1} \color{green}{\lambda(x)} dx \Big)^{-1} $$
+
+$$ \large \color{blue}{
+\overline{d_{c}} = \Big(\dfrac{n-k}{N}\Big)^{-1}
+= \Big(\sum_{i \in \{d\}} \dfrac{\rho_{i}}{i} \Big)^{-1}
+}
+= \Big(\sum_{i \in \{d\}} \rho_{i} \big(\int_{0}^{1} x^{i-1}\big) dx \Big)^{-1}
+= \Bigg( \int_{0}^{1} \color{red}{\Big(\sum_{i \in \{d\}} \rho_{i} x^{i-1} \Big)} dx \Bigg)^{-1}
+= \Big(\int_{0}^{1} \color{red}{\rho(x)} dx \Big)^{-1} $$
+ 
 
 
 </br>
