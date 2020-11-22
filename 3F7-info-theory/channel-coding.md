@@ -151,6 +151,9 @@ Atleast $ \large t $ errors can be corrected where $ t = \big\lfloor \dfrac{ d_{
 $$ \Large \color{blue}{ t \ge \big\lfloor \dfrac{ d_{min} - 1 }{2} \big\rfloor } $$
 
 
+</br>
+
+##### Note: For iterative decoding (ie. each error can be corrected with a single parity equation), we require a **sparse $H$** (ie. $ H $ has to be a LDPC matrix). So now we shift to LDPC matrices since we want iterative decoding for easy computation purposes.
 
 </br> <hr>
 
@@ -177,7 +180,7 @@ For **irregular codes**, we need to specify the **weight distributions** on the 
 
 <font style="font-size: 18px;">Consider the **LDPC matrix** $ H_{ij} $ to be an **adjacency matrix** of a **bipartite graph** with $ \color{green}{ n \text{ variable}} $ nodes **column variables $ \large \color{green}{v_{j}} $** and $ \color{red}{ (n-k) \text{ check}} $ nodes (**row variables $ \large \color{red}{c_{i}} $**).</font>
 
-</br>
+</br></br>
 
 ## Degree Distributions
 
@@ -222,8 +225,26 @@ $$ \large \color{blue}{
 = \Big(\int_{0}^{1} \color{red}{\rho(x)} dx \Big)^{-1} $$
  
 
+</br></br>
+
+## Iterative Decoding as Message Passing
+
+
 
 </br>
+
+### Time Complexity
+
+$ \mathcal{O}(N \cdot I ) $ where $ N $ is **total number of edges** and $ I $ is the **number of iterations**.  
+
+Low number of 1s in H $ \longrightarrow $ Low complexity of decoder
+
+
+</br>
+
+## Density Evolution
+
+
 
 
 
