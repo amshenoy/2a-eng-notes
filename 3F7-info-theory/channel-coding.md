@@ -229,7 +229,7 @@ $$ \large \color{blue}{
 
 ## Iterative Decoding as Message Passing
 
-
+Analogy of solving single equations of $ \underline{c} H^{T} = \underline{0} $ for BEC by passing messages between the two side of the bipartite graph.
 
 </br>
 
@@ -244,7 +244,65 @@ Low number of 1s in H $ \longrightarrow $ Low complexity of decoder
 
 ## Density Evolution
 
+Density evolution is a technique to predict the decoding
+performance of codes with a given $\lambda(x)$, $\rho(x)$ for large $n$.
 
+Let $ p_{t} $ denote the probability that an outgoing $ v → c $ message is an erasure $ ? $ at step $ t $.
+
+Let $ q_{t} $ denote the probability that an outgoing $ c → v $ message is an erasure $ ? $ at step $ t $.
+
+For a BEC, $ p_{0} = \epsilon $ where $ \epsilon $ is the erasure probablity.
+
+$ q_{0} = 1 $ as the first $ c → v $ messages are all
+erasures.
+
+</br>
+
+### Regular Codes
+
+Probability of the **variable and all $ d_{v} - 1 $ messages being erased**: &emsp; &emsp; $ \large p_{t} = \epsilon (q_{t-1})^{d_{v}-1} $
+
+Probability of **atleast one of $ d_{c} - 1 $ messages being erased**: &emsp; &emsp; &emsp; $ \large q_{t} = (1 - (1-p_{t})^{d_{c}-1} )$
+
+</br>
+
+$$ \Large \therefore p_{t} = \epsilon (1 - (1-p_{t-1})^{d_{c}-1} )^{d_{v}-1} $$
+
+#### This density evolution recursion predicts the fraction of erased bits at the end of each step $t$.
+
+### We want to find the maximum $ \epsilon $ for which $ p_{t} \rightarrow 0 $ as $ t \rightarrow \infty $. For the BEC case, this threshold is found to be $ \epsilon_{MP} = 0.4294 $.
+
+### Shannon Limit (max. possible $\epsilon$) &emsp; $ \epsilon^{∗} = 1 − R = 0.5$
+
+</br>
+
+### Irregular Codes
+
+To get closer to the Shannon Limit, we use irregular codes as they provide more flexibility.
+
+Probability of **outgoing message from a variable node with deg. $ i $ being erased**: &emsp; $ \large p_{t, i} = \epsilon (q_{t-1})^{i-1} $
+
+Probability of **outgoing message from a check node with deg. $ i $ being erased**: &emsp; $ \large q_{t, i} = (1 - (1-p_{t})^{i-1} ) $
+
+
+$$ \large p_{t} = \sum_{i} \lambda_{i} \ p_{t, i} = \epsilon \sum_{i} \lambda_{i} (q_{t-1})^{i-1} = \epsilon \ \color{green}{\lambda(}q_{t-1}\color{green}{)} $$
+
+$$ \large q_{t} = \sum_{i} \rho_{i} \ q_{t, i} = \sum_{i} \rho_{i} \ (1 - (1-p_{t})^{i-1} ) = 1 - \color{red}{\rho(} 1 - p_{t} \color{red}{)} $$
+
+</br>
+
+$$ \Large p_{t} = \epsilon \ \color{green}{\lambda(}1 - \color{red}{\rho(} 1 - p_{t-1} \color{red}{)}\color{green}{)} $$
+
+Therefore to find the maximum $ \epsilon $ for which $ p_{t} \rightarrow 0 $ as $ t \rightarrow \infty $, we need to optimise $ R = 1 − \dfrac{\int \color{red}{\rho} } {\int \color{green}{\lambda} } $.
+
+</br></br>
+
+### Key Assumption
+> Incoming messages at each node are independent
+
+- Strictly true only if no cycles (loops) in the bipartite graph (graph is a tree).
+
+- Practical LPDC code is almost never cycle-free but independence assumption is close enough for large $ n $ (as long as there are no short cycles).
 
 
 
