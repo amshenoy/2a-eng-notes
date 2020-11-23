@@ -233,6 +233,11 @@ __Adopt__
 
 
 
+
+#### Groupthink
+Situations in which group pressures for conformity deter the group from critically evaluating unusual, minority, or unpopular opinions.
+
+
 </br><hr>
 
 
