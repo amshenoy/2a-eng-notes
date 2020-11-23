@@ -221,30 +221,53 @@ __Adopt__
 
 
 ### Decision-making in groups
-+ More complete information and knowledge
-+ Increased diversity of views
-+ Increased acceptance of better solutions
-+ Diffusion of responsibility
+(+) More complete information and knowledge
+(+) Increased diversity of views
+(+) Increased acceptance of better solutions
+(+) Diffusion of responsibility
 
-- Time-consuming (slow)
-- Conformity pressures (→ groupthink)
-- Domination by small numbers
-- Diffusion of Responsibility (→ social loafing)
+(-) Time-consuming (slow)
+(-) Conformity pressures (→ groupthink)
+(-) Domination by small numbers
+(-) Diffusion of Responsibility (→ social loafing)
 
+</br>
 
+### Groupthink
+Group pressures for conformity deter the group from critically evaluating unusual, minority, or unpopular opinions.
 
+- People don;t want to dissent
+- Cultural influence
+- Individualistic cultures less conform
+- Dominant (i.e., self-assured and assertive) group members tend to yield the most influence in groups
+- People (group members, the research team, external observers) rate dominant individuals as more competent—even when they actually lack competence!
 
-#### Groupthink
-Situations in which group pressures for conformity deter the group from critically evaluating unusual, minority, or unpopular opinions.
+#### Solutions
+Dissent must be valued
+Group members must feel comfortable speaking up
+Use “devil’s advocate” role
+Bring in outsiders
+Anonymous evaluations of ideas
+
+</br>
+
+### Social loafing
+Tendency to withhold physical or intellectual effort when performing a group task.
+
+- Main cause: diffusion of responsibility
+- More pronounced in individualistic cultures than in collectivistic cultures.
+
+#### Solution: Make individual performance visible!
 
 
 </br><hr>
 
 
-
-
-
 # Leadership
+
+
+
+
 
 
 
