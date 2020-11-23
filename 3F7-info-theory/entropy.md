@@ -162,7 +162,7 @@ $$ I(X; g(Y)) \le I(X; Y) $$
 
 In entropy terms:
 
-$$ H(g(Y), X) \ge H(Y, X) $$
+$$ H(X, g(Y)) \ge H(X, Y) $$
 
 
 
