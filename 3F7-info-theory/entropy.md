@@ -70,8 +70,9 @@ $$ \color{green} { P(X_{1}, X_{2}, ..., X_{n}) } = \color{purple} { \prod^{n}_{i
 $$
 
 
+</br>
 
-</br><hr>
+</br><hr></br>
 
 
 
