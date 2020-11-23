@@ -220,6 +220,19 @@ __Adopt__
 ### Reference this [Big Five Personality Dimensions](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=9609192320&site=bsi-live&scope=site) as (Barrick & Mount 20)
 
 
+### Decision-making in groups
++ More complete information and knowledge
++ Increased diversity of views
++ Increased acceptance of better solutions
++ Diffusion of responsibility
+
+- Time-consuming (slow)
+- Conformity pressures (→ groupthink)
+- Domination by small numbers
+- Diffusion of Responsibility (→ social loafing)
+
+
+
 </br><hr>
 
 
