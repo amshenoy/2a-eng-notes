@@ -156,5 +156,14 @@ Let three random variables $X, Y, Z$ for a Markov Chain $ X \rightarrow Y \right
 Essentially means that any processing on $Y$ ($Z$) does not increase the information $Y$ contains about $X$.
 
 
+A more intuitive definition is:
+
+$$ I(X; g(Y)) \le I(X; Y) $$ 
+
+In entropy terms:
+
+$$ H(g(Y), X) \ge H(Y, X) $$
+
+
 
 
