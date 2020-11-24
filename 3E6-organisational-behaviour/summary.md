@@ -221,8 +221,8 @@ __Adopt__
 # Group Dynamics
 
 ### Mandatory Reference this [Experiential Effect Group Dynamics](https://www.jstor.org/stable/pdf/256567.pdf?refreqid=excelsior%3A7e3de1253822525392bcf67773f7cdc9) as (Schweiger & Sandberg 20)
-> Groups using dialectical inquiry and devil's advocacy made better decisions than consensus groups. Members of such groups did more reevaluation of their own opinions but had lower acceptance of their group's decisions than members of consensus groups. No differences between dialectical inquiry and devil's advocacy groups.
-
+> Decisions efficacy: Dialectical Inquiry = Devil's Advocacy > Consensus
+> Positive reaction: Consensus > Devil's Advocacy > Dialectical Inquiry
 
 
 ### Decision-making in groups
