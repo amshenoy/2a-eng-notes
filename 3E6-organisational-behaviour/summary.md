@@ -244,7 +244,9 @@ __Adopt__
 # Group Dynamics
 
 ### Reference this [Experiential Effect Group Dynamics](https://www.jstor.org/stable/pdf/256567.pdf?refreqid=excelsior%3A7e3de1253822525392bcf67773f7cdc9) as (Schweiger & Sandberg 2020)
+
 > Decisions efficacy: Dialectical Inquiry = Devil's Advocacy > Consensus
+
 > Positive reaction: Consensus > Devil's Advocacy > Dialectical Inquiry
 
 
