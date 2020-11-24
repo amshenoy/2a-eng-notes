@@ -22,9 +22,9 @@ Personality based on:
 * Environmental factors do have some influence
 * Aging influences levels of ability
 
-### Reference this [Big Five Personality Dimensions](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=9609192320&site=bsi-live&scope=site) as (Barrick & Mount 20)
+### Reference this [Big Five Personality Dimensions](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=9609192320&site=bsi-live&scope=site) as (Barrick & Mount 2020)
 
-### Mandatory Reading: [Personality from Facebook Likes](https://www.pnas.org/content/110/15/5802)
+### Mandatory Reading: [Personality from Facebook Likes](https://www.pnas.org/content/110/15/5802) as (Kosinki, Stillwell, Graepel 2013)
 
 
 </br><hr>
@@ -240,7 +240,7 @@ __Adopt__
 
 # Group Dynamics
 
-### Mandatory Reference this [Experiential Effect Group Dynamics](https://www.jstor.org/stable/pdf/256567.pdf?refreqid=excelsior%3A7e3de1253822525392bcf67773f7cdc9) as (Schweiger & Sandberg 20)
+### Reference this [Experiential Effect Group Dynamics](https://www.jstor.org/stable/pdf/256567.pdf?refreqid=excelsior%3A7e3de1253822525392bcf67773f7cdc9) as (Schweiger & Sandberg 2020)
 > Decisions efficacy: Dialectical Inquiry = Devil's Advocacy > Consensus
 > Positive reaction: Consensus > Devil's Advocacy > Dialectical Inquiry
 
@@ -291,9 +291,10 @@ Tendency to withhold physical or intellectual effort when performing a group tas
 # Leadership
 
 
-#### Mandatory Reading: [3 Wave Leadership](https://ezp.lib.cam.ac.uk/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2017-03593-001&site=ehost-live&scope=site)
+#### Mandatory Reading: [3 Waves of Leadership Research](https://ezp.lib.cam.ac.uk/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2017-03593-001&site=ehost-live&scope=site)
 
-(a) behavioral and attitude research; (b) behavioral, social-cognitive, and contingency research; and (c) transformational, social exchange, team, and gender-related research
+#### 3 Waves of Research
+(a) behavioral + attitude; (b) behavioral, social-cognitive and contingency; (c) transformational, social exchange, team, and gender-related
 
 
 
