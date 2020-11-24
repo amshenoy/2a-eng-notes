@@ -25,6 +25,8 @@ $$ \Large \chi = E_{\text{vac}} - E_{c} $$
 
 As before for a PN-junction when we create a junction the difference in work functions causes an exchange of electrons creating a contact potential present across the depletion region present entirely within the semiconductor. 
 
+MS-Junction is a **unipolar** device.
+
 
 ## Contact Potential
 
