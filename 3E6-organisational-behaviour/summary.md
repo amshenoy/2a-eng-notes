@@ -55,10 +55,11 @@ Negative effect due to bounded rationality and availability bias
 #### 3) Functionality Perspective
 Cultures are created because those cultures are beneficial to groups
 
-#### Characteristics
-Shared Beliefs
-Implicit Control
-Artifacts: Empirical Evidence
+**Shared Beliefs**
+
+**Implicit Control**
+
+**Artifacts: Empirical Evidence**
 
 </br>
 
