@@ -1,5 +1,7 @@
 # PN Junction
 
+PN Junction is a **bipolar** device (conduction due to both holes and electrons).
+
 "Abrupt junction" model
 
 * Abrupt junction
