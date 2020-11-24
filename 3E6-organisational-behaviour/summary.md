@@ -270,12 +270,14 @@ Group pressures for conformity deter the group from critically evaluating unusua
 - Dominant (self-assured and assertive) group members tend to yield the most influence in groups
 - People (group members, the research team, external observers) rate dominant individuals as more competent—even when they actually lack competence!
 
+
 #### Solutions
-Dissent must be valued
-Group members must feel comfortable speaking up
-Use “devil’s advocate” role
-Bring in outsiders
-Anonymous evaluations of ideas
+
+- Dissent must be valued
+- Group members must feel comfortable speaking up
+- Use “devil’s advocate” role
+- Bring in outsiders
+- Anonymous evaluations of ideas
 
 </br>
 
