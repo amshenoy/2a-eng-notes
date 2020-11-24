@@ -26,8 +26,9 @@ Personality based on:
 
 # Culture
 
-#### Reference this [Culture Paper](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=136916071&site=bsi-live&scope=site) as (Kim & Toh 2019)
-#### Reference this [Tightness and Looseness Culture](https://www.pnas.org/content/111/22/7990) as (Jesse & Michelle 2014)
+#### Mandatory Reference this [Culture Paper](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=136916071&site=bsi-live&scope=site) as (Kim & Toh 2019)
+
+#### Mandatory Reference this [Tightness and Looseness Culture](https://www.pnas.org/content/111/22/7990) as (Jesse & Michelle 2014)
 
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
@@ -219,7 +220,9 @@ __Adopt__
 
 # Group Dynamics
 
-### Reference this [Experiential Effect Group Dynamics](https://www.jstor.org/stable/pdf/256567.pdf?refreqid=excelsior%3A7e3de1253822525392bcf67773f7cdc9) as (Schweiger & Sandberg 20)
+### Mandatory Reference this [Experiential Effect Group Dynamics](https://www.jstor.org/stable/pdf/256567.pdf?refreqid=excelsior%3A7e3de1253822525392bcf67773f7cdc9) as (Schweiger & Sandberg 20)
+> Groups using dialectical inquiry and devil's advocacy made better decisions than consensus groups. Members of such groups did more reevaluation of their own opinions but had lower acceptance of their group's decisions than members of consensus groups. No differences between dialectical inquiry and devil's advocacy groups.
+
 
 
 ### Decision-making in groups
