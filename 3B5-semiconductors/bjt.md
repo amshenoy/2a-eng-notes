@@ -1,6 +1,9 @@
 # Bipolar Junction Transistor (BJT)
 
+BJTs are **bipolar** devices (involves both types of charge carriers).
+
 $ P^{++} N P $ (or $ N^{--} P N $)
+
 
 We focus on $ P^{++} N P \quad (EBC) $ junction:
 
