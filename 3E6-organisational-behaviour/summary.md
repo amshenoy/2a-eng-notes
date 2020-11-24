@@ -183,7 +183,7 @@ $$ \text{Motivation} = f(\text{Expectancy}, \text{Instrumentality}, \text{Valenc
 
 ### Mandatory Reading: [Model of Creativity](http://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Group_Performance/Amabile_A_Model_of_CreativityOrg.Beh_v10_pp123-167.pdf)
 
-### Mandatory Reading: [Creativity as Flexibility and Persistence](https://doi.org/10.1080/10463281003765323)
+
 
 
 
@@ -193,8 +193,10 @@ Generation of novel and useful ideas
 
 Overlap of **Intrinsic Motivation**, **Creative Skills**, **Expertise**.
 
-
 ### Dual-Pathway to Creativity Model
+
+### Mandatory Reading: [Creativity as Flexibility and Persistence](https://doi.org/10.1080/10463281003765323)
+> Conversion of random, normal and special model into a dual pathway model
 
 * **Cognitive Flexibility**
 Use of broad and inclusive cognitive categories through flexible switching among categories and use of remote associations between different cognitive categories
