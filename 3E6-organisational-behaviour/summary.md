@@ -248,25 +248,25 @@ __Adopt__
 
 
 ### Decision-making in groups
-(+) More complete information and knowledge
-(+) Increased diversity of views
-(+) Increased acceptance of better solutions
-(+) Diffusion of responsibility
+(+) More complete information and knowledge </br>
+(+) Increased diversity of views </br>
+(+) Increased acceptance of better solutions </br>
+(+) Diffusion of responsibility </br>
 
-(-) Time-consuming (slow)
-(-) Conformity pressures (→ groupthink)
-(-) Domination by small numbers
-(-) Diffusion of Responsibility (→ social loafing)
+(-) Time-consuming (slow) </br>
+(-) Conformity pressures (→ groupthink) </br>
+(-) Domination by small numbers </br>
+(-) Diffusion of Responsibility (→ social loafing) </br>
 
 </br>
 
 ### Groupthink
 Group pressures for conformity deter the group from critically evaluating unusual, minority, or unpopular opinions.
 
-- People don;t want to dissent
+- People don't want to dissent
 - Cultural influence
 - Individualistic cultures less conform
-- Dominant (i.e., self-assured and assertive) group members tend to yield the most influence in groups
+- Dominant (self-assured and assertive) group members tend to yield the most influence in groups
 - People (group members, the research team, external observers) rate dominant individuals as more competent—even when they actually lack competence!
 
 #### Solutions
