@@ -1,5 +1,7 @@
 Note*: This module is purely conjectural and mostly based on opinion so for exam purposes, just take it for granted. Hence also written as a summary.
 
+**Everything is full covered in Organisational Behaviour book (Robbins & Judge)**
+
 # Personality
 
 **Myers-Briggs Type Indicator (MBTI)** 
@@ -22,13 +24,22 @@ Personality based on:
 
 ### Reference this [Big Five Personality Dimensions](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=9609192320&site=bsi-live&scope=site) as (Barrick & Mount 20)
 
+### Mandatory Reading: [Personality from Facebook Likes](https://www.pnas.org/content/110/15/5802)
+
+
 </br><hr>
 
 # Culture
 
-#### Mandatory Reference this [Culture Paper](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=136916071&site=bsi-live&scope=site) as (Kim & Toh 2019)
 
-#### Mandatory Reference this [Tightness and Looseness Culture](https://www.pnas.org/content/111/22/7990) as (Jesse & Michelle 2014)
+
+### Optional
+
+#### Reference this [Culture Paper](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=136916071&site=bsi-live&scope=site) as (Kim & Toh 2019)
+
+#### Reference this [Tightness and Looseness Culture](https://www.pnas.org/content/111/22/7990) as (Jesse & Michelle 2014)
+
+
 
 $$ \underbrace{\text{Antecedents}}_{\text{Evidence of Functionality} \\ \text{Leader's Traits} \\ \text{Leader's Personality}} \longrightarrow \underbrace{\text{Cultures}}_{\text{Characteristics} \\ \text{Strength} } \overbrace{\longrightarrow}^{\text{Socialisation}} \underbrace{\text{Outcomes}}_{\text{Shared Assumptions} \\ \text{Shared Values}} $$
 
@@ -168,6 +179,15 @@ $$ \text{Motivation} = f(\text{Expectancy}, \text{Instrumentality}, \text{Valenc
 # Creativity, Innovation, and Innovation Diffusion
 
 
+### Mandatory Reading: [Productivity Loss in Brainstorm Groups](https://ezp.lib.cam.ac.uk/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=1988-01348-001&site=ehost-live&scope=site)
+
+### Mandatory Reading: [Model of Creativity](http://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Group_Performance/Amabile_A_Model_of_CreativityOrg.Beh_v10_pp123-167.pdf)
+
+### Mandatory Reading: [Creativity as Flexibility and Persistence](https://doi.org/10.1080/10463281003765323)
+
+
+
+
 ## Creativity
 Generation of novel and useful ideas
 
@@ -271,8 +291,9 @@ Tendency to withhold physical or intellectual effort when performing a group tas
 # Leadership
 
 
+#### Mandatory Reading: [3 Wave Leadership](https://ezp.lib.cam.ac.uk/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2017-03593-001&site=ehost-live&scope=site)
 
-
+(a) behavioral and attitude research; (b) behavioral, social-cognitive, and contingency research; and (c) transformational, social exchange, team, and gender-related research
 
 
 
