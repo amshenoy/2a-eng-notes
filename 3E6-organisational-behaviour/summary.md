@@ -20,6 +20,8 @@ Personality based on:
 * Environmental factors do have some influence
 * Aging influences levels of ability
 
+### Reference this [Big Five Personality Dimensions](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=9609192320&site=bsi-live&scope=site) as (Barrick & Mount 20)
+
 </br><hr>
 
 # Culture
@@ -217,7 +219,7 @@ __Adopt__
 
 # Group Dynamics
 
-### Reference this [Big Five Personality Dimensions](https://ezp.lib.cam.ac.uk/login?url=http://search.ebscohost.com/login.aspx?direct=true&db=bsu&AN=9609192320&site=bsi-live&scope=site) as (Barrick & Mount 20)
+### Reference this [Experiential Effect Group Dynamics](https://www.jstor.org/stable/pdf/256567.pdf?refreqid=excelsior%3A7e3de1253822525392bcf67773f7cdc9) as (Schweiger & Sandberg 20)
 
 
 ### Decision-making in groups
