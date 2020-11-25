@@ -2,9 +2,13 @@
 
 ## Matrix Calculus
 
-$ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{b}^{T} \underline{x} \Big) = \underline{b} $
+### Linear Differentiation
+$ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{b}^{T} \underline{x} \Big) = \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} \underline{b} \Big) = \underline{b} $
 
+### Quadratic Differentiation
 $ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} B \underline{x} \Big) = (B+B^{T}) \underline{x} $
+
+For a symmetric matrix $ B $, $ \large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} B \underline{x} \Big) = 2 B \underline{x} $.
 
 
 </br>
