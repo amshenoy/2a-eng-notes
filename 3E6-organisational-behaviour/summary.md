@@ -199,10 +199,10 @@ Overlap of **Intrinsic Motivation**, **Creative Skills**, **Expertise**.
 ### Mandatory Reading: [Creativity as Flexibility and Persistence](https://doi.org/10.1080/10463281003765323)
 > Conversion of random, normal and special model into a dual pathway model
 
-* **Cognitive Flexibility**
+* **Cognitive Flexibility (Breadth of Research)**
 Use of broad and inclusive cognitive categories through flexible switching among categories and use of remote associations between different cognitive categories
 
-* **Cognitive Persistence**:
+* **Cognitive Persistence (Depth of Research)**:
 The systematic, effortful, and in-depth exploration of only a few cognitive categories
 
 
