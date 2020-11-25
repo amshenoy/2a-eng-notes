@@ -208,7 +208,7 @@ The systematic, effortful, and in-depth exploration of only a few cognitive cate
 
 </br>
 
-## Innovation
+## Innovation (Innovator)
 
 Process:
 1) Generation
@@ -219,7 +219,7 @@ Process:
 
 </br>
 
-## Innovation Diffusion
+## Innovation Diffusion (Adopter)
 
 Process:
 1) Recognition / Evaluation of Innovation
