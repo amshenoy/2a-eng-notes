@@ -78,7 +78,7 @@ $$
 &= \text{DTFT}\{ r_{xx}[n] \enspace \dfrac{1}{2N+1} \sum_{m=-N}^{N} w_{m}^{N} w_{m-n}^{N} \} \\
 &= \text{DTFT}\{ r_{xx}[n] E(w_{m}^{N} w_{m-n}^{N}) \} \\
 &= \text{DTFT}\{ r_{xx}[n] \enspace r_{ww}[n] \} \\
-&= S_{xx}(e^{j\theta}) * S_{ww}(e^{j\theta})
+\dfrac{1}{2N+1} E(|X_{N}(e^{j\theta})|^{2}) &= S_{xx}(e^{j\theta}) * S_{ww}(e^{j\theta})
 \end{align*}
 $$
 
@@ -105,7 +105,7 @@ $$ \Large \lim_{n \rightarrow \infty} \dfrac{1}{2N+1} E(|X_{N}(e^{j\theta})|^{2}
 
 ## Ordinary Least-Squares (OLS)
 
-$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = 0 $$
+$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = \dfrac{d}{d \underline{\theta}} \underline{\underline{x} - \mathbf{G} \underline{\theta}}^{T} \underline{\underline{x} - \mathbf{G} \underline{\theta}} = 0 $$
 
 $$ \Large \color{blue}{ \hat{\underline{\theta}}_{\text{OLS}} = (G^{T} G)^{-1} \ G^{T} \underline{x} }$$ 
 
