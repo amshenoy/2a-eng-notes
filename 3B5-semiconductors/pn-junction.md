@@ -20,7 +20,19 @@ $$ \Large N_{A} x_{n} + N_{D} x_{p} = 0 $$
 
 Equations for the contact potential in terms of Fermi levels and doping:
 
-$$ \large eV_{0} = E_{Fn} - E_{Fp} = kT \ln(\dfrac{N_{A}N_{D}}{n_{i}^{2}}) $$
+$$ 
+\begin{align*}
+\large eV_{0} &= E_{Fn} - E_{Fp} \\
+&= (E_{C} - kT \ln(\dfrac{N_{C}}{N_{D}})) - (\overbrace{E_{V}}^{ \text{Consider} \ 0} + kT \ln(\dfrac{N_{V}}{N_{A}})) \\ \\
+
+\text{From Law of Mass Action: } \quad & n_{i}^{2} = N_{C} N_{V} \enspace e^{\dfrac{-E_{c}}{kT}} \\ \\
+
+eV_{0} &= kT \ln(\dfrac{N_{A}N_{D}}{n_{i}^{2}})
+\end{align*}
+$$
+
+
+($ \color{orange}{ kT \approx 0.0259 } $ at room temperature) 
 
 </br>
 
@@ -130,6 +142,25 @@ $ \large J_{h} = -e D_{h} \dfrac{dp}{dx} |_{x=0} $
 
 $ \large J_{e} = -e D_{e} \dfrac{dn}{dx} |_{x=0} $
 
+
+### Minority Current Density Diagram
+
+* Consider the minority carriers on each side $ P $ and $ N $. 
+ 
+* Minority carrier concentration on both sides must meet at the depletion region at a constant.
+
+* The **lower doped side** has a **higher initial minority carrier concentration** and a **higher value upon reaching the depletion region** than the **higher doped side**.
+
+* In **forward bias**, the **minority carrier concentrations must increase** going towards the depletion region.
+
+* In **reverse bias**, the **minority carrier concentration must decrease to 0** going towards the depletion region. (However the current diagram is the same as before with lower values (only current that flows is due to drift current across the junction).)
+
+</br>
+
+<insert diagram here>
+
+
+</br>
 
 $ \Large J_{s} = J_{h} + J_{e} $ 
 
