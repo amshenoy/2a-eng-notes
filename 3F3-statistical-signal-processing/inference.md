@@ -140,6 +140,8 @@ Given $ \underline{x} = \mathbf{G} \underline{\theta} + \underline{e} $ (Usually
 $$ P(\underline{x} | \underline{\theta}) = P_{e}(\underline{x} - \mathbf{G} \underline{\theta}) $$
 
 
+#### Note: When the error process $ e_{n} $ is independent and gaussian with mean zero and constant variance, the ML estimator is equal to the OLS estimator. 
+
 </br></br>
 
 ## Minimum Mean-Squared Error (MMSE)
