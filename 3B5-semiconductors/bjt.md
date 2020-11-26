@@ -107,6 +107,9 @@ $ \therefore \Large \gamma \approx \dfrac{1}{1 + \dfrac{D_{e}}{D_{h}} \dfrac{W_{
 
 # Heterojunction Bipolar Transistor (HBT)
 
+we use a different semiconductor with a large band gap for the emitter compared with the base and collector.
+
+This creates a large barrier to electron injection from the base into the emitter whilst retaining a high doping density in the base therefore reducing the electron current (BJT and HBT operate on hole current).
 
 
 
