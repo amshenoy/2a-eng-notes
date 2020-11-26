@@ -60,7 +60,7 @@ $$ \Large
 \end{align*}
 $$
 
-where $ \rho = \dfrac{1}{eN_{D}\mu_{e}}$.
+where resistivity (not charge concentration) $ \rho = \dfrac{1}{eN_{D}\mu_{e}}$.
 
 **Perform integral by substitution $ u = \big(\dfrac{V_{GS} - V_{DS}}{V_{p}}\big) $**
 
