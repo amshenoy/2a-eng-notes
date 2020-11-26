@@ -137,6 +137,10 @@ $ \Large \Delta w = v_{d} \enspace \Delta t $
 
 </br>
 
+$ D_{h} = \dfrac{\Delta w^{2}}{16 t_{d}}$
+
+</br>
+
 **Hall Effect** used to obtain **majority carrier mobility**.
 
   
