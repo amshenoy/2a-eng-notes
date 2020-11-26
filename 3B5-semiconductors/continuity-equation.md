@@ -74,7 +74,14 @@ Defects in the crystal lattice causing recombination
 
 $ \Delta n $ denotes excess electrons and $ \Delta p $ denotes excess holes.
 
-$ \dfrac{\Delta n}{\tau_{e}} $ is the generation/recombination term.
+$ D_{e} \dfrac{\partial^{2} \Delta n}{\partial x^{2}} $ is the **diffusion** term.
+
+$ ( \mu \mathcal{E} ) \dfrac{\partial \Delta n}{\partial x} $ is the **drift** term (sign dependent on carrier type).
+
+$ \dfrac{\Delta n}{\tau_{e}} $ is the **generation/recombination** term.
+
+
+
 
 $$ \large \dfrac{\partial \Delta n}{\partial t} = - \dfrac{\Delta n}{\tau_{e}} \color{blue}{\mathbf{\boldsymbol{+}}} \dfrac{1}{e} \dfrac{\partial}{\partial x} J_{e} $$
 
@@ -107,6 +114,28 @@ $ \dfrac{\partial \Delta n}{\partial t} = 0 ? \qquad \mathcal{E} = 0 ? $
 ## Haynes-Shockley 
 
 Used to obtain **minority carrier mobility**.
+
+$ V_{0} $ - Applied Voltage
+
+$ L_{0} $ - Length of Sample
+
+$ L $ - Distance between Probes
+
+$ \Delta t $ - Width of Applied Pulse (measured by oscilloscope)
+
+$ \Delta w $ - Actual Width of Applied Pulse
+
+$ t_{d} $ - Time of Arrival of Pulse
+
+</br>
+
+$ \Large v_{d} = \mu_{\text{minority}} \ \mathcal{E} = \dfrac{L}{t_{d}} $
+
+$ \mathcal{E} = \dfrac{V_{0}}{L_{0}} $
+
+$ \Large \Delta w = v_{d} \enspace \Delta t $
+
+</br>
 
 **Hall Effect** used to obtain **majority carrier mobility**.
 
