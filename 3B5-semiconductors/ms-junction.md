@@ -3,22 +3,31 @@
 
 For an **Ohmic contact** between a metal and a semiconductor:
 
-$$ \Large \phi_{\text{p-type}} \lt \phi_{m} \lt \phi_{\text{n-type}} $$
+$$ \large \phi_{\text{p-type}} \lt \phi_{m} \lt \phi_{\text{n-type}} $$
 
 For a **Schottky contact**, flip the above statement.
 
+</br>
+
+$$ \Large \color{blue}{ \text{Ohmic} = (\phi_{m} > \phi_{sc}) \cdot \text{p-type} } $$
+
+Set the **values of the booleans** to either $ 1 $ (True) or $ -1 $ (False) for easy formula for finding whether **Ohmic or Schottky**.
+
+</br>
 
 ### Metal Side
 
-$$ \Large \phi_{m} = E_{\text{vac}} - E_{F} $$
+$ E_{F} = E_{C} = E_{V} $
+
+$$ \Large \color{blue}{ \phi_{m} = E_{\text{vac}} - E_{F} } $$
 
 ### Semiconductor Side
 
 $ E_{F \ s} $ is the extrinsic Fermi level of the SC.
 $ \chi $ is the electron affinity of SC (a material property). Note that at this point even $ \phi_{SC} $ must be explicitly calculated due to the effect of doping.  
 
-$$ \Large \phi_{sc} = E_{\text{vac}} - E_{F \ s} $$ 
-$$ \Large \chi = E_{\text{vac}} - E_{c} $$
+$$ \Large \color{blue}{ \phi_{sc} = E_{\text{vac}} - E_{F \ s} } $$ 
+$$ \Large \color{blue}{ \chi = E_{\text{vac}} - E_{c} } $$
 
 
 # M-S Junction
@@ -30,7 +39,7 @@ MS-Junction is a **unipolar** device.
 
 ## Contact Potential
 
-$$ \Large eV_{0} = \phi_{m} - \phi_{sc} $$
+$$ \Large \color{blue}{ eV_{0} = \phi_{m} - \phi_{sc} } $$
 
 
 ## Depletion Region
