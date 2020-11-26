@@ -202,9 +202,12 @@ $$ \large \color{blue}{
 
 From the equation for **total number of edges** $ N = \overline{d_{v}} n = \overline{d_{c}} (n − k) $, we can derive the edge perspective equations.
 
-$ \lambda_{i} $ &emsp; **Fraction of 1s in H** that are in **columns** of weight $ i $ </br> &emsp; &emsp; (**Fraction of total edges** connected to **variable nodes** with degree $ i $)
+$ \lambda_{i} $ &emsp; **Sum of 1s in columns of weight $ i$** / **Sum of 1s in H** </br>
+&emsp; &emsp; **Fraction of 1s in H** that are in **columns** of weight $ i $ </br>
+&emsp; &emsp; (**Fraction of total edges** connected to **variable nodes** with degree $ i $)
 
-$ \rho_{i} $  &emsp; **Fraction of 1s in H** that are in **rows** of weight $ i $ </br> &emsp; &emsp; (**Fraction of total edges** connected to **check nodes** with degree $ i $)
+$ \rho_{i} $  &emsp; **Sum of 1s in rows of weight $ i$** / **Sum of 1s in H** </br>
+&emsp; &emsp; **Fraction of 1s in H** that are in **rows** of weight $ i $ </br> &emsp; &emsp; (**Fraction of total edges** connected to **check nodes** with degree $ i $)
 
 
 
