@@ -275,7 +275,7 @@ $$ \Large \therefore p_{t} = \epsilon (1 - (1-p_{t-1})^{d_{c}-1} )^{d_{v}-1} $$
 
 ### We want to find the maximum $ \epsilon $ for which $ p_{t} \rightarrow 0 $ as $ t \rightarrow \infty $. For the BEC case, this threshold is found to be $ \epsilon_{MP} = 0.4294 $.
 
-### Shannon Limit (max. possible $\epsilon$ for a given R) &emsp; $ \epsilon^{∗} = 1 − R $ &emsp; $ \epsilon^{∗}_{\max} = 0.5 $
+### Shannon Limit (max. possible $\epsilon$ for a given R) &emsp; $ \epsilon^{∗} = 1 − R $ &emsp; $ \epsilon^{∗}_{\max} = 0.5  \quad (R=0.5) $
 
 
 
