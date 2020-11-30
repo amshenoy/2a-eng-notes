@@ -154,20 +154,117 @@ Therefore to find the maximum $ \epsilon $ for which $ p_{t} \rightarrow 0 $ as 
 </br><hr></br>
 
 
-## Application on Channels
+# Application on Channels
 
-### Optimal Decoding
+## Optimal Decoding
 
-#### Blockwise Decoding
+### Blockwise Decoding
 $$ \Large \hat{\underline{c}} = \arg_{\underline{c} \in \mathcal{C}} \max P(\underline{c} | \underline{y}) =  \underbrace{\arg_{\underline{c} \in \mathcal{C}} \max P(\underline{y} | \underline{c}) }_{ \small(\text{Provided that all codewords are equally likely (from Bayes)}) }$$
 
-
-#### Bitwise Decoding
+### Bitwise Decoding
 $$ \Large \hat{c_{j}} = \arg_{c_{j} \in \{0,1\}} \max P(c_{j} | \underline{y}) $$
 
+</br>
+
+## Channels
+
+### BEC
+Solve $ \Large \hat{\underline{c}} H^{T} = \underline{0} $ where $ \Large \hat{\underline{c}} $ consists of variables for erasures.
+
+### BSC
+For a binary symmetric channel (BSC): 
+$ \large \hat{\underline{c}} = \arg\min_{\underline{c} \in \{c_{0}, ..., \underline{c}_{m}\} } d(\underline{y}, \underline{c}) $
+
+This is because for a BSC $ P(\underline{y}|\underline{c}) = (p)^{d(\underline{y}, \underline{c})} (1-p)^{n - d(\underline{y}, \underline{c})} = (1-p)^{n} (\dfrac{p}{1-p})^{d(\underline{y}, \underline{c})} $. Therefore to maximise the probability, we need $ d(\underline{y}, \underline{c}) $ to be as small as possible. $ p $ is the crossover probability and $ d(\underline{y}, \underline{c}) $ is the number of bits that have flipped.
+
+### B-AWGN
+
+$ Y = X + N $, where the input $ X \in \{+1, −1\} $ and $ N ∼ \mathcal{N}(0, \sigma^{2}) $ where $ \mathcal{N} $ is additive white Gaussian noise. Channel input generated from binary by mapping $ 0 \rightarrow X=+1 $ and $ 1 \rightarrow X=-1 $.
 
 
+Optimal decoding in general tends to be unfeasible hence we use message pass decoding.
 
+</br><hr></br>
+
+# Message Pass Decoding
+
+We focus on a message passing algorithm that approximately computes the desired bitwise a posteriori probabilities (APPs) &emsp; $ \large P(c_{j} = 0 | \underline{y}) $.
+
+Index the **variable** nodes as $ j = 1, ..., n $ and **check** nodes as $ i= 1, ..., n-k $.
+
+Consider belief propagation in **log-likelihood domain (LLR domain)**.
+
+$$ \Large L_{ji} = \ln\Big( \dfrac{m_{ji}(0)}{m_{ji}(1)} \Big) \qquad L_{ij} = \ln\Big( \dfrac{m_{ij}(0)}{m_{ij}(1)} \Big) $$
+
+
+$ m_{ji}(0) = 1 - m_{ji}(1) $ </br>
+$ m_{ij}(0) = 1 - m_{ij}(1) $
+
+</br>
+
+## Channel Evidence
+**Channel evidence $ \underline{y} $ is the given observation of the channel output.**
+
+$ c_{j} $ is the output of the parity equation at check node $ j $. 
+ 
+$$ L(y_{j}) = \ln \dfrac{P(c_{j}=0|y_{j})}{P(c_{j}=1|y_{j})} = \ln \dfrac{P(c_{j}=0) P(y_{j}|c_{j}=0)}{P(c_{j}=1) P(y_{j}|c_{j}=1)} = \ln \dfrac{P(y_{j}|c_{j}=0)}{P(y_{j}|c_{j}=1)} $$
+
+
+$$ \Large \color{blue}{ L(y_{j}) = \ln \dfrac{P(y_{j}|c_{j}=0)}{P(y_{j}|c_{j}=1)} } $$
+
+
+#### Note: $ P(y_{j} | c_{j} = x ) $ is simply from the channel matrix $ P_{Y|X}(y|x) $. 
+
+</br></br>
+
+## Variable-to-Check
+
+$ m_{ji}(0) $ is an updated estimate of the posterior probability (or belief) that code bit $ c_{j} = 0 $.
+
+$$ \Large m_{ji}(0) = \dfrac{a_{0}}{a_{0} + a_{1}}, \qquad m_{ji}(1) = \dfrac{a_{1}}{a_{0} + a_{1}}  $$
+
+$$ \Large a_{x} = P(c_{j}=x \ | \ y_{j}) \prod_{i'\ne i} m_{i' j}(x) $$
+
+### LLR Update
+
+$$ \Large \color{blue}{ L_{ji} = L(y_{j}) + \sum_{i' \ne i} L_{i' j} } $$
+
+
+</br></br>
+
+## Check-to-Variable
+
+$ m_{ij}(0) $ is an updated estimate of the probability that the
+parity check equation $ i $ is satisfied when $ c_{j} = 0 $ (ie.
+probability of an even number of ones to make $ c_{j} = 0 $ ).
+
+$$ \Large m_{ij}(0) = \dfrac{1}{2} + \dfrac{1}{2} \prod_{j' \ne j }(1-2m_{j' i}(1)) $$
+
+### LLR Update
+
+$$ \Large \color{blue}{ \tanh( \dfrac{1}{2} L_{ij} ) = \prod_{j' \ne j} \tanh( \dfrac{1}{2} L_{j' i} ) } $$
+
+
+#### Practical Computation
+$ \Large \color{red}{ L_{j' i} = ( \underline{h_{i}} \circ L(\underline{y}) )_{j'} = \underline{h_{i}}_{j'} L(y_{j'}) } $
+
+where $ \underline{h_{i}}_{j'} $ is the $ j' $-th element of the parity vector $ \underline{h_{i}} $ in row $ i $ of the matrix $ H $.
+
+
+</br></br>
+
+## Termination Rule
+
+$$ \Large L_{j} = L(y_{j}) + \sum_{i'} L_{i' j} $$
+
+where the sum in this final stage is over all the checks $ i' $ connected to code bit $ j $.
+
+$$ \large
+\hat{c_{j}} = \begin{cases}
+0 \qquad L_{j} \ge 0 \\
+1 \qquad L_{j} < 0
+\end{cases}
+$$
 
 
 
