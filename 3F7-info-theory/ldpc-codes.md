@@ -21,7 +21,7 @@ For **irregular codes**, we need to specify the **weight distributions** on the 
 
 <font style="font-size: 18px;">Consider the **LDPC matrix** $ H_{ij} $ to be an **adjacency matrix** of a **bipartite graph** with $ \color{green}{ n \text{ variable}} $ nodes **column variables $ \large \color{green}{v_{j}} $** and $ \color{red}{ (n-k) \text{ check}} $ nodes (**row variables $ \large \color{red}{c_{i}} $**).</font>
 
-</br></br>
+</br><hr></br>
 
 ## Degree Distributions
 
@@ -69,7 +69,7 @@ $$ \large \color{blue}{
 = \Big(\int_{0}^{1} \color{red}{\rho(x)} dx \Big)^{-1} $$
  
 
-</br></br>
+</br><hr></br>
 
 ## Iterative Decoding as Message Passing
 
@@ -149,6 +149,29 @@ Therefore to find the maximum $ \epsilon $ for which $ p_{t} \rightarrow 0 $ as 
 - Strictly true only if no cycles (loops) in the bipartite graph (graph is a tree).
 
 - Practical LPDC code is almost never cycle-free but independence assumption is close enough for large $ n $ (as long as there are no short cycles).
+
+
+</br><hr></br>
+
+
+## Application on Channels
+
+### Optimal Decoding
+
+#### Blockwise Decoding
+$$ \Large \hat{\underline{c}} = \arg_{\underline{c} \in \mathcal{C}} \max P(\underline{c} | \underline{y}) =  \underbrace{\arg_{\underline{c} \in \mathcal{C}} \max P(\underline{y} | \underline{c}) }_{ \small(\text{Provided that all codewords are equally likely (from Bayes)}) }$$
+
+
+#### Bitwise Decoding
+$$ \Large \hat{c_{j}} = \arg_{c_{j} \in \{0,1\}} \max P(c_{j} | \underline{y}) $$
+
+
+
+
+
+
+
+
 
 
 
