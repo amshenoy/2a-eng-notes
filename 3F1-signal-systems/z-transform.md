@@ -170,4 +170,5 @@ Consider $e^{j \theta}$ moving around the **unit circle** as $ \theta $ increase
 #### For dB scale (sketching), use the following:
 #### $$ \color{purple}{ \log|G(e^{j \theta})| = \sum_{k} \log|e^{j \theta} - z_{k}| - \sum_{k} \log|e^{j \theta} - p_{k}|  } $$
 
+#### Note: $ \angle (e^{j \theta} - z_{k}) $ is the angle of direction of $ e^{j \theta} $ from the zero (or the pole)
 
