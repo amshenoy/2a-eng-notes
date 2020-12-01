@@ -192,9 +192,14 @@ $$ \text{Motivation} = f(\text{Expectancy}, \text{Instrumentality}, \text{Valenc
 
 
 ## Creativity
-Generation of novel and useful ideas
+> Generation of novel and useful ideas
 
-Overlap of **Intrinsic Motivation**, **Creative Skills**, **Expertise**.
+</br>
+
+## Component Model
+Overlap of **Intrinsic Motivation**, **Creative Skills**, **Expertise**. (**Tri-Venn Diagram**)
+
+</br>
 
 ### Dual-Pathway to Creativity Model
 
@@ -210,7 +215,9 @@ The systematic, effortful, and in-depth exploration of only a few cognitive cate
 
 </br>
 
-## Innovation (Innovator)
+## Goldenberg’s Templates of Creativity
+
+### Innovation (Innovator)
 
 Process:
 1) Generation
@@ -221,7 +228,7 @@ Process:
 
 </br>
 
-## Innovation Diffusion (Adopter)
+### Innovation Diffusion (Adopter)
 
 Process:
 1) Recognition / Evaluation of Innovation
@@ -229,7 +236,9 @@ Process:
 3) Implementation
 
 
-### Adopter’s Dilemma
+</br>
+
+## Adopter’s Dilemma
 
 __Not Adopt__
 - Losing Competitive Advantage
