@@ -94,12 +94,12 @@ Idea that people select cultures
 </br><hr>
 
 # Perception
-Perception is a process by which individuals interpret and organize their sensory impressions to give meaning to their environment.
+> Perception is a process by which individuals interpret and organize their sensory impressions to give meaning to their environment.
 
 **Bounded Rationality Theory**
-Cognitive capacity is limited
-Limited availability of information
-Cognitive biases
+* Cognitive capacity is limited
+* Limited availability of information
+* Cognitive biases
 
 </br><hr>
 
