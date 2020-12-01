@@ -8,6 +8,7 @@ $$ h(X) = \int_{x=-\infty}^{\infty} p(x) \log \Big( \dfrac{1}{p(x)} \Big) = E( -
 #### Note: Differential entropy can be negative.
 We therefore have to interpret differential entropy as the entropy relative to a r.v with a uniform distribution $ U(0,1) $ which has a baseline of 0 differential entropy.
 
+#### Note: To find the differential entropy easily in practice, only simplify $ log(p(x)) $. Keep $ p(x) $ as itself and then use the values of the moments to simplify.
 
 ### Binary Entropy Function
 $$ 
