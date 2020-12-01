@@ -31,7 +31,7 @@ Personality based on:
 
 # Culture
 
-
+> Culture: A system of shared beliefs and assumptions implicitly held by members in a group.
 
 ### Optional
 
@@ -297,16 +297,17 @@ Tendency to withhold physical or intellectual effort when performing a group tas
 
 # Leadership
 
-#### Mandatory Reading: [3 Waves of Leadership Research](https://ezp.lib.cam.ac.uk/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2017-03593-001&site=ehost-live&scope=site)
-
-#### 3 Waves of Research
-(a) behavioral + attitude; (b) behavioral, social-cognitive and contingency; (c) transformational, social exchange, team, and gender-related
-
 
 > Leadership refers to the process whereby an individual intentionally influences others to guide, structure, and facilitate activities and social relationships to achieve organizational goals.
 
 * Formal leaders are appointed
 * Informal leaders emerge spontaneously
+
+#### Mandatory Reading: [3 Waves of Leadership Research](https://ezp.lib.cam.ac.uk/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2017-03593-001&site=ehost-live&scope=site)
+
+#### 3 Waves of Research
+(a) behavioral + attitude; (b) behavioral, social-cognitive and contingency; (c) transformational, social exchange, team, and gender-related
+
 
 </br>
 
