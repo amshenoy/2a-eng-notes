@@ -297,13 +297,60 @@ Tendency to withhold physical or intellectual effort when performing a group tas
 
 # Leadership
 
-
 #### Mandatory Reading: [3 Waves of Leadership Research](https://ezp.lib.cam.ac.uk/login?url=https://search.ebscohost.com/login.aspx?direct=true&db=pdh&AN=2017-03593-001&site=ehost-live&scope=site)
 
 #### 3 Waves of Research
 (a) behavioral + attitude; (b) behavioral, social-cognitive and contingency; (c) transformational, social exchange, team, and gender-related
 
 
+> Leadership refers to the process whereby an individual intentionally influences others to guide, structure, and facilitate activities and social relationships to achieve organizational goals.
+
+* Formal leaders are appointed
+* Informal leaders emerge spontaneously
+
+</br>
+
+## Trait Perspective (Effectiveness)
+
+Genetic, Personality, physical, or intellectual traits
+
+> “Leaders are born”
+
+### Pros - Significant Traits
+
+* Extraversion, openness, agreeableness, conscientiousness were predictive of leadership emergence
+
+* Extraversion and openness to experience emerged as “weak to moderate” predictors of leader effectiveness
+
+### Cons - Dependent Variable Sampling Problem
+
+(Jim Collins Leadership Book Critique)
+Sampling on the dependent variable is an example of **survival bias**.
+There was no control group considered.
+
+</br>
+
+## Situational Perspective (Behaviours / Styles)
+
+> “Leaders could be born, but they are more likely to be made”
+
+### Democratic/Participative/Empowering
+
+
+### Autocratic/Directive
+
+
+### Laissez-Faire
+
+
+
+### Conclusions
+
+Successful leadership depends on “situations”:
+* Ability and motivation of followers
+* Characteristics of the task and jobs
+
+Effective leaders change their behavior to match the situation.
 
 
 </br><hr>
