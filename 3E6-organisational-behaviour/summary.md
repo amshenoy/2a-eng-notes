@@ -4,6 +4,8 @@ Note*: This module is purely conjectural and mostly based on opinion so for exam
 
 # Personality
 
+> Personality refers to a person’s general style of interacting with the world, especially other people.
+
 **Myers-Briggs Type Indicator (MBTI)** 
 
 * Invalid categorization of personality types - Marginal Examples
