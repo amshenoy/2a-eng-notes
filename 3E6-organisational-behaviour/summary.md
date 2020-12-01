@@ -186,17 +186,11 @@ $$ \text{Motivation} = f(\text{Expectancy}, \text{Instrumentality}, \text{Valenc
 
 ### Mandatory Reading: [Model of Creativity](http://web.mit.edu/curhan/www/docs/Articles/15341_Readings/Group_Performance/Amabile_A_Model_of_CreativityOrg.Beh_v10_pp123-167.pdf)
 
-
-
-
-
-
-## Creativity
-> Generation of novel and useful ideas
+> Creativity: Generation of novel and useful ideas
 
 </br>
 
-## Component Model
+### Component Model
 Overlap of **Intrinsic Motivation**, **Creative Skills**, **Expertise**. (**Tri-Venn Diagram**)
 
 </br>
@@ -215,9 +209,9 @@ The systematic, effortful, and in-depth exploration of only a few cognitive cate
 
 </br>
 
-## Goldenberg’s Templates of Creativity
+### Goldenberg’s Templates of Creativity
 
-### Innovation (Innovator)
+#### Innovation (Innovator)
 
 Process:
 1) Generation
@@ -228,7 +222,7 @@ Process:
 
 </br>
 
-### Innovation Diffusion (Adopter)
+#### Innovation Diffusion (Adopter)
 
 Process:
 1) Recognition / Evaluation of Innovation
@@ -238,7 +232,7 @@ Process:
 
 </br>
 
-## Adopter’s Dilemma
+### Adopter’s Dilemma
 
 __Not Adopt__
 - Losing Competitive Advantage
