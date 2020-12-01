@@ -73,13 +73,13 @@ Information of organisation
 ### Encounter
 Integration with organisation
 
-Language: To communicate assumptions, values
-• Symbols: To reinforce values and ideology
-• Stories/Myths: Exemplifying norms and heroes
-• Ceremonies/rituals: To build cohesion and morale
-• Dress/uniform: To reinforce identity
-• Technology/Structure/Physical Environment: To
-reinforce values and shape communication patterns
+Language: To communicate assumptions, values </br>
+Symbols: To reinforce values and ideology </br
+Stories/Myths: Exemplifying norms and heroes </br>
+Ceremonies/rituals: To build cohesion and morale </br>
+Dress/uniform: To reinforce identity </br>
+Technology/Structure/Physical Environment: To reinforce values and shape communication patterns </br>
+
 
 ### Metamorphosis
 Adaptation of thought and behaviour of new leader to new organisation
