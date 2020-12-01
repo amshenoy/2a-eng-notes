@@ -339,12 +339,37 @@ There was no control group considered.
 
 ### Democratic/Participative/Empowering
 
+* Encourage participation
+* Value equality
+
+(+) Increases intrinsic motivation for employees</br>
+(+) Facilitates employee development </br>
+
+(-) Bad for employees with poor expertise </br>
+(-) Slow in group decision-making </br>
+
 
 ### Autocratic/Directive
+
+* Clear goals and instructions
+* Sole decision-maker
+
+(+) Good when leader has high expertise </br>
+(+) High pressure situations </br>
+
+(-) Bad when leader has low expertise </br>
+(-) Lower intrinsic motivation for employees </br>
+(-) Bad for development of employees </br> 
 
 
 ### Laissez-Faire
 
+* Limited instructions and limited contact
+
+(+) Good when employees are experts </br>
+
+(-) Possible low productivity </br>
+(-) Low satisfaction and motivation for employees </br>
 
 
 ### Conclusions
