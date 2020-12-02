@@ -170,6 +170,12 @@ $$ \large P(\underline{\theta} | \underline{x}) \propto  P(\underline{\theta}) P
 
 #### Note: By marginalisation, we can find the normalising constant (area of $ P(\underline{\theta} | \underline{x}) $ must equal 1) $ P(\underline{x}) = \int P(\underline{\theta}) P(\underline{x} | \underline{\theta}) \ d\underline{\theta} $ 
 
+</br>
+
+### Example
+
+For the **linear Gaussian model**, $ \Large \hat{\underline{\theta_{\text{MAP}}}} = (G^{T} G + \sigma_{e}^{2} C_{\theta}^{-1})^{-1} (G^{T} \underline{x} + \sigma_{e}^{2} C_{\theta}^{-1} \underline{m_{\theta}})$
+
 
 </br></br>
 
