@@ -168,10 +168,10 @@ $$ \Large \color{blue}{ \dfrac{d}{d \underline{\theta}} P(\underline{\theta} | \
 
 $$ \large P(\underline{\theta} | \underline{x}) \propto  P(\underline{\theta}) P(\underline{x} | \underline{\theta}) $$
 
-#### Note: By marginalisation, we can find the normalising constant (area under pdf must equal 1) $ P(\underline{x}) = \int P(\underline{\theta}) P(\underline{x} | \underline{\theta}) \ d\underline{\theta} $ 
+#### Note: By marginalisation, we can find the normalising constant (area of $ P(\underline{\theta} | \underline{x}) $ must equal 1) $ P(\underline{x}) = \int P(\underline{\theta}) P(\underline{x} | \underline{\theta}) \ d\underline{\theta} $ 
+
 
 </br></br>
-
 
 # Comparison
 
@@ -198,9 +198,15 @@ $$ \large P(\underline{\theta} | \underline{x}) \propto  P(\underline{\theta}) P
 * (-) Requires knowledge of parameter prior probability distribution
 * (-) Can be more complicated to implement than LS or ML, depending on form of likelihood and prior
 
+</br></br>
 
+## Practical Solving
 
+A gaussian in the form $ \propto e^{-\frac{1}{2} (ax^{2} + bx + c)} $ has variance $ \dfrac{1}{\hat{\sigma}^{2}} = a $ and $ \dfrac{-2\hat{\mu}}{\hat{\sigma}^{2}} = b $.
 
+Essentially derive the constants from $ -\dfrac{1}{2} \dfrac{(x-\mu)^{2}}{\sigma^{2}} $.
 
+In the multivariate case, $ \mu = \underline{m_{\theta}} $ and $ \sigma^{2} = \underline{C_{\theta}} $.
 
+Always use log-posterior and likelihood where possible.
 
