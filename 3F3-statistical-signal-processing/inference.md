@@ -206,7 +206,7 @@ A gaussian in the form $ \propto e^{-\frac{1}{2} (ax^{2} + bx + c)} $ has varian
 
 Essentially derive the constants from $ -\dfrac{1}{2} \dfrac{(x-\mu)^{2}}{\sigma^{2}} $.
 
-In the multivariate case, $ \mu = \underline{m_{\theta}} $ and $ \sigma^{2} = \underline{C_{\theta}} $.
+In the multivariate case, $ \mu = \underline{m_{\theta}} $ and $ \sigma^{2} = C_{\theta} $.
 
 Always use log-posterior and likelihood where possible.
 
