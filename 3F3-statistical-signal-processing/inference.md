@@ -109,7 +109,7 @@ $$ \Large \lim_{n \rightarrow \infty} \dfrac{1}{2N+1} E(|X_{N}(e^{j\theta})|^{2}
 
 ## Ordinary Least-Squares (OLS)
 
-$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = \dfrac{d}{d \underline{\theta}} \underline{\underline{x} - \mathbf{G} \underline{\theta}}^{T} \underline{\underline{x} - \mathbf{G} \underline{\theta}} = 0 $$
+$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = \dfrac{d}{d \underline{\theta}} \Big( \underline{x} - \mathbf{G} \underline{\theta}^{T} \Big) \Big( \underline{x} - \mathbf{G} \underline{\theta} \Big) = 0 $$
 
 $$ \Large \color{blue}{ \hat{\underline{\theta}}_{\text{OLS}} = (G^{T} G)^{-1} \ G^{T} \underline{x} }$$ 
 
@@ -166,7 +166,9 @@ $$ \Large \color{blue}{ \dfrac{d}{d \underline{\theta}} P(\underline{\theta} | \
 
 </br>
 
-$$ P(\underline{\theta} | \underline{x}) \propto  P(\theta) P(\underline{x} | \underline{\theta}) $$
+$$ \large P(\underline{\theta} | \underline{x}) \propto  P(\underline{\theta}) P(\underline{x} | \underline{\theta}) $$
+
+#### Note: By marginalisation, we can find the normalising constant (area under pdf must equal 1) $ P(\underline{x}) = \int P(\underline{\theta}) P(\underline{x} | \underline{\theta}) \ d\underline{\theta} $ 
 
 </br></br>
 
@@ -177,7 +179,7 @@ $$ P(\underline{\theta} | \underline{x}) \propto  P(\theta) P(\underline{x} | \u
 ### Least Squares (LS)
 * (+) Requires no knowledge of probability distributions 
 * (+) Simplest to implement  
-* (+) Guarantee of performance as BLUE (**Best Linear Unbiased Estimator**) estimator 
+* (+) Guarantee of performance as BLUE (**Best Linear Unbiased Estimator**) estimator
 * (-) Cannot incorporate prior knowledge about parameter probability distributions 
 * No guarantees of performance compared to nonlinear estimators
 
@@ -191,7 +193,7 @@ $$ P(\underline{\theta} | \underline{x}) \propto  P(\theta) P(\underline{x} | \u
 
 ### Bayesian (MAP and MMSE)
 * (+) Incorporates prior knowledge
-* (+/-) Performance guaranteed to be optimal for any amount of data (provided prior distribution is correct) 
+* (+/-) Performance guaranteed to be optimal for any amount of data (provided prior distribution is correct)
 * (-) Requires knowledge of noise (model) probability distribution 
 * (-) Requires knowledge of parameter prior probability distribution
 * (-) Can be more complicated to implement than LS or ML, depending on form of likelihood and prior
