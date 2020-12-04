@@ -79,7 +79,7 @@ We can remove the noise from the output signal $ x_{n} $ by applying the filter 
 
 ### Least MSE Criterion
 
-Use this to derive the Wiener-Hopf equations for a given problem:
+Use this to **derive the Wiener-Hopf equations** for a given problem:
 
 $$ \color{blue}{
 \Large \dfrac{\partial}{\partial h_{i}} E(\epsilon_{n}^{2}) = E(2 \epsilon_{n} \dfrac{\partial \epsilon_{n}}{\partial h_{i}} ) = 0
