@@ -8,7 +8,7 @@ Infinite collection of random variables
 ### Discrete Random Variables
 **Joint PMF** &emsp; $ p(x_{0}, ..., x_{n}) $
 
-</br><hr>
+</br><hr><hr></br>
 
 # Markov Chains
 $ \pi $ or $ \lambda $ is the initial distribution
@@ -52,7 +52,7 @@ The p.m.f $ \pi = (\pi_{i}: i \in S) $ is invariant for $Q$ if for all $ j \in S
 $$ \sum_{i \in S } \pi_{i} Q_{ij} = \pi_{j} $$  
 ## $$ \color{blue}{ \pi Q = \pi } \quad (\pi \text{ is regarded as a row vector}) $$
 
-</br><hr></br>
+</br><hr><hr></br>
 
 # WSS Processes
 
@@ -81,22 +81,29 @@ $$
 
 ## LTI System
 
-### For any LTI system with WSS input $ W_{n} $ and impulse response $ h_{n} $, then the output $ X_{n} $ is WSS where:
-### $$ X_{n} = \sum_{k=-\infty}^{\infty} W_{n-k} h_{k} = W_{n} * h_{n} $$
+### For any LTI system with WSS input $ X_{n} $ and impulse response $ h_{n} $, then the output $ Y_{n} $ is WSS where:
+### $$ \color{blue}{ Y_{n} = \sum_{k=-\infty}^{\infty} h_{k} X_{n-k} = h_{n} * X_{n} } $$
 
 ### Power Density Conversions
-### $$ S_{X}(f) = S_{W}(f) \enspace |H(f)|^{2} = S_{W}(f) \enspace H(f) H^{*}(f) $$
+
+### $$ \color{purple}{ S_{Y}(f) = H(f) H^{*}(f) \enspace S_{X}(f) = |H(f)|^{2} \enspace S_{X}(f) } $$
+
+</br>
+
+### $$ \color{purple}{ S_{XY}(f) = H(f) \enspace S_{X}(f) } $$
 
 ### Expected Average Power
-## $$ P = E(X_{n}^{2}) $$
+## $$ P = E(Y_{n}^{2}) $$
 
-**Note: For any random process $ P = E(X_{n}^{2}) $ is the expected instantaneous power and not the expected average power. Only true if the process is WSS.**
+**Note: For any random process $ P = E(Y_{n}^{2}) $ is the expected instantaneous power and not the expected average power. Only true if the process is WSS.**
+
+</br></br>
 
 ## Covariance Matrix
 For any linear system $ \underline{Y} = A \underline{X} + B $ (ie. all the below processes):
 ## $$ Cov(Y) = A Cov(X) A^{T} $$ 
 
-</br></br>
+</br><hr></br>
 
 ## Autoregressive (AR) Process (IIR)
 
