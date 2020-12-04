@@ -139,7 +139,7 @@ $$ \large q_{t} = \sum_{i} \rho_{i} \ q_{t, i} = \sum_{i} \rho_{i} \ (1 - (1-p_{
 
 $$ \Large p_{t} = \epsilon \ \color{green}{\lambda(}1 - \color{red}{\rho(} 1 - p_{t-1} \color{red}{)}\color{green}{)} $$
 
-Therefore to find the maximum $ \epsilon $ for which $ p_{t} \rightarrow 0 $ as $ t \rightarrow \infty $, we need to optimise $ R = 1 − \dfrac{\int \color{red}{\rho} } {\int \color{green}{\lambda} } $.
+Therefore to find the maximum $ \epsilon $ for which $ p_{t} \rightarrow 0 $ as $ t \rightarrow \infty $, we need to optimise $ R = 1 − \dfrac{\int_{0}^{1} \color{red}{\rho(}x\color{red}{)} dx } {\int_{0}^{1} \color{green}{\lambda(}x\color{green}{)} dx } $.
 
 </br></br>
 
@@ -223,7 +223,7 @@ $ m_{ji}(0) $ is an updated estimate of the posterior probability (or belief) th
 
 $$ \Large m_{ji}(0) = \dfrac{a_{0}}{a_{0} + a_{1}}, \qquad m_{ji}(1) = \dfrac{a_{1}}{a_{0} + a_{1}}  $$
 
-$$ \Large a_{x} = P(c_{j}=x \ | \ y_{j}) \prod_{i'\ne i} m_{i' j}(x) $$
+Application of Bayes' Rule $$ \Large a_{x} = P(c_{j}=x \ | \ y_{j}) P(c_{j}=x) = P(c_{j}=x \ | \ y_{j}) \prod_{i'\ne i} m_{i' j}(x) $$
 
 ### LLR Update
 
