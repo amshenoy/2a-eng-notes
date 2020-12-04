@@ -93,7 +93,7 @@ $$
 ### $$ \color{purple}{ S_{XY}(f) = H(f) \enspace S_{X}(f) } $$
 
 ### Expected Average Power
-## $$ P = E(Y_{n}^{2}) $$
+## $$ P_{0} = E(Y_{n}^{2}) = r_{YY}(0) = \dfrac{1}{2 \pi} \int_{-\infty}^{\infty} S_{Y}(\omega) d\omega$$
 
 **Note: For any random process $ P = E(Y_{n}^{2}) $ is the expected instantaneous power and not the expected average power. Only true if the process is WSS.**
 
