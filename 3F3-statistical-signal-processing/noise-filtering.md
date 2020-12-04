@@ -21,6 +21,18 @@
 A process $ X_{n} $ is a **white noise process** if:
 ### $$ \color{red}{ c_{XX}[k] = \sigma_{X}^{2} \enspace \delta(k) } $$
 
+### $$ \color{red}{ r_{XX}[k] = E(X^{2}) \enspace \delta(k) } $$
+
+
+### $$ \color{red}{ S_{X}(\omega) = E(X^{2}) = \text{ Constant } } $$
+
+#### Note: This is unrealisable in practice since constant power density means infinite average power. However this is a good approximation for "nearly white" noise processes.
+
+#### Note: &emsp; $ \color{lightgray}{ \text{ White } } S_{X}(\omega) \propto 1 \qquad \color{violet}{ \text{ Pink } } S_{X}(\omega) \propto \dfrac{1}{\omega} \qquad \color{brown}{ \text{ Brown } } S_{X}(\omega) \propto \dfrac{1}{\omega^{2}} $
+
+
+</br>
+
 ## Mean Ergodic
 A process $ X_{n} $ is mean ergodic if:
 ### $$ \color{red}{ \lim_{k \rightarrow \infty} c_{XX}[k] = 0 } $$
