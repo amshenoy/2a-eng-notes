@@ -136,6 +136,15 @@ Using **partial fractions** to break-down a system function into **standard tran
 #### Numeric Inversion
 Using **long division** to generate first-few terms to hopefully **extrapolate pattern**.
 
+</br>
+
+### Key Results
+$ T $ is the digital sampling period.
+
+Integral (A version of step Response) &emsp; $ \Large \dfrac{1}{s} \longrightarrow \ \dfrac{T}{1-z^{-1}} $
+
+Differential &emsp; $ \Large s \longrightarrow \ \dfrac{1-z^{-1}}{T} $
+
 </br><hr>
 
 ## Solving LDEs
