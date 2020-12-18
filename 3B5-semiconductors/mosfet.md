@@ -51,7 +51,37 @@ If we continue to increase the magnitude of the negative voltage applied to the 
 
 ## Surface Space Charge
 
+**Gauss' Law of Electrostatics**
+$$ \nabla \cdot \mathcal{E} = \dfrac{d\mathcal{E}}{dx} = \dfrac{\rho}{\epsilon} $$
 
+$ \rho = e (N_{D}^{+} - N_{A}^{-} + p - n ) $
+
+where $ p = p_{0} \exp(\dfrac{-eV}{kT}) $ and $ n = n_{0} \exp(\dfrac{eV}{kT}) $.
+
+$ p_{0} = N_{A}^{-} \text{ and } n_{0} = N_{D}^{+} \quad (\text{if all carriers due to ionised dopants}) $
+
+$$ \therefore \dfrac{d\mathcal{E}}{dx}  = \dfrac{e}{\epsilon} (N_{D}^{+} - N_{A}^{-} + p_{0} \exp(\dfrac{-eV}{kT}) - n_{0} \exp(\dfrac{eV}{kT}) ) $$
+
+Multiply each side by the respective side of $ \mathcal{E} dx = - dV $.
+
+$$ \mathcal{E} d\mathcal{E} = - \dfrac{e}{\epsilon} (N_{D}^{+} - N_{A}^{-} + p_{0} \exp(\dfrac{-eV}{kT}) - n_{0} \exp(\dfrac{eV}{kT}) ) dV $$
+
+Integrate both sides from $ 0 $ to the variable $ V_{s} $ or $ \mathcal{E}_{s} $ to find $ \mathcal{E}_{s} $ in terms of $ V_{s} $.
+
+$$ \mathcal{E}_{s} = (2 \int_{0}^{V_{s}} - \dfrac{e}{\epsilon} (N_{D}^{+} - N_{A}^{-} + p_{0} \exp(\dfrac{-eV}{kT}) - n_{0} \exp(\dfrac{eV}{kT}) ) dV )^{1/2} $$
+From **Gauss' Law of Electrostatics** used before, the surface charge per unit area $ Q_{s} $ is given by the following equation:
+$$ \Large Q_{s} = - \epsilon \ \mathcal{E}_{s} $$
+
+
+
+
+</br>
+
+## Strong Inversion
+
+
+
+</br>
 
 </br><hr></br>
 
