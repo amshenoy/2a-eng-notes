@@ -14,18 +14,35 @@ appropriate polarity and magnitude turns it OFF (like the JFET)
 
 **Metal-Oxide-Semiconductor**
 
-## Accumulation ($ V_{G} = +ve $)
+## Capacitance Calculations
+
+Note that these are capacitaces per unit area.
+
+$$ \Large C_{ox} = \dfrac{\epsilon}{d_{ox}} $$
+
+$$ \Large C_{depletion} = \dfrac{\epsilon}{w} $$
+
+
+$$ \Large C_{total} = \Big( \dfrac{1}{C_{ox}} + \dfrac{1}{C_{depletion}} \Big)^{-1} $$
+
+Minimum total capacitance $ C_{depletion} $ when $ C_{depletion} $ is minimised meaning the depletion region width $ w $ is maximised.
+
+</br><hr></br>
+
+## Operating Modes
+
+### Accumulation ($ V_{G} = +ve $)
 When a **positive bias** is applied to the gate $ V_{G} = +ve $, we get an **accumulation of electrons at the interface between the oxide and the semiconductor**.
 
 This accumulation of electrons causes $ E_{C} $ and $ E_{V} $ lines to bend at the interface by $ e V_{s} $ due to a surface potential $ V_{s} $. 
 
 </br>
 
-## Depletion ($ V_{G} = -ve $)
+### Depletion ($ V_{G} = -ve $)
 
 If a **negative bias** is applied to the gate $ V_{G} = -ve $, then we get a depletion region formed in the semiconductor at the interface with the oxide.
 
-From **Poisson's equation**:
+From **Poisson's equation**/**Gauss' Law of Electrostatics**:
 $$ \mathcal{E} = \dfrac{-eN_{D}}{\epsilon} w $$
 
 $$ \large V_{s} = \dfrac{eN_{D}}{\epsilon} \dfrac{w^{2}}{2} $$
@@ -35,7 +52,7 @@ $$ \large \color{blue}{ -V_{G} = V_{ox} + V_{s} } \qquad (V_{G} + V_{ox} + V_{s}
 
 </br>
 
-## Inversion ($ V_{G} = ---ve $)
+### Inversion ($ V_{G} = ---ve $)
 
 If we continue to increase the magnitude of the negative voltage applied to the gate then the band bending in the semiconductor will increase.
 
@@ -51,7 +68,7 @@ If we continue to increase the magnitude of the negative voltage applied to the 
 
 (Insert Diagram here)
 
-</br>
+</br><hr></br>
 
 
 ## Surface Space Charge
@@ -103,7 +120,7 @@ $ C_{i} $ - Oxide Capacitance per unit area
 
 $ Q_{d} $ - Charge per unit area in **Depletion Region** at Strong Inversion 
 
-$$ \large V_{T} = V_{\text{Flat Band}} -\dfrac{Q_{d}}{C_{i}} - 2 V_{f} $$
+$$ \large V_{T} = V_{\text{Flat Band}} -\dfrac{Q_{d}}{C_{i}} - 2 V_{F} $$
 
 $ V_{\text{Flat Band}} $ is the voltage needed to flatten the bands between the metal and the semiconductor. If we considered $ V_{\text{Flat Band}} = 0 $, we would be assuming that $ \phi_{m} = \phi_{sc} $. 
 
@@ -120,7 +137,7 @@ Additionally extra charges are introduced into the system due to the oxide, name
 
 Putting all these charges under a single term effective charge $ Q_{i} $, we get the following expression for the threshold voltage:
 
-$$ \Large \color{blue}{ V_{T} = \underbrace{ \Big( \dfrac{\phi_{m} - \phi_{sc}}{e} -\dfrac{Q_{i}}{C_{i}} \Big) }_{V_{FB}} -\dfrac{Q_{d}}{C_{i}} - 2 V_{f} } $$
+$$ \Large \color{blue}{ V_{T} = \underbrace{ \Big( \dfrac{\phi_{m} - \phi_{sc}}{e} -\dfrac{Q_{i}}{C_{i}} \Big) }_{V_{FB}} -\dfrac{Q_{d}}{C_{i}} - 2 V_{F} } $$
 
 
 
@@ -174,13 +191,13 @@ $$ \Large \color{blue}{ V_{GS} - V_{FB} = - \dfrac{Q_{s}}{C_{i}} - V_{s} } $$
 
 $ \large \color{blue}{ Q_{s} = Q_{d} + Q_{inv} } $ The total charge in the semiconductor is the charge in the depletion region plus the charge in the inversion region.
 
-Rearranging for $ Q_{inv} $ and substituting $ V_{T} = V_{FB} -\dfrac{Q_{d}}{C_{i}} - 2 V_{f} $:
+Rearranging for $ Q_{inv} $ and substituting $ V_{T} = V_{FB} -\dfrac{Q_{d}}{C_{i}} - 2 V_{F} $:
 
-$$ \Large Q_{inv} = - C_{i} (V_{GS} - (V_{T} + 2V_{f} - V_{s})) $$ 
+$$ \Large Q_{inv} = - C_{i} (V_{GS} - (V_{T} + 2V_{F} - V_{s})) $$ 
 
 If we now apply a voltage $V_{DS}$ to the drain, then this will induce a voltage $V(x)$ in the channel at the interface between the semiconductor and the oxide with respect to the source.
 
-$ \large V_{s} = 2 V_{f} - V(x) $
+$ \large V_{s} = 2 V_{F} - V(x) $
 
 $$ \Large \therefore Q_{inv} = - C_{i} (V_{GS} - V_{T} -V(x)) $$
 
@@ -234,10 +251,10 @@ $ \large I_{DS sat} = - W C_{i} V_{DS} v_{s} = - W C_{i} (V_{GS} - V_{T}) v_{s} 
 ## Model Conductances
 
 ### Small Signal Channel Conductance
-$$ g_{s} = \dfrac{dI_{DS}}{dV_{DS}} $$
+$$ \large g_{s} = \dfrac{\partial I_{DS}}{\partial V_{DS}} $$
 
 ### Mutual Transconductance
-$$ g_{m} = \dfrac{dI_{DS}}{dV_{GS}} $$
+$$ \large g_{m} = \dfrac{\partial I_{DS}}{\partial V_{GS}} $$
 
 ## Applications
 
