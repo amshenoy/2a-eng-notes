@@ -6,10 +6,7 @@
 $ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{b}^{T} \underline{x} \Big) = \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} \underline{b} \Big) = \underline{b} $
 
 ### Quadratic Differentiation
-$ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} B \underline{x} \Big) = (B+B^{T}) \underline{x} $
-
-For a symmetric matrix $ B $, $ \large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} B \underline{x} \Big) = 2 B \underline{x} $.
-
+$ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} B \underline{x} \Big) = (B+B^{T}) \underline{x} \qquad (= 2 B \underline{x} \quad \text{ if B is symmetric } ) $
 
 </br>
 
@@ -75,6 +72,8 @@ Therefore at a point in time $ n $:
  
 $$ \Large x_{n} = \mathbf{g_{n}}^{T} \boldsymbol{\theta} + e_{n} $$
 
+For all the below matrix calculus, we consider $ \mathbf{G} $ to be **symmetric** and **invertible**.
+
 </br>
 
 ## Einstein-Wiener-Khinchin Theorem
@@ -128,7 +127,11 @@ $$ \Large \lim_{n \rightarrow \infty} \dfrac{1}{2N+1} E(|X_{N}(e^{j\theta})|^{2}
 
 ## Ordinary Least-Squares (OLS)
 
-$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = \dfrac{d}{d \underline{\theta}} \Big( \underline{x} - \mathbf{G} \underline{\theta}^{T} \Big) \Big( \underline{x} - \mathbf{G} \underline{\theta} \Big) = 0 $$
+$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = \dfrac{d}{d \underline{\theta}} \Big( \underline{x}^{T} - \mathbf{G} \underline{\theta}^{T} \Big) \Big( \underline{x} - \mathbf{G} \underline{\theta} \Big) = 0 $$
+
+Or alternatively:
+
+$$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = 2 \underline{e}^{T} \dfrac{d \underline{e} }{d \underline{\theta}}  = 0 $$ 
 
 $$ \Large \color{blue}{ \hat{\underline{\theta}}_{\text{OLS}} = (G^{T} G)^{-1} \ G^{T} \underline{x} }$$ 
 
