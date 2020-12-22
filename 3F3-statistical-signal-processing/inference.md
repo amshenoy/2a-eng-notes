@@ -17,6 +17,22 @@ For a symmetric matrix $ B $, $ \large \dfrac{\partial}{\partial \underline{x}} 
 
 ### Given $ \large \underline{x}^{T} B \underline{x} + 2 b^{T} x $ and $ B $ is $ \color{green}{\text{symmetric}} $ and $\color{green}{\text{invertible}}$ :
 
+
+$ \large 
+\begin{align*}
+\underline{x}^{T} B \underline{x} + 2 b^{T} x &= \underline{x}^{T} B \underline{x} + \color{green}{b^{T}} x + \color{green}{b^{T} x} \\ \\
+\text{ Let } b = Bu & \\
+&= \underline{x}^{T} B \underline{x} + \color{green}{u^{T} B} x + \color{green}{x^{T} b} \\
+&= \color{green}{ ( \underline{x}^{T} + u^{T} ) } B \underline{x} + x^{T} b \\
+&= \color{green}{ ( \underline{x}^{T} + u^{T} ) B (\underline{x} + u) - ( \underline{x}^{T} + u^{T} ) B u } + x^{T} b \\
+&= ( \underline{x} + u )^{\color{green}{T}} B (\underline{x} + u) - ( \underline{x}^{T} + u^{T} ) \color{green}{ b } + x^{T} b \\ \\
+\underline{x}^{T} B \underline{x} + 2 b^{T} x &= ( \underline{x} + u )^{T} B (\underline{x} + u) - u^{T} b \\
+\end{align*}
+$
+ 
+
+<!--
+
 $ \large \underline{x}^{T} B \underline{x} + 2 b^{T} \color{green}{B^{-1} B} \ x $
 
 ### Let $ \color{green}{ \underline{u} = B^{-1} \underline{b} } $ and $ \color{green}{ \underline{u}^{T} = \underline{b}^{T} B^{-T} 
@@ -33,6 +49,9 @@ $ \large (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \color{green
 $ (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - (\underline{x}^{T} + \underline{u}^{T}) \color{green}{ \underline{b} } + \color{green}{ \underline{b}^{T} } \underline{x} $
 
 $ (\underline{x}^{T} + \underline{u}^{T}) B (\underline{x} + \underline{u} ) - \underbrace{\underline{u}^{T} \underline{b}}_{\underline{b}^{T} \underline{u}} $
+
+-->
+
 
 </br>
 
@@ -146,9 +165,11 @@ $$ P(\underline{x} | \underline{\theta}) = P_{e}(\underline{x} - \mathbf{G} \und
 
 ## Minimum Mean-Squared Error (MMSE)
 
+**Note: Here we consider the error between the actual value and the estimate and not the error process itself.**
+
 $$ \Large \dfrac{d}{d \underline{\theta}} E( (\underline{\hat{\theta}} - \underline{\theta})^{2} ) = 0 $$
 
-Simplifies to (for solving for $ \hat{\underline{\theta}}_{\text{MMSE}} $) using the **posterior**:
+For solving for $ \hat{\underline{\theta}}_{\text{MMSE}} $, simplifies to the following using the **posterior**:
 
 $$ \Large \color{blue}{ \hat{\underline{\theta}}_{\text{MMSE}} = E (\underline{\theta}|\underline{x}) = \int \underline{\theta}  P(\underline{\theta}|\underline{x}) d \underline{\theta} } $$
 
@@ -174,7 +195,7 @@ $$ \large P(\underline{\theta} | \underline{x}) \propto  P(\underline{\theta}) P
 
 ### Example
 
-For the **linear Gaussian model**, $ \Large \hat{\underline{\theta_{\text{MAP}}}} = (G^{T} G + \sigma_{e}^{2} C_{\theta}^{-1})^{-1} (G^{T} \underline{x} + \sigma_{e}^{2} C_{\theta}^{-1} \underline{m_{\theta}})$
+For the **linear Gaussian model**, $ \Large \hat{\underline{\theta}}_{\text{MAP}} = (G^{T} G + \sigma_{e}^{2} C_{\theta}^{-1})^{-1} (G^{T} \underline{x} + \sigma_{e}^{2} C_{\theta}^{-1} \underline{m_{\theta}})$
 
 
 </br></br>
