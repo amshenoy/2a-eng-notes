@@ -58,3 +58,13 @@ Therefore for **stability of the closed-loop** system $ \text{NPOC Closed-Loop} 
 
 ie. must equal the number of unstable open-loop poles.
 
+
+</br>
+
+## Nyquist Diagram
+
+### $ \theta $ is not the angle on the Nyquist plot!
+
+If $ N $ poles on unit circle, the outer encirclement must rejoin after an angle $ - \dfrac{N \pi}{2}} $.
+
+Complete Nyquist plot must have symmetry.
