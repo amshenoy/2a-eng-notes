@@ -238,7 +238,7 @@ Given an analogue filter $ G_{a}(s) $, we need to find the digital filter $ G(z)
 #### Examples:
 #### Impulse Response Invariance &emsp; $ U(s) = 1 $ and $ U(z) = 1 $
 #### Step Response Invariance &emsp; $ U(s) = \dfrac{1}{s} $ and $ U(z) = \dfrac{1}{1-z^{-1}} $
-#### Ramp Response Invariance &emsp; $ U(s) = \dfrac{1+sT}{s^{2}} $ and $ U(z) = \dfrac{T}{(1-z^{-1})^{2}} $ &emsp; (if $ u(t) = t + T $)
+#### Ramp Response Invariance &emsp; $ U(s) = \dfrac{1+sT}{s^{2}} $ and $ U(z) = \dfrac{T z^{-1}}{(1-z^{-1})^{2}} + \dfrac{T}{(1-z^{-1})} $ &emsp; (if $ u(t) = t + T $ ie. $ u(kT) = kT + T $)
 </br>
 
 
