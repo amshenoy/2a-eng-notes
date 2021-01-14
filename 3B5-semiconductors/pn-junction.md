@@ -32,7 +32,7 @@ eV_{0} &= kT \ln(\dfrac{N_{A}N_{D}}{n_{i}^{2}})
 $$
 
 
-($ \color{orange}{ kT \approx 0.0259 } $ at room temperature) 
+($ \color{orange}{ kT \approx 0.0259 \ eV } $ at room temperature) 
 
 </br>
 
@@ -168,16 +168,16 @@ $ \Large J_{s} = J_{h} + J_{e} $
 
 $ L_{h} $ and $ L_{e} $ are known as **carrier diffusion lengths**.
 
-$ \large L_{h} = (D_{h} \tau_{h})^{\frac{1}{2}} $ and $ \large L_{e} = (D_{e} \tau_{e})^{\frac{1}{2}} $
+$ \large L = (D \tau)^{\frac{1}{2}} $ ie. $ \large \dfrac{D}{L} = \dfrac{L}{\tau} $
 
-$$ \color{blue}{ \Large J_{s} = e n_{i}^{2} (\dfrac{D_{h}}{L_{h} N_{D}} + \dfrac{D_{e}}{L_{e} N_{A}}) } $$
+$$ \color{blue}{ \Large J_{s} = e (\dfrac{D_{h}}{L_{h}} \dfrac{n_{i}^{2}}{ N_{D}} + \dfrac{D_{e}}{L_{e}} \dfrac{n_{i}^{2}}{N_{A}}) } $$
 
 </br>
 
 $$
 \large
 \begin{align*}
-J_{s} &= e (\dfrac{D_{h}}{L_{h}} \dfrac{n_{i}^{2}}{ N_{D}} + \dfrac{D_{e}}{L_{e}} \dfrac{n_{i}^{2}}{N_{A}}) \\
+J_{s} &= e (\dfrac{L_{h}}{\tau_{h}} \dfrac{n_{i}^{2}}{ N_{D}} + \dfrac{L_{e}}{\tau_{e}} \dfrac{n_{i}^{2}}{N_{A}}) \\ \\
 J_{s} &= e (\dfrac{L_{h}}{\tau_{h}} p_{n0} + \dfrac{L_{e}}{\tau_{e}} n_{p0})
 \end{align*}
 $$
