@@ -239,7 +239,7 @@ $$
 
 This expression for $ I_{DS} $ is valid up to a saturation current $ I_{DS sat} $ (up to the saturation region).
 
-Saturation occurs at $ V_{DS} = V_{GS} – V_{T} $:
+Saturation occurs at $ V_{DS} = V_{GS} – V_{T} $ (**pinch-off** condition):
 
 $$ \therefore I_{DS sat} = - \dfrac{ C_{ox} \ \mu_{hFE} \ W }{L} \ \dfrac{V_{DS}^{2}}{2} = - \dfrac{ C_{ox} \ \mu_{hFE} \ W }{L} \ \dfrac{(V_{GS} – V_{T})^{2}}{2} $$
 
