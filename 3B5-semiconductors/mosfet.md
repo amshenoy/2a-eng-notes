@@ -102,9 +102,9 @@ __Note: Surface Potential $ V_{s} $ is analogous to Contact Potential $ V_{0} $_
 
 $$ \large \color{blue}{ V_{s \ \text{Strong Inversion}} \ge 2 V_{F}  = 2 \ \dfrac{kT}{e} \ \ln\dfrac{N_{D}}{n_{i}} } $$
 
-$ \color{blue}{ V_{F} = \dfrac{kT}{e} \ \ln\dfrac{N_{D}}{n_{i}} } $
+$ \Large \color{blue}{ V_{F} = \dfrac{kT}{e} \ \ln\dfrac{N_{D}}{n_{i}} } $
 
-$ \large \color{blue}{ w(V_{s}) = \Big( \dfrac{2\epsilon V_{s}}{e N_{D}}\Big)^{\dfrac{1}{2}} } $
+$ \Large \color{blue}{ w(V_{s}) = \Big( \dfrac{2\epsilon V_{s}}{e N_{D}}\Big)^{\dfrac{1}{2}} } $
 
 **Max Depletion Width just at Strong Inversion** &emsp; $ \Large \color{blue}{ w_{max} = w(2 V_{F})} $
 
@@ -116,11 +116,11 @@ $ \large \color{blue}{ w(V_{s}) = \Big( \dfrac{2\epsilon V_{s}}{e N_{D}}\Big)^{\
 
 We want to know the threshold voltage $ V_{T} $ which has to be applied to the gate to induce strong inversion.
 
-$ C_{i} $ - Oxide Capacitance per unit area
+$ C_{ox} $ - Oxide Capacitance per unit area
 
 $ Q_{d} $ - Charge per unit area in **Depletion Region** at Strong Inversion 
 
-$$ \large V_{T} = V_{\text{Flat Band}} -\dfrac{Q_{d}}{C_{i}} - 2 V_{F} $$
+$$ \large V_{T} = V_{\text{Flat Band}} -\dfrac{Q_{d}}{C_{ox}} - 2 V_{F} $$
 
 $ V_{\text{Flat Band}} $ is the voltage needed to flatten the bands between the metal and the semiconductor. If we considered $ V_{\text{Flat Band}} = 0 $, we would be assuming that $ \phi_{m} = \phi_{sc} $. 
 
@@ -137,7 +137,7 @@ Additionally extra charges are introduced into the system due to the oxide, name
 
 Putting all these charges under a single term effective charge $ Q_{i} $, we get the following expression for the threshold voltage:
 
-$$ \Large \color{blue}{ V_{T} = \underbrace{ \Big( \dfrac{\phi_{m} - \phi_{sc}}{e} -\dfrac{Q_{i}}{C_{i}} \Big) }_{V_{FB}} -\dfrac{Q_{d}}{C_{i}} - 2 V_{F} } $$
+$$ \Large \color{blue}{ V_{T} = \underbrace{ \Big( \dfrac{\phi_{m} - \phi_{sc}}{e} -\dfrac{Q_{i}}{C_{ox}} \Big) }_{V_{FB}} -\dfrac{Q_{d}}{C_{ox}} - 2 V_{F} } $$
 
 
 
@@ -184,28 +184,30 @@ and drain. We will continue to use the PMOS device working in an inversion regim
 
 ## Inversion Region Charge
 
-If we apply a gate-source voltage $ V_{GS} $, then $ V_{GS} - V_{\text{Flat Band}} $ will be dropped across the oxide $ \dfrac{Q_{s}}{C_{i}} $ and a surface potential $ V_{s} $ in the semiconductor:
+If we apply a gate-source voltage $ V_{GS} $, then $ V_{GS} - V_{\text{Flat Band}} $ will be dropped across the oxide $ \dfrac{Q_{s}}{C_{ox}} $ and a surface potential $ V_{s} $ in the semiconductor:
 
-$$ \Large \color{blue}{ V_{GS} - V_{FB} = - \dfrac{Q_{s}}{C_{i}} - V_{s} } $$
+$$ \Large \color{blue}{ V_{GS} - V_{FB} = - \dfrac{Q_{s}}{C_{ox}} - V_{s} } $$
 
 
 $ \large \color{blue}{ Q_{s} = Q_{d} + Q_{inv} } $ The total charge in the semiconductor is the charge in the depletion region plus the charge in the inversion region.
 
-Rearranging for $ Q_{inv} $ and substituting $ V_{T} = V_{FB} -\dfrac{Q_{d}}{C_{i}} - 2 V_{F} $:
+Rearranging for $ Q_{inv} $ and substituting $ V_{T} = V_{FB} -\dfrac{Q_{d}}{C_{ox}} - 2 V_{F} $:
 
-$$ \Large Q_{inv} = - C_{i} (V_{GS} - (V_{T} + 2V_{F} - V_{s})) $$ 
+$$ \Large Q_{inv} = - C_{ox} (V_{GS} - (V_{T} + 2V_{F} - V_{s})) $$ 
 
 If we now apply a voltage $V_{DS}$ to the drain, then this will induce a voltage $V(x)$ in the channel at the interface between the semiconductor and the oxide with respect to the source.
 
 $ \large V_{s} = 2 V_{F} - V(x) $
 
-$$ \Large \therefore Q_{inv} = - C_{i} (V_{GS} - V_{T} -V(x)) $$
+$$ \Large \therefore Q_{inv} = - C_{ox} (V_{GS} - V_{T} -V(x)) $$
 
 </br>
 
 ## Drain-Source Current
 
 Using the resistivity law $ R = \dfrac{\rho L }{A}$ (Note $ \rho $ is resitivity not charge density ):
+
+$ \mu_{hFE} $ is the **field effect mobility**, ie. the measured electron mobility $ \mu_{e} $.
 
 $$ \large
 \begin{align*}
@@ -226,8 +228,8 @@ $$
 \begin{align*}
 \int_{0}^{L} I_{DS} dx &= \int_{0}^{V_{DS}} Q_{inv} \ \mu_{hFE} \ W \ dV(x) \\
 I_{DS} &= \dfrac{ \mu_{hFE} \ W }{L} \int_{0}^{V_{DS}} Q_{inv} \ dV(x) \\
-I_{DS} &= \dfrac{ \mu_{hFE} \ W }{L} \int_{0}^{V_{DS}} - C_{i} (V_{GS} - V_{T} -V) \ dV \\
-I_{DS} &= - \dfrac{ C_{i} \ \mu_{hFE} \ W }{L} \ \Big( (V_{GS} - V_{T}) V_{DS} - \dfrac{V_{DS}^2}{2} \Big)\\
+I_{DS} &= \dfrac{ \mu_{hFE} \ W }{L} \int_{0}^{V_{DS}} - C_{ox} (V_{GS} - V_{T} -V) \ dV \\
+I_{DS} &= - \dfrac{ C_{ox} \ \mu_{hFE} \ W }{L} \ \Big( (V_{GS} - V_{T}) V_{DS} - \dfrac{V_{DS}^2}{2} \Big)\\
 \end{align*}
 $$
 
@@ -239,12 +241,12 @@ This expression for $ I_{DS} $ is valid up to a saturation current $ I_{DS sat} 
 
 Saturation occurs at $ V_{DS} = V_{GS} – V_{T} $:
 
-$$ \therefore I_{DS sat} = - \dfrac{ C_{i} \ \mu_{hFE} \ W }{L} \ \dfrac{V_{DS}^{2}}{2} = - \dfrac{ C_{i} \ \mu_{hFE} \ W }{L} \ \dfrac{(V_{GS} – V_{T})^{2}}{2} $$
+$$ \therefore I_{DS sat} = - \dfrac{ C_{ox} \ \mu_{hFE} \ W }{L} \ \dfrac{V_{DS}^{2}}{2} = - \dfrac{ C_{ox} \ \mu_{hFE} \ W }{L} \ \dfrac{(V_{GS} – V_{T})^{2}}{2} $$
 
 </br>
 
 As discussed for the JFET, for short channel lengths the carrier velocity saturates:
-$ \large I_{DS sat} = - W C_{i} V_{DS} v_{s} = - W C_{i} (V_{GS} - V_{T}) v_{s} $
+$ \large I_{DS sat} = - W C_{ox} V_{DS} v_{s} = - W C_{ox} (V_{GS} - V_{T}) v_{s} $
 
 </br>
 
