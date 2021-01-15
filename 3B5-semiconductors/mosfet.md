@@ -222,7 +222,7 @@ $ \large dV(x) = I_{DS} \ dR $
 Substitute for $ dR $ and rearrange for $ I_{DS} $:
 $ \large \therefore  Q_{inv} \ \mu_{hFE} \ W \ dV(x) = I_{DS} dx $
 
-Integrate for appropriate conditions:
+Integrate for appropriate conditions, $ W = \text{Gate Width} $, $ L = \text{Drain-Source Length}$:
 $$ 
 \large 
 \begin{align*}
