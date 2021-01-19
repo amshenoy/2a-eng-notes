@@ -10,6 +10,8 @@ Eigenvectors - $ (A-\lambda_{i} I) \underline{u}_{i}  = \underline{0} = \underli
 
 Eigenvalues of $ A $ and $ A^{T} $ are the same however eigenvectors are not!
  
+To avoid confusion with $ P $ and $ P^{T} $, we will switch to using the row form of calculating these vectors using only $ P $.
+   
 </br>
 
 # Discrete (Finite) State-Space
