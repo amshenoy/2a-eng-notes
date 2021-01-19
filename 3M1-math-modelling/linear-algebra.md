@@ -28,17 +28,21 @@ Hermitian matrix has **real eigenvalues** and **orthognal eigenvectors** $ \math
 
 # Norms
 
-$$ \Large I_{p} \enspace \text{Norm} = \lVert x \rVert_{p} = \Big( \sum_{i=1}^{n} |x_{i}|^{p} \Big)^{\dfrac{1}{p}} $$
+$$ \Large L_{p} \text{ or } I_{p} \enspace \text{Norm} = \lVert x \rVert_{p} = \Big( \sum_{i=1}^{n} |x_{i}|^{p} \Big)^{\dfrac{1}{p}} $$
 
 $ \Large \lVert x \rVert_{1} = \sum_{i}|x_{i}| $
 
-$ \Large \lVert x \rVert_{2} = \sum_{i} x_{i}^{2} \qquad \Large \lVert x \rVert_{2}^{2} = \mathbf{x}^{\mathbf{H}}  \mathbf{x} $
+$ \Large \lVert x \rVert_{2} = \sum_{i} x_{i}^{2} $
+
+$ \Large \lVert x \rVert_{2}^{2} = \mathbf{x}^{\mathbf{H}}  \mathbf{x} \quad ( = \mathbf{x}^{*T} \ \mathbf{x} ) \qquad (  = \mathbf{x}^{T} \ \mathbf{x} \quad $ **if real** $ \quad  \Large ) $
 
 $ \Large \lVert x \rVert_{\infty} = \max_{i}(x_{i}) $
 
 
 
 $ \Large \lVert x \rVert_{\mathbf{A}} = \mathbf{x}^{\mathbf{H}} A \ \mathbf{x} $ &emsp; &emsp; (**Matrix Norm**) 
+
+</br>
 
 ## Frobenius Norm
 
@@ -47,7 +51,9 @@ $ \Large \lVert x \rVert_{\mathbf{A}} = \mathbf{x}^{\mathbf{H}} A \ \mathbf{x} $
 
 # Least Squares Fitting
 
+$$ \mathbf{A} \mathbf{x} = \mathbf{b} $$
 
+## Pseudoinverse
 
 
 </br><hr>
