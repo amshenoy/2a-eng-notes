@@ -50,7 +50,7 @@ The noise waveform $ n(t) $ in general will not lie in the signal space (ie. it 
 
 </br>
 
-## Output Projection
+## Output Projection Vector
 
 By projecting $ y(t) $ into the signal space, we can find the vector representation $ \underline{y} $:
 
@@ -68,9 +68,27 @@ $$
 
 For optimal detection, we first need to understand the distribution of the (random) noise vector $ \underline{n} $.
 
+$ E(n_{j}) = E\Big( \int n(t) \ \phi_{j}^{*}(t) \ dt \Big) = \int E(n(t)) \ \phi_{j}^{*}(t) \ dt = 0 $
 
+$$ \large \color{blue}{ E(n_{j}) = 0 } $$
 
+$
+\begin{align*}
+E(n_{l}n_{m}) &= E\Big( \int n(t) \ \phi_{l}^{*}(t) \ dt \int n(s) \ \phi_{m}^{*}(s) \ ds \Big) \\
+&= \int \int E(n(t)n(s)) \ \phi_{l}^{*}(t) \ dt \ \phi_{m}^{*}(s) \ ds \\
+&= \int \int \dfrac{N_{0}}{2} \delta(s-t) \ \phi_{l}^{*}(t) \ dt \ \phi_{m}^{*}(s) \ ds  \\
+&= \dfrac{N_{0}}{2} \int \phi_{l}^{*}(s) \ \phi_{m}^{*}(s) \ ds \\
+&= \dfrac{N_{0}}{2} \delta(m-l)
+\end{align*}
+$
 
+$$ \large \color{blue}{ E(n_{l}n_{m}) = \dfrac{N_{0}}{2} \delta(m-l) } $$
+
+These results for the discrete version are exactly the same as the continuous version.
+
+</br>
+
+## Optimal Detection
 
 
 
