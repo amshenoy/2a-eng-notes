@@ -50,6 +50,18 @@ $$ \large \underline{x}^{T} A \underline{x} > 0 \qquad \small( \text{ for all no
 
 A matrix $ M^{\mathbf{H}} M $ is always Hermitian since $ ( M^\mathbf{H} M )^{\mathbf{H}} = M^{\mathbf{H}} M $ and also always **positive semi-definite**.
 
+</br>
+
+## Rank
+Rank of a matrix is the number of linearly independent rows or columns (the number is equal for either rows or columns).
+
+$$ rank(A) \le \min(m, n) $$
+ 
+**Full Rank** - $ rank(A) = \min(m, n) $
+
+**Deficient Rank** - $ rank(A) < \min(m, n) $
+
+
 </br><hr>
 
 # Norms
