@@ -34,14 +34,15 @@ For a set of **orthonormal basis** functions $ f_{1}(t), ..., f_{k}(t) $, the fo
 
 1) (Must be a **basis**) Any function $ x(t) $ can be represented as a linear combination of the **orthonormal basis** functions $ f_{1}(t), ..., f_{k}(t) $ where $ k $ is the **dimension** of the space and $ x_{i} $ are the **projection coefficients**:
 
-$$ \large x(t) = \sum_{i} x_{i} f_{i}(t) $$
+$$ \large \color{blue}{ x(t) = \sum_{i} x_{i} f_{i}(t) } $$
 
 2) (Must be **orthonormal**):
 
-$$ \large \int_{-\infty}^{\infty} f_{i}(t) \ f_{j}^{*}(t) dt = \begin{cases}
+$$ \large \color{blue}{ \int_{-\infty}^{\infty} f_{i}(t) \ f_{j}^{*}(t) dt = \begin{cases}
 1 \quad i = j \\
 0 \quad i \ne j \\
 \end{cases}
+}
 $$
 
 
@@ -70,16 +71,20 @@ $$
 
 Now for any $ x(t) $, we can calculate the **projection coefficients** $ x_{j} $ by considering the projection of $ x(t) $ along $ f_{j}(t) $ (ie. the inner product):
 
-$$ \large 
+#### Proof
+$$ 
 \begin{align*}
 x_{j} &= \langle x(t), f_{j}(t) \rangle \\
-&= \int_{-\infty}^{\infty} x(t) f_{j}^{*}(t) dt \\
+x_{j} &= \int_{-\infty}^{\infty} x(t) f_{j}^{*}(t) dt \\
 &= \int_{-\infty}^{\infty} \big( \sum_{i} x_{i} f_{i}(t) \big) \ f_{j}^{*}(t) dt \\
-x_{j} &= \sum_{i} x_{i} \int_{-\infty}^{\infty} f_{i}(t) \ f_{j}^{*}(t) dt \quad (= x_{j} ) \\
+x_{j} &= \sum_{i} x_{i} \int_{-\infty}^{\infty} f_{i}(t) \ f_{j}^{*}(t) dt \quad (= x_{j} \text{ by orthonormality of } f_{i}(t) \text{ and } f_{j}^{*}(t) ) \\
 \end{align*}
 $$ 
 
-Therefore we have now converted $ x(t) $ into a vector $ \underline{x} $.
+
+We can convert any $ x(t) $ into a vector $ \underline{x} $ using the following:
+
+$$ \Large \color{blue}{ \underline{x} = \{ x_{j} \} = \Big\{ \int_{-\infty}^{\infty} x(t) f_{j}^{*}(t) dt \Big\} } $$
 
 
 Similarly we can derive the energy formulae in vector form as:
