@@ -20,25 +20,35 @@ $ \large A^{*T} = A  $
 
 Hermitian matrix has **real eigenvalues** and **orthognal eigenvectors** $ \mathbf{u_{i}}^{\mathbf{H}} \mathbf{u_{j}} = 0 $
 
-A matrix $ M^{\mathbf{H}} M $ is always Hermitian since $ ( M^\mathbf{H} M )^{\mathbf{H}} = M^{\mathbf{H}} M $.
- 
+### Symmetric Matrix (T : 1) [Real Case]
+
+</br>
+
 ## Unitary Matrix (H : -1)
 
 $$ \large U^{\mathbf{H}} = U^{-1} $$
 
 $ \large U^{\mathbf{H}} U = I $
 
+### Orthognal Matrix (T : -1) [Real Case]
+
+
 </br>
 
 ## Positive Definite Matrix
 
-**A positive definite matrix has all eigenvalues > 0.**
+**A positive definite matrix has all eigenvalues > 0 and must be Hermitian.**
 
 $$ \Large Re( \ \underline{x}^{H} A \underline{x} \ ) > 0 \qquad \small( \text{ for all non-zero } \underline{x} ) $$
 
+**Note: Semi-definite means $ \ge 0 $. Negative definite means $ < 0 $.**
 
 In the **real case**, this simplifies to:
 $$ \large \underline{x}^{T} A \underline{x} > 0 \qquad \small( \text{ for all non-zero } \underline{x} ) $$
+
+</br>
+
+A matrix $ M^{\mathbf{H}} M $ is always Hermitian since $ ( M^\mathbf{H} M )^{\mathbf{H}} = M^{\mathbf{H}} M $ and also always **positive semi-definite**.
 
 </br><hr>
 
