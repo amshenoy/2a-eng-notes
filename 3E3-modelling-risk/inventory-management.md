@@ -29,8 +29,9 @@ $ SS $ - **Safety stock** / Stock Threshold
 </br>
 
 #### Reorder level
-$$ \Large R = d \cdot L + SS $$
+$$ \Large R = d \cdot L + SS = \mu + SS $$
 
+$ \mu = d \cdot L $ - **Demand during lead time** </br>
 $ d = D/T $ - **Average demand per unit time** </br>
 $ L $ - **Lead time** (Time between supply order and delivery ) </br>
  
