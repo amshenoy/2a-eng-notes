@@ -12,17 +12,33 @@ Note: In the complex case, $ \mathbf{x} \cdot \mathbf{y} \ne \mathbf{y} \cdot \m
 
 </br>
 
-## Hermitian Matrix
+## Hermitian Matrix (H : 1)
 
-A matrix $ A $ is Hermitian if $ \large A = A^{*T} $ ie. $ \large A^{\textbf{H}} = A $.
+$$ \large A^{\textbf{H}} = A $$
+
+$ \large A^{*T} = A  $
 
 Hermitian matrix has **real eigenvalues** and **orthognal eigenvectors** $ \mathbf{u_{i}}^{\mathbf{H}} \mathbf{u_{j}} = 0 $
 
-## Unitary Matrix
+A matrix $ M^{\mathbf{H}} M $ is always Hermitian since $ ( M^\mathbf{H} M )^{\mathbf{H}} = M^{\mathbf{H}} M $.
+ 
+## Unitary Matrix (H : -1)
 
+$$ \large U^{\mathbf{H}} = U^{-1} $$
+
+$ \large U^{\mathbf{H}} U = I $
+
+</br>
 
 ## Positive Definite Matrix
 
+**A positive definite matrix has all eigenvalues > 0.**
+
+$$ \Large Re( \ \underline{x}^{H} A \underline{x} \ ) > 0 \qquad \small( \text{ for all non-zero } \underline{x} ) $$
+
+
+In the **real case**, this simplifies to:
+$$ \large \underline{x}^{T} A \underline{x} > 0 \qquad \small( \text{ for all non-zero } \underline{x} ) $$
 
 </br><hr>
 
