@@ -126,6 +126,8 @@ $$
 $$ \Large \therefore F(Q^{*}) = \dfrac{p-c}{p} $$ 
 where $ F(x) $ is the CDF of the r.v $ D $. 
 
+#### Note: For a normal distribution we can use the standard distribution table by converting to the standard form:
+$ F_{D}(Q) = F_{Z}\Big(\dfrac{Q-\mu}{\sigma}\Big) $
 
 </br>
 
