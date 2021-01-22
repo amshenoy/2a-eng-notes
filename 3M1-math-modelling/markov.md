@@ -58,8 +58,11 @@ $ \Lambda $ - Diagonal Matrix of Eigenvalues
 
 $ Q $ - Normalised Eigenvectors as Columns
 
-$$ \Large \underline{x}_{N} = \underline{x}_{0} \ P^{N} = \underline{x}_{0} \ (Q \Lambda^{N} Q^{T}) $$
+$$ \Large \underline{x}_{N} = \underline{x}_{0} \ P^{N} = \underline{x}_{0} \ (Q \Lambda^{N} Q^{-1}) $$
 
+#### Note that for a real and symmetric P, the eigenvectors for different eigenvalues are orthognal, ie. use $ Q \Lambda^{N} Q^{T} $.
+
+</br>
 
 #### 2) Eigen-Summation
 
