@@ -192,17 +192,38 @@ To find an optimal reorder point $ R^{*} $:
 
 > **EOQ** with stochastic demand $ D $
 
-$$ \Large \pi(R,Q) = h (\dfrac{Q}{2} + \underbrace{R - \mu}_{SS}) + K \dfrac{D}{Q} + b \ n(R) \ \dfrac{D}{Q}$$
+$$ \Large \pi(R,Q) = h (\dfrac{Q}{2} + \underbrace{R - \mu}_{SS}) + K \dfrac{D}{Q} + B(R) \ \dfrac{D}{Q}$$
 
-$ n(R) $ - Expected shortage per cycle
+$ B(R) $ - Total shortage cost per cycle as function of $ R $
+
+
+$$ \Large E( \pi(R,Q) ) $$
+
+(TBD, consider D as D_{mu})
+
+### Fixed Cost per Stockout
+
+
+### Fixed Cost per Unit ($ B(R) = b \ n(R) $)
 
 $$
 n(R) = \begin{cases}
 0 \qquad \qquad D < R \\
 D-R \qquad D > R 
 \end{cases}\\
-\therefore n(R) = \int_{R}^{\infty} (x-R) f(x) dx
+\therefore E( n(R) ) = \int_{R}^{\infty} (x-R) f(x) dx = 
 $$
+
+### Fixed Cost per Unit per Time
+
+
+</br>
+
+### Optimal QR
+
+#### Solutions
+
+#### Iteration
 
 1) \dfrac{}{}
 
