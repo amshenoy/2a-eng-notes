@@ -229,7 +229,7 @@ $$
 \begin{align*}
 E( B(R) ) &= b \ E(n(R)) \\
 &= b \int_{R}^{\infty} (x-R) f(x) dx \\ \\
-&= b \ \sigma_{d} L \Big(R\Big) \quad \small (\text{if } f(x) \text{ is a normal distribution} )\\
+&= b \ L \Big(R\Big) \quad \small (\text{if } f(x) \text{ is a normal distribution} )\\
 &= b \ \sigma_{d} L_{z} \Big(\dfrac{R-d_{\mu}}{\sigma_{d}}\Big) \quad \small (\text{if } f(x) \text{ is a normal distribution} )
 \end{align*}
 $$
@@ -265,7 +265,7 @@ $$
 \begin{align*}
 (1) \qquad h + \Bigg(- \alpha_{1} f(R) \Bigg) \dfrac{d_{\mu}}{Q} &= 0\\
 (2) \qquad h + \Bigg( b ( 1-F(R)) \Bigg) \dfrac{d_{\mu}}{Q} &= 0 \\
-(3) \qquad h + \Bigg( - \dfrac{\alpha_{3}}{d_{\mu}} \ \sigma_{d} \ L\big(R\big) \Bigg) \dfrac{d_{\mu}}{Q} &= 0
+(3) \qquad h + \Bigg( - \dfrac{\alpha_{3}}{d_{\mu}} \ \sigma_{d} \ L_{z}\big(\dfrac{R-d_{\mu}}{\sigma_{d}}\big) \Bigg) \dfrac{d_{\mu}}{Q} &= 0
 \end{align*}
 $$
 
