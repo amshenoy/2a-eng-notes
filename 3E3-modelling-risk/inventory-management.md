@@ -1,5 +1,7 @@
 # Inventory Management
 
+<hr><hr>
+
 # Introduction
 
 ### Considerations
@@ -10,6 +12,7 @@
 
 **Safety stock (SS)**: How much safety stock should we maintain? 
 
+</br><hr><hr></br>
 
 # Deterministic Models (EOQ)
 
@@ -136,17 +139,17 @@ $$ \Large \therefore F(Q^{*}) = \dfrac{p-c}{p} $$
 where $ F(x) $ is the CDF of the r.v $ D $. 
 
 #### Note: For a normal distribution we can use the standard distribution table by converting to the standard form:
-$ F_{D}(Q) = F_{Z}\Big(\dfrac{Q-\mu}{\sigma}\Big) $
+$ \large F_{D}(Q) = F_{Z}\Big(\dfrac{Q-\mu}{\sigma}\Big) $
 
 </br><hr></br>
 
-## Lost Sales $ (R, S) $ Policy
+# Lost Sales $ (R, S) $ Policy
 
 (**(s, S)** in lecture notes)
 
 > A variation of the newsvendor model
 
-### Expected Profit
+## Expected Profit
 
 $$ \large P_{o}(R, S) = p ( \mu_{D} - E_{b}[S] ) - c (S-R) + e E_{e}[S] - b E_{b}[S] - K $$
 
@@ -166,16 +169,16 @@ $$ \large P(S) = (p+b-e) \ E(\min(S, D)) − (c-e)S $$
 
 </br>
 
-### Optimal Stock Level
+## Optimal Stock Level
 
 $$ \large F(S^{*}) = \dfrac{(p+(b-e)) - (c-e)}{(p+(b-e))} $$ 
 
 </br>
 
-### Expected Profit with No Orders (S=R and no K)
+## Expected Profit with No Orders (S=R and no K)
 $$ \large P_{n}(R) = p ( \mu_{D} - E_{b}[R] ) + e E_{e}[R] - b E_{b}[R] $$
 
-### Optimal Reorder Level
+## Optimal Reorder Level
 
 To find an optimal reorder point $ R^{*} $:
 
@@ -186,47 +189,100 @@ To find an optimal reorder point $ R^{*} $:
 
 </br><hr></br>
 
-## Backorder $ (R, Q) $ Policy
+# Backorder $ (R, Q) $ Policy
 
 (**(s, Q)** in lecture notes and **(Q,R)** in lecture slides)
 
-> **EOQ** with stochastic demand $ D $
+> **EOQ** with stochastic demand per unit time $ d $
 
-$$ \Large \pi(R,Q) = h (\dfrac{Q}{2} + \underbrace{R - \mu}_{SS}) + K \dfrac{D}{Q} + B(R) \ \dfrac{D}{Q}$$
+**Constant lead time but random cycle time.**
+
+## Total Cost per unit time
+$$ \Large \pi(R,Q) = h (\dfrac{Q}{2} + \underbrace{R - d L}_{SS}) + K \dfrac{d}{Q} + B(R) \ \dfrac{d}{Q}$$
 
 $ B(R) $ - Total shortage cost per cycle as function of $ R $
 
+## Expected Total Cost per unit time
 
-$$ \Large E( \pi(R,Q) ) $$
+$$ \Large E( \pi(R,Q) ) = h (\dfrac{Q}{2} + \underbrace{R - d_{\mu} L}_{SS}) + K \dfrac{d_{\mu}}{Q} + E(B(R)) \ \dfrac{d_{\mu}}{Q} $$
 
-(TBD, consider D as D_{mu})
+## Shortage Cost per unit time
 
-### Fixed Cost per Stockout
+### 1) Fixed Cost per Stockout 
+Cost of Stockout $ \times $ Probability of Stockout
+$$ \Large E(B(R)) = \alpha_{1} P(D > R) = \alpha_{1} (1- F(R)) $$
 
 
-### Fixed Cost per Unit ($ B(R) = b \ n(R) $)
+### 2) Fixed Cost per Unit ($ B(R) = b \ n(R) $)
 
 $$
 n(R) = \begin{cases}
 0 \qquad \qquad D < R \\
 D-R \qquad D > R 
-\end{cases}\\
-\therefore E( n(R) ) = \int_{R}^{\infty} (x-R) f(x) dx = 
+\end{cases}
 $$
-
-### Fixed Cost per Unit per Time
-
 
 </br>
 
-### Optimal QR
+$$
+\Large 
+\begin{align*}
+E( B(R) ) &= b \ E(n(R)) \\
+&= b \int_{R}^{\infty} (x-R) f(x) dx \\ \\
+&= b \ \sigma_{d} L \Big(R\Big) \quad \small (\text{if } f(x) \text{ is a normal distribution} )\\
+&= b \ \sigma_{d} L_{z} \Big(\dfrac{R-d_{\mu}}{\sigma_{d}}\Big) \quad \small (\text{if } f(x) \text{ is a normal distribution} )
+\end{align*}
+$$
 
-#### Solutions
 
-#### Iteration
 
-1) \dfrac{}{}
+### 3) Fixed Cost per Unit per Time
 
+$$ \Large E( B(R) ) = \alpha_{3} \dfrac{1}{2 d_{\mu}} \int_{R}^{\infty} (x-R)^{2} f(x) dx $$
+
+</br>
+
+## Optimal QR
+
+### Solutions
+
+### 1) $ \dfrac{\partial}{\partial Q} E(\pi(R, Q)) = 0 $
+
+$$ \large
+\dfrac{\partial}{\partial Q} \Big( \quad \dfrac{h}{2} Q + (K + E\big( B(R) \big) ) \ \dfrac{d_{\mu}}{Q} \quad \Big) = 0
+$$
+
+$$ Q^{*} = \sqrt{ \dfrac{2d_{\mu} \bigg(K + E\Big( B(R) \Big) \bigg)}{h} } $$
+
+### 2) $ \dfrac{\partial}{\partial R} E(\pi(R, Q)) = 0 $
+
+$$ \Large
+\dfrac{\partial}{\partial R} \Big( \quad \dfrac{h}{2} R + E\big( B(R) \big) \ \dfrac{d_{\mu}}{Q} \quad \Big) = 0
+$$
+
+#### Solutions for different shortage types
+$$
+\begin{align*}
+(1) \qquad h + \Bigg(- \alpha_{1} f(R) \Bigg) \dfrac{d_{\mu}}{Q} &= 0\\
+(2) \qquad h + \Bigg( b ( 1-F(R)) \Bigg) \dfrac{d_{\mu}}{Q} &= 0 \\
+(3) \qquad h + \Bigg( - \dfrac{\alpha_{3}}{d_{\mu}} \ \sigma_{d} \ L\big(R\big) \Bigg) \dfrac{d_{\mu}}{Q} &= 0
+\end{align*}
+$$
+
+Rearrange and solve for $ R $ to find optimal $ R^{*} $.
+Use the standard tables to find $ z $ and calculate $ R^{*} = \sigma_{d} z + d_{\mu} $.
+
+### Iteration
+
+Consider **shortage type 1** with **normal r.v** $ d $ (using $ z $ instead of $ R $ is considerably easier for hand calculation avoiding the de/re-normalisation. ):
+
+**Iter 0** (EOQ) &emsp; - &emsp; $ Q_{0} = \sqrt{\dfrac{2 d_{\mu} K}{h}} \qquad z_{0} = fn(Q_{0}) $
+
+**Iter 1** &emsp; - &emsp; $ Q_{1} = \sqrt{\dfrac{2 d_{\mu} (K + b \sigma_{d} L_{z}(z_{0}) )}{h}} \qquad z_{1} = fn(Q_{1}) $
+
+**Iter 2** &emsp; - &emsp; $ Q_{2} = \sqrt{\dfrac{2 d_{\mu} (K + b \sigma_{d} L_{z}(z_{1}) )}{h}} \qquad z_{2} = fn(Q_{2}) $
+
+### . . .
 
 </br><hr></br>
 
