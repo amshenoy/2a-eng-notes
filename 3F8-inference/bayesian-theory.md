@@ -1,6 +1,8 @@
 # Bayesian Theory
 $$ \text{Bayes' Theorem} \qquad p(B|A) = \dfrac{p(B)}{p(A)} \ p(A|B) $$
 
+</br>
+
 ## Bayesian Inference
 Replacing $ B $ with some parameter set $ \color{blue}{\boldsymbol{\theta}} $ and replacing $ A $ with some data set $ \color{green}{\boldsymbol{x}} $: 
 
@@ -38,6 +40,8 @@ For general problem-solving, to calculate the posterior distribution:
 \quad \propto \quad
 \underbrace{p(\color{blue}{\boldsymbol{\theta}}, \mathcal{M})}_{\textbf{Prior}} \quad \underbrace{ \prod_{\color{green}{i=1}}^{\color{green}{N}} p(\color{green}{x_{i}} | \color{blue}{\boldsymbol{\theta}}) }_{ \textbf{Likelihood} } \quad \Bigg] $$
 
+</br>
+
 ## Maximum Estimation
 Finding the parameter for which the posterior or the likelihood is maximised.
 ##### Note*: Often easier to compute the maximum of the log of the function and hence give rise to the terms log-likelihood and log-posterior functions.
@@ -51,4 +55,32 @@ $$ \dfrac{d}{d\color{blue}{\theta}} \Big( ln(\color{red}{\small\text{Posterior}}
 
 $$ \color{blue}{\boldsymbol{\theta}}^{\color{red}{\text{ML}}} = \arg \max_{\color{blue}{\boldsymbol{\theta}}} \Big\{ p( \ \color{green}{\boldsymbol{x}} \ |  \ \color{blue}{\boldsymbol{\theta}} \ ) \Big\} $$
 
+</br>
 
+## Decision Theory
+
+Given an **observation** $ \color{green}{x} $, a set of **possible parameter values** $ \color{blue}{\underline{\Theta}} $ and a set of **possible actions** $ \color{red}{\underline{\mathcal{A}}} $, we can calculate the **conditional reward** $ R(\color{red}{a}) $ based on a specific action.
+
+We are essentially weighting the posterior distribution using the reward function for a specific action.
+ 
+#### Continuous Case
+
+$$
+\begin{align*}
+R(\color{red}{a}) &= \bigg\langle R(\color{blue}{\theta}, \color{red}{a}), p(\color{blue}{\theta}|\color{green}{x}) \bigg\rangle \\
+\therefore R(\color{red}{a}) &= \int R(\color{blue}{\theta}, \color{red}{a}) p(\color{blue}{\theta}|\color{green}{x}) d\color{blue}{\theta}
+\end{align*}
+$$
+
+#### Discrete Case
+
+$$ \Large
+\begin{align*}
+R(\color{red}{a}) &= R_{\color{blue}{\theta}, \color{red}{a}}^{T} \ \underline{p}_{\color{blue}{\theta}|\color{green}{x}} \\
+&= \sum_{ \color{blue}{\theta} \in \color{blue}{\underline{\Theta}} } R(\color{blue}{\theta}, \color{red}{a}) p(\color{blue}{\theta}|\color{green}{x})
+\end{align*}
+$$
+
+### Optimal Action
+
+$$ \Large \color{red}{a^{*}} = \arg\max_{\color{red}{a} \in \color{red}{\underline{\mathcal{A}}}} R(\color{red}{a}) $$
