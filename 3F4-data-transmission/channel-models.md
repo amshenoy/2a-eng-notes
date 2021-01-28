@@ -62,6 +62,8 @@ $$ \large
 \end{align*}
 $$
 
+$$ \Large \color{blue}{ \underline{y} = \underline{x} + \underline{n} } $$
+
 </br>
 
 ## Noise Vector Characteristic
@@ -90,9 +92,46 @@ These results for the discrete version are exactly the same as the continuous ve
 
 ## Optimal Detection
 
+### Maximum a Posteriori (MAP) [Optimal]
+
+$$ \Large \color{green}{
+\begin{align*}
+\hat{\underline{x}}_{MAP} &= \arg_{\underline{s}_{i} \in \mathcal{S}} \max P(\underline{x} = \underline{s}_{i} | \underline{y}) \\
+\hat{\underline{x}}_{MAP} &= \arg_{\underline{s}_{i} \in \mathcal{S}} \max P(\underline{x} = \underline{s}_{i}) p(\underline{y} | \underline{x} = \underline{s}_{i}) \\
+\end{align*}
+}
+$$
+
+### Maximum Likelihood
+
+**ML is equivalent to MAP and hence optimal only when $ P(\underline{x} = \underline{s}_{i}) = \text{Constant} $ (ie. uniform prior):**
+ 
+$$ \Large \color{blue}{
+\begin{align*}
+\hat{\underline{x}}_{ML} &= \arg_{\underline{s}_{i} \in \mathcal{S}} \max  p(\underline{y} | \underline{x} = \underline{s}_{i}) \\
+\end{align*}
+}
+$$
+
+#### ML Detection in AWGN
+
+Consider the **likelihood PDF** $ \color{red}{ p(\underline{y} | \underline{x} = \underline{s}_{i}) = p_{n}(\underline{y} - \underline{s}_{i}) = \prod_{i} p_{n}(y_{i} - s_{i}) } $.
+
+Minimising the **log likelihood** for the iid Gaussian PDF $ \mathcal{N}(0, \dfrac{N_{0}}{2})$ :
+
+$$ \Large \color{purple}{ \hat{\underline{x}}_{ML} = \arg_{\underline{s}_{i} \in \mathcal{S}} \min |\underline{y} - \underline{s}_{i}|^{2} } $$
 
 
+### Probability of Detection Error
 
+$$ \color{blue}{  P_{e} = \sum_{i} P(\underline{x} = \underline{s}_{i}) P(\hat{\underline{x}}^{ML} \ne \underline{s}_{i} | \underline{x} = \underline{s}_{i}) } $$
 
+For **constant/uniform prior**:
 
-
+$$ \color{purple}{  
+\begin{align*}
+P_{e} &= P(\hat{\underline{x}}^{ML} \ne \underline{s}_{i} | \underline{x} = \underline{s}_{i}) \\
+&= 1 - P(\hat{\underline{x}}^{ML} = \underline{s}_{i} | \underline{x} = \underline{s}_{i}) \\
+\end{align*}
+}
+$$
