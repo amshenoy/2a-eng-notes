@@ -150,17 +150,74 @@ $$ \therefore \dfrac{||\delta \underline{x}||}{||\underline{x} + \delta \underli
  $$
 
 
-
+### Note: Large $ \kappa(A) $ is bad since any error is amplified.
 
 
 </br><hr></br>
 
 # Least Squares Fitting
 
-$$ \mathbf{A} \mathbf{x} = \mathbf{b} $$
+Consider $ A $ as a $ m \times n $ matrix:
 
-## Pseudoinverse
+$$ \Large \mathbf{A}^{H} \mathbf{A} \mathbf{x} = \mathbf{A}^{H} \mathbf{b} $$
 
+This is derived by calculating $ \large r(\hat{\underline{x}}) = \min ||A \hat{\underline{x}} - \underline{b} ||_{2}^{2} $ by considering the **Gateaux derivative** to be equal to 0 (ie. minimise the residual):
+$$ \dfrac{d \ r(\hat{\underline{x}} + \epsilon \underline{v})}{d \epsilon}|_{\epsilon=0} = 0$$
+
+
+
+
+## Pseudoinverse (Moore-Penrose)
+$$ \Large \mathbf{x} = ( \mathbf{A}^{H} \mathbf{A} )^{-1} \mathbf{A}^{H} \mathbf{b} = \mathbf{A}^{+} \mathbf{b} $$
+
+$ A^{+} = ( A^{H} A )^{-1} A^{H} $ is the pseudoinverse of $ A $.
+
+This is only valid when $ A $ is **full rank** (**columns are linearly independent**). 
+
+- If $ m < n $, $ A^{+} = ( A^{H} A )^{-1} A^{H} $.
+- If $ m > n $, $ A^{+} = A^{H} ( A A^{H} )^{-1} $.
+
+#### Note: If $ A $ is not full rank, then there are multiple solutions to the least squares problem and cannot be done with this method.
+
+</br>
+
+# Solving $ A x = b $
+
+- Direct Methods such as LU Decomposition
+- Iterative Methods
+- Conjugate Gradient Method
+
+## Power-Iteration (Iterative)
+
+Writing $ \underline{x} $ as a linear combination of eigenvectors $ \underline{u}_{i} $ of $ A $:
+
+$$ \underline{x} = \sum_{i} c_{i} \underline{u}_{i} $$
+
+Then the following is true where $ \lambda_{i} $ are the eigenvalues of $ A $:
+
+$$ A^{k} \underline{x} = \sum_{i} c_{i} \lambda_{i}^{k} \underline{u}_{i} $$
+
+### Rayleigh Quotient
+
+If we have an estimate of an eigenvector $ \underline{u} $ of $ A $, then we can estimate a corresponding eigenvalue $ \lambda^{*} $ by computing $ \min ||A\underline{u}-\lambda^{*}\underline{u} ||_{2}  $:
+
+$$ \lambda^{*} = R(A, \underline{u}) = \dfrac{\underline{u}^{H}A\underline{u}}{\underline{u}^{H}\underline{u}}$$
+
+#### Note: $ A $ must be Hermitian
+
+
+## Stationary Methods
+
+
+
+
+</br>
+
+## Conjugate Gradient
+
+
+
+</br>
 
 </br><hr></br>
 
