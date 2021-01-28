@@ -2,6 +2,15 @@
 
 ## Decision Trees
 
+
+1. **Decision nodes** (square boxes) are where decisions among a number of options or strategies are made by the decision maker.
+
+2. **Event nodes** (__circles__) are where future states are decided with assigned probabilities to the events.
+
+3. **Final nodes** (__leaves__) correspond to a scenario ie. a decision-event sequence with a specified outcome and payoff.
+
+</br>
+
 **Decision** Node $ \rightarrow $ **Probability** Node
 
 Simplify to:
