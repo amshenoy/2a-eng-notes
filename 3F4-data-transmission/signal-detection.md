@@ -1,4 +1,4 @@
-# Channel Models
+# Signal Detection
 
 ## General LTI Noise Model 
 $$ \large y(t) = h(t) * x(t) + n(t) $$
