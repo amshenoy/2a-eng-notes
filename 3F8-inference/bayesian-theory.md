@@ -84,3 +84,11 @@ $$
 ### Optimal Action
 
 $$ \Large \color{red}{a^{*}} = \arg\max_{\color{red}{a} \in \color{red}{\underline{\mathcal{A}}}} R(\color{red}{a}) $$
+
+
+## Prediction
+
+Given data $ \color{green}{x} $ and parameter $ \color{blue}{\theta} $, we want to determine the probability of seeing a new datapoint $ x_{new} $:
+
+$$ \Large P(x_{new} | \color{green}{x} ) = \int p(x_{new} | \color{blue}{\theta}) p(\color{blue}{\theta}|\color{green}{x}) d\color{blue}{\theta} $$
+
