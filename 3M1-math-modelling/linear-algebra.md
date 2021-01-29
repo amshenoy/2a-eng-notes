@@ -320,6 +320,8 @@ For Hermitian matrices $ A $ &emsp; ($ Q^{-1} = Q^{H} $) &emsp; - &emsp; $ A = Q
 
 > If $ A $ is **Hermitian**, then **SVD is equivalent to eigen-decomposition / diagonalisation**.
 
+$$ \large A = \sum_{i} \lambda_{i} \underbrace{ \underline{u}_{i} \ \underline{u}_{i}^{H} }_{\text{Rank 1 Matrix}} $$
+
 > For all other $ A $, we perform **eigen-decomposition** of $ A^{H} A : \qquad A^{H} A = Q \Lambda Q^{H} $
 
 Consider the matrices: </br>
