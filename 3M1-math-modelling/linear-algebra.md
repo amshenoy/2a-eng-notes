@@ -179,13 +179,14 @@ This is only valid when $ A $ is **full rank** (**columns are linearly independe
 
 #### Note: If $ A $ is not full rank, then there are multiple solutions to the least squares problem and cannot be done with this method.
 
-</br>
+</br><hr></br>
 
 # Solving $ A x = b $
 
-- Direct Methods such as LU Decomposition
+- Direct Methods (eg. LU Decomposition)
 - Iterative Methods
-- Conjugate Gradient Method
+
+</br>
 
 ## Power-Iteration (Iterative)
 
@@ -195,7 +196,7 @@ $$ \underline{x} = \sum_{i} c_{i} \underline{u}_{i} $$
 
 Then the following is true where $ \lambda_{i} $ are the eigenvalues of $ A $:
 
-$$ A^{k} \underline{x} = \sum_{i} c_{i} \lambda_{i}^{k} \underline{u}_{i} $$
+$$ \large A^{k} \underline{x} = \sum_{i} c_{i} \lambda_{i}^{k} \underline{u}_{i} $$
 
 ### Rayleigh Quotient
 
@@ -205,13 +206,50 @@ $$ \lambda^{*} = R(A, \underline{u}) = \dfrac{\underline{u}^{H}A\underline{u}}{\
 
 #### Note: $ A $ must be Hermitian
 
+</br></br>
 
-## Stationary Methods
+## Stationary Methods (Iterative)
 
+Split $ A $ into 2 matrices $ N$ and $ P $ giving $ A = N - P $:
 
+Solve $ N \underline{x} = \underline{b} + P\underline{x} $ which can be solved by iteration in the following way for an estimate $ \underline{x}_{k} $:
 
+$$ \large N \underline{x}_{k+1} = \underline{b} + P\underline{x}_{k} $$
+
+### Methods
+* Richardson &emsp; - &emsp; $ N = I $
+* Jacobi &emsp; - &emsp; $ N = diag(A) $
+* Gauss-Seidel &emsp; - &emsp; $ N = L(A) $ (Lower Triangular of A)
 
 </br>
+
+### Convergence
+
+Consider the error $ \large \underline{e}_{k} = \underline{x}_{exact} - \underline{x}_{k} $ :
+
+$$ \large
+\begin{align*}
+N \underline{e}_{k+1} &= P \underline{e}_{k} \\
+\underline{e}_{k+1} &= N^{-1} P \underline{e}_{k} \\
+\therefore \underline{e}_{k} &= ( N^{-1} P )^{k} \ \underline{e}_{0}
+\end{align*}
+$$
+
+Now we can perform **power-iteration** on this simplified form.
+We can **express $ \underline{e}_{0} $ as a linear combination of the eigenvectors $ \underline{u}_{i} $ of $ N^{-1} P $** :
+
+$$ \large \underline{e}_{0} = \sum_{i} c_{i} \underline{u}_{i} $$
+
+$$ \large \underline{e}_{k} = (N^{-1} P)^{k} \underline{e}_{0} = \sum_{i} c_{i} \lambda_{i}^{k} \underline{u}_{i} $$
+
+
+### Convergence if &emsp; $ \large |\lambda \Big( N^{-1} P \Big)|_{max} < 1 $
+
+#### Note: $ |\lambda|_{max} $ of a matrix is known as the *spectral radius*.
+
+
+
+</br></br>
 
 ## Conjugate Gradient
 
