@@ -301,6 +301,47 @@ $ P^{-1} $ must be efficient to apply and close to $ A^{-1} $.
 
 # Singular Value Decomposition
 
+> SVD can diagonalise any matrix (even rectangular matrices).
+
+## Eigen-Decomposition (Diagonalisation)
+
+For all real invertible matrices $ A $ &emsp; - &emsp;  $ A = Q \Lambda Q^{-1} $ 
+
+For real symmetric matrices $ A $ &emsp; ($ Q^{-1} = Q^{T} $) &emsp; - &emsp; $ A = Q \Lambda Q^{T} $ &emsp; and &emsp; $ \Lambda = Q^{T} A Q $
+
+For Hermitian matrices $ A $ &emsp; ($ Q^{-1} = Q^{H} $) &emsp; - &emsp; $ A = Q \Lambda Q^{H} $ &emsp; and &emsp; $ \Lambda = Q^{H} A Q $
+
+### Problems
+- Only valid for square matrices
+- Defective matrices cannot be diagonalised
+
+
+## Derivation
+
+> If $ A $ is **Hermitian**, then **SVD is equivalent to eigen-decomposition / diagonalisation**.
+
+> For all other $ A $, we perform **eigen-decomposition** of $ A^{H} A : \qquad A^{H} A = Q \Lambda Q^{H} $
+
+Consider the matrices: </br>
+$ \large A (m \times n) $ </br>
+$ \large U \in \mathbb{C}(m \times m) $ (Unitary) </br>
+$ \large \Sigma \in \mathbb{R}(m \times n) $ (Diagonal)</br>
+$ \large V \in \mathbb{C}(n \times n) $ (Unitary) </br>
+
+If $ \Large A = U \Sigma V^{H} $,
+
+$$ \large A^{H} A = V (\Sigma^{H} \Sigma) V^{H} $$
+$$ \large A A^{H} = U (\Sigma \Sigma^{H}) U^{H} $$
+
+$ \Sigma^{H} \Sigma $ - Diagonal matrix of eigenvalues of $ A^{H} A $ </br>
+$ \large V $ - Normalised eigenvectors of $ A^{H} A $ </br>
+
+$ \Sigma \Sigma^{H} $ - Diagonal matrix of eigenvalues of $ A A^{H} $ </br>
+$ \large U $ - Normalised eigenvectors of $ A A^{H} $ </br>
+
+$ \large \Sigma $ - Square root of the eigenvalues of $ A^{H} A $ or $ A A^{H} $
+
+#### Important: After calculating, switch the signs of the eigenvectors appropriately so that $ AV = U \Sigma $.
 
 
 
