@@ -223,9 +223,11 @@ $ m_{ji}(0) $ is an updated estimate of the posterior probability (or belief) th
 
 $$ \Large m_{ji}(0) = \dfrac{a_{0}}{a_{0} + a_{1}}, \qquad m_{ji}(1) = \dfrac{a_{1}}{a_{0} + a_{1}}  $$
 
-Application of Bayes' Rule $$ \Large a_{x} = P(c_{j}=x \ | \ y_{j}) P(c_{j}=x) = P(c_{j}=x \ | \ y_{j}) \prod_{i'\ne i} m_{i' j}(x) $$
+Application of Bayes' Rule $$ \Large a_{x} = P(c_{j}=x \ | \ y_{j}) \prod_{i'\ne i} m_{i' j}(x) $$
 
 ### LLR Update
+
+$$ \large L_{ji} = \ln \dfrac{m_{ji}(0)}{m_{ji}(1)} $$
 
 $$ \Large \color{blue}{ L_{ji} = L(y_{j}) + \sum_{i' \ne i} L_{i' j} } $$
 
@@ -241,6 +243,8 @@ probability of an even number of ones to make $ c_{j} = 0 $ ).
 $$ \Large m_{ij}(0) = \dfrac{1}{2} + \dfrac{1}{2} \prod_{j' \ne j }(1-2m_{j' i}(1)) $$
 
 ### LLR Update
+
+$$ \large L_{ij} = \ln \dfrac{m_{ij}(0)}{m_{ij}(1)} $$
 
 $$ \Large \color{blue}{ \tanh( \dfrac{1}{2} L_{ij} ) = \prod_{j' \ne j} \tanh( \dfrac{1}{2} L_{j' i} ) } $$
 
