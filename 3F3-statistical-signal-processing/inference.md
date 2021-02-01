@@ -5,6 +5,9 @@
 ### Linear Differentiation
 $ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{b}^{T} \underline{x} \Big) = \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} \underline{b} \Big) = \underline{b} $
 
+### Matrix Differentiation
+$ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( B \underline{x} \Big) = B $
+
 ### Quadratic Differentiation
 $ \Large \dfrac{\partial}{\partial \underline{x}} \enspace \Big( \underline{x}^{T} B \underline{x} \Big) = (B+B^{T}) \underline{x} \qquad (= 2 B \underline{x} \quad \text{ if B is symmetric } ) $
 
