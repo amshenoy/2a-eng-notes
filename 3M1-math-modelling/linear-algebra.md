@@ -322,13 +322,17 @@ For Hermitian matrices $ A $ &emsp; ($ Q^{-1} = Q^{H} $) &emsp; - &emsp; $ A = Q
 
 $$ \large A = \sum_{i} \lambda_{i} \underbrace{ \underline{u}_{i} \ \underline{u}_{i}^{H} }_{\text{Rank 1 Matrix}} $$
 
-> For all other $ A $, we perform **eigen-decomposition** of $ A^{H} A : \qquad A^{H} A = Q \Lambda Q^{H} $
+$ \underline{u}_{i} $ is an eigenvector of $ A $ (column of $ U $) </br>
+$ \lambda_{i} $ is an eigenvalue of $ A $ (diagonal value of $ \Lambda $) 
+
+
+> For all other $ A $, we perform **eigen-decomposition** of $ A^{H} A : \qquad A^{H} A = U \Lambda U^{H} $
 
 Consider the matrices: </br>
 $ \large A (m \times n) $ </br>
-$ \large U \in \mathbb{C}(m \times m) $ (Unitary) </br>
-$ \large \Sigma \in \mathbb{R}(m \times n) $ (Diagonal)</br>
-$ \large V \in \mathbb{C}(n \times n) $ (Unitary) </br>
+$ \large U \in \mathbb{C}(m \times m) $ (**Unitary**) </br>
+$ \large \Sigma \in \mathbb{R}(m \times n) $ (**Diagonal**)</br>
+$ \large V \in \mathbb{C}(n \times n) $ (**Unitary**) </br>
 
 If $ \Large A = U \Sigma V^{H} $,
 
@@ -345,7 +349,48 @@ $ \large \Sigma $ - Square root of the eigenvalues of $ A^{H} A $ or $ A A^{H} $
 
 #### Important: After calculating, switch the signs of the eigenvectors appropriately so that $ AV = U \Sigma $.
 
+</br>
 
+We can write this as a summation as with the general eigen-decomposition:
 
+$$ \Large A = \sum_{i}^{r} \sigma_{i} \underbrace{ \underline{u}_{i} \ \ \underline{v}_{i}^{H} }_{\text{Rank 1 Matrix}} $$
 
+$ \large \underline{u}_{i} $ - Column of $ U $ </br>
+$ \large \underline{v}_{i} $ - Column of $ V $ </br>
+$ \large \sigma_{i} $ -  Diagonal value of $ \Sigma $ ("Singular value") </br>
+$ r $ - Rank of A
 
+</br>
+
+### Low-Rank Approximation
+
+For low-rank approximation $ A_{k}$ for $ k < r $, we can consider:
+$$ A_{k} = \sum_{i}^{k} \sigma_{i} \ \underline{u}_{i} \ \ \underline{v}_{i}^{H} $$ 
+
+$ ||A - A_{k}||_{F} \le ||A - B||_{F} $
+
+$ ||A - A_{k}||_{2} \le ||A - B||_{2} $
+
+$ A_{k} $ is the best approximation than any other matrix $ B $ of rank $ k $ in the Frobenius norm and 2-norm.
+
+</br>
+
+## Least-Squares Solution
+
+### Full-Rank Case
+
+$$ \large A = \begin{bmatrix} U_{1}& U_{2}\end{bmatrix}
+\begin{bmatrix}\Sigma_{1} \\ 0 \end{bmatrix} V^{H}
+$$
+
+$ \Large \hat{\underline{x}} = A^{+} \underline{b} = V \Sigma^{+} U^{H} \underline{b} $
+
+$ \Large \Sigma^{+} = \small \begin{bmatrix} \dfrac{1}{\sigma_{1}} & \\ & \ddots \\ & & \dfrac{1}{\sigma_{n}} \\ \end{bmatrix} $
+
+### Rank-Deficient Case
+
+$$ \large A = \begin{bmatrix} U_{1}& U_{2}\end{bmatrix}
+\begin{bmatrix}\Sigma_{1} & 0 \\ 0 & 0 \end{bmatrix} \begin{bmatrix} V_{1}& V_{2}\end{bmatrix}^{H} = U_{1} \Sigma_{1} V_{1}^{H}
+$$
+
+$ \Large \hat{\underline{x}} = A^{+} \underline{b} = V_{1} \Sigma_{1}^{-1} U_{1}^{H} \underline{b} $
