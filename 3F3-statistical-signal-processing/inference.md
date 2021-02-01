@@ -135,6 +135,10 @@ $$ \Large \dfrac{d}{d \underline{\theta}} \underline{e}^{T} \underline{e} = 2 \u
 
 $$ \Large \color{blue}{ \hat{\underline{\theta}}_{\text{OLS}} = (G^{T} G)^{-1} \ G^{T} \underline{x} }$$ 
 
+This is the least squares solution to $ G\underline{\theta} = \underline{x} $:
+
+$ \large \hat{\underline{\theta}} = G^{+} \underline{x} $ where $ G^{+} $ is the pseudoinverse.
+
 </br></br>
 
 ## Maximum Likelihood (ML)
@@ -162,7 +166,9 @@ Given $ \underline{x} = \mathbf{G} \underline{\theta} + \underline{e} $ (Usually
 $$ P(\underline{x} | \underline{\theta}) = P_{e}(\underline{x} - \mathbf{G} \underline{\theta}) $$
 
 
-#### Note: When the error process $ e_{n} $ is independent and gaussian with mean zero and constant variance, the ML estimator is equal to the OLS estimator. 
+#### Note: For Gaussian noise, we are essentially minimising the sum-squared noise (minimising $ ||\underline{x} - \mathbf{G} \underline{\theta}||_{2}^{2} $ )
+
+#### Note: When the error process $ e_{n} $ is independent and gaussian with mean zero and constant variance (ie. constant prior), the ML estimator is equal to the OLS estimator.
 
 </br></br>
 
@@ -175,6 +181,9 @@ $$ \Large \dfrac{d}{d \underline{\theta}} E( (\underline{\hat{\theta}} - \underl
 For solving for $ \hat{\underline{\theta}}_{\text{MMSE}} $, simplifies to the following using the **posterior**:
 
 $$ \Large \color{blue}{ \hat{\underline{\theta}}_{\text{MMSE}} = E (\underline{\theta}|\underline{x}) = \int \underline{\theta}  P(\underline{\theta}|\underline{x}) d \underline{\theta} } $$
+
+MMSE estimator for the Linear Gaussian model:
+$ \hat{\underline{\theta}}_{\text{MMSE}} = \hat{\underline{\theta}}_{\text{MAP}} $ 
 
 </br></br>
 
