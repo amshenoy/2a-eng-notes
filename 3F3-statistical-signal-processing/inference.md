@@ -210,7 +210,9 @@ $$ \large P(\underline{\theta} | \underline{x}) \propto  P(\underline{\theta}) P
 
 ### Example
 
-For the **linear Gaussian model**, $ \Large \hat{\underline{\theta}}_{\text{MAP}} = (G^{T} G + \sigma_{e}^{2} C_{\theta}^{-1})^{-1} (G^{T} \underline{x} + \sigma_{e}^{2} C_{\theta}^{-1} \underline{m_{\theta}})$
+For the **linear Gaussian model** where $ e_{n} \sim \mathcal{N}(0, \sigma_{e}^{2}) $ and the prior is $ \underline{\theta} \sim \mathcal{N}(\underline{m}_{\theta}, C_{\theta})$:
+
+$ \large \hat{\underline{\theta}}_{\text{MAP}} = (G^{T} G + \sigma_{e}^{2} C_{\theta}^{-1})^{-1} (G^{T} \underline{x} + \sigma_{e}^{2} C_{\theta}^{-1} \underline{m_{\theta}})$
 
 
 </br></br>
