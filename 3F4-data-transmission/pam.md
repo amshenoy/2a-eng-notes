@@ -61,7 +61,8 @@ $$
 
 **MAP (Optimal)**
 
-**MAP = ML = Minimum Distance between $ Y_{k} $ and $ S \in \mathcal{S} $ (for AWGN)**
+**MAP = ML (for uniform symbol probability)**
+**ML = Minimum Distance between $ Y_{k} $ and $ S \in \mathcal{S} $ (for AWGN)**
 
 </br>
 
