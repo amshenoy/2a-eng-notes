@@ -158,16 +158,37 @@ $$ \large x(t) =  \sum_{k=-\infty}^{\infty} X_{k} \ p(t-kT - \Theta)  $$
 
 
 
+</br>
+
+$ E(x(t)x(t+\tau)) $ simplifies to the following:
+
+$$ \large  \color{blue}{ R_{x}(\tau) = \dfrac{1}{T} \sum_{m=-\infty}^{\infty} R_{X}[m] R_{p}(\tau - mT) } $$
+
+$ \large R_{x}(\tau) = E(x(t)x(t+\tau)) $ </br>
+$ \large R_{X}[m] = E(X_{k}X_{k+m}) $ </br>
+$ \large R_{p}(\tau) = p(\tau) * p(-\tau) $ </br>
+
+</br>
+
+Taking the **Fourier Transform**:
+
+$$ S_{x}(f) = \dfrac{1}{T} \sum_{m=-\infty}^{\infty} R_{X}[m] \mathcal{F}\{ R_{p}(\tau - mT) \} $$
+
+$$ \large \color{blue}{ S_{x}(f) = |P(f)|^{2} \ \dfrac{1}{T} \sum_{m=-\infty}^{\infty} R_{X}[m] \underbrace{e^{-j 2\pi m f T}}_{\text{Shift from } R_{p}(\tau-mT)} } $$
 
 
+</br>
 
 
-If $ X_{k} $ is **independent**:
-$$ E(X_{k}X_{k+m}) = \begin{cases}
-E(X_{k}^{2}) \qquad m = 0 \\
-0 \qquad \qquad m\ne 0
+### If $ X_{k} $ is **independent**:
+$$ R_{X}[m] = E(X_{k}X_{k+m}) = \begin{cases}
+E(X_{k}^{2}) = E_{s} \qquad m = 0 \\
+0 \qquad \qquad \qquad \quad m\ne 0
 \end{cases}
 $$
+
+and $ R_{x}(\tau) = \dfrac{E_{s}}{T} R_{p}(\tau) $ </br>
+and $ S_{x}(f) = \dfrac{E_{s}}{T} |P(f)|^{2} $
 
 
 
