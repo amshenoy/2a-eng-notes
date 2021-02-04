@@ -46,7 +46,7 @@ $ \lambda > 0 (+ve) $ - Eigenvector goes away from equilibrium (**Diverges**)
 
 </br>
 
-## Solutions of Linear State Equations
+# Solutions of Linear State Equations
 
 $$ 
 \large \color{blue}{
@@ -66,13 +66,17 @@ s\underline{X}(s) - \underline{x}_{0} &= A \underline{X}(s) + B \underline{U}(s)
 &= C (sI-A)^{-1} (\underline{x}_{0} + B \underline{U}(s) )  + D \underline{U}(s) \\
 \end{align*}
 $$
-$$ \large \color{blue}{ \underline{Y}(s) = \underbrace{ C (sI-A)^{-1} \underline{x}_{0} }_{\text{Initial Condition Response}} + \underbrace{ ( C(sI-A)^{-1} B + D) \underline{U}(s) }_{\text{Input Response}} } $$
+$$ \large \color{blue}{ \underline{Y}(s) = \underbrace{ C (sI-A)^{-1} \underline{x}_{0} }_{\text{Initial Condition Response}} + \underbrace{ ( C(sI-A)^{-1} B + D) \underline{U}(s) }_{\text{Input Response} \ G(s) \underline{U}(s)} } $$
+
+#### Note: We can create composite systems from this model as well as find the frequency response.
+
+</br>
+
+### Transfer Function
 
 For $ \underline{x}_{0} = \underline{0} $, $ \underline{Y}(s) = G(s) \underline{U}(s) $:
 
-$$ G(s) = C(sI-A)^{-1} B + D $$
-
-## Poles of G(s)
+$$ \large \color{purple}{ G(s) = C(sI-A)^{-1} B + D } $$
 
 **Poles of G(s)** &emsp; $ \large \color{blue}{ det(sI-A) = 0 } \qquad \small (|G(p)| \rightarrow \infty) $
 
@@ -82,10 +86,26 @@ $$ \large \text{Poles of } G(s) \subseteq \text{Eigenvalues of } A   \qquad ( \ 
 
 </br>
 
-## Initial Condition Response
+## Time Domain Solutions
+
+##### Multiplication in Laplace domain is convolution in time domain and vice versa.
+
+$$ \large \color{blue}{ \underline{x}(t) = e^{At} \underline{x}_{0} + \int_{0}^{t} e^{A(t- \tau)} B \underline{u}(\tau) d\tau } $$
+
+$$ \large \color{blue}{ \underline{y}(t) = C \Big( e^{At} \underline{x}_{0} + \int_{0}^{t} e^{A(t- \tau)} B \underline{u}(\tau) d\tau \Big) \ + D \underline{u}(t) } $$
+
+</br>
+
+### Impulse Response Matrix
+
+$$ \large \color{purple}{ H(t) = \mathcal{L}^{-1}(G(s)) = C e^{At} B + D \delta(t) \qquad t\ge 0 } $$
+
+</br>
+
+### Initial Condition Response
 For $\underline{u}(t) = \underline{0} $:
 
-### Method 1
+#### Method 1
 
 $$ \large
 \begin{align*}
@@ -98,7 +118,9 @@ $$ \Large \color{blue}{ \underline{x}(t) = \mathcal{L}^{-1}\{ (sI-A)^{-1} \} \ \
 
 ##### Note: If we have calculated $ (sI-A)^{-1} $, it will most likely be easier to compute $ \mathcal{L}^{-1}\{ (sI-A)^{-1} \} $, therefore use this method.
 
-### Method 2
+</br>
+
+#### Method 2
 
 $$
 \large
@@ -112,7 +134,7 @@ $$
 \Large \color{blue}{ \underline{x}(t) = e^{A t} \underline{x}_{0} }
 $$
 
-#### Change of State Coordinates
+##### Change of State Coordinates
 
 Let $ A = Q \Lambda Q^{-1} $, then $ A^{k} = Q \Lambda^{k} Q^{-1} $ :
 
@@ -127,6 +149,8 @@ $$ \Large \color{green}{ e^{At} = Q e^{\Lambda t} Q^{-1} } $$
 
 ##### Note: $ e^{At} $ is not just the exponential of every term! The diagonal elements are the only elements for which this works! Hence the exponential of a diagonal matrix is indeed a diagonal matrix with the exponential of the diagonal terms. This is why we need to use the above method to compute.
 
+</br>
+
 #### Matrix Exponent Rules
 $ e^{A+B} = e^{A} e^{B} $ only when $ AB = BA $. Since $ t $ is a scalar, we can split $ e^{A(t_{1} + t_{2})} = e^{A t_{1}} e^{A t_{2}} = e^{A t_{2}} e^{A t_{1}} $
 
@@ -135,4 +159,5 @@ $ (e^{A t})^{-1} = e^{-At} $
 $ \dfrac{d}{dt}(e^{At}) = A e^{At} = e^{At} A $
 
 $ \int (e^{At}) dt = A^{-1} ( e^{At} - 1) = A^{-1} e^{At} - A^{-1} $
+
 
