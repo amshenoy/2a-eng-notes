@@ -210,16 +210,21 @@ $$ \lambda^{*} = R(A, \underline{u}) = \dfrac{\underline{u}^{H}A\underline{u}}{\
 
 ## Stationary Methods (Iterative)
 
-Split $ A $ into 2 matrices $ N$ and $ P $ giving $ A = N - P $:
+Split $ A $ into 2 matrices $ N$ and $ P $ giving $ \large A = N - P $:
 
 Solve $ N \underline{x} = \underline{b} + P\underline{x} $ which can be solved by iteration in the following way for an estimate $ \underline{x}_{k} $:
 
-$$ \large N \underline{x}_{k+1} = \underline{b} + P\underline{x}_{k} $$
+$$ \large 
+\begin{align*}
+N \underline{x}_{k+1} &= \underline{b} + P\underline{x}_{k} \\
+\underline{x}_{k+1} &= N^{-1} ( \underline{b} + P\underline{x}_{k} )
+\end{align*}
+$$
 
 ### Methods
-* Richardson &emsp; - &emsp; $ N = I $
-* Jacobi &emsp; - &emsp; $ N = diag(A) $
-* Gauss-Seidel &emsp; - &emsp; $ N = L(A) $ (Lower Triangular of A)
+* **Richardson** &emsp; &emsp; - &emsp; $ \large N = I $
+* **Jacobi** &emsp; &emsp; &emsp; &emsp; - &emsp; $ \large N = diag(A) $
+* **Gauss-Seidel** &emsp; - &emsp; $ \large N = L(A) $ (Lower Triangular of A)
 
 </br>
 
