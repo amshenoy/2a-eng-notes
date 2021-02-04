@@ -197,4 +197,4 @@ and $ S_{x}(f) = \dfrac{E_{s}}{T} |P(f)|^{2} $
 $$ \large \color{blue}{ P_{avg} = \int_{-\infty}^{\infty} |P(f)|^{2} df } $$
 
 
-
+#### Note: $ |P(f)|^{2} = G(f) $
