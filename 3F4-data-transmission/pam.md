@@ -180,7 +180,7 @@ $$ \large \color{blue}{ S_{x}(f) = |P(f)|^{2} \ \dfrac{1}{T} \sum_{m=-\infty}^{\
 </br>
 
 
-### If $ X_{k} $ is **independent**:
+#### If $ X_{k} $ is **independent**:
 $$ R_{X}[m] = E(X_{k}X_{k+m}) = \begin{cases}
 E(X_{k}^{2}) = E_{s} \qquad m = 0 \\
 0 \qquad \qquad \qquad \quad m\ne 0
@@ -190,6 +190,11 @@ $$
 and $ R_{x}(\tau) = \dfrac{E_{s}}{T} R_{p}(\tau) $ </br>
 and $ S_{x}(f) = \dfrac{E_{s}}{T} |P(f)|^{2} $
 
+</br>
+
+### Average Power
+
+$$ \large \color{blue}{ P_{avg} = \int_{-\infty}^{\infty} |P(f)|^{2} df } $$
 
 
 
