@@ -57,7 +57,15 @@ $ \Large \color{blue}{ Y_{m} = r(mT) = y(t) * p(-t) |_{t=mT} = \big( x(t) + n(t)
 
 **ML = Minimum Distance between $ Y_{k} $ and $ S \in \mathcal{S} $ (for AWGN)**
 
-#### Note: In general we will only consider solving problems with minimum distance.
+##### Note: In general we will only consider solving problems with minimum distance.
+
+### Probability of Detection Error
+
+$$ \text{Symbol Probability of Error} P_{e}(x) = P(\hat{X} \ne X | X = x ) $$
+
+$$ \text{Total Probability of Error} \qquad P_{e} = \sum_{x \in \mathcal{X}} P(X=x) P(\hat{X} \ne X | X = x ) $$
+
+#### Rewrite $ \hat{X} \ne X $ as an inequality in terms of $ Y $ ie. $ X + N $ and rerrange for $ N $.
 
 </br>
 
@@ -75,8 +83,7 @@ $$ \large E_{s} = E(\mathcal{S}^{2}) = \dfrac{1}{len(\mathcal{S})} \sum_{i}^{len
 
 $ \large E_{s} = b \ E_{bit} = \log_{2}(M) \enspace E_{bit} $
 
-
-</br>
+</br><hr></br>
 
 ## Nyquist Pulse Criterion
 
@@ -140,6 +147,27 @@ Therefore we can design $ P(f) $ and $ Q(f) $ or just consider $ P(f) = Q(f) = \
 $ p(t) = \mathcal{F}^{-1}(P(f)) $
 
 #### Note: For $ p(t) $ to be causal we have to truncate and delay the time-domain function. This can lead to non-idealities.
+
+</br><hr></br>
+
+## Power Spectrum Density
+
+Consider the original time signal with a random time delay/dither $ \Theta \sim U(0, 1) $ with the symbols generated from the discrete random **WSS process** $ X_{k} $ :
+
+$$ \large x(t) =  \sum_{k=-\infty}^{\infty} X_{k} \ p(t-kT - \Theta)  $$
+
+
+
+
+
+
+
+If $ X_{k} $ is **independent**:
+$$ E(X_{k}X_{k+m}) = \begin{cases}
+E(X_{k}^{2}) \qquad m = 0 \\
+0 \qquad \qquad m\ne 0
+\end{cases}
+$$
 
 
 
