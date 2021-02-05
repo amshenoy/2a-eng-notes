@@ -102,7 +102,9 @@ $$
 
 For $ r(mT) = \sum_{k} X_{k} \ g((m-k)T) $ to be equal to $ X_{m} $, we require that:
 
-$$ \large g((m-k)T) = \begin{cases} 1 \quad k=m \\ 0 \quad k \ne m \end{cases} $$
+$$ g((m-k)T) = \begin{cases} 1 \quad k=m \\ 0 \quad k \ne m \end{cases} $$
+
+$$ \large \color{blue}{ g(0) = 1 \qquad g(nT) = 0 \quad \{n\ne 0\} } $$
 
 If **NPC** is not obeyed, we get **inter-symbol interference (ISI)** (noise is magnified).
 
