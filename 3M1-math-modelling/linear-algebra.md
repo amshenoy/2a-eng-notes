@@ -344,13 +344,13 @@ If $ \Large A = U \Sigma V^{H} $,
 $$ \large A^{H} A = V (\Sigma^{H} \Sigma) V^{H} $$
 $$ \large A A^{H} = U (\Sigma \Sigma^{H}) U^{H} $$
 
-$ \Sigma^{H} \Sigma $ - Diagonal matrix of eigenvalues of $ A^{H} A $ </br>
-$ \large V $ - Normalised eigenvectors of $ A^{H} A $ </br>
+$ \Sigma^{H} \Sigma $ - **Diagonal of eigenvalues** of $ A^{H} A $ </br>
+$ \large V $ - **Normalised eigenvectors** of $ A^{H} A $ </br>
 
-$ \Sigma \Sigma^{H} $ - Diagonal matrix of eigenvalues of $ A A^{H} $ </br>
-$ \large U $ - Normalised eigenvectors of $ A A^{H} $ </br>
+$ \Sigma \Sigma^{H} $ - **Diagonal of eigenvalues** of $ A A^{H} $ </br>
+$ \large U $ - **Normalised eigenvectors** of $ A A^{H} $ </br>
 
-$ \large \Sigma $ - Square root of the eigenvalues of $ A^{H} A $ or $ A A^{H} $
+$ \large \Sigma $ - **Square root eigenvalues** of $ A^{H} A $ or $ A A^{H} $ &emsp; (**Singular value** $ \sigma_{i} = |\lambda_{i}| $ of $ A $)
 
 #### Important: After calculating, switch the signs of the eigenvectors appropriately so that $ AV = U \Sigma $.
 
