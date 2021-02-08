@@ -27,10 +27,15 @@ $ x^{*} $ is either a minimum, maximum or saddle.
 In general, constrained optimization is more difficult to solve than unconstrained optimization.
 
 
-## Modality
+## Landscape Properties
+
+### Modality
+
+**Unimodality** - Single extremum </br>
+**Strong Unimodality** - Gradient is always toward extremum </br>
 
 
-## Convexity
+### Convexity
 
 
 </br><hr></br>
@@ -38,22 +43,31 @@ In general, constrained optimization is more difficult to solve than unconstrain
 # Unconstrained Optimisation
 
 ## Line search
-Gradient methods
+## Gradient methods
 
 
 </br><hr></br>
 
 # Constrained Optimisation
 
-## Linear programming: Simplex Algorithm
+## Simplex Algorithm (Linear Programming)
+
+**Linear programming** algorithm for solving a **linear problem** with **linear constraints**.
+
+[Simplex Calculator](https://www.zweigmedia.com/simplex/simplex.php?lang=en)
+
+
 ## Lagrange and Karush-Kuhn-Tucker (KKT) multipliers
 Note that the Karush-Kuhn-Tucker (KKT) multipliers (Kuhn-Tucker (KT) multipliers)
 
-## Barrier and penalty methods
+## Barrier and Penalty Methods
+
+
+
 
 </br><hr></br>
 
-# Simulated annealing (Global)
+# Simulated Annealing (Global)
 
 
 
