@@ -2,11 +2,14 @@
 
 # Introduction
 
+## Prerequisites
 ### Hessian Matrix
 
 $$ \nabla(\nabla f(x)) = H(f(x)) $$
 
 $$ H_{i,j}(f(x)) = \dfrac{\partial f^{2}}{\partial x_{i} \partial x_{j}} $$
+
+If $ H $ is **positive definite** at $ x^{*} $ then $ x^{*} $ is a minimum. $ (x-x^{*})^{T} H(x^{*}) (x-x^{*}) > 0 $
 
 ### Stationary Point
 $ \nabla f(x^{*}) = 0 $
@@ -20,12 +23,15 @@ $ x^{*} $ is either a minimum, maximum or saddle.
 **Weak Local** - Local minimum (with other possible local minima, ie. a plateau) </br>
 **Strong Local** - Singular local minimum </br>
 
+</br>
+
 ## Constraints
 - **Equality constraints** can sometimes be eliminated by substitution
 - **Inequality constraints** can sometimes be left out and candidate results checked (we will treat them formally with KKT multipliers)
 
 In general, constrained optimization is more difficult to solve than unconstrained optimization.
 
+</br>
 
 ## Landscape Properties
 
@@ -36,6 +42,13 @@ In general, constrained optimization is more difficult to solve than unconstrain
 
 
 ### Convexity
+
+For any two points $x_{1}$ and $x_{2}$:
+$$ f(x_{2}) - f(x_{1}) \ge (\nabla f(x_{1}))^{T} (x_{2}-x_{1}) $$
+
+- **Convex functions** have a **global minimum**
+- **Convex functions** are **unimodal**, but not all unimodal functions are convex
+
 
 
 </br><hr></br>
