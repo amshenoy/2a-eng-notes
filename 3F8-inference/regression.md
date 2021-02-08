@@ -88,9 +88,9 @@ y^{*} = \underbrace{\underline{w}^{T}}_{\underbrace{\mathcal{N}(\underline{w}|\u
 }
 $$
 
-Since the **sum of Gaussians is a Gaussian**, the predictive distribution is given by:
+Since the **sum of Gaussians is a Gaussian**, the **predictive distribution** is given by:
 
-$$ \Large p(y^{*}) = \mathcal{N}(y^{*}| m^{*}, C^{*}) $$
+$$ \Large p(y^{*}|\underline{x}^{*}, \underline{y}, X) = \mathcal{N}(y^{*}| m^{*}, C^{*}) $$
 
 $ \large m^{*} = E(y^{*}) = \underline{m}_{po}^{T} \ \underline{x}^{*} $
 
