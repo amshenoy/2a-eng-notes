@@ -102,6 +102,26 @@ $$
 
 ### Quadratic Fitting (at 3 points)
 
+Given $ x_{1}, x_{2}, x_{3} $, we want to find the coefficients     $ a_{1}, a_{2}, a_{3} $:
+
+$$ 
+\begin{bmatrix}
+    f(x_{1}) \\
+    f(x_{2}) \\
+    f(x_{3})
+\end{bmatrix}
+= 
+\begin{bmatrix}
+    1 & x_{1} & x_{1}^{2} \\
+    1 & x_{2} & x_{2}^{2} \\
+    1 & x_{3} & x_{3}^{2} \\
+\end{bmatrix}
+\begin{bmatrix}
+    a_{1} \\
+    a_{2} \\
+    a_{3} \\
+\end{bmatrix}
+$$
 
 </br>
 
@@ -116,7 +136,9 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{f^{''}(x_{k+1})} $$
 
 ### Quasi-Newton Methods
 
-
+#### Secant Method
+**Using an approximation for $ f^{''}(x_{k+1}) $**
+$$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-1})}{x_{k}-x_{k-1}}} $$
 
 
 
