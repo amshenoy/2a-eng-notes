@@ -109,7 +109,10 @@ We can now solve for $ \underline{q} $ by setting the vector as a series of vari
 
 </br>
 
+Above is also equivalent to:
+$ \underline{h} = (I - P)^{-1} \underline{1} $
 
+[Hitting Time](https://gtribello.github.io/mathNET/hitting-time-problems.html)
 
 
 
