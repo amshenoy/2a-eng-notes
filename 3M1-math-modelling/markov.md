@@ -93,7 +93,7 @@ The final distribution $ \pi $ must sum to 1, therefore divide by the sum of the
 
 ## Waiting Time
 
-### (Hitting Time / First Passage Time)
+### (Hitting Time / First Passage Time for Markov)
 
 Solve for $ \underline{q} $ where $ \underline{q}_{0} $ is $ \underline{q} $ with the value of the end state (/an absorbing state) being 0 $ q_{e} = 0 $:
 
