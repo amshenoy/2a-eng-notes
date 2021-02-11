@@ -89,7 +89,7 @@ The final distribution $ \pi $ must sum to 1, therefore divide by the sum of the
 
 </br>
 
-## Waiting Time
+## Waiting Time (First Passage Time)
 
 Solve for $ \underline{q} $ where $ \underline{q}_{0} $ is $ \underline{q} $ with the value of the initial state being 0 $ q_{i} = 0 $:
 
@@ -101,7 +101,7 @@ $$ \color{blue}{ \underline{q} = \underline{1} + P \underline{q}_{0} } $$
 
 $$ \Large \color{blue}{ \underline{q} - P \underline{q}_{0} = \underline{1} } $$
 
-We can now solve for $ \underline{q} $.
+We can now solve for $ \underline{q} $ by setting the vector as a series of variables with unknown values.
 
 </br>
 
