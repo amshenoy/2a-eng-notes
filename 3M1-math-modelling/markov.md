@@ -32,6 +32,7 @@ To avoid confusion with $ P $ and $ P^{T} $, we will switch to using the row for
 
 **Aperiodic Chain** - All states of the chain are aperiodic.
 
+**Classes** - Markov chain nodes can be split into communicating sets called "classes" where a node is in the set if it communicates bidirectionally with every other node in the same set.
 </br>
 
 
