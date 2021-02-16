@@ -22,11 +22,12 @@ $$ X_{p}(f) = \dfrac{1}{2}(X_{b}(f-f_{c}) + X_{b}(f+f_{c})) $$
 
 We can improve on this by using **complex-valued symbols**, giving the **QAM signal**:
 
-$$ \large
+$$ \large \color{blue}{
 \begin{align*}
 x(t) &= Re( \sqrt{2} \ x_{b}(t) \ e^{j 2\pi f_{c} t} ) \\
 x(t) &= \sqrt{2} \sum_{k} p(t-kT) \ \Big( Re(X_{k}) \cos(2\pi f_{c} t) - Im(X_{k}) \sin(2\pi f_{c} t) \Big)
 \end{align*}
+}
 $$
 
 </br>
@@ -61,8 +62,8 @@ $$ \large \color{blue}{ x(t) = \sqrt{2} \sum_{k} p(t-kT) \ \Big( Re(X_{k}) \cos(
 Let </br>
 $ X_{k}^{r} = Re(X_{k}) $ </br>
 $ X_{k}^{i} = Im(X_{k}) $ </br>
-$ f_{k}^{r} = \sqrt{2} p(t-kT) \cos(2\pi f_{c} t) $ </br>
-$ f_{k}^{i} = - \sqrt{2} p(t-kT) \sin(2\pi f_{c} t) $ </br>
+$ f_{k}^{r} = \sqrt{2} \ p(t-kT) \cos(2\pi f_{c} t) $ </br>
+$ f_{k}^{i} = - \sqrt{2} \ p(t-kT) \sin(2\pi f_{c} t) $ </br>
 
 $$ \large x(t) = \sum_{k} X_{k}^{r} f_{k}^{r}(t) + X_{k}^{i} f_{k}^{i}(t) $$
 
