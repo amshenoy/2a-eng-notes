@@ -39,7 +39,12 @@ This method allows us to **solve optimization problems with equality constraints
 
 #### The solution should therefore satisfy: 
 
-$$ \nabla f(\underline{x}) = - \lambda \nabla g(\underline{x}) \qquad g(\underline{x}) = c $$
+$$ \large \nabla f(\underline{x}) = - \lambda \nabla g(\underline{x}) \qquad g(\underline{x}) = c $$
+
+where $ \lambda $ is the lagrangian multiplier.
+
+
+$$ $$
 
 
 
