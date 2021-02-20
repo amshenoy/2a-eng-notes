@@ -206,15 +206,15 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-
 
 2) Formulate $ m $ **Constraint Equations**
 
-#### Notes:
-- Optimum must be an extremal point
-- **$ n-m $ variables must equal 0 for an extremal point**
+3) **Compute total cost when $ n-m $ variables are a 0**
 
-3) 
-Set each variable to 0 in turn and solve for other variables using constraint equations.
-Compute the total cost when each variable is 0.
+&emsp; &emsp; &emsp; **$ n-m $ variables must equal 0 for an extremal point (optimum must be an extremal point)**
 
-Total cost minimised
+&emsp; &emsp; &emsp; Set $ n-m $ variables to 0 in turn and solve for other variables using constraint equations.
+
+&emsp; &emsp; &emsp;  Substitute values into the cost function to get the total cost.
+
+4) **Solutions: The values that give a valid minimum total cost**
 
 
 
