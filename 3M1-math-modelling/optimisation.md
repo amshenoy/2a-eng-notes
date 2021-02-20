@@ -3,9 +3,22 @@
 # Introduction
 
 ## Prerequisites
+
+### Jacobian Matrix
+
+$$ J_{ij}(\underline{f}(\underline{x})) = \dfrac{\partial f_{i}}{\partial x_{j} } $$
+
+This is for the case of vector function $ \underline{f}(\underline{x}) = \{ \underline{f}(x_{1}), ..., \underline{f}(x_{N}), \} $.
+
+For the case of a 1D function, the Jacobian $ J $ is the same as the gradient $ \nabla $.
+
+
+
 ### Hessian Matrix
 
 $$ \nabla(\nabla f(x)) = H(f(x)) $$
+
+Or equivalently the $ J(\nabla f(x)) = H(f(x)) $.
 
 $$ H_{i,j}(f(x)) = \dfrac{\partial f^{2}}{\partial x_{i} \partial x_{j}} $$
 
@@ -181,17 +194,40 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-
 
 # Constrained Optimisation
 
-## Simplex Algorithm (Linear Programming)
+</br>
+
+## Linear Programming
 
 **Linear programming** algorithm for solving a **linear problem** with **linear constraints**.
+
+### Hand Solution
+
+
+
+
+
+</br>
+
+### Simplex Algorithm
 
 [Simplex Calculator](https://www.zweigmedia.com/simplex/simplex.php?lang=en)
 
 
+
+
+
+</br>
+
 ## Lagrange and Karush-Kuhn-Tucker (KKT) multipliers
 Note that the Karush-Kuhn-Tucker (KKT) multipliers (Kuhn-Tucker (KT) multipliers)
 
+
+</br>
+
 ## Barrier and Penalty Methods
+
+
+
 
 
 
