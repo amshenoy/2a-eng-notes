@@ -81,7 +81,7 @@ $ p $ - Order of Convergence (Higher the better) [Linear $ p=1 $, Quadratic $ p=
 
 </br>
 
-## Line Search (1D)
+# Line Search (1D)
 
 ### Golden Section Search
 
@@ -141,6 +141,40 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{f^{''}(x_{k+1})} $$
 $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-1})}{x_{k}-x_{k-1}}} $$
 
 
+# Multi-Dimensional
+
+<table style="width:100%">
+  <tr>
+    <th>Method</th>
+    <th>Advantages</th>
+    <th>Disadvantages</th>
+  </tr>
+  <tr>
+    <td>Steepest Descent</td>
+    <td>Only needs <strong>gradient</strong></td>
+    <td> <strong>Linear</strong> convergence</td>
+  </tr>
+  <tr>
+    <td>Conjugate Gradient</td>
+    <td>Only needs  <strong>conjugate gradient</strong>. Faster than Steepest Descent</td>
+    <td> <strong>Linear</strong> convergence</td>
+  </tr>
+  <tr>
+    <td>Gauss-Newton <small>(Derived by $\nabla$ Least-Squares Error)</small></td>
+    <td>Only need <strong>Jacobian</strong>. Near  <strong>quadratic</strong> convergence.</td>
+    <td> <strong>Poor performance if poor initialisation </strong> (starting point is far from optimum)</td>
+  </tr>
+  <tr>
+    <td>Newton-Raphson</td>
+    <td> <strong>Quadratic</strong> convergence</td>
+    <td>Needs <strong>Hessian</strong>. Possible  <strong>divergence</strong>.</td>
+  </tr>
+  <tr>
+    <td>Barzilai-Borwein</td>
+    <td>Faster than Steepest Descent. Often <strong>very stable </strong>.</td>
+    <td> <strong>Convergence analysis difficult </strong>.</td>
+  </tr>
+</table>
 
 
 </br><hr></br>
