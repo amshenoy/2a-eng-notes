@@ -202,6 +202,23 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-
 
 ### Hand Solution
 
+1) Formulate $ n $-variable **Cost Function**
+
+2) Formulate $ m $ **Constraint Equations**
+
+#### Notes:
+- Optimum must be an extremal point
+- **$ n-m $ variables must equal 0 for an extremal point**
+
+3) 
+Set each variable to 0 in turn and solve for other variables using constraint equations.
+Compute the total cost when each variable is 0.
+
+Total cost minimised
+
+
+
+
 
 
 
