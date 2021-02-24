@@ -218,11 +218,6 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-
 
 
 
-
-
-
-
-
 </br>
 
 ### Simplex Algorithm
@@ -231,23 +226,49 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-
 
 
 
+</br>
 
+## Lagrange [$ \lambda_{i} $] and Karush-Kuhn-Tucker (KKT) [$ \mu_{j} $] multipliers
+
+$$ \large L(\underline{x}, \underline{\lambda}, \underline{\mu}) = f(\underline{x}) + \sum_{i} \lambda_{i} h_{i}(\underline{x}) + \sum_{j} \mu_{j} g_{j}(\underline{x}) $$
+
+ $ h_{i}(\underline{x}) $ - Equality constraints $ = 0 $ </br>
+ $ g_{j}(\underline{x}) $ - Inequality constraints $ \le 0 $ </br>
+
+$ \mu_{j} = 0 $ if $ g_{j}(\underline{x}) < 0 $ (**inequality constraint inactive**)
+
+$ g_{j}(\underline{x}) = 0 $ (**inequality constraint active**, becomes an equality constraint)
+
+#### Minimise by solving $ \large \nabla L = \underline{0} $
+In the case when $ L(\underline{x}, \underline{\lambda}, \underline{\mu} ) $ is **scalar**:
+$
+\dfrac{\partial L}{\partial \underline{x}} = \dfrac{\partial L}{\partial x_{i}}|_{i=1}^{N} = 0 $.
 
 </br>
 
-## Lagrange and Karush-Kuhn-Tucker (KKT) multipliers
-Note that the Karush-Kuhn-Tucker (KKT) multipliers (Kuhn-Tucker (KT) multipliers)
+## Penalty Method
+
+> The idea is to replace the **constrained** optimisation problem with an **approximated unconstrained** (**soft constraints**) optimisation problem
+
+$$ \large Q(\underline{x}, \underline{\lambda}, \underline{\mu}) = f(\underline{x}) + \kappa \sum_{i} \ P\Big( h_{i}(\underline{x}) \Big) $$
+
+$ \large \kappa $ - Adjustable **Penalty Parameter** </br>
+$ \large P( \cdot ) $ - **Penalty Function**
+
+(+) Can handle both inequalities and equalities
+(-) May provide unfeasible solutions 
+
+#### Note: We typically start with small $ \kappa $ and increase it as the solution gets closer to the optimum (so that the impact of the penalty function is increased for the small error thus becoming more accurate towards the end).
+
+</br> </br>
+
+## Barrier Method
+
+
+
 
 
 </br>
-
-## Barrier and Penalty Methods
-
-
-
-
-
-
 
 </br><hr></br>
 
