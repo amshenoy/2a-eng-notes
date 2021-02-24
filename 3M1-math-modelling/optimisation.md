@@ -255,8 +255,13 @@ $$ \large Q(\underline{x}, \underline{\lambda}, \underline{\mu}) = f(\underline{
 $ \large \kappa $ - Adjustable **Penalty Parameter** </br>
 $ \large P( \cdot ) $ - **Penalty Function**
 
-(+) Can handle both inequalities and equalities
-(-) May provide unfeasible solutions 
+</br>
+
+(+) Can handle both **inequalities and equalities**
+
+(-) **May provide unfeasible solutions** 
+
+</br>
 
 #### Note: We typically start with small $ \kappa $ and increase it as the solution gets closer to the optimum (so that the impact of the penalty function is increased for the small error thus becoming more accurate towards the end).
 
@@ -264,6 +269,20 @@ $ \large P( \cdot ) $ - **Penalty Function**
 
 ## Barrier Method
 
+> With a barrier method, the feasibility is enforced exactly by using a penalty that diverges as we approach the boundary of the constraint.
+
+$$ \large Q(\underline{x}, \underline{\lambda}, \underline{\mu}) = f(\underline{x}) - \dfrac{1}{\kappa} \sum_{j} \ B\Big( g_{j}(\underline{x}) \Big) $$
+
+$ \large \kappa $ - Adjustable **Penalty Parameter** </br>
+$ \large B( \cdot ) $ - **Barrier Function** eg. $ B(x) = \dfrac{1}{x} $ or $ B(x) = \ln(-x) $
+
+</br>
+
+(+) Will always provide **feasible solutions**</br>
+(+) Sharp divergence at constraint boundaries for large $ \kappa $ hence **can get solutions closer to the constraint boundary**.
+
+(-) Can only handle **inequalities** </br>
+(-) Sharp divergence at constraint boundaries for large $ \kappa $ hence **harder the optimisation** </br>
 
 
 
