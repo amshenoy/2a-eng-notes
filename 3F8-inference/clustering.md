@@ -63,8 +63,7 @@ $ \large \theta $ - "Parameters" $ \large \{ \ \pi_{k}, \underline{m}_{k}, \Sigm
 $$ \large
 \begin{align*}
 p(\underline{x}_{n} | \theta) &= \sum_{k}^{K} \ p(\underline{x}_{n} | s_{n}=k, \theta) \ p(s_{n}=k | \theta) \\
-&= \small \sum_{k} p(\underline{x}_{n}, s_{n}=k| \theta) \\ \\
-p(\underline{x}_{n} | \theta) &= \sum_{k}^{K} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k})
+&= \sum_{k}^{K} p(\underline{x}_{n}, s_{n}=k| \theta) \\ 
 \end{align*}
 $$
 
