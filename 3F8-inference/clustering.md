@@ -128,9 +128,11 @@ $$ \large
 q(s_{n} = k) &= p(s_{n} = k | \underline{x}_{n}, \theta) \\
 &= \ \dfrac{p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ }{p(\underline{x}_{n}|\theta)} \\
 &= \ \dfrac{p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ }{ \sum_{k} p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ } \\ \\
-q(s_{n} = k) &= \dfrac{ \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }{\sum_{k} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }
+q(s_{n} = k) &= \dfrac{ \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }{\sum_{k} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) } \qquad ( = \dfrac{u_{nk}}{u_{n}} = \dfrac{u_{nk}}{\sum_{k} u_{nk}} )
 \end{align*}
 $$
+
+#### Note: that $ q(s_{n} = k) $ can be denoted as "responsibility" &emsp; $ q(s_{n} = k) = r_{nk} = \dfrac{u_{nk}}{u_{n}} = \dfrac{u_{nk}}{\sum_{k} u_{nk}} $ where $ \large u_{nk} = \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) $
 
 </br>
 
@@ -171,7 +173,6 @@ $$
 $$
 
 Note that after solving for $ \pi_{k} $, $ \lambda = \dfrac{1}{N} $ so that the constraint is fulfilled.
-
 
 </br> </br>
 
