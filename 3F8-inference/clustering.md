@@ -5,6 +5,8 @@ Given a dataset $ \mathcal{D} = \{ \underline{x}_{n} \}_{n=1}^{N} $, we want to 
 ##### Note that unlike classification, this is an unsupervised algorithm.
 
 
+</br><hr></br>
+
 # K-Means
 
 
@@ -41,3 +43,75 @@ $$ \large m_{k} = \text{mean}(\underline{x}_{n} | s_{n} = k ) $$
 - Initialisation is delicate
 
  
+</br><hr></br>
+
+# Mixture of Gaussians Model
+
+## Cluster Probability
+> Probability of $ \underline{x}_{n} $ being in cluster $ k $
+$$ \Large p(s_{n}=k | \theta) = \pi_{k} \qquad \big(\sum_{k=1}^{K} \pi_{k} = 1 \big) $$
+
+## Datapoint Probability
+> Probability of $ \underline{x}_{n} $ given that it is in cluster $ k $
+$$ \Large p(\underline{x}_{n} | s_{n}=k, \theta) = \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k})$$ </br>
+$ \large \theta $ - "Parameters" $ \large \{ \ \pi_{k}, \underline{m}_{k}, \Sigma_{k} \ \}_{k=1}^{K} $ </br>
+
+
+</br>
+
+
+$$ \large
+\begin{align*}
+p(\underline{x}_{n} | \theta) &= \sum_{k}^{K} \ p(\underline{x}_{n} | s_{n}=k, \theta) \ p(s_{n}=k | \theta) \\
+&= \small \sum_{k} p(\underline{x}_{n}, s_{n}=k| \theta) \\ \\
+p(\underline{x}_{n} | \theta) &= \sum_{k}^{K} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k})
+\end{align*}
+$$
+
+$$ \Large \color{blue}{ p(\underline{x}_{n} | \theta) = \sum_{k}^{K} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) } $$
+
+## Likelihood
+
+$$ \large \color{green}{
+\log \big( p(\{x_{n}\}_{n=1}^{N}|\theta \big) = \log \big( 
+ \prod_{n=1}^{N} p(x_{n}|\theta) \big) = \sum_{n=1}^{N} \log \ p(x_{n}|\theta)
+} 
+$$
+
+$$ \therefore \log \big( p(\{x_{n}\}_{n=1}^{N}|\theta \big) = \sum_{n=1}^{N} \log \big( \ \sum_{k}^{K} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) \ \big)
+$$
+
+### Maximum Likelihood
+
+$$ \large \theta_{ML} = \arg_{\theta} \max \enspace \log( p(\{x_{n}\}_{n=1}^{N}|\theta) ) $$
+
+#### Possible Methods:
+1) **Gradient Descent** &emsp; $ \theta_{new} = \theta_{old} + \alpha \dfrac{d}{d\theta} \log \big( p(\{x_{n}\}_{n=1}^{N}|\theta \big)  $
+
+2) **Expectation Maximisation** Algorithm
+
+</br> </br>
+
+## Expectation Maximisation
+
+
+
+
+
+
+
+
+
+</br> </br>
+
+## Prediction
+
+$$ \large p(s_{n} = k | \underline{x}_{n}, \theta_{ML}) $$
+
+
+
+
+
+
+
+
