@@ -120,6 +120,16 @@ Here we maximise the free-energy $ \mathcal{F}( q(\underline{s}), \theta ) $ wrt
 
 $$ \large q_{t}(\underline{s}) = p(\underline{s} | X, \theta_{t-1}) $$
 
+</br>
+
+$$ \large 
+\begin{align*}
+q(s_{n} = k) &= p(s_{n} = k | \underline{x}_{n}, \theta) \\
+&= \ \dfrac{p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ }{p(\underline{x}_{n}|\theta)} \\
+&= \ \dfrac{p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ }{ \sum_{k} p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ } \\
+&= \dfrac{ \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }{\sum_{k} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }
+\end{align*}
+$$
 
 </br>
 
