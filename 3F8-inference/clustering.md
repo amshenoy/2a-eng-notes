@@ -106,7 +106,8 @@ $$
 &= \underbrace{\sum_{\underline{s}} \ q(\underline{s})}_{1} \log \Big( \ p(X|\theta) \ \Big) - \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ \dfrac{q(\underline{s})}{p(\underline{s} | X, \theta)} \ \Big) \\
 &= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ \dfrac{p(\underline{s} | X, \theta) \ p(X|\theta)}{q(\underline{s})} \ \Big) \\ \\
 &= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ \dfrac{p(X | \underline{s}, \theta) \ p(\underline{s}|\theta)}{q(\underline{s})} \ \Big) \\
-&= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ p(X | \underline{s}, \theta) \ p(\underline{s}|\theta) \ \Big) \ + \ \underbrace{ - \sum_{\underline{s}} q(\underline{s}) \log \Big( q(\underline{s}) \Big)}_{H(q(\underline{s}))}
+&= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ p(X | \underline{s}, \theta) \ p(\underline{s}|\theta) \ \Big) \ + \ \underbrace{ - \sum_{\underline{s}} q(\underline{s}) \log \Big( q(\underline{s}) \Big)}_{H(q(\underline{s}))} \\
+&= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ p(\underline{s}|\theta) \ p(X | \underline{s}, \theta) \ \Big) + H(q(\underline{s}))
 \end{align*}
 $$
 
@@ -116,7 +117,7 @@ We can use an **iterative maximisation rule** starting with a random $ \theta_{0
 
 #### E Step
 
-Here we maximise the free-energy $ \mathcal{F}( q(\underline{s}), \theta ) $ wrt $ q(\underline{s}) $ which is the equivalent of minimising the KL-Divergence term (use of Lagrange multiplier to prove) giving the denominator $ p(\underline{s} | X, \theta) $ as the optimum value.
+Here we maximise the free-energy $ \color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } $ wrt $ q(\underline{s}) $ which is the equivalent of minimising the KL-Divergence term (use of Lagrange multiplier to prove) giving the denominator $ p(\underline{s} | X, \theta) $ as the optimum value.
 
 $$ \large q_{t}(\underline{s}) = p(\underline{s} | X, \theta_{t-1}) $$
 
@@ -126,23 +127,50 @@ $$ \large
 \begin{align*}
 q(s_{n} = k) &= p(s_{n} = k | \underline{x}_{n}, \theta) \\
 &= \ \dfrac{p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ }{p(\underline{x}_{n}|\theta)} \\
-&= \ \dfrac{p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ }{ \sum_{k} p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ } \\
-&= \dfrac{ \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }{\sum_{k} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }
+&= \ \dfrac{p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ }{ \sum_{k} p(s_{n}=k|\theta) \ p(\underline{x}_{n} | s_{n}=k, \theta) \ } \\ \\
+q(s_{n} = k) &= \dfrac{ \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }{\sum_{k} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) }
 \end{align*}
 $$
 
 </br>
 
 #### M Step
-Here we maximise the free energy $ \mathcal{F}( q(\underline{s}), \theta ) $ wrt $ \theta $.
+Here we maximise the free energy $ \color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } $ wrt $ \theta $.
 
 We can ignore the entropy term $ H(q(\underline{s})) $ since it is independent of $ \theta $.
 
-$$ \large \theta_{t} = \arg_{\theta}\max \ \sum_{\underline{s}} \ 
-q_{t}(\underline{s}) \log \Big( \ p(X | \underline{s}, \theta) \ p(\underline{s}|\theta) \ \Big) $$
+$$ \large
+\begin{align*}
+\theta_{t} &= \arg_{\theta}\max \ \color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } \\
+&= \arg_{\theta}\max \ \sum_{\underline{s}} \ 
+q_{t}(\underline{s}) \log \Big( \ p(\underline{s}|\theta) \ \ p(X | \underline{s}, \theta) \ \Big) \\
+\end{align*}
+$$
 
+</br>
 
+$$ 
+\begin{align*}
+\mathcal{F}( q(\underline{s}), \theta ) &= \sum_{n}^{N} \sum_{k}^{K} q(s_{n}=k) \log \Big( \ p(s=k|\theta) \ p(\underline{x}_{n}|s=k, \theta) \ \Big) \\
+&= \sum_{n}^{N} \sum_{k}^{K} q(s_{n}=k) \log \Big( \ \pi_{k} \ \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) \ \Big) \\
+&= \sum_{n}^{N} \sum_{k}^{K} q(s_{n}=k) \Bigg( \log( \ \pi_{k} \ ) - \dfrac{1}{2} (\underline{x}_{n} - \underline{m}_{k})^{T} \ \Sigma_{k}^{-1} \ (\underline{x}_{n} - \underline{m}_{k}) \ + const. \Bigg) \\
+\end{align*}
+$$
 
+We can work out the parameters $ \theta = \{ \pi_{k},  \underline{m}_{k}, \Sigma_{k} \}_{k=1}^{K} $ by partially differentiating wrt to each parameter and solving for the parameter.
+
+$$
+\begin{align*}
+\dfrac{\partial \mathcal{F}}{\partial \underline{m}_{k}} = \sum_{n}^{N} q(s_{n}=k) \ \big( 2 \Sigma_{k}^{-1} (\underline{x}_{n} - \underline{m}_{k} ) \big) = 0
+\\
+\dfrac{\partial \mathcal{F}}{\partial \Sigma_{k}} = \sum_{n}^{N} q(s_{n}=k) \ \big( - \Sigma_{k}^{-T} \ (\underline{x}_{n} - \underline{m}_{k} ) (\underline{x}_{n} - \underline{m}_{k} )^{T}  \ \Sigma_{k}^{-T} \big) = 0
+\\
+\dfrac{\partial (\mathcal{F} + \lambda( 1 - \sum_{k} \pi_{k} ) )}{\partial \pi_{k}} = \sum_{n}^{N} \dfrac{q(s_{n}=k)}{\pi_{k}} - \lambda = 0 
+\\
+\end{align*}
+$$
+
+Note that after solving for $ \pi_{k} $, $ \lambda = \dfrac{1}{N} $ so that the constraint is fulfilled.
 
 
 </br> </br>
