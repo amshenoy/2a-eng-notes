@@ -73,8 +73,8 @@ $$ \Large \color{blue}{ p(\underline{x}_{n} | \theta) = \sum_{k}^{K} \pi_{k} \ \
 ## Likelihood
 
 $$ \large \color{green}{
-\log \big( p(\{x_{n}\}_{n=1}^{N}|\theta \big) = \log \big( 
- \prod_{n=1}^{N} p(x_{n}|\theta) \big) = \sum_{n=1}^{N} \log \ p(x_{n}|\theta)
+\log \big( p(\{\underline{x}_{n}\}_{n=1}^{N}|\theta \big) = \log \big( 
+ \prod_{n=1}^{N} p(\underline{x}_{n}|\theta) \big) = \sum_{n=1}^{N} \log \ p(\underline{x}_{n}|\theta)
 } 
 $$
 
@@ -94,9 +94,43 @@ $$ \large \theta_{ML} = \arg_{\theta} \max \enspace \log( p(\{x_{n}\}_{n=1}^{N}|
 
 ## Expectation Maximisation
 
+### Free Energy
+
+For simplification of notation at this stage, consider $ X = \{\underline{x}_{n}\}_{n=1}^{N} $ and $ \underline{s} = \{s_{n}\}_{n=1}^{N} $ with $ q(\underline{s}) $ being an arbitrary distribution over $ S $:
+
+$$
+\begin{align*}
+\color{green}{ \text{Free Energy} } &= \color{blue}{ \text{Log-Likelihood} } - \color{red}{ \text{KL-Divergence} }\\
+\color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } &= \color{blue}{ \log \Big( \ p(X|\theta) \ \Big) } - \color{red}{ \mathcal{KL}\Big( \ q(\underline{s}) \ || \ p(\underline{s} | X, \theta) \ \Big) } \\
+&= \color{blue}{ \log \Big( \ p(X|\theta) \ \Big) } - \color{red}{ \sum_{\underline{s}} \ q(S) \log \Big( \ \dfrac{q(\underline{s})}{p(\underline{s} | X, \theta)} \ \Big) } \\ \\
+
+&= \underbrace{\sum_{\underline{s}} \ q(\underline{s})}_{1} \log \Big( \ p(X|\theta) \ \Big) - \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ \dfrac{q(\underline{s})}{p(\underline{s} | X, \theta)} \ \Big) \\
+&= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ \dfrac{p(\underline{s} | X, \theta) \ p(X|\theta)}{q(\underline{s})} \ \Big) \\ \\
+&= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ \dfrac{p(X | \underline{s}, \theta) \ p(\underline{s}|\theta)}{q(\underline{s})} \ \Big) \\
+&= \sum_{\underline{s}} \ q(\underline{s}) \log \Big( \ p(X | \underline{s}, \theta) \ p(\underline{s}|\theta) \ \Big) \ + \ \underbrace{ - \sum_{\underline{s}} q(\underline{s}) \log \Big( q(\underline{s}) \Big)}_{H(q(\underline{s}))}
+\end{align*}
+$$
+
+### Algorithm
+
+We can use an **iterative maximisation rule** starting with a random $ \theta_{0} $:
+
+#### E Step
+
+Here we maximise the free-energy $ \mathcal{F}( q(\underline{s}), \theta ) $ wrt $ q(\underline{s}) $ which is the equivalent of minimising the KL-Divergence term (use of Lagrange multiplier to prove) giving the denominator $ p(\underline{s} | X, \theta) $ as the optimum value.
+
+$$ \large q_{t}(\underline{s}) = p(\underline{s} | X, \theta_{t-1}) $$
 
 
+</br>
 
+#### M Step
+Here we maximise the free energy $ \mathcal{F}( q(\underline{s}), \theta ) $ wrt $ \theta $.
+
+We can ignore the entropy term $ H(q(\underline{s})) $ since it is independent of $ \theta $.
+
+$$ \large \theta_{t} = \arg_{\theta}\max \ \sum_{\underline{s}} \ 
+q_{t}(\underline{s}) \log \Big( \ p(X | \underline{s}, \theta) \ p(\underline{s}|\theta) \ \Big) $$
 
 
 
