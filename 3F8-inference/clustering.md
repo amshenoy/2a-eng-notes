@@ -111,11 +111,11 @@ $$
 \end{align*}
 $$
 
-### Algorithm
+## Algorithm
 
-We can use an **iterative maximisation rule** starting with a random $ \theta_{0} $:
+### 1) We can use an **iterative maximisation rule** starting with a random $ \theta_{0} $:
 
-#### E Step
+### 2) E Step
 
 Here we maximise the free-energy $ \color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } $ wrt $ q(\underline{s}) $ which is the equivalent of minimising the KL-Divergence term (use of Lagrange multiplier to prove) giving the denominator $ p(\underline{s} | X, \theta) $ as the optimum value.
 
@@ -136,7 +136,7 @@ $$
 
 </br>
 
-#### M Step
+### 3) M Step
 Here we maximise the free energy $ \color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } $ wrt $ \theta $.
 
 We can ignore the entropy term $ H(q(\underline{s})) $ since it is independent of $ \theta $.
@@ -173,6 +173,8 @@ $$
 $$
 
 Note that after solving for $ \pi_{k} $, $ \lambda = \dfrac{1}{N} $ so that the constraint is fulfilled.
+
+### 4) Repeat E-step and M-step till convergence
 
 </br> </br>
 
