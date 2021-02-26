@@ -2,10 +2,10 @@
 
 ## Linear Regression Basics
 
-$ S_{xx} = \sum_{i} (x_{i} - \overbar{x})^{2} $
-$ S_{yy} = \sum_{i} (y_{i} - \overbar{y})^{2} $
+$ S_{xx} = \sum_{i} (x_{i} - \overline{x})^{2} $
+$ S_{yy} = \sum_{i} (y_{i} - \overline{y})^{2} $
 
-$ S_{xy} = \sum_{i} (x_{i} - \overbar{x}) (y_{i} - \overbar{y}) $
+$ S_{xy} = \sum_{i} (x_{i} - \overline{x}) (y_{i} - \overline{y}) $
 
 **Correlation Coefficient**
 
