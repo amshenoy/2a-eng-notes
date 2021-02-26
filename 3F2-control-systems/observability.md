@@ -19,11 +19,21 @@ If $ M_{O} $ is **full-rank** (**linearly independent columns** | $ det(M_{O}) \
 
 ## Observer Canonical Form
 
-
+$$ 
+A = \begin{bmatrix}
+-a_{1} & 1 & 0 & \cdots & 0 & 0 \\
+-a_{2} & 0 & 1 & \cdots & 0 & 0 \\
+\vdots & \vdots & \vdots & \ddots & 0 & 0\\
+-a_{n-1} & 0 & 0 & \cdots & 1 & 0 \\
+-a_{n} & 0 & 0 & \cdots & 0 & 1\\
+\end{bmatrix} \\
+$$
+$$
+C = \begin{bmatrix} 1, 0 & \cdots & 0 \end{bmatrix}
+$$
 
 
 # Observers
-
 
 Instead of differentiating signals (bad since amplified noise) we will use a **state observer** (**Luenberger Observer**) which contains **a dynamic model of the system** and whose state $ \hat{x}(t)$ approaches $ x(t) $ as $ t \rightarrow \infty $.
 
