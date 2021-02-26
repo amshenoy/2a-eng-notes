@@ -1,4 +1,5 @@
 # Observability
+> Typically the state is not available for measurement, but we can estimate $ \underline{x}(t) $ from $ \underline{y} $ and $ \underline{u} $
 
 ## Observability Matrix
 
