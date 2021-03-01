@@ -54,6 +54,8 @@ $ \large \mu_{n} $ - **Mean service time** when $ n $ customers are in the syste
 
 Traffic Intensity (Utilisation) $ \Large \color{blue}{ \rho = \dfrac{\lambda}{s\mu} } $
 
+Proportion of time the server is idle $ 1 - \rho $
+
 </br>
 
 ## Steady-State Metrics
