@@ -293,6 +293,24 @@ $ \large B( \cdot ) $ - **Barrier Function** eg. $ B(x) = \dfrac{1}{x} $ or $ B(
 
 # Simulated Annealing (Global)
 
+Given the cost (ie. energy) function $ E(x) $: 
+
+The following **update step is performed with probability** $ p $:
+$$ \Large x_{n+1} \underbrace{\leftarrow}_{p} x_{n} + U(-\frac{1}{2}, \frac{1}{2}) \ h $$
+
+where $ \Large p = \min (e^{-\frac{\Delta E }{T}}, 1) $ and $ \Delta E = E(x_{n+1}) - E(x_{n}) $.
+
+The **temperature is updated deterministically** using a cooling rate parameter $ R $.
+$$ T_{n+1} = T_{n} \ (1 - R) $$
+
+
+### Limitations
+
+- High $ h $ does not explore enough. Low $ h $ explores too slowly. 
+- High $ R $ means possible to not converge. Low $ R $ means high computational requirements. 
+- No stopping condition
+
+
 
 
 
