@@ -77,12 +77,12 @@ $$ \large \color{green}{
 } 
 $$
 
-$$ \therefore \log \big( p(\{x_{n}\}_{n=1}^{N}|\theta \big) = \sum_{n=1}^{N} \log \big( \ \sum_{k}^{K} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) \ \big)
+$$ \therefore \color{blue}{ \log \big( p(\{x_{n}\}_{n=1}^{N}|\theta \big) = \sum_{n=1}^{N} \log \big( \ \sum_{k}^{K} \pi_{k} \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) \ \big) }
 $$
 
 ### Maximum Likelihood
 
-$$ \large \theta_{ML} = \arg_{\theta} \max \enspace \log( p(\{x_{n}\}_{n=1}^{N}|\theta) ) $$
+$$ \large \color{blue}{ \theta_{ML} = \arg_{\theta} \max \enspace \log( p(\{x_{n}\}_{n=1}^{N}|\theta) ) } $$
 
 #### Possible Methods:
 1) **Gradient Descent** &emsp; $ \theta_{new} = \theta_{old} + \alpha \dfrac{d}{d\theta} \log \big( p(\{x_{n}\}_{n=1}^{N}|\theta \big)  $
@@ -119,7 +119,12 @@ $$
 
 Here we maximise the free-energy $ \color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } $ wrt $ q(\underline{s}) $ which is the equivalent of minimising the KL-Divergence term (use of Lagrange multiplier to prove) giving the denominator $ p(\underline{s} | X, \theta) $ as the optimum value.
 
-$$ \large q_{t}(\underline{s}) = p(\underline{s} | X, \theta_{t-1}) $$
+$$ \large 
+\begin{align*}
+q_{t}(\underline{s}) &= \color{green}{ \arg_{q(\underline{s})}\max \  \mathcal{F}( q(\underline{s}), \theta ) } \\ \\
+q_{t}(\underline{s}) &= p(\underline{s} | X, \theta_{t-1})
+\end{align*}
+$$
 
 </br>
 
@@ -143,7 +148,7 @@ We can ignore the entropy term $ H(q(\underline{s})) $ since it is independent o
 
 $$ \large
 \begin{align*}
-\theta_{t} &= \arg_{\theta}\max \ \color{green}{ \mathcal{F}( q(\underline{s}), \theta ) } \\
+\theta_{t} &= \color{green}{ \arg_{\theta}\max \ \mathcal{F}( q(\underline{s}), \theta ) } \\
 &= \arg_{\theta}\max \ \sum_{\underline{s}} \ 
 q_{t}(\underline{s}) \log \Big( \ p(\underline{s}|\theta) \ \ p(X | \underline{s}, \theta) \ \Big) \\
 \end{align*}
