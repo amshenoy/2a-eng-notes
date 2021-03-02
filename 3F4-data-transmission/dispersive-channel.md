@@ -2,16 +2,18 @@
 
 > A **channel frequency response** $ H(f) $ that is **not flat in the transmission band** is called **frequency-selective** or **dispersive**.
 
-Consider the baseband signal $ \large x(t) = \sum_{k} X_{k} \ p(t-kT) $:
+</br> </br>
+
+# Equalisation
+
+
+Consider the **baseband signal** $ \large x(t) = \sum_{k} X_{k} \ p(t-kT) $ where $ h(t) $ is the **channel impulse response**:
 
 $$ \large y(t) = \Big( \sum_{k} X_{k} \ f(t-kT) \Big) + n(t) $$
 
 where $ \large f(t) = h(t) * p(t) $.
 
-
-</br> </br>
-
-# Equalisation
+</br>
 
 At the receiver, we apply the low pass filter $ \large r(t) = y(t) * q(t) $ and sample the output $ \large r(t)|_{t=mT} $:
 
@@ -25,7 +27,7 @@ To make notation easier to parse, consider $ \underline{r} = \{ r_{m} \} = \{ r(
 
 $$ \large \color{blue}{
 \begin{align*}
-r_{m} & = \sum_{l=0}^{L} X_{k} \ g_{m-l} + N_{m}  \qquad \small (L \ \text{non-zero components of } g_{l}) \\
+r_{m} & = \sum_{l=0}^{L} g_{l} \ X_{m-l} + N_{m}  \qquad \small (L \ \text{non-zero components of } g_{l}) \\
 \end{align*}
 }
 $$ 
@@ -151,7 +153,55 @@ $$
 
 # Orthognal Frequency Division Multiplexing (OFDM)
 
+</br>
 
+Consider the **passband signal**:
+$$ \large
+\begin{align*}
+x(t) &= Re(x_{b}(t) e^{j 2\pi f_{c} t}) = x_{b}(t) \cos(2\pi f_{c} t) \\
+&= \Big( \sum_{k} \ x_{k} \ p(t-kT) \Big) \ \cos(2\pi f_{c} t) \\
+&= \sum_{k} p(t-kT) \ \Big( Re(x_{k}) \cos(2\pi f_{c} t) - Im(x_{k}) \sin(2\pi f_{c} t) \Big) 
+\end{align*}
+$$
+
+##### Note: Although we consider the signal to be the same as that used in QAM, the symbols are not distributed according to the QAM constellation.
+
+</br>
+
+Consider $ \large h(t) = Re( \ h_{b}(t) \ e^{j 2\pi f_{c} t} \ ) = h_{b}(t) \cos(2\pi f_{c} t) $ where $ \large h_{b}(t) $ is the **baseband equivalent impulse response**:
+
+$$ \large 
+\begin{align*}
+y(t) &= x(t)*h(t) + n(t) \\
+y(t) &= \sum_{k} f(t-kT) \ \Big( Re(x_{k}) \cos(2\pi f_{c} t) - Im(x_{k}) \sin(2\pi f_{c} t) \Big) + n(t)
+\end{align*}
+$$
+
+where $ \large f(t) = h_{b}(t) * p(t) $.
+
+</br>
+
+### Multiply, Lowpass, Matched, Sample (as in QAM)
+
+$$ y_{r}(t) = Lowpass( y(t) \cdot \cos(2\pi f_{c} t) )\qquad = \qquad \sum_{k} \color{blue}{ x_{k}^{r} } \ f(t-kT) + n^{r}(t)  $$
+$$ y_{i}(t) =  Lowpass( y(t) \cdot - \sin(2\pi f_{c} t) ) \qquad = \qquad \sum_{k} \color{red}{ x_{k}^{i} } \ f(t-kT) + n^{i}(t) $$
+
+$$ \large 
+\begin{align*}
+r(t) &= ( \ y_{r}(t) + j \ y_{i}(t) \ ) * p(-t) \\ \\
+r(t) &= \sum_{k} x_{k} \ g(t-kT) \ + n(t) \\
+r_{m} &= \sum_{k} x_{k} \ g_{m-k}  \ + n_{m} \\
+\end{align*}
+$$
+
+
+$$ \Large \color{blue}{ r_{m} = \sum_{l=0}^{L} g_{l} \ x_{m-l}  \ + n_{m} } $$
+
+</br>
+
+where $ \large g(t) = f(t) * p(-t) = p(t) * h_{b}(t) * p(-t) $, $ \large r_{m} = r(mT) $ and $ \large g_{m} = g(mT) $.
+
+</br>
 
 
 
