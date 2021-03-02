@@ -1,6 +1,6 @@
 # Dispersive Channels
 
-A **channel frequency response** $ H(f) $ that is **not flat in the transmission band** is called **frequency-selective** or **dispersive**.
+> A **channel frequency response** $ H(f) $ that is **not flat in the transmission band** is called **frequency-selective** or **dispersive**.
 
 Consider the baseband signal $ \large x(t) = \sum_{k} X_{k} \ p(t-kT) $:
 
@@ -9,7 +9,7 @@ $$ \large y(t) = \Big( \sum_{k} X_{k} \ f(t-kT) \Big) + n(t) $$
 where $ \large f(t) = h(t) * p(t) $.
 
 
-</br>
+</br> </br>
 
 # Equalisation
 
