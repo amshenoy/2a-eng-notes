@@ -201,14 +201,71 @@ $$ \Large \color{blue}{ r_{m} = \sum_{l=0}^{L} g_{l} \ x_{m-l}  \ + n_{m} } $$
 
 where $ \large g(t) = f(t) * p(-t) = p(t) * h_{b}(t) * p(-t) $, $ \large r_{m} = r(mT) $ and $ \large g_{m} = g(mT) $.
 
+
 </br>
 
+##### Note: That this convolution can be performed by the attachment of a cyclic prefix to $ \underline{x} $ giving $ \underline{\tilde{x}} $ , taking the product of the DFTs of $ \underline{x} $ and $ \underline{g} $ then performing the inverse DFT (essentially performing the circular convolution of the $ \underline{\tilde{x}} $ and $\underline{g}$).
+
+</br> </br>
+
+Hence, the full formulation of the OFDM transmitter and receiver is as follows:
+
+## OFDM Transmitter
+
+### 1) **Encode the information in DFT domain** by choosing
+$ \{ X[0], . . . , X[N − 1] \} $ are **chosen from a QAM constellation**.
+
+### 2) **Inverse DFT** to produce the **time-domain sequence**
+$ \{ x[0], . . . , x[N − 1] \} $.
+
+### 3) **Insert cyclic prefix** $ \{ x[−L], . . . , x[−1] \} = \{x[N − L], . . . , x[N − 1] \} $
+
+### 4) $ \large \color{blue}{ x_{b}(t) = \sum_{m=-L}^{N−1} x[m] \ p(t − m T ) } $
+##### Note: $ N $ QAM symbols are transmitted per block even though the linear convolution is from $ -L $. Here by adding the cyclic prefix we have achieved the output of the required circular convolution by performing the modified linear convolution.
+
+### 5) $ \large \color{green}{ x(t) = Re(x_{b}(t) e^{j 2\pi f_{c} t}) } $
+
+</br>
+
+#### Note: Each OFDM block has duration $ (L+N)T $ time and hence the time to send the cyclic prefix $ LT $ is known as the "guard period" (guarding against ISI).  
+
+</br> </br>
+
+## OFDM Receiver
+
+Received signal $ y(t) = x(t) * h(t) + n(t) $
+ 
+</br>
+
+### 1) **Multiply, Lowpass, Matched, Sample**
+
+$ \large \color{blue}{ r_{m} = \sum_{l=0}^{L} g_{l} \ x_{m-l}  \ + n_{m} \qquad \small m= -L, ..., 0, ..., N-1 } $
+
+Outputs $ \{ r[−L], ..., r[−1] \} $ are discarded.
+ 
+</br>
+
+### 2) **Compute the N-point DFT** of $ \{ r[0], . . . ,r[N − 1] \} $
+
+$ \color{blue}{ R[n] = G[n]X[n] + N[n] \qquad \small n = 0, ..., N-1 } $
+
+##### Note: For each n, this is an AWGN channel with no ISI.
+##### Note: $ G[0], . . . , G[N − 1] $ are obtained by taking the N-point DFT of $ g[0], . . . , g[L] $.
+ 
+</br>
+
+### 3) Use **MAP rule to recover the QAM symbols** $ X[n] $.
 
 
+</br>
 
+## Summary
 
+Full Bandwidth $ \dfrac{1}{T} $
 
+Sub-Carrier Bandwidth (Bandwidth per symbol) $ \dfrac{1}{N T} $
 
+Transmission Rate $ \dfrac{N}{L+N} \dfrac{1}{T} $
 
 
 
