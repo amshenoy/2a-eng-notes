@@ -115,3 +115,19 @@ The **transfer function of the graph** can be calculated from the **state equati
 
 ##### Note: We can define any metric (eg. total path length $ J $, $ N $ if the input bit is 1) on each of the edges as a product with $ D^{w} $ to get an extended transfer function $T(D, J, N)$ !!!! 
 
+
+</br><hr></br>
+
+### Catastrophic Encoders
+
+It is possible to have an encoder that generates infinitely many decoding errors for a finite number of channel errors.
+
+#### Avoidance
+
+Theorem [Massey & Sain, 1968]
+If the greatest common divisor of $ \{ g_{1}(D), ..., g_{n}(D) \} $ is of the form $ D^{l} $ for $ l \ge 0 $, then the encoder is not catastrophic.
+
+
+
+
+
