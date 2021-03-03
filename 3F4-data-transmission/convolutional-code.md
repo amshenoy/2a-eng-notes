@@ -108,7 +108,10 @@ The **transfer function of the graph** can be calculated from the **state equati
 ##### 2) Simplify by substitution to an equation in terms of the all-zero start state and end state.
 ##### 3) Calculate the transfer function in terms of $ D $.
 
-##### 4) Convert the transfer function to a finite / infinite series of $ D $
+##### 4) Convert the transfer function $ T(D) $ to a finite / infinite series of $ D $
 ##### 5) The power of the term with the lowest power of $ D $ is $ d_{\text{free}} $.
 
+</br>
+
+##### Note: We can define any metric (eg. total path length $ J $, $ N $ if the input bit is 1) on each of the edges as a product with $ D^{w} $ to get an extended transfer function $T(D, J, N)$ !!!! 
 
