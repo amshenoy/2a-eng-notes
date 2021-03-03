@@ -76,4 +76,27 @@ $$
 
 ### ---------------------------------
 
+</br><hr></br>
+
+## Performance
+
+> In linear codes, we considered the minimum distance $ \large d_{min} $ between any two codewords but since convolutional codes do not have a fixed blocklength we consider the free distance $  \large d_{\text{free}} $.
+
+$ \le \lfloor \dfrac{d_{free}-1}{2} \rfloor $ errors can be corrected.
+
+**We can compute $ \large d_{free} $ using the code transfer function:**
+
+1) **Simplify state labels** (Use letters instead of the state vectors)
+
+2) **Duplicate the all-zero state** (creating two nodes; **a start and an end**)
+
+3) **Label each transition edge with $ \large D^{w} $** where **$  \large w $** is the **weight of the output** at that edge.
+
+4) **$ d_{\text{free}} $** is the **minimum sum of the edges** going **from the start to the end node**.
+
+
+</br>
+
+##### Note: Free distance is the difference in path metrics between the all-zeroes output and the path with the smallest non-zero path metric going from the initial all-zero state to some future all-zero state. (In our case the path metric is the Hamming distance)
+
 
