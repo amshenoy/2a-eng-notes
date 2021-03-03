@@ -100,3 +100,15 @@ $ \le \lfloor \dfrac{d_{free}-1}{2} \rfloor $ errors can be corrected.
 ##### Note: Free distance is the difference in path metrics between the all-zeroes output and the path with the smallest non-zero path metric going from the initial all-zero state to some future all-zero state. (In our case the path metric is the Hamming distance)
 
 
+</br>
+
+The **transfer function of the graph** can be calculated from the **state equations**.
+
+##### 1) For each node, calculate the state equation.
+##### 2) Simplify by substitution to an equation in terms of the all-zero start state and end state.
+##### 3) Calculate the transfer function in terms of $ D $.
+
+##### 4) Convert the transfer function to a finite / infinite series of $ D $
+##### 5) The power of the term with the lowest power of $ D $ is $ d_{\text{free}} $.
+
+
