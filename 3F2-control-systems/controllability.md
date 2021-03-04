@@ -6,9 +6,11 @@
 
 $ n $ is the dimension of $ A $ (**the number of states**).
 
-$$ M_{C} = \begin{bmatrix}
+$$ \Large \color{blue}{
+M_{C} = \begin{bmatrix}
 B & A B & \cdots & A^{n-1} B
 \end{bmatrix}
+}
 $$
 
 If $ M_{C} $ is **full-rank** (**linearly independent columns** | $ det(M_{C}) \ne 0 $ | $ M_{C} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is controllable**.
@@ -32,13 +34,15 @@ B = \begin{bmatrix} 1 \\ 0 \\ \vdots \\ 0 \end{bmatrix}
 $$
 
 
-# State Feedback
+# Controller (State Feedback)
 
 The response of a system is largely determined by the location of its closed loop poles. We can use state feedback to assign the closed-loop poles.
 
-Given $ \dot{\underline{x}} = A \underline{x} + B \underline{u} $, we can let $ \underline{u} = −K \underline{x} + M \underline{r} $:
+Given $ \dot{\underline{x}} = A \underline{x} + B \underline{u} $:
+ 
+Let $ \large \color{blue}{ \underline{u} = −K \underline{x} + M \underline{r} } $.
 
-$$ \dot{\underline{x}} = (A - BK)\underline{x} + B M \underline{r} $$
+$$ \large \dot{\underline{x}} = (A - BK)\underline{x} + B M \underline{r} $$
 
 #### We can arbitrarily assign the eigenvalues of $ (A − BK) $ by choice of $ K $ if and only if the system is controllable.
 
@@ -50,10 +54,43 @@ $$ \dot{\underline{x}} = (A - BK)\underline{x} + B M \underline{r} $$
 
 Supposing that we want $ \underline{y} \rightarrow \underline{r} $ as $ t \rightarrow \infty $:
 
-In steady-state $ \dot{\underline{x}} = 0 $ ie. $ \underline{x} = (A-BK)^{-1} B M \underline{r} $:
+In **steady-state** &ensp; $ \large \dot{\underline{x}} = 0 $ ie. $ \underline{x} = (A-BK)^{-1} B M \underline{r} $:
 
 $ \underline{y} = C \underline{x} = C (A-BK)^{-1} B M \underline{r} $
 
 
 We need to select $ M $ such that the steady-state gain becomes $ I $ so that $ \underline{y} \rightarrow \underline{r} $ as $ t \rightarrow \infty $.
+
+
+
+</br> <hr> </br>
+
+## Duality Controllability-Observability
+
+> The pair ($ A $, $ B $) is **controllable** if and only if the pair ($ A^{T} $, $ B^{T} $ ) is **observable** (and vice versa).
+
+</br>
+
+**Possible Statements**:
+
+($ A $, $ B $) is **controllable** if ($ A^{T} $, $ B^{T} $ ) is **observable**.
+
+($ A $, $ C $) is **observable** if ($ A^{T} $, $ C^{T} $ ) is **controllable**.
+
+</br>
+
+### Proof by Gramians
+
+($ A $,$ B $) is **controllable** if $ W_{C}(t) $ is **nonsingular for any t**:
+
+$$ W_{C}(t) = \int_{0}^{t} e^{A \tau} B B^{T} e^{A^{T} \tau} d\tau $$
+
+
+($ A $,$ C $) is **observable** if $ W_{O}(t) $ is **nonsingular for any t**:
+
+$$ W_{O}(t) = \int_{0}^{t} e^{A^{T} \tau} C^{T} C e^{A \tau} d\tau $$
+
+Substitute $ A = A^{T} $ and $ C = B^{T} $ to show equivalence.
+
+
 
