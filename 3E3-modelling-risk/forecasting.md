@@ -113,6 +113,6 @@ where $ \large c $ is the number of time periods in the season.
 </br>
 
 
-
+### Note: We can consider $ S $ or $ T $ being $ 0 $ (additive case) or $ 1 $ (multiplicative case) where required such as to either exclude consideration of seasonality or trend.
 
 
