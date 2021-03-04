@@ -5,13 +5,14 @@
 
 $ n $ is the dimension of $ A $ (**the number of states**).
 
-$$
+$$ \Large \color{blue}{
 M_{O} = \begin{bmatrix}
 C \\
 C A \\
 \vdots \\
 C A^{n-1}
 \end{bmatrix}
+}
 $$
 
 If $ M_{O} $ is **full-rank** (**linearly independent columns** | $ det(M_{O}) \ne 0 $ | $ M_{O} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is observable**.
@@ -38,7 +39,7 @@ $$
 Instead of differentiating signals (bad since amplified noise) we will use a **state observer** (**Luenberger Observer**) which contains **a dynamic model of the system** and whose state $ \hat{x}(t)$ approaches $ x(t) $ as $ t \rightarrow \infty $.
 
 
-$$ 
+$$ \large
 \mathcal{O} = 
 \begin{cases}
 \dot{\hat{\underline{x}}} = A \hat{\underline{x}} + B \underline{u} + L(\underline{y} - \hat{\underline{y}}) \\
@@ -46,9 +47,9 @@ $$
 \end{cases}
 $$
 
-Now we will consider $ \underline{\epsilon}(t) = \underline{x}(t) − \hat{\underline{x}}(t) $:
+Now we will consider $ \large \underline{\epsilon}(t) = \underline{x}(t) − \hat{\underline{x}}(t) $:
 
-This simplifies to $ \dot{\underline{\epsilon}} = (A − LC)\underline{\epsilon} $, the solution to this differential equation is $ \underline{\epsilon}(t) = e^{(A-LC)t} \underline{\epsilon}_{0} $.
+This simplifies to $ \large \dot{\underline{\epsilon}} = (A − LC)\underline{\epsilon} $, the solution to this differential equation is $ \underline{\epsilon}(t) = e^{(A-LC)t} \underline{\epsilon}_{0} $.
 
 Therefore we need  $ e^{(A-LC)t} \rightarrow 0 $ as $ t \rightarrow \infty $.
 
