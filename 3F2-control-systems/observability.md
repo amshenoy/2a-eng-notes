@@ -29,7 +29,7 @@ A = \begin{bmatrix}
 \end{bmatrix} \\
 $$
 $$
-C = \begin{bmatrix} 1, 0 & \cdots & 0 \end{bmatrix}
+C = \begin{bmatrix} 1 & 0 & \cdots & 0 \end{bmatrix}
 $$
 
 
