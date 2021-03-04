@@ -116,3 +116,26 @@ where $ \large c $ is the number of time periods in the season.
 ### Note: We can consider $ S $ or $ T $ being $ 0 $ (additive case) or $ 1 $ (multiplicative case) where required such as to either exclude consideration of seasonality or trend.
 
 
+</br> <hr> </br>
+
+## Forecasting Error
+
+$$ \large \epsilon_{t} = X_{t} - \hat{X}_{t} $$
+
+### Mean Absolute Deviation (MAD)
+$$ \large \zeta = \dfrac{1}{n} \sum_{t} |e_{t}| $$
+
+### Mean Squared Error (MSE)
+$$ \large \zeta = \dfrac{1}{n} \sum_{t} e_{t}^{2} $$
+
+### Mean Absolute Percentage Error (MAPE)
+
+$$ \large \zeta = 100\% \cdot \dfrac{1}{n}  \sum_{t} |\dfrac{e_{t}}{X_{t}}| $$
+
+
+#### Confidence Intervals
+
+The **square root of MSE** is the **standard deviation of the forecast errors**. It can be used as a tentative confidence interval for a point estimate forecast.
+
+
+
