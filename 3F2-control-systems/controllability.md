@@ -20,8 +20,9 @@ If $ M_{C} $ is **full-rank** (**linearly independent columns** | $ det(M_{C}) \
 $$ 
 A = \begin{bmatrix}
 -a_{1} & -a_{2} & -a_{3} & \cdots & -a_{n-1}  & -a_{n} \\
-1 & 0 & 1 & \cdots & 0 & 0 \\
-0 & 1 & \vdots & \ddots & 0 & 0\\
+0 & 1 & 0 & \cdots & 0 & 0 \\
+0 & 0 & 1 & \cdots & 0 & 0\\
+\vdots & \vdots & \vdots & \ddots & \vdots & \vdots \\
 0 & 0 & 0 & \cdots & 1 & 0 \\
 0 & 0 & 0 & \cdots & 0 & 1\\
 \end{bmatrix} \\
