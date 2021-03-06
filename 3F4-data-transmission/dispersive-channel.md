@@ -42,9 +42,9 @@ We can take the **Z-transform** giving us the following:
 
 $$ \large \color{blue}{ R(z) = X(z)G(z) + N(z) } $$
 
-Then apply the **zero-forcing equaliser** filter &ensp; $ \large \color{blue}{ H_{E}(z) = \dfrac{1}{G(z)} } $ &ensp; (**IIR filter** - Infinite non-zero coeffs). The output of the filter $ W(z) $ is the following:
+Then apply the **zero-forcing equaliser** filter &ensp; $ \large \color{blue}{ H_{E}(z) = \dfrac{1}{G(z)} } $ &ensp; (**IIR filter** - Infinite non-zero coeffs). The output of the filter $ Y(z) $ is the following:
 
-$$ W(z) = R(z) H_{E}(z) = \underbrace{ \dfrac{R(z)}{G(z)} }_{(1)} = \underbrace{ X(z) + \dfrac{N(z)}{G(z)} }_{(2)} $$
+$$ Y(z) = R(z) H_{E}(z) = \underbrace{ \dfrac{R(z)}{G(z)} }_{(1)} = \underbrace{ X(z) + \dfrac{N(z)}{G(z)} }_{(2)} $$
 
 $(1)$ shows us how we can implement the filtering process. We can use an iterative method in the $ k $-domain by writing $ Y(z) G(z) = R(z) $ ie. $ \underline{r} = \underline{y} * \underline{g} = \sum_{l=0}^{L} g_{l} \ y_{n-l} = g_{0} \ y_{n} + ... + g_{L} \ y_{n-L} $. Rearrange for $y_{n}$ and recursively find $ y_{n} $ using previous terms as well as the known $ g_{n} $ filter terms.
 
@@ -57,18 +57,18 @@ $(2)$ shows that in the **absence of noise**, we **can exactly recover the symbo
 
 > We want to design a $K+1$-tap equalising (removes ISI) filter $ \underline{h} = \{h_{0}, ..., h_{K}\}$.
 
-Given $ \underline{g} = \{g_{0}, ..., g_{L} \}$, apply the general filter $ \underline{h} = \{h_{0}, ..., h_{K}\}$ to $ \underline{r} $. The output $ \underline{w} $ is given by:
+Given $ \underline{g} = \{g_{0}, ..., g_{L} \}$, apply the general filter $ \underline{h} = \{h_{0}, ..., h_{K}\}$ to $ \underline{r} $. The output $ \underline{y} $ is given by:
 
 $$
 \begin{align*}
-\underline{w} &= \underline{h} * \underline{r} = \underline{h} * \Big( \underline{g} * \underline{X} + \underline{n} \Big) \\
+\underline{y} &= \underline{h} * \underline{r} = \underline{h} * \Big( \underline{g} * \underline{X} + \underline{n} \Big) \\
 &= (\underline{h} * \underline{g}) * \underline{X} + \underline{h}*\underline{n} \\
 \text{Let } \underline{f} = \underline{h} * \underline{g} \qquad f_{l} = \sum_{k=0}^{K} \ h_{k} \ g_{l-k} \\ \\
 
-\underline{w} &= \underline{f} * \underline{X} + \underline{h}*\underline{n} \\ \\
+\underline{y} &= \underline{f} * \underline{X} + \underline{h}*\underline{n} \\ \\
 
-w_{m} &= \sum_{j=0}^{L+K} X_{m-j} f_{j} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
-w_{m} &= X_{m} f_{0} + \underbrace{ \sum_{j=1}^{L+K} X_{m-j} f_{j} }_{ISI} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
+y_{m} &= \sum_{j=0}^{L+K} X_{m-j} f_{j} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
+y_{m} &= X_{m} f_{0} + \underbrace{ \sum_{j=1}^{L+K} X_{m-j} f_{j} }_{ISI} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
 
 \end{align*}
 $$
@@ -79,18 +79,20 @@ We can try to **eliminate the ISI term** by attempting to get $ f_{j} = \begin{c
 
 </br>
 
-### Given $ \color{green}{ \underline{g} } $ and $ \color{blue}{ f_{l} = \begin{cases} 1 \qquad l=0 \\ 0 \qquad l \ne 0 \end{cases} } $, solve for $ \color{green}{ \underline{h} } $ by solving $ K $ equations $ l = 0, ..., K-1 $:
+### Given $ \color{green}{ \underline{g} } $, solve for $ \color{green}{ \underline{h} } $ by solving $ K $ equations $ l = 0, ..., K-1 $:
 
-$$ \Large \color{blue}{ f_{l} = \sum_{k=0}^{K} \ h_{k} \ g_{l-k} } $$
+$$ \Large \color{blue}{ f_{l} = \sum_{k=0}^{K} \ h_{k} \ g_{l-k} } 
+\qquad \qquad \color{blue}{ f_{l} = \begin{cases} 1 \qquad l=0 \\ 0 \qquad l \ne 0 \end{cases} } 
+$$
 
 </br>
 
 After solving this we will have eliminated $ K $ ISI terms:
 
 $ \begin{align*}
-w_{m} &= X_{m} f_{0} + \underbrace{ \sum_{j=1}^{L+K} X_{m-j} f_{j} }_{ISI} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
+y_{m} &= X_{m} f_{0} + \underbrace{ \sum_{j=1}^{L+K} X_{m-j} f_{j} }_{ISI} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
 \text{becomes} \\
-w_{m} &= X_{m} + \underbrace{ \sum_{j=\color{purple}{K+1}}^{L+K} X_{m-j} f_{j} }_{\text{Residual } ISI} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
+y_{m} &= X_{m} + \underbrace{ \sum_{j=\color{purple}{K+1}}^{L+K} X_{m-j} f_{j} }_{\text{Residual } ISI} + \sum_{i=0}^{K} h_{i} n_{m-i} \\
 \end{align*}
 $
 
@@ -261,11 +263,34 @@ $ \color{blue}{ R[n] = G[n]X[n] + N[n] \qquad \small n = 0, ..., N-1 } $
 
 ## Summary
 
-Full Bandwidth $ \dfrac{1}{T} $
+</br>
 
-Sub-Carrier Bandwidth (Bandwidth per symbol) $ \dfrac{1}{N T} $
+**Symbol Period** $ T $
 
-Transmission Rate $ \dfrac{N}{L+N} \dfrac{1}{T} $
+</br>
 
+**Full Bandwidth** $ W = \dfrac{1}{T} $
+
+**Number of Sub-Carriers** $ N $
+
+**Sub-Carrier Bandwidth** (Bandwidth / symbol) $ \Delta f = \dfrac{W}{N}$
+
+</br>
+
+**Sub-Carrier Period** $ T_{S} $
+
+**Guard Time** $ \Delta T = LT $
+
+**Sub-Carrier Symbol Rate** $ R_{S} = \dfrac{1}{ T_{S} + \Delta T} $
+
+**Full Symbol Rate** (Transmission Rate) $ R = \dfrac{N}{(L+N) T} = N R_{S} $
+
+
+</br>
+$ b $ - Number of Symbols in Constellation
+
+$ E $ - Error Correcting Code Rate
+
+**Full Data Rate** (Bit Rate) $ B = N R_{s} \ b \ E $ 
 
 
