@@ -89,9 +89,42 @@ $$ \large \color{blue}{ \theta_{ML} = \arg_{\theta} \max \enspace \log( p(\{x_{n
 
 2) **Expectation Maximisation** Algorithm
 
+
 </br> </br>
 
-## Expectation Maximisation
+## General Formulation (EM)
+
+Let $ \large \theta = \{ \ \pi_{k}, \underline{m}_{k}, \Sigma_{k} \ \}_{k=1}^{K} , \qquad \large D = \{ \underline{d}_{n} \}_{n=1}^{N}  , \qquad  \large X = \{ \underline{x}_{n} \}_{n=1}^{N}  $
+
+### (**E**) Expectation Step 
+> **Posterior of data** $ \underline{x}_{n} $ (/ likelihood of latent variable) as a **function of latent variables** $ \underline{d}_{n} $ **given parameters** $ \theta $
+
+$$ \large \color{blue}{ q(\underline{d}_{n}) = p(\underline{d}_{n} | \underline{x}_{n}, \theta) } $$
+
+### (**M**) Maximisation Step
+> **Maximise expected log** of **Likelihood of data** $ P(X|D) \times P(D) $ **prior of latent variable given parameters** $ \theta $ wrt $ \theta $ (Maximisation of free-energy)
+
+$$ \large \color{blue}{
+\begin{align*}
+\theta^{*} &= \arg_{\theta}\max \ E_{q(\underline{d}_{n})} \Big[ \ \log\Big( \ p(X|D, \theta)  \ p(D|\theta) \ \Big) \ \big] \\
+\end{align*}
+}
+$$
+
+</br>
+
+#### Note: The expectation should be computed as follows $ \theta^{*} = \arg_{\theta}\max \ \int q(\underline{d}_{n}) \ \log\Big( \ p(X|D, \theta)  \ p(D|\theta) \ \Big) \ \ d ( \ \underline{d}_{n}  \ )  $ however simplification of products and summations to single datapoint representation must be done first.
+
+</br>
+
+#### Note: In the case of clustering, $ D $ is written as $ \underline{s} = \{s_{n}\}_{n=1}^{N} $ and where $ s_{n} $ is a scalar value instead of a vector $ \underline{d}_{n} $.  
+
+
+</br> </br>
+
+</br> <hr> </br>
+
+## Expectation Maximisation (Full Proof)
 
 ### Free Energy
 
@@ -160,7 +193,7 @@ $$
 \begin{align*}
 \mathcal{F}( q(\underline{s}), \theta ) &= \sum_{n}^{N} \sum_{k}^{K} q(s_{n}=k) \log \Big( \ p(s=k|\theta) \ p(\underline{x}_{n}|s=k, \theta) \ \Big) \\
 &= \sum_{n}^{N} \sum_{k}^{K} q(s_{n}=k) \log \Big( \ \pi_{k} \ \ \mathcal{N}(\underline{x}_{n}; \ \underline{m}_{k}, \Sigma_{k}) \ \Big) \\
-&= \sum_{n}^{N} \sum_{k}^{K} q(s_{n}=k) \Bigg( \log( \ \pi_{k} \ ) - \dfrac{1}{2} (\underline{x}_{n} - \underline{m}_{k})^{T} \ \Sigma_{k}^{-1} \ (\underline{x}_{n} - \underline{m}_{k}) \ + const. \Bigg) \\
+&= \sum_{n}^{N} \sum_{k}^{K} q(s_{n}=k) \Bigg( \log( \ \pi_{k} \ ) - \dfrac{1}{2} (\underline{x}_{n} - \underline{m}_{k})^{T} \ \Sigma_{k}^{-1} \ (\underline{x}_{n} - \underline{m}_{k}) \ - \dfrac{1}{2} \log(|\Sigma_{k}|) + const. \Bigg) \\
 \end{align*}
 $$
 
@@ -168,9 +201,9 @@ We can work out the parameters $ \theta = \{ \pi_{k},  \underline{m}_{k}, \Sigma
 
 $$
 \begin{align*}
-\dfrac{\partial \mathcal{F}}{\partial \underline{m}_{k}} = \sum_{n}^{N} q(s_{n}=k) \ \big( 2 \Sigma_{k}^{-1} (\underline{x}_{n} - \underline{m}_{k} ) \big) = 0
+\dfrac{\partial \mathcal{F}}{\partial \underline{m}_{k}} = \sum_{n}^{N} q(s_{n}=k) \ \big( 2\Sigma_{k}^{-1} (\underline{x}_{n} - \underline{m}_{k} ) \big) = 0
 \\
-\dfrac{\partial \mathcal{F}}{\partial \Sigma_{k}} = \sum_{n}^{N} q(s_{n}=k) \ \big( - \Sigma_{k}^{-T} \ (\underline{x}_{n} - \underline{m}_{k} ) (\underline{x}_{n} - \underline{m}_{k} )^{T}  \ \Sigma_{k}^{-T} \big) = 0
+\dfrac{\partial \mathcal{F}}{\partial \Sigma_{k}} = \sum_{n}^{N} q(s_{n}=k) \ \big( \Sigma_{k}^{-T} \ (\underline{x}_{n} - \underline{m}_{k} ) (\underline{x}_{n} - \underline{m}_{k} )^{T}  \ \Sigma_{k}^{-T} \ - \ \Sigma_{k}^{-T} \big) = 0
 \\
 \dfrac{\partial (\mathcal{F} + \lambda( 1 - \sum_{k} \pi_{k} ) )}{\partial \pi_{k}} = \sum_{n}^{N} \dfrac{q(s_{n}=k)}{\pi_{k}} - \lambda = 0 
 \\
