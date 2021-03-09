@@ -118,25 +118,65 @@ $ \underline{h} = (I - P)^{-1} \underline{1} $
 
 </br><hr>
 
-## Continuous Time, Discrete State-Space
+# Continuous Time, Discrete State-Space
 
 
-### Birth-Death Process
+## Birth-Death Process
+
+$$ \large \dfrac{d \underline{p}}{dt} = \underline{p} Q $$
+
+$ \underline{p} $ - **Probability State Vector** (Infinite size) (**$ \underline{p} $ must sum to 1**)
+
+$ Q $- **Transition Rate Matrix** (Infinite size) (**Rows of $ Q $ must sum to 0**)
+
+</br>
+
+**Steady State Distribution** $ \dfrac{d \underline{p}}{dt} = 0 \qquad \underline{p} \ Q = 0 $
+
+(Get general expression by computing for each column and noticing general pattern)
 
 
 
-
+##### Note: Links with 3F2
 
 
 </br><hr>
 
-## Continuous State-Space
+# Continuous State-Space
+
+## Random Walk
+$ S_{k} \in \{-1, 1\} $ with uniform probability $ \frac{1}{2} $
+
+Position after $ n $ steps, $ X_{n} = \sum_{k=1}^{n} S_{k} $
+
+As $ N \rightarrow \infty $, $ X_{N} \sim \mathcal{N}(0, N) $.
+
+Now taking a small step $ \delta $ in direction $ S_{k} $ every $\delta$ seconds; we get $ W_{t} \sim \mathcal{N}(0, \delta) = \mathcal{N}(0, t)$ and as $ \delta \rightarrow 0 $, this is Brownian motion (Wiener Process).
+
+## Brownian Motion (Weiner Process)
+
+$$ \dfrac{\partial f(x,t)}{\partial t}  = D \dfrac{\partial^{2} f(x,t)}{\partial x^{2}} $$
+
+### Drift Term
+
+$$ \dfrac{\partial f(x,t)}{\partial t} = \color{green}{ m \dfrac{\partial f(x,t)}{\partial x} } + D \dfrac{\partial^{2} f(x,t)}{\partial x^{2}} $$
 
 
-### Brownian Motion
 
-#### Wiener Process
+### Gaussianity
 
+$ W_{t} $ is Gaussian with &emsp; $ E[ W_{t} ] = 0  \qquad E[ W_{t} W_{s} ] = 2D \min(t,s) $
 
-### Ornstein–Uhlenbeck Process
+### Continuity
 
+$ W_{t} = W_{t-s} + W_{s} $ for $ t \ge s $ 
+
+  
+#### Note: Weiner process are **independent** and **continuous** in time, **stationary** and obey **gaussianity**. 
+ 
+</br>
+
+## Ornstein–Uhlenbeck Process
+
+$$ \dfrac{\partial f(x,t)}{\partial t} = \color{green}{ m \dfrac{\partial 
+ \ ( \ \color{red}{ x } f(x,t) \ ) }{\partial x} } + D \dfrac{\partial^{2} f(x,t)}{\partial x^{2}} $$
