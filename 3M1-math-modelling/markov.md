@@ -189,14 +189,26 @@ $$ \dfrac{\partial f(x,t)}{\partial t} = \color{green}{ m \dfrac{\partial
 
 ### Importance Sampling
 
+> We would like to sample from the distribution $ p(\underline{x}) $ but what if we can't sample $ p(\underline{x}) $ directly. Instead assume we can only sample from $ q(\underline{x}) $.
 
+Let $ p(\underline{x}) = \dfrac{1}{Z_{p}} p^{*}(\underline{x}) $ and $ q(\underline{x}) = \dfrac{1}{Z_{q}} q^{*}(\underline{x}) $:
+
+$$
+\begin{align*}
+E_{p}[ f(\underline{x}) ] &= \int f(\underline{x}) p(\underline{x}) \ d(\underline{x}) \\ &= \dfrac{ \int f(\underline{x}) p(\underline{x}) \ d(\underline{x}) } { \int p(\underline{x}) \ d(\underline{x}) } 
+= \dfrac{ \int f(\underline{x}) \dfrac{p(\underline{x})}{q(\underline{x})} q(\underline{x}) \ d(\underline{x}) } { \int \dfrac{p(\underline{x})}{q(\underline{x})} q(\underline{x}) \ d(\underline{x}) } 
+= \dfrac{ \int f(\underline{x}) \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} q(\underline{x}) \ d(\underline{x}) } { \int \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} q(\underline{x}) \ d(\underline{x}) }  \\
+&= \dfrac{ E_{q}[ f(\underline{x}) \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} ] } { E_{q}[ \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} ] }  \\
+&\approx \\
+\end{align*}
+$$
 
 
 </br>
 
 ### Rejection Sampling
 
-We can sample a **probability distribution defined by constraints**, by **sampling using Monte-Carlo** and **rejecting samples that do not obey the constraints**.
+> We can sample a **probability distribution defined by constraints**, by **sampling using Monte-Carlo** and **rejecting samples that do not obey the constraints**.
 
 
 </br>
