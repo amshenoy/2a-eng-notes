@@ -155,6 +155,14 @@ Now taking a small step $ \delta $ in direction $ S_{k} $ every $\delta$ seconds
 
 ## Brownian Motion (Weiner Process)
 
+### Extended Chapman-Kolmogorov Equation
+
+$$ f(x, t+ \tau) = \int_{\infty}^{\infty} f(x+\Delta, t) p(-\Delta) d\Delta$$
+
+Take Taylor series of $ f(x+\Delta, t) $, simplify, convert to $ f(x, t + \tau) - f(x, t) =  \dfrac{\partial f(x,t)}{\partial t} $ giving an expression for $ D = \dfrac{1}{2\tau} \int \Delta^{2} p(\Delta) d\Delta$
+
+</br>
+
 $$ \dfrac{\partial f(x,t)}{\partial t}  = D \dfrac{\partial^{2} f(x,t)}{\partial x^{2}} $$
 
 ### Drift Term
@@ -184,12 +192,11 @@ $$ \dfrac{\partial f(x,t)}{\partial t} = \color{green}{ m \dfrac{\partial
 
 </br><hr></br>
 
-## Monte Carlo
-
+## Markov Chain Monte Carlo (MCMC) Sampling Methods
 
 ### Importance Sampling
 
-> We would like to sample from the distribution $ p(\underline{x}) $ but what if we can't sample $ p(\underline{x}) $ directly. Instead assume we can only sample from $ q(\underline{x}) $.
+> We would like to sample from the distribution $ p(\underline{x}) $ but what if we can't sample $ p(\underline{x}) $ directly. Instead assume we can only generate samples $ \underline{x}_{i} $ from $ q(\underline{x}) $.
 
 Let $ p(\underline{x}) = \dfrac{1}{Z_{p}} p^{*}(\underline{x}) $ and $ q(\underline{x}) = \dfrac{1}{Z_{q}} q^{*}(\underline{x}) $:
 
@@ -199,7 +206,8 @@ E_{p}[ f(\underline{x}) ] &= \int f(\underline{x}) p(\underline{x}) \ d(\underli
 = \dfrac{ \int f(\underline{x}) \dfrac{p(\underline{x})}{q(\underline{x})} q(\underline{x}) \ d(\underline{x}) } { \int \dfrac{p(\underline{x})}{q(\underline{x})} q(\underline{x}) \ d(\underline{x}) } 
 = \dfrac{ \int f(\underline{x}) \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} q(\underline{x}) \ d(\underline{x}) } { \int \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} q(\underline{x}) \ d(\underline{x}) }  \\
 &= \dfrac{ E_{q}[ f(\underline{x}) \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} ] } { E_{q}[ \dfrac{p^{*}(\underline{x})}{q^{*}(\underline{x})} ] }  \\
-&\approx \\
+&\approx \dfrac{ \dfrac{1}{N} \sum_{i=1}^{N} f(\underline{x}_{i}) 
+ w_{i} }{ \dfrac{1}{N} \sum_{i=1}^{N} w_{i} } \qquad w_{i} = \dfrac{p^{*}(\underline{x}_{i})}{q^{*}(\underline{x}_{i})} \\
 \end{align*}
 $$
 
@@ -215,6 +223,17 @@ $$
 
 
 ### Metropolis Hastings
+
+> Accept a new sample $ \underline{x}^{*} $ with probability $ \alpha $ else keep current sample $ \underline{x}_{i} $.
+
+$ \large \underline{x}_{i+1} \leftarrow \begin{cases}
+\underline{x}^{*}  \qquad \alpha = \min(\dfrac{p(\underline{x}^{*})} {p(\underline{x}_{i})}, 1) \\
+\underline{x}_{i} \qquad \text{Otherwise}
+\end{cases}
+$
+
+
+</br>
 
 ### Detailed Balance
 
