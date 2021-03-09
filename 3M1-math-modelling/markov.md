@@ -180,3 +180,37 @@ $ W_{t} = W_{t-s} + W_{s} $ for $ t \ge s $
 
 $$ \dfrac{\partial f(x,t)}{\partial t} = \color{green}{ m \dfrac{\partial 
  \ ( \ \color{red}{ x } f(x,t) \ ) }{\partial x} } + D \dfrac{\partial^{2} f(x,t)}{\partial x^{2}} $$
+
+
+</br><hr></br>
+
+## Monte Carlo
+
+
+### Importance Sampling
+
+
+
+
+</br>
+
+### Rejection Sampling
+
+We can sample a **probability distribution defined by constraints**, by **sampling using Monte-Carlo** and **rejecting samples that do not obey the constraints**.
+
+
+</br>
+
+
+### Metropolis Hastings
+
+### Detailed Balance
+
+
+
+
+
+
+
+
+
