@@ -19,9 +19,13 @@ If $ M_{O} $ is **full-rank** (**linearly independent columns** | $ det(M_{O}) \
 
 </br>
 
-> **Initial Condition that does not affect the output for an unobservable $ M_{O}$**
-$$ \Large M_{O} \ \underline{x}_{0} = \underline{0} $$ 
-$ Range(\underline{x}_{0}) $ are the set of **unobservable states**.
+> **Observable states of $ M_{O} $** &emsp; $ \large Range(M_{O}) $ </br> </br>
+> **Unobservable states of $ M_{O} $** &emsp; $ \large M_{O} \ \underline{x}_{0} = \underline{0} \qquad Range(\underline{x}_{0}) $ are the set of **unobservable states**.
+
+</br>
+
+#### Note: Unobservable states are those that do not affect the output
+
 ##### Note: $ Range(A) $ is all possible linear combinations from the given columns of $ A $.
 
 </br>
