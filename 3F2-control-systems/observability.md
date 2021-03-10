@@ -17,6 +17,14 @@ $$
 
 If $ M_{O} $ is **full-rank** (**linearly independent columns** | $ det(M_{O}) \ne 0 $ | $ M_{O} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is observable**.
 
+</br>
+
+> **Initial Condition that does not affect the output for an unobservable $ M_{O}$**
+$$ \Large M_{O} \ \underline{x}_{0} = \underline{0} $$ 
+$ Range(\underline{x}_{0}) $ are the set of **unobservable states**.
+##### Note: $ Range(A) $ is all possible linear combinations from the given columns of $ A $.
+
+</br>
 
 ## Observer Canonical Form
 
