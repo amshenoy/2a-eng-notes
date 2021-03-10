@@ -122,34 +122,3 @@ We need to select $ M $ such that the steady-state gain becomes $ I $ so that $ 
 
 
 
-</br> <hr> </br>
-
-## Duality Controllability-Observability
-
-> The pair ($ A $, $ B $) is **controllable** if and only if the pair ($ A^{T} $, $ B^{T} $ ) is **observable** (and vice versa).
-
-</br>
-
-**Possible Statements**:
-
-($ A $, $ B $) is **controllable** if ($ A^{T} $, $ B^{T} $ ) is **observable**.
-
-($ A $, $ C $) is **observable** if ($ A^{T} $, $ C^{T} $ ) is **controllable**.
-
-</br>
-
-### Proof by Gramians
-
-($ A $,$ B $) is **controllable** if $ W_{C}(t) $ is **nonsingular for any t**:
-
-$$ W_{C}(t) = \int_{0}^{t} e^{A \tau} B B^{T} e^{A^{T} \tau} d\tau $$
-
-
-($ A $,$ C $) is **observable** if $ W_{O}(t) $ is **nonsingular for any t**:
-
-$$ W_{O}(t) = \int_{0}^{t} e^{A^{T} \tau} C^{T} C e^{A \tau} d\tau $$
-
-Substitute $ A = A^{T} $ and $ C = B^{T} $ to show equivalence.
-
-
-
