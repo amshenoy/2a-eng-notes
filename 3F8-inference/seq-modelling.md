@@ -203,9 +203,21 @@ $ \large \underline{x}_{1:T}^{*} = \arg_{\underline{x}_{1:T}}\max p( \ \underlin
 
 </br>
 
-$ \large \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } = \int \color{green}{ p( \ \underline{x}_{t-1} \ | \ \underline{y}_{1:t-1} ) } \ \color{red}{ \underbrace{ p( \ \underline{x}_{t} \ | \ \underline{x}_{t-1} \ ) }_{\text{Transition}} } \ d\underline{x}_{t-1}  $
+### Step 1 - Prediction
 
-</br>
+$$ \large
+\begin{align*}
+\color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) }
+&= \int \color{red}{ p( \ \underline{x}_{t} \ | \ \underline{x}_{t-1}, \ \underline{y}_{1:t-1} \ ) } \ \color{green}{ p( \ \underline{x}_{t-1} \ | \ \underline{y}_{1:t-1} ) } \ d\underline{x}_{t-1} \\
+
+&= \int \color{green}{ p( \ \underline{x}_{t-1} \ | \ \underline{y}_{1:t-1} ) } \ \color{red}{ \underbrace{ p( \ \underline{x}_{t} \ | \ \underline{x}_{t-1} \ ) }_{\text{Transition}} } \ d\underline{x}_{t-1} \\
+
+\end{align*}
+$$
+
+</br> </br>
+
+### Step 2 - Posterior
 
 $$
 \large \begin{align*}
