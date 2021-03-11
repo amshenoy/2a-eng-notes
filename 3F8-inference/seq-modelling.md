@@ -8,7 +8,7 @@
 **2nd Order Markov** - $ p(x_{1}, x_{2}, ..., x_{T}) = p(x_{1}) \ p(x_{2}|x_{1}) \ p(x_{3}|x_{2}, x_{1}) \ ... \ p(x_{T}| x_{T-1}, x_{T-2}) $
 
 
-</br><hr></br>
+</br></br><hr><hr></br></br>
 
 ## N-Gram (Discrete Markov) Model
 
@@ -37,7 +37,7 @@
 
 ## Hidden Markov Model
 
-> $ x_{t} $ is the latent variable, $ y_{t} $ is the observed variable.
+> $ x_{t} $ is the **latent variable**, $ y_{t} $ is the **observed variable**.
 
 **Emission Element (Bigram)** &emsp;  $ \large \color{blue}{ P( \ y_{t}=m \ | \ x_{t}=k \ ) = S_{m,k} \qquad P( \ y_{t}\ | \ x_{t} \ ) = \mathbf{S} } $ </br>
 
@@ -78,7 +78,7 @@ $
 
 $$ T_{kl} = \dfrac{N_{kl}}{\sum_{k} N_{kl}} \qquad N_{kl} = \text{Count}(x_{t}=k \cap x_{t-1}=l)$$
 
-</br><hr></br>
+</br></br><hr><hr></br></br>
 
 ## AR Gaussian (Continuous Markov) Model
 
@@ -137,11 +137,7 @@ $ \large \Sigma_{\infty} = E(\underline{x}_{\infty}^{2}) = (I-\Lambda^{2})^{-1} 
 
 ##### Note: Methodology is same as 3F3 except in the continuous case, the stationary distribution parameters are calculated in the limit $ t \rightarrow \infty $.
 
-
-
-
-
-
+</br> </br>
 
 
 
