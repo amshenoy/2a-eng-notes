@@ -32,22 +32,27 @@
 
 **Transition Element (Bigram)** &emsp; $ \large \color{blue}{ P( \ x_{t}=k \ | \ x_{t-1}=l \ ) = T_{k,l} \qquad P( \ x_{t}\ | \ x_{t-1} \ ) = \mathbf{T} } $ </br>
 
-
-</br>
-
-## Hidden Markov Model
-
-> $ x_{t} $ is the **latent variable**, $ y_{t} $ is the **observed variable**.
-
-**Emission Element (Bigram)** &emsp;  $ \large \color{blue}{ P( \ y_{t}=m \ | \ x_{t}=k \ ) = S_{m,k} \qquad P( \ y_{t}\ | \ x_{t} \ ) = \mathbf{S} } $ </br>
-
-
-</br> </br>
+</br> 
 
 ##### Instead of using $ T_{l,k} $ (the transition matrix that is conventionally used), we consider $ T_{k,l} $ (the transpose) so that we can use the conventional linear algebra techiques. The columns of $ T_{k,l} $ sum to 1 instead of the rows.
 
 
 ##### Note: **Transition Element (Trigram)** &emsp; $ \large P(x_{T}=k | x_{T-1}=l, x_{T-2}=m) = T_{k,l, m} $ </br>
+
+</br> </br>
+
+## Hidden Markov Model
+
+> $ x_{t} $ is the **latent variable**, $ y_{t} $ is the **observed variable**. **HMM** uses a **mixture of Gaussians model** with **dynamic cluster assignments** given by an **underlying Markov model**.
+
+**Emission Element (Bigram) &emsp; [Discrete]** &emsp;  $ \large \color{blue}{ P( \ y_{t}=m \ | \ x_{t}=k \ ) = S_{m,k} \qquad P( \ y_{t}\ | \ x_{t} \ ) = \mathbf{S} } $ </br>
+
+**Emission Element (Bigram) &emsp; [Continuous]** &emsp;  $ \large \color{blue}{ P( \ y_{t} \ | \ x_{t}=k \ ) = \mathcal{N}(y_{t}, \mu_{k}, \sigma_{k}^{2}) } $ </br>
+
+$$ \large P(y_{1:T}, x_{1:T}) = \prod_{t=1}^{T} P( \ x_{t}\ | \ x_{t-1} \ ) P( \ y_{t}\ | \ x_{t} \ ) $$
+
+$$ P(y_{1}) = \sum_{k} \ P(x_{1}=k) \ P(y_{1}|x_{1}=k)  = \sum_{k} \ \pi_{k}^{0} \enspace \mathcal{N}(y_{t}, \mu_{k}, \sigma_{k}^{2}) \qquad \text{Mixture of Gaussians} $$
+
 
 
 </br> </br>
@@ -94,7 +99,7 @@ This can be equivalently written as $ \large \color{blue}{ \underline{x}_{t} = \
 
 </br>
 
-> In the 1D ($ D = 1 $) case: </br></br>
+> **In the 1D ($ D = 1 $) case:** </br></br>
 $ \large \color{blue}{ 
  p(x_{t} | x_{t-1}) = \mathcal{N}(x_{t}; \ \lambda \ x_{t-1}, \ \sigma^{2} \ ) }  $ </br></br>
 $ \large \color{blue}{ x_{t} = \lambda \ x_{t-1} + \sigma \epsilon_{t} \qquad \epsilon_{t} \sim \mathcal{N}(0, 1) 
