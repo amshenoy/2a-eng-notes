@@ -30,7 +30,7 @@
 
 **Initial State Probabilities** &emsp; $ \large \color{blue}{ P(x_{1} = k) = \pi_{k}^{0}  \qquad \qquad P( \ x_{1} \ ) = \underline{\pi}^{0} } $ </br>
 
-**Transition Element (Bigram)** &emsp; $ \large \color{blue}{ P( \ x_{t}=k \ | \ x_{t-1}=l \ ) = T_{k,l} \qquad P( \ x_{t}\ | \ x_{t-1} \ ) = \mathbf{T} } $ </br>
+**Transition Element** &emsp; $ \large \color{blue}{ P( \ x_{t}=k \ | \ x_{t-1}=l \ ) = T_{k,l} \qquad P( \ x_{t}\ | \ x_{t-1} \ ) = \mathbf{T} } $ </br>
 
 </br> 
 
@@ -41,13 +41,14 @@
 
 </br> </br>
 
-## Hidden Markov Model
+## Discrete Hidden State Model [DHSM] &emsp; (Discrete HMM)
 
-> $ x_{t} $ is the **latent variable**, $ y_{t} $ is the **observed variable**. **HMM** uses a **mixture of Gaussians model** with **dynamic cluster assignments** given by an **underlying Markov model**.
+> $ x_{t} $ is the **discrete latent variable**, $ y_{t} $ is the **discrete/continuous observed variable**. </br> </br>
+**HMM** uses a **mixture of Gaussians model** with **dynamic cluster assignments** given by an **underlying Markov model**.
 
-**Emission Element (Bigram) &emsp; [Discrete]** &emsp;  $ \large \color{blue}{ P( \ y_{t}=m \ | \ x_{t}=k \ ) = S_{m,k} \qquad P( \ y_{t}\ | \ x_{t} \ ) = \mathbf{S} } $ </br>
+**Emission Element &emsp; [Discrete]** &emsp;  $ \large \color{blue}{ P( \ y_{t}=m \ | \ x_{t}=k \ ) = S_{m,k} \qquad P( \ y_{t}\ | \ x_{t} \ ) = \mathbf{S} } $ </br>
 
-**Emission Element (Bigram) &emsp; [Continuous]** &emsp;  $ \large \color{blue}{ P( \ y_{t} \ | \ x_{t}=k \ ) = \mathcal{N}(y_{t}, \mu_{k}, \sigma_{k}^{2}) } $ </br>
+**Emission Element &emsp; [Continuous]** &emsp;  $ \large \color{blue}{ P( \ y_{t} \ | \ x_{t}=k \ ) = \mathcal{N}(y_{t}, \mu_{k}, \sigma_{k}^{2}) } $ </br>
 
 $$ \large P(y_{1:T}, x_{1:T}) = \prod_{t=1}^{T} P( \ x_{t}\ | \ x_{t-1} \ ) P( \ y_{t}\ | \ x_{t} \ ) $$
 
@@ -55,7 +56,7 @@ $$ P(y_{1}) = \sum_{k} \ P(x_{1}=k) \ P(y_{1}|x_{1}=k)  = \sum_{k} \ \pi_{k}^{0}
 
 
 
-</br> </br>
+</br><hr></br>
 
 ### Examples
 
@@ -118,6 +119,19 @@ $ \therefore p(x_{t}|x_{t-1}) = \mathcal{N}(x_{t}; \ \lambda \ x_{t-1} + \mu, \ 
 
 </br> </br>
 
+## Linear Gaussian State-Space Model [LGSSM] &emsp; (Continuous HMM)
+
+> $ x_{t} $ is the **continuous latent variable**, $ y_{t} $ is the **continuous observed variable**. </br>
+
+**Emission Density &emsp; [Continuous]** &emsp;  $ \large \color{blue}{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) = \mathcal{N}(\underline{y}_{t}, C \underline{x}_{t}, Q ) } $ </br>
+
+
+
+
+
+
+</br><hr></br>
+
 ### Examples
 
 > **Stationary Distribution**
@@ -143,6 +157,55 @@ $ \large \Sigma_{\infty} = E(\underline{x}_{\infty}^{2}) = (I-\Lambda^{2})^{-1} 
 ##### Note: Methodology is same as 3F3 except in the continuous case, the stationary distribution parameters are calculated in the limit $ t \rightarrow \infty $.
 
 </br> </br>
+
+</br></br><hr><hr></br></br>
+
+# HMM Inference
+
+> Various methods of learning parameters $ \theta $ where the **posterior depends on the purpose**.
+
+## Posterior Table
+$$ 
+\begin{array}{|c|c|c|}
+\hline
+  \text{Purpose} & \text{Marginal (Sample)} & \text{Joint (Sequence)} \\ 
+\hline
+   \text{Online ("Predicting") [Filter]} & p(\underline{x}_{t}|\underline{y}_{1:t}) & p(\underline{x}_{1:t}|\underline{y}_{1:t})  \\
+\hline
+   \text{Batch/Offline ("Learning") [Smoother]} & p(\underline{x}_{t}|\underline{y}_{1:T}) & p(\underline{x}_{1:T}|\underline{y}_{1:T}) \\
+\hline
+\end{array}
+$$
+
+</br>
+
+## Maximum a Posteriori (MAP)
+
+</br>
+
+#### Most Probable Sample
+$ \large \underline{x}_{t}^{*} = \arg_{\underline{x}_{t}}\max p( \ \underline{x}_{t} \ | \ \underline{y}_{1:T} \ ) $
+
+#### Most Probable Sequence
+$ \large \underline{x}_{1:T}^{*} = \arg_{\underline{x}_{1:T}}\max p( \ \underline{x}_{1:T} \ | \ \underline{y}_{1:T} \ ) $
+
+</br>
+
+### LGSSM - Sample and Sequence estimates are the same (Mean $ = $ Mode)
+
+### DHSM - Sample and Sequence estimates are not the same (Mean $ \ne $ Mode)
+
+</br> </br>
+
+## Kalman Filter
+
+> Online recursive sample prediction
+
+$ \large \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } = \int \color{green}{ p( \ \underline{x}_{t-1} \ | \ \underline{y}_{1:t-1} ) } \ \color{red}{ \underbrace{ p( \ \underline{x}_{t} \ | \ \underline{x}_{t-1} \ ) }_{\text{Transition}} } \ d\underline{x}_{t-1}  $
+
+</br>
+
+$ \large \color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) } \propto \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \underbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }_{\text{Emission}} } $
 
 
 
