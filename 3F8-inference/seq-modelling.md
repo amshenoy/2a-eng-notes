@@ -201,11 +201,21 @@ $ \large \underline{x}_{1:T}^{*} = \arg_{\underline{x}_{1:T}}\max p( \ \underlin
 
 > Online recursive sample prediction
 
+</br>
+
 $ \large \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } = \int \color{green}{ p( \ \underline{x}_{t-1} \ | \ \underline{y}_{1:t-1} ) } \ \color{red}{ \underbrace{ p( \ \underline{x}_{t} \ | \ \underline{x}_{t-1} \ ) }_{\text{Transition}} } \ d\underline{x}_{t-1}  $
 
 </br>
 
-$ \large \color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) } \propto \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \underbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }_{\text{Emission}} } $
+$ \large \color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) }
+
+= p( \ \underline{x}_{t} \ | \ \underline{y}_{t} , \  \underline{y}_{1:t-1} ) \qquad
+
+= \dfrac{  \color{orange}{  p( \ \underline{y}_{t} \ | \ \underline{x}_{t} , \ \underline{y}_{1:t-1} )  } \ \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) }  } { p( \ \underline{y}_{t} \ | \ \underline{y}_{1:t-1} ) } \quad
+
+= \dfrac{\color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \overbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }^{\text{Emission}} } } { p( \ \underline{y}_{t} \ | \ \underline{y}_{1:t-1} ) } \quad
+
+\propto \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \underbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }_{\text{Emission}} } $
 
 
 
