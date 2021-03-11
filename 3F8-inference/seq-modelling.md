@@ -207,15 +207,20 @@ $ \large \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } = 
 
 </br>
 
-$ \large \color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) }
+$$
+\large \begin{align*}
+\color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) }
 
-= p( \ \underline{x}_{t} \ | \ \underline{y}_{t} , \  \underline{y}_{1:t-1} ) \qquad
+&= p( \ \underline{x}_{t} \ | \ \underline{y}_{t} , \  \underline{y}_{1:t-1} ) \\
 
-= \dfrac{  \color{orange}{  p( \ \underline{y}_{t} \ | \ \underline{x}_{t} , \ \underline{y}_{1:t-1} )  } \ \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) }  } { p( \ \underline{y}_{t} \ | \ \underline{y}_{1:t-1} ) } \quad
+&= \dfrac{  \color{orange}{  p( \ \underline{y}_{t} \ | \ \underline{x}_{t} , \ \underline{y}_{1:t-1} )  } \ \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) }  } { p( \ \underline{y}_{t} \ | \ \underline{y}_{1:t-1} ) } \\ \\
 
-= \dfrac{\color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \overbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }^{\text{Emission}} } } { p( \ \underline{y}_{t} \ | \ \underline{y}_{1:t-1} ) } \quad
+&= \dfrac{\color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \overbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }^{\text{Emission}} } } { p( \ \underline{y}_{t} \ | \ \underline{y}_{1:t-1} ) } \\ \\
 
-\propto \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \underbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }_{\text{Emission}} } $
+\color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) } &\propto \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } \ \color{orange}{ \underbrace{ p( \ \underline{y}_{t} \ | \ \underline{x}_{t} \ ) }_{\text{Emission}} } 
+
+\end{align*}
+$$
 
 
 
