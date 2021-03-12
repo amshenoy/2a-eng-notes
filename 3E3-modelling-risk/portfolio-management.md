@@ -1,7 +1,8 @@
 # Portfolio Management
 
+</br>
 
-## Modern Portfolio Theory
+# Modern Portfolio Theory
 
 > **Markowitz Mean-Variance Model** </br> </br>
 Consider a set of weights $ w_{i} $ such that $ \sum_{i=1}^{N} w_{i} = 1 $ (ie. a vector $ \underline{w} $ such that $ \underline{w}^{T} \underline{1} = 1 $). We can now consider a **random variable** $ R_{i} $  giving the **return for asset** $ i $. </br> </br>
@@ -87,11 +88,65 @@ $
 
 > Hedging can be shown to reduce the portfolio risk if $ \sigma_{p} < \min(\sigma_{i}, \sigma_{j}) $.
 
-##### Note: That hedging works successfully even if the correlation coefficient is not negative (as shown in the Desmos sim)! 
+##### Note: That hedging works successfully even if the correlation coefficient is not negative (as shown in the Desmos sim)! Therefore diversification is a form of hedging that is robust for positive dependence.
+
 
 </br> </br>
 
-## Capital Asset Pricing Model (CAPM)
+# Capital Asset Pricing Model (CAPM)
+
+## Risk-Free Asset
+
+> Consider a risk-free asset $ F $ with expected return $ \mu_{f} = E(R_{f}) $ and zero risk $ \sigma_{f}^{2} = 0 $
+
+</br>
+
+## Capital Allocation Line (CAL)
+
+> **Line with gradient reward-to-risk ratio** $ \dfrac{\mu_{i} - \mu_{f}}{\sigma_{i}} $ where y-axis is $ \mu_{p} $ and x-axis is $ \sigma_{p} $ 
+
+Consider a risky portfolio $ R_{i} $ weighted with $ w $ and $ 1 - w $ respectively. 
+
+$ \therefore E(R_{p}) = w \ E(R_{f}) + (1-w) \ E(R_{i}) $
+
+$$ \large \mu_{p} = w \ \mu_{f} + (1-w) \ \mu_{i} $$
+
+$ Var(R_{p}) = w^{2} \cdot \underbrace{0}_{Var(R_{f})} + (1-w)^{2} \ Var(R_{i}) $
+
+$$ \large \sigma_{p}^{2} = (1-w)^{2} \ \sigma_{i}^{2} $$
+
+</br>
+
+$ \large \sigma_{p} = (1-w) \ \sigma_{i} \qquad \Rightarrow \qquad (1-w) = \dfrac{\sigma_{p}}{\sigma_{i}} $ and $ \large w = \dfrac{\sigma_{i}-\sigma_{p}}{\sigma_{i}}$
+
+</br>
+
+$$ \Large 
+\begin{align*}
+\therefore \mu_{p} &= \Big(\dfrac{\sigma_{i}-\sigma_{p}}{\sigma_{i}} \Big) \ \mu_{f} + \Big(\dfrac{\sigma_{p} }{\sigma_{i}} \Big) \ \mu_{i} \\
+\mu_{p} &= \mu_{f} + \dfrac{\mu_{i} - \mu_{f}}{\sigma_{i}} \ \sigma_{p} \\
+
+\end{align*}
+$$
+
+
+</br>
+
+### Capital Market Line (CML)
+
+> **Capital Allocation Line with the highest gradient**
+
+### Market Portfolio
+
+> **Portfolio** defined by the **intersection of the Capital Market Line with the original efficient frontier** of the risky portfolio.
+
+
+</br>
+
+## Asset Risk
+
+$ \text{Total Risk} = \text{Systematic Risk} + \text{Specific Risk} $
+
 
 
 
