@@ -85,7 +85,7 @@ Var(R_{p}) &= w^{2} \ Var(R_{i}) + (1-w)^{2} \ Var(R_{j}) + 2 w(1-w) \ Cov(R_{i}
 \end{align*}
 $
 
-[Desmos Hedging Playground](https://www.desmos.com/calculator/tfhojzq06m)
+[Desmos Hedging Playground](https://www.desmos.com/calculator/kyae3htyfo)
 
 > Hedging can be shown to reduce the portfolio risk if $ \sigma_{p} < \min(\sigma_{i}, \sigma_{j}) $.
 
