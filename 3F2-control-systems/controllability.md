@@ -16,7 +16,7 @@ $$
 If $ M_{C} $ is **full-rank** (**linearly independent columns** | $ det(M_{C}) \ne 0 $ | $ M_{C} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is controllable**.
 
 > **Reachable states of $ M_{C} $** &emsp; $ \large Range(M_{C}) $ </br> </br>
-> **Unreachable states of $ M_{C} $** &emsp; $ \large M_{C} \ \underline{x} = \underline{0} \qquad Range(\underline{x}) $ are the set of **unreachable states**.
+> **Unreachable states of $ M_{C} $** &emsp; $ \large M_{C}^{T} \ \underline{x} = \underline{0} \qquad Range(\underline{x}) $ are the set of **unreachable states**.
 
 
 #### Note: There can be multiple solutions for unreachable states $ \underline{x} $ in which case the unreachable states are represented by a matrix of vectors where the columns are the linearly independent solutions.
