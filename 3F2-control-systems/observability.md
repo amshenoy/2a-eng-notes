@@ -20,7 +20,7 @@ If $ M_{O} $ is **full-rank** (**linearly independent columns** | $ det(M_{O}) \
 </br>
 
 > **Observable states of $ M_{O} $** &emsp; $ \large Range(M_{O}^{T}) $ </br> </br>
-> **Unobservable states of $ M_{O} $** &emsp; $ \large M_{O} \ \underline{x} = \underline{0} \qquad Range(\underline{x}) $ are the set of **unobservable states**.
+> **Unobservable states of $ M_{O} $** &emsp; $ \large \color{blue}{ M_{O} \ \underline{x} = \underline{0} \qquad Range(\underline{x}) } $ are the set of **unobservable states**.
 
 </br>
 
