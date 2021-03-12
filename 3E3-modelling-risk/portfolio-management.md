@@ -44,6 +44,7 @@ $$ \large Var(R_{P}) = \sum_{i=1}^{N} \ w_{i} \ \sum_{j=1}^{N} \ w_{j} \ Var(R_{
 </br>
 
 ## Efficient Frontier
+> Portfolio is efficient if return and risk cannot be improved at the same time (lies on the limit of optimality).
 
 ### Max Return
 
@@ -84,14 +85,14 @@ Var(R_{p}) &= w^{2} \ Var(R_{i}) + (1-w)^{2} \ Var(R_{j}) + 2 w(1-w) \ Cov(R_{i}
 \end{align*}
 $
 
-[Desmos Hedging Playground](https://www.desmos.com/calculator/h9hmsq0pkp)
+[Desmos Hedging Playground](https://www.desmos.com/calculator/tfhojzq06m)
 
 > Hedging can be shown to reduce the portfolio risk if $ \sigma_{p} < \min(\sigma_{i}, \sigma_{j}) $.
 
 ##### Note: That hedging works successfully even if the correlation coefficient is not negative (as shown in the Desmos sim)! Therefore diversification is a form of hedging that is robust for positive dependence.
 
 
-</br> </br>
+</br> <hr> </br>
 
 # Capital Asset Pricing Model (CAPM)
 
@@ -125,7 +126,6 @@ $$ \Large
 \begin{align*}
 \therefore \mu_{p} &= \Big(\dfrac{\sigma_{i}-\sigma_{p}}{\sigma_{i}} \Big) \ \mu_{f} + \Big(\dfrac{\sigma_{p} }{\sigma_{i}} \Big) \ \mu_{i} \\
 \mu_{p} &= \mu_{f} + \dfrac{\mu_{i} - \mu_{f}}{\sigma_{i}} \ \sigma_{p} \\
-
 \end{align*}
 $$
 
@@ -134,26 +134,52 @@ $$
 
 ### Capital Market Line (CML)
 
-> **Capital Allocation Line with the highest gradient**
+> **Capital Allocation Line with the highest gradient**. The gradient is also called "market price of risk".
+
+</br>
 
 ### Market Portfolio
 
-> **Portfolio** defined by the **intersection of the Capital Market Line with the original efficient frontier** of the risky portfolio.
+> **Portfolio** defined by the **intersection of the Capital Market Line with the original efficient frontier** of the risky portfolio. $ \large ( \ \mu_{M}, \sigma_{M} \ ) $
 
 
 </br>
 
 ## Asset Risk
 
+</br>
+
 $ \text{Total Risk} = \text{Systematic Risk} + \text{Specific Risk} $
 
+$ \large \sigma_{p}^{2} = \sum_{i \ne j} w_{i} w_{j} \sigma_{ij} \ + \ \sum_{i} w_{i}^{2} \sigma_{i}^{2}  $
+
+##### Note: For a diversified portfolio, the specific risk tends to zero. However, systematic risk converges to the average of the covariances for all pairs of assets in the portfolio. (Law of average covariance showing that systematic risk does not disappear with diversification)
+
+</br>
+
+### Beta
+
+$$ \Large \beta_{i} = \dfrac{Cov(R_{i}, R_{M})}{\sigma_{M}^{2}} = \dfrac{\sigma_{iM}}{\sigma_{M}^{2}} $$
 
 
+</br>
 
+## CAPM
 
+If the market portfolio $ M $ is efficient (ie. on the frontier), the expected rate of return $ \mu_{i} $ for asset $ i $ is given by:
 
+$$ \Large 
+\begin{align*}
+\mu_{i} = \mu_{f} + \beta_{i} (\mu_{m} - \mu_{f})
+\end{align*}
+$$
 
+### Security Market Line (SML) 
 
+> Line of **Beta** ($ x \leftarrow \beta_{i} $) vs **Excess Return** ($ y \leftarrow \mu_{i} - \mu_{f} $)
 
+$$ \large \underbrace{ \mu_{i} - \mu_{f} }_{y} = \underbrace{ (\mu_{m} - \mu_{f}) }_{m} \underbrace{ \beta_{i} }_{x} $$
 
+- If an asset is > SML, then it is **undervalued**.
+- If an asset is < SML, then it is **overvalued**.
 
