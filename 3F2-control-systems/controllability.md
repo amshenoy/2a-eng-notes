@@ -100,25 +100,3 @@ Substitute $ A = A^{T} $ and $ C = B^{T} $ to show equivalence.
 
 
 
-
-$$ \large \dot{\underline{x}} = (A - BK)\underline{x} + B M \underline{r} $$
-
-#### We can arbitrarily assign the eigenvalues of $ (A − BK) $ by choice of $ K $ if and only if the system is controllable.
-
-##### Note: This is analogous to setting the eigenvalues of $ A - LC $ by selecting $ L $ (provided the system is observable) to create an observer. 
-
-</br>
-
-### Steady-State Gain
-
-Supposing that we want $ \underline{y} \rightarrow \underline{r} $ as $ t \rightarrow \infty $:
-
-In **steady-state** &ensp; $ \large \dot{\underline{x}} = 0 $ ie. $ \underline{x} = (A-BK)^{-1} B M \underline{r} $:
-
-$ \underline{y} = C \underline{x} = C (A-BK)^{-1} B M \underline{r} $
-
-
-We need to select $ M $ such that the steady-state gain becomes $ I $ so that $ \underline{y} \rightarrow \underline{r} $ as $ t \rightarrow \infty $.
-
-
-
