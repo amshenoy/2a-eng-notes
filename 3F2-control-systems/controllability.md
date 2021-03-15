@@ -13,7 +13,7 @@ B & A B & \cdots & A^{n-1} B
 }
 $$
 
-If $ M_{C} $ is **full-rank** (**linearly independent columns** | $ det(M_{C}) \ne 0 $ | $ M_{C} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is controllable**.
+If $ M_{C} $ is **full-rank** (**Rank = n**)  (**linearly independent columns** | $ det(M_{C}) \ne 0 $ | $ M_{C} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is controllable**.
 
 > **Reachable states of $ M_{C} $** &emsp; $ \large \color{blue}{  Range(M_{C}) } $ </br> </br>
 > **Unreachable states of $ M_{C} $** &emsp; $ \large M_{C}^{T} \ \underline{x} = \underline{0} \qquad Range(\underline{x}) $ are the set of **unreachable states**.
