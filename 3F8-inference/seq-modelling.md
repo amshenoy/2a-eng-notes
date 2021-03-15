@@ -197,9 +197,7 @@ $ \large \underline{x}_{1:T}^{*} = \arg_{\underline{x}_{1:T}}\max p( \ \underlin
 
 </br> </br>
 
-## Kalman Filter
-
-> Online recursive sample prediction
+## General Inference Equations
 
 </br>
 
@@ -234,11 +232,64 @@ $$
 \end{align*}
 $$
 
+</br> </br>
+
+## Kalman Filter (LGSSM)
+
+> **Online recursive sample prediction**
+
 Let:
 - $ \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } =  \color{blue}{ \mathcal{N}(\underline{x}_{t}, \underline{\mu}_{t}^{t-1}, V_{t}^{t-1}) } $ where $ \underline{\mu}_{t}^{t-1} = \Lambda \underline{\mu}_{t-1}^{t-1} $ and $ V_{t}^{t-1} = \Lambda V_{t-1}^{t-1} \Lambda^{T} + \Sigma $ where $ \Lambda $ and $ \Sigma $ are from the **AR(1) transition density** $ \color{blue}{ 
  p(\underline{x}_{t} | \underline{x}_{t-1}) = \mathcal{N}(\underline{x}_{t}; \Lambda \underline{x}_{t-1}, \Sigma ) } $.
 
 - $ \color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) } =  \color{green}{ \mathcal{N}(\underline{x}_{t}, \underline{\mu}_{t}^{t}, V_{t}^{t}) } $:
+
+Then we apply the **Kalman update equations** for calculating the required parameters $ \underline{\mu}_{t}^{t} $ and $ V_{t}^{t} $:
+
+- $ \underline{\mu}_{t}^{t} = \underline{\mu}_{t}^{t-1} + K_{t} (\underline{y}_{t} - C\underline{\mu}_{t}^{t-1}) $
+
+- $ V_{t}^{t} = V_{t}^{t-1} - K_{t} C V_{t}^{t-1} $
+
+- $ K_{t} = V_{t}^{t-1} C^{T} (
+C V_{t}^{t-1} C^{T} + Q)^{-1} $
+
+
+</br> </br>
+
+## Forward Algorithm (DHSM)
+
+> **Discrete inference equations** 
+
+Let:
+- $ \color{green}{ p( \ x_{t-1} = k \ | \ y_{1:t-1} ) }  $ = $ \color{green}{ \rho_{t-1}^{t-1}(k) }  $
+- $ \color{red}{ p( \ x_{t} = k \ | \ x_{t-1} = l ) } = \color{red}{ T(k, l) } $
+
+</br>
+
+$
+\color{blue}{ p( \ x_{t} = k \ | \ y_{1:t-1} ) } = \sum_{l}^{K} \color{red}{ p( \ x_{t} = k \ | \ x_{t-1} = l ) } \color{green}{ p( \ x_{t-1} = l \ | \ y_{1:t-1} ) } 
+\\
+\color{blue}{ \rho_{t}^{t-1}(k) } = \sum_{l}^{K} \color{red}{ T(k, l) } \color{green}{ \rho_{t-1}^{t-1}(l) } 
+
+
+
+$
+
+</br>
+
+$
+\color{green}{ p( \ x_{t} = k \ | \ y_{1:t} ) } \propto \color{blue}{ p( \ x_{t} = k \ | \ y_{1:t-1} ) }  \color{orange}{ p( \ y_{t} \ | \ x_{t} = k \ ) } 
+\\
+
+\color{green}{ \rho_{t}^{t}(k) } 
+ \propto \color{blue}{ \rho_{t}^{t-1}(k) } \color{orange}{ p( \ y_{t} \ | \ x_{t} = k \ ) } 
+
+$
+
+</br> </br>
+
+
+## Maximum Likelihood Parameter Learning
 
 
 
