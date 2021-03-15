@@ -15,7 +15,7 @@ C A^{n-1}
 }
 $$
 
-If $ M_{O} $ is **full-rank** (**linearly independent columns** | $ det(M_{O}) \ne 0 $ | $ M_{O} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is observable**.
+If $ M_{O} $ is **full-rank** (**Rank = n**) (**linearly independent columns** | $ det(M_{O}) \ne 0 $ | $ M_{O} \ \underline{x} \ne \underline{0} $ for $ \underline{x} \ne \underline{0} $), then **the system is observable**.
 
 </br>
 
