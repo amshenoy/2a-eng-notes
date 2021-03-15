@@ -234,6 +234,11 @@ $$
 \end{align*}
 $$
 
+Let:
+- $ \color{blue}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t-1} ) } =  \color{blue}{ \mathcal{N}(\underline{x}_{t}, \underline{\mu}_{t}^{t-1}, V_{t}^{t-1}) } $ where $ \underline{\mu}_{t}^{t-1} = \Lambda \underline{\mu}_{t-1}^{t-1} $ and $ V_{t}^{t-1} = \Lambda V_{t-1}^{t-1} \Lambda^{T} + \Sigma $ where $ \Lambda $ and $ \Sigma $ are from the **AR(1) transition density** $ \color{blue}{ 
+ p(\underline{x}_{t} | \underline{x}_{t-1}) = \mathcal{N}(\underline{x}_{t}; \Lambda \underline{x}_{t-1}, \Sigma ) } $.
+
+- $ \color{green}{ p( \ \underline{x}_{t} \ | \ \underline{y}_{1:t} ) } =  \color{green}{ \mathcal{N}(\underline{x}_{t}, \underline{\mu}_{t}^{t}, V_{t}^{t}) } $:
 
 
 
