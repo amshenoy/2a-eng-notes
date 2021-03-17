@@ -273,11 +273,11 @@ $ \color{blue}{ R[n] = G[n]X[n] + N[n] \qquad \small n = 0, ..., N-1 } $
 
 **Number of Sub-Carriers** $ N $
 
-**Sub-Carrier Bandwidth** (Bandwidth / symbol) $ \Delta f = \dfrac{W}{N}$
+**Sub-Carrier Bandwidth** (Bandwidth / symbol) $ f_{S} = \dfrac{W}{N}$
 
 </br>
 
-**Sub-Carrier Period** $ T_{S} $
+**Sub-Carrier Period** $ T_{S}  = \dfrac{1}{f_{S}} = NT $
 
 **Guard Time** $ \Delta T = LT $
 
