@@ -287,10 +287,12 @@ $ \color{blue}{ R[n] = G[n]X[n] + N[n] \qquad \small n = 0, ..., N-1 } $
 
 
 </br>
-$ b $ - Number of Symbols in Constellation
+$ b $ - Number of Bits per Symbol in Constellation
 
 $ E $ - Error Correcting Code Rate
 
-**Full Data Rate** (Bit Rate) $ B = N R_{s} \ b \ E $ 
+</br>
+
+**Full Data Rate** (Bit Rate) $ \large D = b \ E \ R =  b \ E \ N R_{s} $ 
 
 
