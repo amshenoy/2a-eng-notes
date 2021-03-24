@@ -44,19 +44,19 @@ $$ \color{green} { P(X,Y) = P(Y|X) P(X) } $$
 
 
 ### Chain Rule of Joint Entropy
-$$ \color{blue} { H(X_{1}, X_{2}, ..., X_{n}) = H(X_{1}) + H(X_{1}|X_{2}) + ... + H(X_{n}|X_{n-1}, ..., X_{1}) } 
+$$ \color{blue} { H(X_{1}, X_{2}, ..., X_{n}) = H(X_{1}) + H(X_{2}|X_{1}) + ... + H(X_{n}|X_{n-1}, ..., X_{1}) } 
 \\
 = \color{red} { \sum^{n}_{i=1} H(X_{i}|X_{i-1}, ..., X_{1}) }
 $$
 
 (Proof by analogous probability product rule)
-$$ \color{green} { P(X_{1}, X_{2}, ..., X_{n}) = P(X_{1}) P(X_{1}|X_{2}) ... P(X_{n}|X_{n-1}, ..., X_{1}) }
+$$ \color{green} { P(X_{1}, X_{2}, ..., X_{n}) = P(X_{1}) P(X_{2}|X_{1}) ... P(X_{n}|X_{n-1}, ..., X_{1}) }
 \\ =  \color{purple} { \prod^{n}_{i=1} P(X_{i}|X_{i-1}, ..., X_{1}) }
 $$
 
 #### Chain Rule with Conditionals
 
-$$ H(\color{blue}{X_{1}, ..., X_{n}}|\color{green}{Y}) = H(X_{1}, \color{green}{Y}) + H(X_{1}|X_{2}, \color{green}{Y}) + ... + H(X_{n}|X_{n-1}, ..., X_{1}, \color{green}{Y}) \\
+$$ H(\color{blue}{X_{1}, ..., X_{n}}|\color{green}{Y}) = H(X_{1}, \color{green}{Y}) + H(X_{2}|X_{1}, \color{green}{Y}) + ... + H(X_{n}|X_{n-1}, ..., X_{1}, \color{green}{Y}) \\
 = \sum^{n}_{i=1} H(\color{red}{X_{i}|X_{i-1}, ..., X_{1}}, \color{green}{Y}) $$
 
 
