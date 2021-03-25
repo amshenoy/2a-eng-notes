@@ -33,12 +33,12 @@ This is simple and intuitive, just take the **mean of the weights (expected valu
 </br>
 
 $ \large \color{teal}{ L_{i} } $ &emsp; **Fraction of columns** of weight $ i $ </br> </br>
-&emsp; &emsp; [**Fraction of total nodes** that are **variable nodes** with degree $ i $]
+&emsp; &emsp; [**Fraction of variable nodes** (total $ n $) **that have degree** $ i $]
 
 </br>
 
 $ \large \color{violet}{ R_{i} } $   &emsp; **Fraction of rows** of weight $ i $ </br> </br>
-&emsp; &emsp; [**Fraction of total nodes** that are **check nodes** with degree $ i $]
+&emsp; &emsp; [**Fraction of check nodes** (total $ n-k $) **with degree** $ i $]
 
 </br>
 
