@@ -19,63 +19,105 @@ For **irregular codes**, we need to specify the **weight distributions** on the 
 
 </br>
 
-<font style="font-size: 18px;">Consider the **LDPC matrix** $ H_{ij} $ to be an **adjacency matrix** of a **bipartite graph** with $ \color{green}{ n \text{ variable}} $ nodes **column variables $ \large \color{green}{v_{j}} $** and $ \color{red}{ (n-k) \text{ check}} $ nodes (**row variables $ \large \color{red}{c_{i}} $**).</font>
+> <font style="font-size: 18px;">**LDPC matrix** $ H_{ij} $ is the **adjacency matrix** of a **bipartite graph** with $ \color{green}{ n \text{ variable}} $ nodes **column variables $ \large \color{green}{v_{j}} $** and $ \color{red}{ (n-k) \text{ check}} $ nodes (**row variables $ \large \color{red}{c_{i}} $**).</font>
 
 </br><hr></br>
 
 ## Degree Distributions
 
+</br>
+
 ### Node Perspective
-This is simple and intuitive, just take the **mean of the weights**. Using **weight fractions** $ Fv_{i} $ and $ Fc_{i} $ for each value of weight $ \large i $, we get the following:
+This is simple and intuitive, just take the **mean of the weights (expected value)**. Using **weight fractions** $ L_{i} $ and $ R_{i} $ for each value of weight $ \large i $, we get the node perspective equations:
+
+</br>
+
+$ \large \color{teal}{ L_{i} } $ &emsp; **Fraction of columns** of weight $ i $ </br> </br>
+&emsp; &emsp; [**Fraction of total nodes** that are **variable nodes** with degree $ i $]
+
+</br>
+
+$ \large \color{violet}{ R_{i} } $   &emsp; **Fraction of rows** of weight $ i $ </br> </br>
+&emsp; &emsp; [**Fraction of total nodes** that are **check nodes** with degree $ i $]
+
+</br>
 
 $$ \large \color{blue}{
-\overline{d_{v}} = \sum_{i \in \{d\}} i \ Fv_{i} 
+\overline{d_{v}} = \sum_{i \in \{d\}} i \ L_{i} 
 }
-= \dfrac{d}{dx} \Big( \sum_{i \in \{d\}} \ Fv_{i} \ x^{i} \Big)|_{x=1} = Fv^{'}(1) $$
+= \dfrac{d}{dx} \Big( \color{teal}{ \sum_{i \in \{d\}} \ L_{i} \ x^{i} } \Big)|_{x=1} = \dfrac{d}{dx} \Big( \ \color{teal}{L(x)} \ \Big)|_{x=1} = L^{'}(1) $$
 
 $$ \large \color{blue}{ 
-\overline{d_{c}} = \sum_{i \in \{d\}} i \ Fc_{i} 
+\overline{d_{c}} = \sum_{i \in \{d\}} i \ R_{i} 
 }
-= \dfrac{d}{dx} \Big( \sum_{i \in \{d\}} \ Fc_{i} \ x^{i} \Big)|_{x=1} = Fc^{'}(1) $$
+= \dfrac{d}{dx} \Big( \color{violet}{ \sum_{i \in \{d\}} \ R_{i} \ x^{i} } \Big)|_{x=1}  = \dfrac{d}{dx} \Big( \ \color{violet}{R(x)} \ \Big)|_{x=1} = R^{'}(1) $$
 
+</br>
 
 ### Edge Perspective
 
-From the equation for **total number of edges** $ N = \overline{d_{v}} n = \overline{d_{c}} (n − k) $, we can derive the edge perspective equations.
+From the equation for **total number of edges** $ \large \color{blue}{ N = \overline{d_{v}} n = \overline{d_{c}} (n − k) } $, we can derive the edge perspective equations.
 
-$ \lambda_{i} $ &emsp; **Sum of 1s in columns of weight $ i$** / **Sum of 1s in H** </br>
-&emsp; &emsp; **Fraction of 1s in H** that are in **columns** of weight $ i $ </br>
-&emsp; &emsp; (**Fraction of total edges** connected to **variable nodes** with degree $ i $)
+</br>
 
-$ \rho_{i} $  &emsp; **Sum of 1s in rows of weight $ i$** / **Sum of 1s in H** </br>
-&emsp; &emsp; **Fraction of 1s in H** that are in **rows** of weight $ i $ </br> &emsp; &emsp; (**Fraction of total edges** connected to **check nodes** with degree $ i $)
+$ \large \color{green}{ \lambda_{i} } $ &emsp; **Sum of 1s in columns of weight $ i$** / **Sum of 1s in H** </br>
+&emsp; &emsp; **Fraction of 1s in H** that are in **columns** of weight $ i $ </br> </br>
+&emsp; &emsp; [**Fraction of total edges** connected to **variable nodes** with degree $ i $]
 
+</br>
 
+$ \large \color{red}{ \rho_{i} } $  &emsp; **Sum of 1s in rows of weight $ i$** / **Sum of 1s in H** </br>
+&emsp; &emsp; **Fraction of 1s in H** that are in **rows** of weight $ i $ </br> </br>
+&emsp; &emsp; [**Fraction of total edges** connected to **check nodes** with degree $ i $]
 
-$$ \large \color{blue}{ 
+</br> </br>
+
+$$ \large 
+\begin{align*}
+\color{blue}{ 
 \overline{d_{v}} = \Big(\dfrac{n}{N}\Big)^{-1}
 = \Big(\sum_{i \in \{d\}} \dfrac{\lambda_{i}}{i} \Big)^{-1} 
 }
-= \Big(\sum_{i \in \{d\}} \lambda_{i} \big(\int_{0}^{1} x^{i-1}\big) dx \Big)^{-1}
-= \Bigg( \int_{0}^{1} \color{green}{\Big(\sum_{i \in \{d\}} \lambda_{i} x^{i-1} \Big)} dx \Bigg)^{-1}
-= \Big(\int_{0}^{1} \color{green}{\lambda(x)} dx \Big)^{-1} $$
+&= \Big(\sum_{i \in \{d\}} \lambda_{i} \big(\int_{0}^{1} x^{i-1}\big) dx \Big)^{-1} \\
+&= \Bigg( \int_{0}^{1} \color{green}{\Big(\sum_{i \in \{d\}} \lambda_{i} x^{i-1} \Big)} dx \Bigg)^{-1}
+= \Big(\int_{0}^{1} \color{green}{\lambda(x)} dx \Big)^{-1}
+\end{align*}
+$$
 
-$$ \large \color{blue}{
+</br>
+
+$$ \large
+\begin{align*}
+\color{blue}{
 \overline{d_{c}} = \Big(\dfrac{n-k}{N}\Big)^{-1}
 = \Big(\sum_{i \in \{d\}} \dfrac{\rho_{i}}{i} \Big)^{-1}
 }
-= \Big(\sum_{i \in \{d\}} \rho_{i} \big(\int_{0}^{1} x^{i-1}\big) dx \Big)^{-1}
-= \Bigg( \int_{0}^{1} \color{red}{\Big(\sum_{i \in \{d\}} \rho_{i} x^{i-1} \Big)} dx \Bigg)^{-1}
-= \Big(\int_{0}^{1} \color{red}{\rho(x)} dx \Big)^{-1} $$
+&= \Big(\sum_{i \in \{d\}} \rho_{i} \big(\int_{0}^{1} x^{i-1}\big) dx \Big)^{-1} \\
+&= \Bigg( \int_{0}^{1} \color{red}{\Big(\sum_{i \in \{d\}} \rho_{i} x^{i-1} \Big)} dx \Bigg)^{-1}
+= \Big(\int_{0}^{1} \color{red}{\rho(x)} dx \Big)^{-1}
+\end{align*}
+$$
  
+</br>
+
+### Conversion
+
+$$ \large \color{teal}{L(x)} = \dfrac{\int \color{green}{\lambda(x)} dx}{\int_{0}^{1} \color{green}{\lambda(x)} dx} 
+\qquad \qquad
+\color{green}{\lambda(x)} = \color{teal}{ \dfrac{L^{'}(x)}{L^{'}(1)} } $$
+
+</br>
+
+$$ \large \color{violet}{R(x)} = \dfrac{\int \color{red}{\rho(x)} dx}{\int_{0}^{1} \color{red}{\rho(x)} dx} 
+\qquad \qquad
+\color{red}{\rho(x)} = \color{violet}{ \dfrac{R^{'}(x)}{R^{'}(1)} } $$
 
 </br><hr></br>
 
 ## Iterative Decoding as Message Passing
 
-Analogy of solving single equations of $ \underline{c} H^{T} = \underline{0} $ for BEC by passing messages between the two side of the bipartite graph.
+Analogy of solving single equations of $ \large \underline{c} H^{T} = \underline{0} $ for BEC by passing messages between the two side of the bipartite graph.
 
-</br>
 
 ### Time Complexity
 
@@ -84,12 +126,12 @@ $ \mathcal{O}(N \cdot I ) $ where $ N $ is **total number of edges** and $ I $ i
 Low number of 1s in H $ \longrightarrow $ Low complexity of decoder
 
 
-</br>
+</br><hr></br>
 
 ## Density Evolution
 
-Density evolution is a technique to predict the decoding
-performance of codes with a given $\lambda(x)$, $\rho(x)$ for large $n$.
+> **Density evolution** is a technique to **predict the decoding
+performance of codes with a given $\lambda(x)$, $\rho(x)$ for large $n$**.
 
 Let $ p_{t} $ denote the probability that an outgoing $ v → c $ message is an erasure $ ? $ at step $ t $.
 
