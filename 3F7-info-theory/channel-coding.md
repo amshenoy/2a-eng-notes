@@ -111,7 +111,7 @@ Given a $ G $ matrix, we can find $ G_{sys} $ by **swapping columns** and perfor
 
 Given $ G_{sys} $ we can find a parity check matrix $ H $:
 
-$$ \Large \color{blue}{ G_{sys} = [I_{k} | P] \qquad \underbrace{H}_{(n-k) \times n} = [\underbrace{P_{T}}_{(n-k) \times k} \quad | \quad \underbrace{I_{n-k} }_{(n-k) \times (n-k)} ] 
+$$ \Large \color{blue}{ G_{sys} = [I_{k} | P] \qquad \underbrace{H}_{(n-k) \times n} = [\underbrace{P^{T}}_{(n-k) \times k} \quad | \quad \underbrace{I_{n-k} }_{(n-k) \times (n-k)} ] 
 } $$ 
 
 </br>
