@@ -218,6 +218,12 @@ $$
 
 > We can sample a **probability distribution defined by constraints**, by **sampling using Monte-Carlo** and **rejecting samples that do not obey the constraints**.
 
+In the case of two probability distributions, suppose **proposed distribution** $ P_{X}(x) $ and the **desired distribution** is $ P_{D}(d) $ (where $ P_{D}(d) \le P_{X}(x) $):
+
+1) Take a sample $ x_{i} $ from $ P_{X}(x) $.
+2) Take a sample $ u_{i} $ uniformly along the vertical line from $ 0 \le u_{i} \le P_{X}(x_{i}) $
+3) Accept the sample $ x_{i} $ if $ u_{i} \le P_{D}(x_{i}) $.
+
 
 </br>
 
