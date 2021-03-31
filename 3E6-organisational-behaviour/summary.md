@@ -13,7 +13,7 @@ Note*: This module is purely conjectural and mostly based on opinion so for exam
 * MBTI does not predict organisational outcomes
 
 **5 Five Factor Model (FFM)**
-OCEAN for Openness, Conscientiousness, Extraversion, Agreeableness and Neurototicism (Emotional Stability)
+> OCEAN for **Openness**, **Conscientiousness**, **Extraversion**, **Agreeableness** and **Neurototicism (Emotional Stability)**
 
 * Does not force personality into certain categories
 * Based on scientific findings
@@ -117,18 +117,18 @@ Method of profiling or analysing individuals’ needs that motivate their behavi
 ### Maslow’s Hierarchy of Needs
 
 **Pyramid**
-* Self-actualization: acheiving full-potential
-* Esteem needs: self-respect, recognition
-* Social needs: needs for having social relationships with others
-* Safety needs: security and protection from physical, emotional harms
-* Physiological needs: hunger, thirst, shelter, other bodily needs
+* Self-actualization (**Achievement**): acheiving full-potential
+* Esteem needs (**Power**): self-respect, recognition
+* Social needs (**Affiliation**): needs for having social relationships with others
+* Safety needs (**Security**): security and protection from physical, emotional harms
+* Physiological needs (**Necessities**): hunger, thirst, shelter, other bodily needs
 
 (+) Intuitive </br>
 (-) Not always true </br>
 
 ### McClelland’s Theory of Needs
 
-Maslow's Theory (with first three labelle as **Achievement**, **Power**, **Affiliation**) but no heirarchy
+Maslow's Theory (with first three labelled as **Achievement**, **Power**, **Affiliation**) but no hierarchy
 
 </br>
 
