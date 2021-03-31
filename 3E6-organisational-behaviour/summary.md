@@ -73,12 +73,12 @@ Information of organisation
 ### Encounter
 Integration with organisation
 
-Language: To communicate assumptions, values </br>
-Symbols: To reinforce values and ideology </br
-Stories/Myths: Exemplifying norms and heroes </br>
-Ceremonies/rituals: To build cohesion and morale </br>
-Dress/uniform: To reinforce identity </br>
-Technology/Structure/Physical Environment: To reinforce values and shape communication patterns </br>
+**Language**: &emsp; &emsp; &emsp; &emsp;  To communicate assumptions, values </br>
+**Symbols**: &emsp; &emsp; &emsp; &emsp; To reinforce values and ideology </br>
+**Stories/Myths**: &emsp; &emsp; &emsp; &emsp; Exemplifying norms and heroes </br>
+**Ceremonies/rituals**: &emsp; &emsp; &emsp; &emsp; To build cohesion and morale </br>
+**Dress/uniform**: &emsp; &emsp; &emsp; &emsp; To reinforce identity </br>
+**Technology/Structure/Physical Environment**: &emsp; &emsp; &emsp; To reinforce values and shape communication patterns </br>
 
 
 ### Metamorphosis
