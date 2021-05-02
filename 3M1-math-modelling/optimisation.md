@@ -232,17 +232,24 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-
 
 $$ \large L(\underline{x}, \underline{\lambda}, \underline{\mu}) = f(\underline{x}) + \sum_{i} \lambda_{i} h_{i}(\underline{x}) + \sum_{j} \mu_{j} g_{j}(\underline{x}) $$
 
+subject to $ \large g_{j}(\underline{x}) \le 0 $ and $ \large \mu_{j} \ g_{j}(\underline{x}) = 0 $ (ie. $ \large \mu_{j} \ge 0 $).
+
  $ h_{i}(\underline{x}) $ - Equality constraints $ = 0 $ </br>
  $ g_{j}(\underline{x}) $ - Inequality constraints $ \le 0 $ </br>
 
-$ \mu_{j} = 0 $ if $ g_{j}(\underline{x}) < 0 $ (**inequality constraint inactive**)
+</br>
 
-$ g_{j}(\underline{x}) = 0 $ (**inequality constraint active**, becomes an equality constraint)
+#### Case 1: &emsp; $ \mu_{j} = 0 $ &ensp; if $ g_{j}(\underline{x}) < 0 $ (**inequality constraint inactive**)
 
-#### Minimise by solving $ \large \nabla L = \underline{0} $
+#### Case 2: &emsp; $ g_{j}(\underline{x}) = 0 $ (**inequality constraint active**, becomes an equality constraint)
+
+### Minimise by solving $ \large \nabla L = \underline{0} $
+
+</br>
+
 In the case when $ L(\underline{x}, \underline{\lambda}, \underline{\mu} ) $ is **scalar**:
 $
-\dfrac{\partial L}{\partial \underline{x}} = \dfrac{\partial L}{\partial x_{i}}|_{i=1}^{N} = 0 $.
+\dfrac{\partial L}{\partial \underline{x}} = \underline{0} \Rightarrow \dfrac{\partial L}{\partial x_{i}}|_{i=1}^{N} = 0 $.
 
 </br>
 
