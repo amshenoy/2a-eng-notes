@@ -232,7 +232,7 @@ $$ \large x_{k+1} = x_{k} - \dfrac{f^{'}(x_{k})}{\dfrac{f^{'}(x_{k})-f^{'}(x_{k-
 
 $$ \large L(\underline{x}, \underline{\lambda}, \underline{\mu}) = f(\underline{x}) + \sum_{i} \lambda_{i} h_{i}(\underline{x}) + \sum_{j} \mu_{j} g_{j}(\underline{x}) $$
 
-subject to $ \large g_{j}(\underline{x}) \le 0 $ and $ \large \mu_{j} \ g_{j}(\underline{x}) = 0 $ (ie. $ \large \mu_{j} \ge 0 $).
+subject to $ \large \mu_{j} \ g_{j}(\underline{x}) = 0 $ (ie. $ \large \mu_{j} \ge 0 $ and $ \large g_{j}(\underline{x}) \le 0 $ ) and $ \large h_{i}(\underline{x}) = 0 $.
 
  $ h_{i}(\underline{x}) $ - Equality constraints $ = 0 $ </br>
  $ g_{j}(\underline{x}) $ - Inequality constraints $ \le 0 $ </br>
