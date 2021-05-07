@@ -43,7 +43,7 @@ Let $ \large s_{0} = \omega_{0} j $:
 **Poles of Closed Loop** are given by:
 $$ \Large 1 + k \ L(s) = 0 $$
 
-For the $ n $-degree polynomial, the **coefficients** must satisfy the following (where $ a_{0} $ is coeff of max degree $ n $):
+For the $ n $-degree polynomial, the **coefficients** must satisfy the following (where $ a_{n} $ is coeff of max degree $ n $):
 
 $$
 \begin{align*}
