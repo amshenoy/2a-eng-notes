@@ -73,7 +73,7 @@ $$ \Large L_{p} \enspace \text{Norm} = \lVert x \rVert_{p} = \Big( \sum_{i=1}^{n
 
 $ \Large \lVert x \rVert_{1} = \sum_{i}|x_{i}| $
 
-$ \Large \lVert x \rVert_{2} = \sum_{i} x_{i}^{2} $
+$ \Large \lVert x \rVert_{2} = \Big( \sum_{i} x_{i}^{2} \Big)^{\dfrac{1}{2}} $
 
 $ \Large \lVert x \rVert_{2}^{2} = \mathbf{x}^{\mathbf{H}}  \mathbf{x} \quad ( = \mathbf{x}^{*T} \ \mathbf{x} ) \qquad (  = \mathbf{x}^{T} \ \mathbf{x} \quad $ **if real** $ \quad  \Large ) $
 
